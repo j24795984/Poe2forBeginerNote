@@ -1,0 +1,35 @@
+---
+import JsonGuidePanel from '../components/JsonGuidePanel.vue';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="POE2 Beginner Note">
+	<main class="mx-auto max-w-6xl px-6 py-16 sm:py-24">
+		<p class="mb-3 text-sm font-semibold tracking-[0.24em] text-cyan-300">ASTRO + VUE STARTER</p>
+		<h1 class="hero-title max-w-3xl text-5xl font-bold tracking-tight text-white sm:text-7xl">POE2 新手筆記</h1>
+		<p class="hero-copy mt-6 max-w-2xl text-lg leading-8 text-slate-300">內容以靜態 JSON 管理；只有需要資料互動的區塊才由 Vue 在瀏覽器端載入。</p>
+
+		<section class="mt-16" aria-label="初始化功能">
+			<div class="starter-swiper overflow-hidden rounded-2xl border border-slate-700 bg-slate-900/70">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide p-8 sm:p-12"><strong class="text-cyan-300">Astro</strong><p class="mt-2 text-slate-300">預設輸出靜態網站，適合 GitHub Pages。</p></div>
+					<div class="swiper-slide p-8 sm:p-12"><strong class="text-cyan-300">Vue island</strong><p class="mt-2 text-slate-300">只水合需要互動的元件，避免整站 SPA 負擔。</p></div>
+					<div class="swiper-slide p-8 sm:p-12"><strong class="text-cyan-300">CDN utilities</strong><p class="mt-2 text-slate-300">GSAP、Swiper 與 Tailwind 4 先使用 CDN 引入。</p></div>
+				</div>
+				<div class="swiper-pagination !relative !bottom-auto pb-5"></div>
+			</div>
+		</section>
+
+		<section class="mt-16" aria-labelledby="guides-heading">
+			<h2 id="guides-heading" class="text-2xl font-semibold text-white">JSON 資料讀取測試</h2>
+			<JsonGuidePanel client:visible />
+		</section>
+	</main>
+
+	<script is:inline>
+		window.addEventListener('DOMContentLoaded', () => {
+			if (window.gsap) window.gsap.from('.hero-title, .hero-copy', { y: 24, opacity: 0, duration: 0.7, stagger: 0.12, ease: 'power2.out' });
+			if (window.Swiper) new window.Swiper('.starter-swiper', { loop: true, autoplay: { delay: 4000 }, pagination: { el: '.swiper-pagination', clickable: true } });
+		});
+	</script>
+</BaseLayout>
