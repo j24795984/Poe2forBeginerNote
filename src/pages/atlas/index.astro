@@ -1,5 +1,9 @@
 ---
+import AtlasCategoryTabs from '../../components/AtlasCategoryTabs.vue';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="輿圖" />
+<BaseLayout title="輿圖">
+	<h1>輿圖</h1>
+	<AtlasCategoryTabs client:load />
+</BaseLayout>
