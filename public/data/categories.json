@@ -1,4 +1,8 @@
-[
-  { "id": "basics", "name": "基礎入門" },
-  { "id": "builds", "name": "流派指南" }
-]
+{
+  "id": "categories-document-001",
+  "idRegistry": { "nextSequence": 4, "retiredIds": [] },
+  "categories": [
+    { "id": "category-basics-002", "name": "基礎入門" },
+    { "id": "category-builds-003", "name": "流派指南" }
+  ]
+}

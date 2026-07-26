@@ -1,4 +1,18 @@
-[
-  { "id": "getting-started", "title": "開始前的準備", "summary": "建立角色前先理解聯盟、職業與技能寶石的基本關係。", "categoryId": "basics" },
-  { "id": "first-build", "title": "第一套流派", "summary": "以容易取得的技能與裝備為優先，逐步建立自己的遊玩節奏。", "categoryId": "builds" }
-]
+{
+  "id": "guides-document-001",
+  "idRegistry": { "nextSequence": 4, "retiredIds": [] },
+  "guides": [
+    {
+      "id": "guide-getting-started-002",
+      "title": "開始前的準備",
+      "summary": "建立角色前先理解聯盟、職業與技能寶石的基本關係。",
+      "categoryId": "category-basics-002"
+    },
+    {
+      "id": "guide-first-build-003",
+      "title": "第一套流派",
+      "summary": "以容易取得的技能與裝備為優先，逐步建立自己的遊玩節奏。",
+      "categoryId": "category-builds-003"
+    }
+  ]
+}

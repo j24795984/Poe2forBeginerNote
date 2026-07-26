@@ -1,0 +1,4 @@
+interface:
+  display_name: "Design Reference Library"
+  short_description: "Curated DESIGN.md systems for frontend direction."
+  default_prompt: "Use $design-reference-library to select a design system reference for this frontend task."

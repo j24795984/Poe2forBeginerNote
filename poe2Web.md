@@ -1,18 +1,18 @@
-\# POE2 新手進度引導與紀錄網站
+# POE2 新手進度引導與紀錄網站
 
 > Project Planning Document v1.0
 
 
 
-\---
+---
 
 
 
-\# 一、專案概述
+# 一、專案概述
 
 
 
-\## 1.1 專案背景
+## 1.1 專案背景
 
 
 
@@ -28,15 +28,15 @@
 
 
 
-\- 下一步建議（Next Action）
+- 下一步建議（Next Action）
 
-\- 必做任務提醒
+- 必做任務提醒
 
-\- 重要獎勵提醒
+- 重要獎勵提醒
 
-\- 進度紀錄
+- 進度紀錄
 
-\- 主流工具快速入口
+- 主流工具快速入口
 
 
 
@@ -44,11 +44,11 @@
 
 
 
-\---
+---
 
 
 
-\## 1.2 專案定位
+## 1.2 專案定位
 
 
 
@@ -56,13 +56,13 @@
 
 
 
-\- Wiki
+- Wiki
 
-\- 資料庫
+- 資料庫
 
-\- Build 分享站
+- Build 分享站
 
-\- 天賦模擬器
+- 天賦模擬器
 
 
 
@@ -78,15 +78,15 @@
 
 
 
-\---
+---
 
 
 
-\## 1.3 核心價值
+## 1.3 核心價值
 
 
 
-\### Progress First
+### Progress First
 
 
 
@@ -94,11 +94,11 @@
 
 
 
-\---
+---
 
 
 
-\### Checklist
+### Checklist
 
 
 
@@ -110,25 +110,25 @@
 
 
 
-\- 主線
+- 主線
 
-\- 昇華
+- 昇華
 
-\- 天賦點
+- 天賦點
 
-\- Atlas
+- Atlas
 
-\- 開圖
+- 開圖
 
-\- Boss
-
-
-
-\---
+- Boss
 
 
 
-\### Lightweight
+---
+
+
+
+### Lightweight
 
 
 
@@ -140,113 +140,66 @@
 
 
 
-\---
+---
 
 
 
-\# 二、技術架構
+# 二、技術架構
 
+## 開發方式
 
+- Node.js 24
+- Astro
+- Vue 3（僅用於需要互動的 islands）
+- GitHub Pages
+- 靜態網站（Static Site）
 
-\## 開發方式
+### 架構分工
 
+- **Astro**：負責檔案式路由、靜態 HTML 產生與網站共用 Layout。
+- **Vue 3**：僅負責分類切換、Checklist、進度紀錄與設定等瀏覽器端互動。
+- **Vite**：由 Astro 內部使用，處理開發伺服器與建置流程；不另外建立 Vite SPA。
+- **GitHub Pages**：部署 `dist/` 內的靜態產物，不依賴伺服器、資料庫或登入。
 
+---
 
-\- Vue 3
+## 資料來源
 
-\- Vite
-
-\- GitHub Pages
-
-\- SPA（Single Page Application）
-
-
-
-\---
-
-
-
-\## 資料來源
-
-
-
-所有網站內容皆由 JSON 靜態資料提供。
-
-
+所有網站內容皆由 JSON 靜態資料提供，依資料領域拆分為不同檔案並置於 `public/data/`。
 
 ```text
-
 JSON
-
-&#x20;   ↓
-
-Vue
-
-&#x20;   ↓
-
+   ↓
+Astro 靜態頁面／Vue 互動元件
+   ↓
 畫面
-
 ```
 
+---
 
+## 儲存方式
 
-\---
+使用 LocalStorage 保存：
 
-
-
-\## 儲存方式
-
-
-
-LocalStorage
-
-
-
-保存：
-
-
-
-\- 玩家進度
-
-\- 網站設定
-
-\- 勾選紀錄
-
-
+- 玩家進度
+- 網站設定
+- 勾選紀錄
 
 不建立：
 
+- Server
+- Database
+- Login
 
+---
 
-\- Server
+## 部署方式
 
-\- Database
+使用 GitHub Pages + GitHub Actions。建置後將 `dist/` 部署至 GitHub Pages，並設定 repository 子路徑 `/Poe2forBeginerNote/`。
 
-\- Login
+---
 
-
-
-\---
-
-
-
-\## 部署方式
-
-
-
-GitHub Pages
-
-
-
-零維護成本。
-
-
-
-\---
-
-
-
-\# 三、網站資訊架構（Information Architecture）
+# 三、網站資訊架構（Information Architecture）
 
 
 
@@ -294,15 +247,15 @@ GitHub Pages
 
 
 
-\---
+---
 
 
 
-\# 四、各功能模組
+# 四、各功能模組
 
 
 
-\## 4.1 首頁 Dashboard
+## 4.1 首頁 Dashboard
 
 
 
@@ -314,17 +267,17 @@ GitHub Pages
 
 
 
-\- 玩家目前進度
+- 玩家目前進度
 
-\- 下一步建議
+- 下一步建議
 
-\- Campaign 完成率
+- Campaign 完成率
 
-\- Atlas 完成率
+- Atlas 完成率
 
-\- 最近更新
+- 最近更新
 
-\- 快速入口
+- 快速入口
 
 
 
@@ -336,11 +289,11 @@ GitHub Pages
 
 
 
-\---
+---
 
 
 
-\## 4.2 進度總覽
+## 4.2 進度總覽
 
 
 
@@ -352,17 +305,17 @@ GitHub Pages
 
 
 
-\- 等級
+- 等級
 
-\- Campaign
+- Campaign
 
-\- Atlas
+- Atlas
 
-\- 昇華
+- 昇華
 
-\- Passive Quest
+- Passive Quest
 
-\- 完成百分比
+- 完成百分比
 
 
 
@@ -370,17 +323,17 @@ GitHub Pages
 
 
 
-\- 下一步推薦
+- 下一步推薦
 
-\- 尚未完成的重要事項
-
-
-
-\---
+- 尚未完成的重要事項
 
 
 
-\## 4.3 拓荒與流派
+---
+
+
+
+## 4.3 拓荒與流派
 
 
 
@@ -392,15 +345,15 @@ GitHub Pages
 
 
 
-\- 推薦拓荒職業
+- 推薦拓荒職業
 
-\- 推薦技能
+- 推薦技能
 
-\- Build 入口
+- Build 入口
 
-\- 升級建議
+- 升級建議
 
-\- 外部 Build 網站
+- 外部 Build 網站
 
 
 
@@ -412,19 +365,19 @@ GitHub Pages
 
 
 
-\- poe.ninja
+- poe.ninja
 
-\- Maxroll
+- Maxroll
 
-\- pobb.in
-
-
-
-\---
+- pobb.in
 
 
 
-\## 4.4 主線 Campaign
+---
+
+
+
+## 4.4 主線 Campaign
 
 
 
@@ -436,17 +389,17 @@ GitHub Pages
 
 
 
-\- 必做任務
+- 必做任務
 
-\- Passive Point 任務
+- Passive Point 任務
 
-\- 昇華試煉
+- 昇華試煉
 
-\- 技能石提醒
+- 技能石提醒
 
-\- 抗性檢查
+- 抗性檢查
 
-\- Boss
+- Boss
 
 
 
@@ -454,11 +407,11 @@ GitHub Pages
 
 
 
-\---
+---
 
 
 
-\## 4.5 輿圖 Atlas
+## 4.5 輿圖 Atlas
 
 
 
@@ -470,15 +423,15 @@ GitHub Pages
 
 
 
-\- 剛進 Atlas
+- 剛進 Atlas
 
-\- 白圖
+- 白圖
 
-\- 黃圖
+- 黃圖
 
-\- 紅圖
+- 紅圖
 
-\- Pinnacle Boss
+- Pinnacle Boss
 
 
 
@@ -486,19 +439,19 @@ GitHub Pages
 
 
 
-\- 推薦下一步
+- 推薦下一步
 
-\- 開圖進度
+- 開圖進度
 
-\- Atlas Passive
-
-
-
-\---
+- Atlas Passive
 
 
 
-\## 4.6 賺錢
+---
+
+
+
+## 4.6 賺錢
 
 
 
@@ -510,13 +463,13 @@ GitHub Pages
 
 
 
-\- 剛進 Atlas
+- 剛進 Atlas
 
-\- 白圖
+- 白圖
 
-\- 黃圖
+- 黃圖
 
-\- 紅圖
+- 紅圖
 
 
 
@@ -524,11 +477,11 @@ GitHub Pages
 
 
 
-\- 推薦機制
+- 推薦機制
 
-\- 建議投資
+- 建議投資
 
-\- 收益概念
+- 收益概念
 
 
 
@@ -536,11 +489,11 @@ GitHub Pages
 
 
 
-\---
+---
 
 
 
-\## 4.7 做裝
+## 4.7 做裝
 
 
 
@@ -552,21 +505,21 @@ GitHub Pages
 
 
 
-\- Base 選擇
+- Base 選擇
 
-\- 基礎 Craft
+- 基礎 Craft
 
-\- 常用貨幣
+- 常用貨幣
 
-\- Bench
+- Bench
 
-\- Essence
+- Essence
 
-\- Regal
+- Regal
 
-\- Exalted
+- Exalted
 
-\- Omens
+- Omens
 
 
 
@@ -574,11 +527,11 @@ GitHub Pages
 
 
 
-\---
+---
 
 
 
-\## 4.8 高價值物品
+## 4.8 高價值物品
 
 
 
@@ -590,15 +543,15 @@ GitHub Pages
 
 
 
-\- 高價底材
+- 高價底材
 
-\- 通貨
+- 通貨
 
-\- 聯盟掉落
+- 聯盟掉落
 
-\- Boss 掉落
+- Boss 掉落
 
-\- 特殊 Unique
+- 特殊 Unique
 
 
 
@@ -610,11 +563,11 @@ GitHub Pages
 
 
 
-\---
+---
 
 
 
-\## 4.9 工具 Tools
+## 4.9 工具 Tools
 
 
 
@@ -630,15 +583,15 @@ GitHub Pages
 
 
 
-\- POE2DB
+- POE2DB
 
-\- poe.ninja
+- poe.ninja
 
-\- Maxroll
+- Maxroll
 
-\- pobb.in
+- pobb.in
 
-\- 社群試算表
+- 社群試算表
 
 
 
@@ -646,23 +599,23 @@ GitHub Pages
 
 
 
-\- Database
+- Database
 
-\- Build
+- Build
 
-\- Planner
+- Planner
 
-\- Trade
+- Trade
 
-\- Wiki
-
-
-
-\---
+- Wiki
 
 
 
-\## 4.10 設定／資料管理
+---
+
+
+
+## 4.10 設定／資料管理
 
 
 
@@ -670,7 +623,7 @@ GitHub Pages
 
 
 
-\### （一）進度管理
+### （一）進度管理
 
 
 
@@ -678,13 +631,13 @@ GitHub Pages
 
 
 
-\- Campaign 完成率
+- Campaign 完成率
 
-\- Atlas 完成率
+- Atlas 完成率
 
-\- 昇華完成率
+- 昇華完成率
 
-\- Passive Quest
+- Passive Quest
 
 
 
@@ -692,15 +645,15 @@ GitHub Pages
 
 
 
-\- 下一步建議
+- 下一步建議
 
 
 
-\---
+---
 
 
 
-\### （二）聯盟角色
+### （二）聯盟角色
 
 
 
@@ -716,9 +669,9 @@ GitHub Pages
 
 
 
-\- 角色名稱
+- 角色名稱
 
-\- 職業
+- 職業
 
 
 
@@ -730,11 +683,11 @@ GitHub Pages
 
 
 
-\---
+---
 
 
 
-\### （三）資料管理
+### （三）資料管理
 
 
 
@@ -742,13 +695,13 @@ GitHub Pages
 
 
 
-\- 匯出 JSON
+- 匯出 JSON
 
-\- 匯入 JSON
+- 匯入 JSON
 
-\- 匯出 CSV
+- 匯出 CSV
 
-\- 重置所有資料
+- 重置所有資料
 
 
 
@@ -756,17 +709,17 @@ GitHub Pages
 
 
 
-\- 備份
+- 備份
 
-\- 換裝置
-
-
-
-\---
+- 換裝置
 
 
 
-\### （四）網站設定
+---
+
+
+
+### （四）網站設定
 
 
 
@@ -774,23 +727,21 @@ GitHub Pages
 
 
 
-\- 深色／淺色模式
+- 固定深色主題（不提供亮色、系統主題或切換功能）
 
-\- 系統主題
+- 是否顯示完成率
 
-\- 是否顯示完成率
+- 是否顯示下一步建議
 
-\- 是否顯示下一步建議
-
-\- 是否隱藏已完成項目
+- 是否隱藏已完成項目
 
 
 
-\---
+---
 
 
 
-\### （五）網站資訊
+### （五）網站資訊
 
 
 
@@ -798,13 +749,13 @@ GitHub Pages
 
 
 
-\- Website Version
+- Website Version
 
-\- Game Version
+- Game Version
 
-\- Data Version
+- Data Version
 
-\- 最後更新日期
+- 最後更新日期
 
 
 
@@ -812,19 +763,19 @@ GitHub Pages
 
 
 
-\- GitHub Repository
+- GitHub Repository
 
-\- 問題回報
+- 問題回報
 
-\- 更新紀錄
-
-
-
-\---
+- 更新紀錄
 
 
 
-\# 五、外部資源策略
+---
+
+
+
+# 五、外部資源策略
 
 
 
@@ -852,11 +803,11 @@ GitHub Pages
 
 
 
-\---
+---
 
 
 
-\# 六、資料架構
+# 六、資料架構
 
 
 
@@ -898,15 +849,15 @@ GitHub Pages
 
 
 
-\---
+---
 
 
 
-\# 七、開發階段
+# 七、開發階段
 
 
 
-\## Phase 1
+## Phase 1
 
 
 
@@ -914,15 +865,15 @@ GitHub Pages
 
 
 
-\- Campaign
+- Campaign
 
-\- Atlas
+- Atlas
 
-\- Farming
+- Farming
 
-\- Crafting
+- Crafting
 
-\- Valuable Items
+- Valuable Items
 
 
 
@@ -930,11 +881,11 @@ GitHub Pages
 
 
 
-\---
+---
 
 
 
-\## Phase 2
+## Phase 2
 
 
 
@@ -946,21 +897,21 @@ UI / UX
 
 
 
-\- RWD
+- RWD
 
-\- Dashboard
+- Dashboard
 
-\- Checklist
+- Checklist
 
-\- Navigation
-
-
-
-\---
+- Navigation
 
 
 
-\## Phase 3
+---
+
+
+
+## Phase 3
 
 
 
@@ -972,21 +923,21 @@ UI / UX
 
 
 
-\- LocalStorage
+- LocalStorage
 
-\- Progress Tracking
+- Progress Tracking
 
-\- JSON Import / Export
+- JSON Import / Export
 
-\- Theme
-
-
-
-\---
+- Theme
 
 
 
-\## Phase 4
+---
+
+
+
+## Phase 4
 
 
 
@@ -1006,23 +957,23 @@ GitHub Pages
 
 
 
-\- LocalStorage
+- LocalStorage
 
-\- RWD
+- RWD
 
-\- 外部連結
+- 外部連結
 
-\- 匯入／匯出
+- 匯入／匯出
 
-\- GitHub Action（如有）
-
-
-
-\---
+- GitHub Action（如有）
 
 
 
-\# 八、未來擴充（Future Features）
+---
+
+
+
+# 八、未來擴充（Future Features）
 
 
 
@@ -1030,21 +981,21 @@ GitHub Pages
 
 
 
-\- 多角色管理
+- 多角色管理
 
-\- 雲端同步
+- 雲端同步
 
-\- 帳號登入
+- 帳號登入
 
-\- Trade API
+- Trade API
 
-\- 市場價格
+- 市場價格
 
-\- 即時物價
+- 即時物價
 
-\- Build 模擬器
+- Build 模擬器
 
-\- 天賦計算機
+- 天賦計算機
 
 
 

@@ -1,6 +1,9 @@
 ---
-interface Props { title: string; }
-const { title } = Astro.props;
+import '../styles/atlas.css';
+
+interface Props { title: string; bodyClass?: string; }
+const { title, bodyClass } = Astro.props;
+const imageBase = `${import.meta.env.BASE_URL}images/`;
 ---
 
 <!doctype html>
@@ -8,7 +11,63 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet" />
+		<script is:inline src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+		<script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/lenis@1.3.25/dist/lenis.css" />
+		<script is:inline src="https://unpkg.com/lenis@1.3.25/dist/lenis.min.js"></script>
+		<script is:inline>
+			document.addEventListener('DOMContentLoaded', () => {
+				const scrollbar = document.querySelector('.site-scrollbar');
+				const thumb = document.querySelector('.site-scrollbar-thumb');
+				let frame = 0;
+				const updateScrollbar = () => {
+					frame = 0;
+					if (!scrollbar || !thumb) return;
+					const documentHeight = document.documentElement.scrollHeight;
+					const viewportHeight = window.innerHeight;
+					const maxScroll = documentHeight - viewportHeight;
+					const thumbHeight = Math.min(viewportHeight, Math.max(44, (viewportHeight / documentHeight) * viewportHeight));
+					const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
+					thumb.style.height = `${thumbHeight}px`;
+					thumb.style.transform = `translateY(${progress * (viewportHeight - thumbHeight)}px)`;
+				};
+				const requestScrollbarUpdate = () => {
+					if (!frame) frame = requestAnimationFrame(updateScrollbar);
+				};
+				window.addEventListener('scroll', requestScrollbarUpdate, { passive: true });
+				window.addEventListener('resize', requestScrollbarUpdate);
+				window.addEventListener('site-content-resize', requestScrollbarUpdate);
+				requestScrollbarUpdate();
+
+				if (!window.Lenis) return;
+				const lenis = new window.Lenis({ anchors: true, autoRaf: false, lerp: 0.1 });
+				const { gsap, ScrollTrigger } = window;
+				lenis.on('scroll', () => {
+					requestScrollbarUpdate();
+					ScrollTrigger?.update();
+				});
+				if (!gsap || !ScrollTrigger) return;
+				gsap.ticker.add((time) => lenis.raf(time * 1000));
+				gsap.ticker.lagSmoothing(0);
+				ScrollTrigger.refresh();
+			});
+		</script>
 		<title>{title}</title>
 	</head>
-	<body><slot /></body>
+	<body class:list={['site-body', bodyClass]}>
+		<div class="site-page">
+			<picture class="site-background" aria-hidden="true">
+				<source media="(max-width: 767px)" srcset={`${imageBase}poe2-mobile-767x1364-cropped.webp`} />
+				<source media="(max-width: 1439px)" srcset={`${imageBase}poe2-hero-1280x653.webp`} />
+				<img class="site-background-image h-lvh w-full object-cover" src={`${imageBase}poe2-hero-1920x980.webp`} alt="" />
+			</picture>
+			<div class="site-background-overlay" aria-hidden="true"></div>
+			<div class="site-content"><slot /></div>
+		</div>
+		<div class="site-scrollbar" aria-hidden="true"><div class="site-scrollbar-thumb"></div></div>
+	</body>
 </html>

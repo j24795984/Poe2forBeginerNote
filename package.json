@@ -9,7 +9,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "data:validate": "node scripts/validate-json-ids.mjs"
   },
   "dependencies": {
     "@astrojs/vue": "^7.0.1",

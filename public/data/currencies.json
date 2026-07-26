@@ -1,0 +1,9 @@
+{
+  "id": "currencies-document-001",
+  "idRegistry": { "nextSequence": 3, "retiredIds": [] },
+  "currencyIndex": {
+    "id": "currency-index-002",
+    "name": "POE2DB 可堆疊通貨列表",
+    "url": "https://poe2db.tw/tw/Stackable_Currency"
+  }
+}
