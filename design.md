@@ -78,6 +78,7 @@ Base tokens on `.site-body`:
 - Selecting an atlas category scrolls the viewport to the top, using smooth scrolling unless the user prefers reduced motion.
 - Atlas categories use copyable hash routes (for example, `/atlas/#league-mechanics`) without a document navigation. A click creates a browser-history entry; opening a category URL and browser back/forward restore the matching category.
 - The league-mechanics section uses one horizontal quick-navigation row. It can scroll horizontally on narrow screens; selecting a mechanism smoothly positions its sequential content block below the fixed top menu, unless the user prefers reduced motion.
+- Quick-navigation rows use the generic `.content-quick-nav` component classes. They can scroll horizontally on narrow screens; at the `42rem` container breakpoint they become sticky at `--top-menu-height + 1.5rem`, matching the left category navigation. Sticky rows use the card's deep black-to-blue treatment and a containment shadow so adjacent content cannot show through. The builds campaign card contains its quick navigation, `核心防禦機制`, and `裝備詞綴選擇【泛用】` as three sequential areas.
 - Keep the gold tokens for hover and keyboard focus; do not use the reference image’s orange-red palette.
 
 ## Atlas category navigation
@@ -130,7 +131,7 @@ animation: atlas-metal-shift 22s linear infinite;
 - Content cards have a translucent gradient exactly as follows:
 
 ```css
-background: linear-gradient(60deg, rgb(0 0 0 / .6) 20%, rgb(11 57 163 / 20%));
+background: linear-gradient(100deg, rgb(0 0 0 / .6) 20%, rgb(11 57 163 / 20%));
 ```
 
 - Card content stays above decoration with `z-index: 1`. Cards do not use `overflow: hidden`.
