@@ -8,6 +8,10 @@ astro dev --background
 
 Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
 
+## Published files
+
+Files or data that must be served, rendered, or otherwise presented to users must not use names beginning with an underscore (`_`). GitHub Pages' Jekyll processing omits underscore-prefixed paths unless explicitly disabled.
+
 ## Design baseline
 
 Before changing any page layout or UI visual style, read [`design.md`](design.md) in full. Treat it as the current approved design baseline, preserve its documented contracts unless the user explicitly changes them, and update it when an approved visual or interaction change alters that baseline.
