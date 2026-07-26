@@ -1,8 +1,8 @@
-name: Build and publish Astro site to gh-pages
+name: Build and publish Astro site to main
 
 on:
   push:
-    branches: [main]
+    branches: [creating-web]
   workflow_dispatch:
 
 permissions:
@@ -30,5 +30,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
+          publish_branch: main
           publish_dir: ./dist
+          force_orphan: true
