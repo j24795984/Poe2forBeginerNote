@@ -43,6 +43,10 @@ function refreshScrollbar() {
 	window.dispatchEvent(new Event('site-content-resize'));
 }
 
+function scrollToPageTop() {
+	window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+}
+
 function setSelectedCategory(id: string) {
 	const previousId = selectedId.value;
 	leavingId.value = previousId;
@@ -55,6 +59,7 @@ function setSelectedCategory(id: string) {
 
 function selectCategory(id: string) {
 	if (id === selectedId.value || isChanging.value) return;
+	scrollToPageTop();
 	const browserWindow = window as typeof window & { gsap?: Gsap };
 	const panel = detailPanel.value;
 	if (!panel || !browserWindow.gsap) {
@@ -125,7 +130,7 @@ onUnmounted(() => {
 			<ul class="atlas-category-nav-list m-0 list-none p-0">
 				<li v-for="category in atlasData.atlas.categories" :key="category.id">
 					<button class="atlas-accent-button atlas-category-button group flex min-h-14 w-full cursor-pointer items-center justify-between rounded-[8px] border border-stone-200/20 bg-black/45 px-4 py-3 text-left text-sm font-semibold text-stone-200 transition focus-visible:outline-2 focus-visible:outline-offset-2" :class="{ 'atlas-accent-selected text-stone-950': category.id === selectedId, 'atlas-accent-leaving': category.id === leavingId, 'hover:bg-stone-900/80 hover:text-stone-100': category.id !== selectedId && category.id !== leavingId }" type="button" :aria-pressed="category.id === selectedId" @click="selectCategory(category.id)">
-						<span>{{ category.name }}</span><span class="font-['Outfit'] text-xs opacity-60">0{{ atlasData.atlas.categories.indexOf(category) + 1 }}</span>
+						<span>{{ category.name }}</span><span class="font-english-body text-xs opacity-60">0{{ atlasData.atlas.categories.indexOf(category) + 1 }}</span>
 					</button>
 				</li>
 			</ul>
@@ -133,8 +138,8 @@ onUnmounted(() => {
 
 		<section ref="detailPanel" class="atlas-detail atlas-detail-motion" aria-live="polite">
 			<header class="atlas-intel-copy mb-7 grid gap-3 px-1 md:mb-9">
-				<p class="atlas-accent-bright-text font-['Outfit'] text-xs font-semibold">ATLAS INTEL</p>
-				<h2 class="font-['Outfit'] text-3xl font-bold text-stone-100 [text-wrap:pretty] md:text-4xl">{{ selectedCategory.name }}</h2>
+				<p class="atlas-accent-bright-text font-english-decorative text-xs font-semibold">ATLAS INTEL</p>
+				<h2 class="font-english-body text-3xl font-bold text-stone-100 [text-wrap:pretty] md:text-4xl">{{ selectedCategory.name }}</h2>
 				<p class="max-w-3xl text-base leading-8 text-stone-100 md:text-lg">{{ selectedCategory.summary }}</p>
 			</header>
 
@@ -142,19 +147,19 @@ onUnmounted(() => {
 				<li v-for="section in selectedCategory.sections" :key="section.id" class="atlas-content-card rounded-[8px] border border-stone-100/15 px-6 py-8 shadow-xl shadow-black/25 md:px-10 md:py-10">
 				<span class="atlas-content-card-ornament" :style="{ '--atlas-card-ornament': `url('${cardOrnamentUrl}')` }" aria-hidden="true"></span>
 				<article>
-				<h3 class="atlas-accent-text font-['Outfit'] text-2xl font-semibold tracking-[-.02em] md:text-3xl">{{ section.title }}</h3>
+					<h3 class="atlas-accent-text font-english-body text-2xl font-semibold tracking-[-.02em] md:text-3xl">{{ section.title }}</h3>
 				<p v-if="section.description" class="mt-4 max-w-4xl leading-8 text-stone-300">{{ section.description }}</p>
 				<ul v-if="section.bullets" class="atlas-accent-border-35 mt-6 grid gap-3 border-l pl-5 text-stone-300 md:max-w-4xl"><li v-for="item in section.bullets" :key="item.id" class="leading-7">{{ item.text }}</li></ul>
-				<ol v-if="section.steps" class="mt-6 grid gap-4 md:max-w-4xl"><li v-for="(step, index) in section.steps" :key="step.id" class="grid grid-cols-[2rem_1fr] gap-3 leading-7 text-stone-300"><span class="atlas-accent-text font-['Outfit'] text-lg font-bold">0{{ index + 1 }}</span><span>{{ step.text }}</span></li></ol>
-				<div v-if="section.table" class="mt-6 overflow-x-auto"><table class="w-full min-w-[38rem] border-collapse text-left text-sm"><thead class="atlas-accent-text font-['Outfit']"><tr><th v-for="header in section.table.headers" :key="header" scope="col" class="atlas-accent-border-20 border bg-stone-900 px-4 py-3 font-semibold">{{ header }}</th></tr></thead><tbody><tr v-for="(row, rowIndex) in section.table.rows" :key="rowIndex" class="odd:bg-stone-900/45"><td v-for="(cell, cellIndex) in row" :key="cellIndex" class="border border-stone-100/10 px-4 py-4 align-top leading-6 text-stone-300">{{ cell }}</td></tr></tbody></table></div>
+					<ol v-if="section.steps" class="mt-6 grid gap-4 md:max-w-4xl"><li v-for="(step, index) in section.steps" :key="step.id" class="grid grid-cols-[2rem_1fr] gap-3 leading-7 text-stone-300"><span class="atlas-accent-text font-english-body text-lg font-bold">0{{ index + 1 }}</span><span>{{ step.text }}</span></li></ol>
+					<div v-if="section.table" class="mt-6 overflow-x-auto"><table class="w-full min-w-[38rem] border-collapse text-left text-sm"><thead class="atlas-accent-text font-english-body"><tr><th v-for="header in section.table.headers" :key="header" scope="col" class="atlas-accent-border-20 border bg-stone-900 px-4 py-3 font-semibold">{{ header }}</th></tr></thead><tbody><tr v-for="(row, rowIndex) in section.table.rows" :key="rowIndex" class="odd:bg-stone-900/45"><td v-for="(cell, cellIndex) in row" :key="cellIndex" class="border border-stone-100/10 px-4 py-4 align-top leading-6 text-stone-300">{{ cell }}</td></tr></tbody></table></div>
 				</article>
 				</li>
 
 				<li v-if="selectedMechanics.length" class="atlas-content-card rounded-[8px] border border-stone-100/15 px-6 py-8 shadow-xl shadow-black/25 md:px-10 md:py-10">
 				<span class="atlas-content-card-ornament" :style="{ '--atlas-card-ornament': `url('${cardOrnamentUrl}')` }" aria-hidden="true"></span>
 			<section aria-labelledby="league-mechanics-heading">
-				<h3 id="league-mechanics-heading" class="atlas-accent-text font-['Outfit'] text-2xl font-semibold">目前聯盟機制</h3>
-				<ul class="mt-6 grid gap-px border border-stone-100/10 bg-stone-100/10 md:grid-cols-2"><li v-for="mechanic in selectedMechanics" :key="mechanic.id" class="bg-black/30 px-5 py-4 text-stone-300"><strong class="atlas-accent-text font-['Outfit']">{{ mechanic.name }}</strong><span> — {{ mechanic.summary }}</span></li></ul>
+					<h3 id="league-mechanics-heading" class="atlas-accent-text font-english-body text-2xl font-semibold">目前聯盟機制</h3>
+					<ul class="mt-6 grid gap-px border border-stone-100/10 bg-stone-100/10 md:grid-cols-2"><li v-for="mechanic in selectedMechanics" :key="mechanic.id" class="bg-black/30 px-5 py-4 text-stone-300"><strong class="atlas-accent-text font-english-body">{{ mechanic.name }}</strong><span> — {{ mechanic.summary }}</span></li></ul>
 			</section>
 				</li>
 			</ul>

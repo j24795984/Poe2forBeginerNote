@@ -6,25 +6,26 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title="輿圖｜POE2 新手筆記" bodyClass="atlas-body">
-	<main class="relative overflow-x-clip pb-12 font-['Noto_Sans_TC'] text-stone-100">
-		<nav class="atlas-motion-hero mx-auto flex w-full max-w-[1470px] items-center justify-between px-5 py-5 md:px-8" aria-label="主要導覽">
-			<a class="atlas-accent-link font-['Outfit'] text-sm font-semibold tracking-[0.16em] transition" href={`${base}`}>POE2 BEGINNER NOTE</a>
-			<a class="atlas-accent-button atlas-accent-border-25 atlas-accent-text border bg-black/35 px-4 py-2 text-sm transition hover:bg-black/60 focus-visible:outline-2 focus-visible:outline-offset-2" href={`${base}`}>返回首頁</a>
-		</nav>
+	<main class="relative overflow-x-clip pb-12 text-stone-100">
+		<div class="global-px-box">
+			<header class="atlas-motion-hero base-container pt-8 md:pt-12">
+				<h1 class="atlas-page-title font-english-body text-3xl font-bold text-stone-100 md:text-5xl">輿圖 - 目標與明</h1>
+			</header>
+		</div>
 
-		<header class="atlas-motion-hero mx-auto w-full max-w-[1470px] px-5 pt-8 md:px-8 md:pt-12">
-			<h1 class="atlas-page-title font-['Outfit'] text-3xl font-bold text-stone-100 md:text-5xl">輿圖 - 目標與明</h1>
-		</header>
+		<div class="global-px-box">
+			<section id="atlas-content" class="atlas-scroll-reveal base-container py-8 md:py-12">
+				<AtlasCategoryTabs client:load />
+			</section>
+		</div>
 
-		<section id="atlas-content" class="atlas-scroll-reveal mx-auto w-full max-w-[1470px] px-5 py-8 md:px-8 md:py-12">
-			<AtlasCategoryTabs client:load />
-		</section>
-
-		<footer id="atlas-scope" class="atlas-scroll-reveal atlas-accent-border-15 mx-auto w-full max-w-[1470px] border-t px-5 py-10 md:px-8">
-			<div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-				<p class="max-w-xl text-sm leading-7 text-stone-400">本頁內容依據本專案維護的 `atlas.json` 顯示；尚未整理的分類會明確標示為待補內容。</p>
-				<a class="atlas-accent-link font-['Outfit'] text-sm font-semibold tracking-[0.14em] transition" href={`${base}`}>回到起點</a>
-			</div>
-		</footer>
+		<div class="global-px-box">
+			<footer id="atlas-scope" class="atlas-scroll-reveal atlas-accent-border-15 base-container border-t py-10">
+				<div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+					<p class="max-w-xl text-sm leading-7 text-stone-400">本頁內容依據本專案維護的 `atlas.json` 顯示；尚未整理的分類會明確標示為待補內容。</p>
+					<a class="atlas-accent-link font-english-body text-sm font-semibold tracking-[0.14em] transition" href={`${base}`}>回到起點</a>
+				</div>
+			</footer>
+		</div>
 	</main>
 </BaseLayout>

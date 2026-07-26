@@ -6,6 +6,32 @@
   min-height: 100vh;
   margin: 0;
   background: #050608;
+  font-family: 'Ramabhadra', 'Noto Sans TC', sans-serif;
+}
+
+.font-english-body { font-family: 'Ramabhadra', 'Noto Sans TC', sans-serif; }
+.font-english-decorative { font-family: 'Lobster Two', 'Noto Sans TC', cursive; }
+
+/* Google Material Symbols: use ligature names such as "menu" or "settings". */
+.material-symbols-outlined {
+  font-size: 24px;
+  line-height: 1;
+  vertical-align: middle;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.global-px-box {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  padding-inline: 1.25rem;
+}
+
+.base-container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
 }
 
 html {
@@ -26,7 +52,9 @@ html::-webkit-scrollbar {
   width: .35rem;
   overflow: hidden;
   border-radius: 999px;
-  background: rgb(0 0 0 / .22);
+  background: rgb(255 255 255 / .08);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   pointer-events: none;
 }
 
@@ -34,8 +62,8 @@ html::-webkit-scrollbar {
   width: 100%;
   min-height: 44px;
   border-radius: inherit;
-  background: var(--atlas-yellow);
-  box-shadow: 0 0 10px color-mix(in oklab, var(--atlas-yellow) 28%, transparent);
+  background: rgb(255 255 255 / .3);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .42), 0 2px 8px rgb(0 0 0 / .22);
   will-change: transform;
 }
 
@@ -208,6 +236,164 @@ html::-webkit-scrollbar {
 .atlas-accent-button:focus-visible { outline-color: var(--atlas-yellow) !important; }
 .atlas-accent-button:hover { border-color: var(--atlas-yellow) !important; }
 
+.top-menu-glass {
+  min-height: 4rem;
+  border: 1px solid rgb(245 245 244 / .15);
+  border-radius: 99999px;
+  background: linear-gradient(112deg, rgb(8 18 31 / .76), rgb(6 17 29 / .53) 58%, rgb(28 46 62 / .63));
+  background-color: rgb(7 17 29 / .68);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .28), 0 16px 40px rgb(0 0 0 / .34);
+  -webkit-backdrop-filter: blur(10px) saturate(118%);
+  backdrop-filter: blur(10px) saturate(118%);
+  transform: translateZ(0);
+}
+
+.top-menu {
+  position: fixed;
+  z-index: 40;
+  top: 0;
+  right: 0;
+  left: 0;
+  font-family: 'Ramabhadra', 'Noto Sans TC', sans-serif;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.top-menu-spacer {
+  min-height: 6.5rem;
+}
+
+.top-menu-brand,
+.top-menu-link {
+  color: rgb(239 242 246);
+  text-decoration: none;
+}
+
+.top-menu-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .65rem;
+  white-space: nowrap;
+}
+
+.top-menu-logo {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.top-menu-primary-links {
+  display: flex;
+  gap: .15rem;
+}
+
+.top-menu-link,
+.top-menu-toggle {
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: rgb(226 232 240);
+  cursor: pointer;
+  font: inherit;
+  padding: .5rem .7rem;
+  text-shadow: none;
+  transition: box-shadow .28s cubic-bezier(.22, .8, .25, 1), color .28s ease, text-shadow .28s ease;
+}
+
+.top-menu-link::before,
+.top-menu-toggle::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: repeating-linear-gradient(160deg, rgb(255 255 255 / .025) 0 1px, transparent 1px 4px), linear-gradient(160deg, rgb(5 15 27 / .52), rgb(37 57 74 / .33) 50%, rgb(104 126 143 / .3) 74%, rgb(151 169 181 / .35));
+  background-blend-mode: soft-light, normal;
+  -webkit-backdrop-filter: blur(4px) saturate(108%);
+  backdrop-filter: blur(4px) saturate(108%);
+  content: '';
+  opacity: 0;
+  transition: opacity .28s cubic-bezier(.22, .8, .25, 1);
+}
+
+.top-menu-link:hover,
+.top-menu-toggle:hover,
+.top-menu-more[open] .top-menu-toggle {
+  box-shadow: inset 2px 2px 4px rgb(0 0 0 / .52), inset -1px -1px 2px rgb(255 255 255 / .12), 0 2px 3px rgb(0 0 0 / .28), 0 -1px 2px rgb(0 0 0 / .2);
+  color: rgb(226 232 240);
+  text-shadow: 2px 3px 3px rgb(0 0 0 / .72), 4px 5px 8px rgb(0 0 0 / .46);
+}
+
+.top-menu-link:hover::before,
+.top-menu-toggle:hover::before,
+.top-menu-more[open] .top-menu-toggle::before {
+  opacity: 1;
+}
+
+.top-menu-link:focus-visible,
+.top-menu-toggle:focus-visible,
+.top-menu-brand:focus-visible {
+  outline: 2px solid var(--atlas-yellow);
+  outline-offset: 3px;
+}
+
+.top-menu-more {
+  position: relative;
+}
+
+.top-menu-toggle {
+  list-style: none;
+  width: 2.5rem;
+  padding: .5rem;
+}
+
+.top-menu-toggle::-webkit-details-marker { display: none; }
+.top-menu-toggle::marker { content: ''; }
+
+.top-menu-toggle svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-width: 1.7;
+}
+
+.top-menu-dropdown {
+  position: absolute;
+  z-index: 20;
+  top: calc(100% + .65rem);
+  right: 0;
+  display: grid;
+  min-width: 9.5rem;
+  gap: .2rem;
+  border: 1px solid rgb(229 236 247 / .38);
+  border-radius: 12px;
+  background: linear-gradient(140deg, rgb(10 21 35 / .94), rgb(5 14 25 / .9));
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .2), 0 16px 32px rgb(0 0 0 / .4);
+  padding: .35rem;
+  backdrop-filter: blur(18px) saturate(118%);
+}
+
+.top-menu-dropdown .top-menu-link {
+  justify-content: flex-start;
+  white-space: nowrap;
+}
+
+.top-menu-mobile-links {
+  display: none;
+  border-bottom: 1px solid rgb(229 236 247 / .18);
+  margin-bottom: .2rem;
+  padding-bottom: .2rem;
+}
+
 @container atlas-content (min-width: 42rem) {
   .atlas-workspace {
     grid-template-columns: minmax(13rem, 15rem) minmax(0, 1fr);
@@ -232,6 +418,15 @@ html::-webkit-scrollbar {
 @media (max-width: 767px) {
   .site-background-image { object-position: 62% top; }
   .site-scrollbar { right: .2rem; width: .25rem; }
+  .top-menu-primary-links { display: none; }
+  .top-menu-logo { width: 32px; height: 32px; }
+  .top-menu-mobile-links { display: grid; }
+  .top-menu-dropdown { min-width: min(16rem, calc(100vw - 2.5rem)); }
+  .top-menu-dropdown .top-menu-link { min-height: 2.75rem; }
+}
+
+@media (min-width: 768px) {
+  .global-px-box { padding-inline: 2rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {

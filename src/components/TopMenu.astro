@@ -1,0 +1,123 @@
+---
+const base = import.meta.env.BASE_URL;
+const primaryLinks = [
+	{ href: 'builds/', label: '拓荒與流派' },
+	{ href: 'campaign/', label: '主線' },
+	{ href: 'atlas/', label: '輿圖' },
+	{ href: 'farming/', label: '賺錢' },
+	{ href: 'crafting/', label: '做裝' },
+	{ href: 'valuable-items/', label: '高價值物品' },
+];
+const utilityLinks = [
+	{ href: 'tools/', label: '工具' },
+	{ href: 'settings/', label: '設定' },
+];
+---
+
+	<div class="top-menu-spacer" data-top-menu-spacer aria-hidden="true"></div>
+	<nav class="top-menu" data-top-menu aria-label="主要導覽">
+		<div class="global-px-box py-5">
+			<div class="base-container">
+				<div class="top-menu-glass flex w-full items-center gap-3 px-6 py-3">
+					<a class="top-menu-brand font-english-body text-sm font-semibold transition" href={base}>
+						<img class="top-menu-logo" src={`${base}images/logo.webp`} width="48" height="48" alt="" />
+						POE2 BEGINNER NOTE
+					</a>
+
+					<div class="top-menu-actions ml-auto flex items-center gap-1">
+						<div class="top-menu-primary-links items-center">
+							{primaryLinks.map(({ href, label }) => <a class="top-menu-link" href={`${base}${href}`}>{label}</a>)}
+						</div>
+
+						<details class="top-menu-more">
+							<summary class="top-menu-toggle" aria-label="開啟更多導覽選項">
+								<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+							</summary>
+							<div class="top-menu-dropdown">
+								<div class="top-menu-mobile-links">
+									{primaryLinks.map(({ href, label }) => <a class="top-menu-link" href={`${base}${href}`}>{label}</a>)}
+								</div>
+								{utilityLinks.map(({ href, label }) => <a class="top-menu-link" href={`${base}${href}`}>{label}</a>)}
+							</div>
+						</details>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<script is:inline>
+		document.addEventListener('DOMContentLoaded', () => {
+			const menu = document.querySelector('[data-top-menu]');
+			const spacer = document.querySelector('[data-top-menu-spacer]');
+			if (!menu || !spacer) return;
+
+			const threshold = 12;
+			let menuHeight = 0;
+			let hiddenDistance = 0;
+			let renderedDistance = 0;
+			let pendingDistance = 0;
+			let pendingDirection = 0;
+			let previousScroll = Math.max(0, window.scrollY);
+			let frame;
+			const scheduleFrame = window.requestAnimationFrame?.bind(window) ?? ((callback) => window.setTimeout(callback, 16));
+
+			const applyTransform = () => {
+				menu.style.transform = `translate3d(0, ${-renderedDistance}px, 0)`;
+			};
+			const render = () => {
+				const difference = hiddenDistance - renderedDistance;
+				if (Math.abs(difference) < 0.2) {
+					renderedDistance = hiddenDistance;
+					frame = undefined;
+					applyTransform();
+					return;
+				}
+				renderedDistance += difference * 0.24;
+				applyTransform();
+				frame = scheduleFrame(render);
+			};
+			const requestRender = () => {
+				if (frame !== undefined) return;
+				frame = scheduleFrame(render);
+			};
+			const syncMenuHeight = () => {
+				menuHeight = menu.offsetHeight;
+				spacer.style.height = `${menuHeight}px`;
+				hiddenDistance = Math.min(hiddenDistance, menuHeight);
+				renderedDistance = Math.min(renderedDistance, menuHeight);
+				applyTransform();
+			};
+			const updateMenu = (scroll) => {
+				const currentScroll = Math.max(0, scroll);
+				const delta = currentScroll - previousScroll;
+				previousScroll = currentScroll;
+				if (currentScroll === 0) {
+					hiddenDistance = 0;
+					pendingDistance = 0;
+					requestRender();
+					return;
+				}
+				if (!delta) return;
+
+				const direction = Math.sign(delta);
+				if (direction !== pendingDirection) {
+					pendingDirection = direction;
+					pendingDistance = 0;
+				}
+				pendingDistance += delta;
+				if (Math.abs(pendingDistance) < threshold) return;
+
+				hiddenDistance = Math.min(menuHeight, Math.max(0, hiddenDistance + pendingDistance));
+				pendingDistance = 0;
+				requestRender();
+			};
+			const requestUpdate = () => updateMenu(window.scrollY);
+
+			syncMenuHeight();
+			window.addEventListener('scroll', requestUpdate, { passive: true });
+			document.addEventListener('scroll', requestUpdate, { passive: true });
+			window.addEventListener('resize', syncMenuHeight);
+			if ('ResizeObserver' in window) new ResizeObserver(syncMenuHeight).observe(menu);
+		});
+	</script>
