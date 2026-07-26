@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build and Push"
+  short_description: "Build and deploy the site to GitHub Pages."
+  default_prompt: "Use $build-and-push to update the website."

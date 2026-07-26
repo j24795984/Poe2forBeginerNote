@@ -1,8 +1,6 @@
-name: Build and publish Astro site to main
+name: Build and publish Astro site to main (manual)
 
 on:
-  push:
-    branches: [creating-web]
   workflow_dispatch:
 
 permissions:
