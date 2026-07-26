@@ -21,6 +21,7 @@ Project-local design skills are installed under `.agents/skills/` and should be 
 - `gsap-core`, `gsap-frameworks`, `gsap-performance`, `gsap-plugins`, `gsap-react`, `gsap-scrolltrigger`, `gsap-timeline`, and `gsap-utils` — use the relevant GSAP skill for animation implementation, framework integration, plugins, timelines, ScrollTrigger, utilities, or performance work.
 - `design-reference-library` — use to select one bundled DESIGN.md reference before a substantial visual design or redesign; adapt principles rather than copying a brand identity.
 - `karpathy-guidelines` — use for non-trivial coding work to keep scope explicit, solutions simple, edits surgical, and success criteria verifiable.
+- `build-and-push` — use only when the user explicitly requests updating the website or GitHub Pages; it publishes compiled files from `creating-web` to `main`.
 
 For a substantial visual frontend task, load `web-design-engineer` first to establish the product context and design direction, then `design-reference-library` if a reference style is useful, then `gpt-taste` for implementation detail. Load only the GSAP skills needed for the requested animation. Do not load visual design skills for non-visual backend, data-processing, or pure-logic tasks.
 
