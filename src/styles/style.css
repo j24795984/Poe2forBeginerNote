@@ -170,6 +170,59 @@ html::-webkit-scrollbar {
   z-index: 1;
 }
 
+.atlas-league-nav {
+  position: relative;
+  z-index: 1;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255 255 255 / .3) transparent;
+}
+
+.atlas-league-nav-list {
+  display: flex;
+  min-width: max-content;
+  gap: .5rem;
+  border-bottom: 1px solid rgb(245 245 244 / .18);
+  padding-bottom: .65rem;
+}
+
+.atlas-league-nav-button {
+  min-height: 2.75rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: rgb(0 0 0 / .28);
+  color: rgb(226 232 240);
+  cursor: pointer;
+  font: inherit;
+  padding: .55rem 1rem;
+  transition: background-color .24s ease, border-color .24s ease, color .24s ease, box-shadow .24s ease;
+}
+
+.atlas-league-nav-button:hover {
+  border-color: color-mix(in oklab, var(--atlas-yellow) 42%, transparent);
+  background: rgb(255 255 255 / .08);
+  color: var(--atlas-yellow-bright);
+}
+
+.atlas-league-nav-button:focus-visible {
+  outline: 2px solid var(--atlas-yellow);
+  outline-offset: 3px;
+}
+
+.atlas-league-mechanic-list {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 1px;
+  border: 1px solid rgb(245 245 244 / .13);
+  background: rgb(245 245 244 / .1);
+}
+
+.atlas-league-mechanic {
+  scroll-margin-top: 8rem;
+  background: rgb(0 0 0 / .28);
+}
+
 .atlas-accent-text { color: var(--atlas-yellow) !important; }
 .atlas-accent-border { border-color: var(--atlas-yellow) !important; }
 .atlas-accent-border-15 { border-color: color-mix(in oklab, var(--atlas-yellow) 15%, transparent) !important; }
@@ -403,7 +456,7 @@ html::-webkit-scrollbar {
 
   .atlas-category-nav {
     position: sticky;
-    top: 1.5rem;
+    top: calc(var(--top-menu-height, 6.5rem) + 1.5rem);
   }
 
   .atlas-category-nav-list {

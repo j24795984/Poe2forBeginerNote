@@ -1,7 +1,7 @@
 {
   "id": "atlas-document-001",
   "idRegistry": {
-    "nextSequence": 35,
+    "nextSequence": 58,
     "retiredIds": []
   },
   "atlas": {
@@ -9,84 +9,156 @@
     "categories": [
       {
         "id": "atlas-category-003",
-        "name": "初入輿圖",
-        "summary": "城牆與起源高塔是初期累積輿圖天賦的優先目標。",
+        "slug": "initial-atlas",
+        "name": "初始拓圖",
+        "summary": "以起源高塔取得天賦點數，並優先建立換界石與怪物密度相關的輿圖基礎。",
         "sections": [
           {
             "id": "atlas-section-004",
             "title": "城牆與起源高塔",
             "steps": [
-              { "id": "atlas-step-005", "text": "優先攻略起源高塔以取得輿圖天賦點數；完成後約可取得 150 點。" },
-              { "id": "atlas-step-006", "text": "剩餘天賦點可由牆內的輿圖取得，或購買原初搖籃／原初光輝並挑戰 Boss 快速取得。起源高塔可通往先行者反應爐。" }
+              { "id": "atlas-step-005", "text": "透過打起源高塔（優先）獲得輿圖天賦點數，打完約有 150 點。" },
+              { "id": "atlas-step-006", "text": "剩下的天賦點可透過打圖（牆內的輿圖才有天賦點），或購買原初搖籃／原初光輝打 Boss 快速獲得。起源高塔可通往先行者反應爐。" },
+              { "id": "atlas-step-007", "text": "前期優先點換界石、怪物稀有度與怪物數量相關點數；中後期再考慮精髓、保險箱等其他機制。" },
+              { "id": "atlas-step-008", "text": "後期若要專攻特定地形，再點地形加成天賦點。" },
+              { "id": "atlas-step-009", "text": "二代神殿目前偏弱，不需要優先投資。" }
             ]
           },
           {
-            "id": "atlas-section-007",
+            "id": "atlas-section-010",
             "title": "前期天賦優先順序",
             "bullets": [
-              { "id": "atlas-bullet-008", "text": "前期優先：換界石、怪物稀有度、怪物數量相關天賦。" },
-              { "id": "atlas-bullet-009", "text": "建議順序：換界石 > 召喚法陣 > 稀有／傳奇怪 > 怪物數量 > 精隨。" },
-              { "id": "atlas-bullet-010", "text": "中後期再考慮精隨、保險箱等其他聯盟機制。" }
-            ]
-          },
-          {
-            "id": "atlas-section-011",
-            "title": "後期調整",
-            "bullets": [
-              { "id": "atlas-bullet-012", "text": "若要專攻特定地形，再投入地形加成天賦。" },
-              { "id": "atlas-bullet-013", "text": "二代神殿目前不需要優先投入天賦。" }
+              { "id": "atlas-bullet-011", "text": "換界石 ＞ 召喚法陣 ＞ 稀有／傳奇怪 ＞ 怪物數量 ＞ 精髓。" },
+              { "id": "atlas-bullet-012", "text": "過路點不重要，甚至不需要打所有機制；核心是找路途中的機制地形，專心打聯盟機制。" },
+              { "id": "atlas-bullet-013", "text": "跑圖可放不主要打的機制碑牌，或不需要特別處理的碑牌，例如瞻望。" }
             ]
           }
         ]
       },
-      { "id": "atlas-category-022", "name": "換界石", "summary": "換界石內容待補。", "sections": [{ "id": "atlas-section-023", "title": "換界石", "description": "後續將補上取得、詞綴與使用策略。" }] },
       {
         "id": "atlas-category-014",
-        "name": "碑牌",
-        "summary": "碑牌用於調整高塔周邊輿圖的聯盟機制與獎勵。",
+        "slug": "waystones",
+        "name": "換界石",
+        "summary": "先確保能打，再以換界石掉落率與目標收益決定地圖用途。",
         "sections": [
           {
             "id": "atlas-section-015",
-            "title": "已整理的碑牌種類",
+            "title": "基本處理",
             "bullets": [
-              { "id": "atlas-bullet-016", "text": "照耀碑牌：地圖等級 +1。" },
-              { "id": "atlas-bullet-017", "text": "總督碑牌：強化王。" }
+              { "id": "atlas-bullet-016", "text": "基本順序：點金 ＞ 崇高（＞ 混沌）＞ 瓦爾（拚 T16）。" },
+              { "id": "atlas-bullet-017", "text": "點金後，只挑換界石掉落率大於 65% 的圖。" },
+              { "id": "atlas-bullet-018", "text": "確認是否有打不了的詞墜，例如 ES 流派的減少 ES 回復率，或血量流派無法主動回復等。" }
             ]
           },
           {
-            "id": "atlas-section-018",
-            "title": "三碑牌配置",
-            "steps": [
-              { "id": "atlas-step-019", "text": "放入想打的兩個機制，加上一張照耀碑牌。" },
-              { "id": "atlas-step-020", "text": "放入三張相同碑牌時，只會出現該聯盟機制。" }
+            "id": "atlas-section-019",
+            "title": "地圖用途",
+            "bullets": [
+              { "id": "atlas-bullet-020", "text": "換界石掉落率大於 100% 的圖：優先打王。" },
+              { "id": "atlas-bullet-021", "text": "怪群稀有度高、物品稀有度高的圖：用於掉落特定道具。" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "atlas-category-022",
+        "slug": "tablets",
+        "name": "碑牌",
+        "summary": "碑牌以前墜的泛用強度為底，後墜依聯盟機制選擇；最頂的留給大事件使用。",
+        "sections": [
+          {
+            "id": "atlas-section-023",
+            "title": "碑牌種類與配置",
+            "bullets": [
+              { "id": "atlas-bullet-024", "text": "照耀碑牌：地圖等級 +1。" },
+              { "id": "atlas-bullet-025", "text": "總督碑牌：強化王。" },
+              { "id": "atlas-bullet-026", "text": "三碑牌配置：放想打的兩個機制，加上一張照耀碑牌。" },
+              { "id": "atlas-bullet-027", "text": "三張相同碑牌：只會出現該聯盟機制。" }
             ]
           },
           {
-            "id": "atlas-section-021",
-            "title": "詞墜挑選",
-            "description": "前墜大多通用，核心優先挑選與聯盟機制相符的後墜；最好的碑牌留給大事件。",
+            "id": "atlas-section-028",
+            "title": "碑牌詞墜挑選",
+            "description": "前墜大多通用，核心挑選與機制相符的後墜；最頂的碑牌留給大事件。",
             "table": {
               "headers": ["碑牌", "前墜", "後墜"],
               "rows": [
                 ["通用", "怪物群大小、稀有怪數量、物品稀有度、怪物效用", ""],
                 ["祭祀", "", "額外貢禮、減少貢禮消耗、增加玉照獎勵機率"],
-                ["深淵", "", "無盡深淵（大事件幾乎都有，留給小事件）"]
+                ["深淵", "", "無盡深淵（大事件幾乎都會有，留給小事件）"]
               ]
             }
           }
         ]
       },
-      { "id": "atlas-category-026", "name": "聯盟機制", "summary": "目前已記錄的聯盟機制如下。", "sections": [], "leagueMechanicIds": ["league-ritual-028", "league-abyss-029", "league-breach-030", "league-delirium-031", "league-simulacrum-032", "league-vaal-033"] },
-      { "id": "atlas-category-024", "name": "掉落／養圖", "summary": "掉落與養圖內容待補。", "sections": [{ "id": "atlas-section-025", "title": "掉落／養圖", "description": "後續將補上地圖續航與掉落策略。" }] },
-      { "id": "atlas-category-027", "name": "地形", "summary": "地形內容待補。", "sections": [{ "id": "atlas-section-034", "title": "地形", "description": "後期將補上特定地形與對應天賦策略。" }] }
+      {
+        "id": "atlas-category-029",
+        "slug": "league-mechanics",
+        "name": "聯盟機制",
+        "summary": "挑選好賺錢、有興趣、且適合自己機體的機制即可；可同時打兩種不互相卡到的機制。",
+        "sections": [
+          {
+            "id": "atlas-section-030",
+            "title": "機制選擇",
+            "bullets": [
+              { "id": "atlas-bullet-031", "text": "優先順序：祭祀／深淵／裂痕 ＞ 炸墳 ＞ 瓦爾。" },
+              { "id": "atlas-bullet-032", "text": "可以一次打兩種機制，盡量以不會互相卡到為主。" }
+            ]
+          }
+        ],
+        "leagueMechanicIds": ["league-ritual-052", "league-abyss-053", "league-breach-054", "league-expedition-055", "league-vaal-056", "league-delirium-057"]
+      },
+      {
+        "id": "atlas-category-033",
+        "slug": "drops-and-sustain",
+        "name": "掉落／養圖",
+        "summary": "以地圖難度與換界石掉落率，判斷哪些機制、城市與門票值得投入。",
+        "sections": [
+          {
+            "id": "atlas-section-034",
+            "title": "掉落與感染",
+            "bullets": [
+              { "id": "atlas-bullet-035", "text": "物品稀有度取決於地圖難度（強度）。" },
+              { "id": "atlas-bullet-036", "text": "各機制分為大事件與小事件；大事件例如區域內含有多個深淵，較高機率感染周圍輿圖成為相同機制。" },
+              { "id": "atlas-bullet-037", "text": "小事件只有約 5% 機率感染周圍輿圖。" }
+            ]
+          },
+          {
+            "id": "atlas-section-038",
+            "title": "值得打的點",
+            "bullets": [
+              { "id": "atlas-bullet-039", "text": "各機制地形。" },
+              { "id": "atlas-bullet-040", "text": "被各機制影響的城市：配合輿圖天賦與機制碑牌。" },
+              { "id": "atlas-bullet-041", "text": "發光點：原初搖籃、原初光輝、風化遺跡等門票。" },
+              { "id": "atlas-bullet-042", "text": "各門票掉落也受換界石掉落率影響，有機會掉複數門票；盡可能使用高掉落率換界石，100% 以上甚至 120% 以上。" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "atlas-category-043",
+        "slug": "terrain",
+        "name": "地形",
+        "summary": "針對要專攻的地形，再投入對應的地形加成天賦。",
+        "sections": [
+          {
+            "id": "atlas-section-044",
+            "title": "地形投資",
+            "bullets": [
+              { "id": "atlas-bullet-045", "text": "後期若要專攻特定地形，再點地形加成天賦。" },
+              { "id": "atlas-bullet-046", "text": "優先選擇路途中的機制地形，配合聯盟機制與碑牌規劃。" }
+            ]
+          }
+        ]
+      }
     ]
   },
   "leagueMechanics": [
-    { "id": "league-ritual-028", "name": "祭祀", "summary": "聯盟機制內容待補。" },
-    { "id": "league-abyss-029", "name": "深淵", "summary": "聯盟機制內容待補。" },
-    { "id": "league-breach-030", "name": "裂痕", "summary": "聯盟機制內容待補。" },
-    { "id": "league-delirium-031", "name": "瞻望", "summary": "聯盟機制內容待補。" },
-    { "id": "league-simulacrum-032", "name": "金司馬（死境）", "summary": "聯盟機制內容待補。" },
-    { "id": "league-vaal-033", "name": "瓦爾（阿茲里）", "summary": "聯盟機制內容待補。" }
+    { "id": "league-ritual-052", "name": "祭祀", "summary": "打完後在城市周邊點大機制，配合輿圖天賦可以多放一個碑牌。" },
+    { "id": "league-abyss-053", "name": "深淵", "summary": "內容待補。" },
+    { "id": "league-breach-054", "name": "裂痕", "summary": "內容待補。" },
+    { "id": "league-expedition-055", "name": "炸墳", "summary": "內容待補。" },
+    { "id": "league-vaal-056", "name": "瓦爾", "summary": "內容待補。" },
+    { "id": "league-delirium-057", "name": "瞻望", "summary": "可作為跑圖時不主要打、也不需要特別處理的機制碑牌選擇。" }
   ]
 }

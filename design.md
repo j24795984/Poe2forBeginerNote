@@ -27,13 +27,14 @@ This document records the approved visual and interaction baseline for the curre
 - The image is not globally darkened or blurred. On phone the image position is `62% top`.
 - The browser’s native scrollbar is hidden. `BaseLayout.astro` renders a fixed glass scrollbar that overlays the viewport and must not consume content width: its thumb is white at 30% opacity and its track uses a `10px` blur. Vue dispatches `site-content-resize` after atlas data/content changes so its thumb length is recalculated.
 - Lenis is enabled globally from CDN for smooth scrolling. GSAP and ScrollTrigger are also loaded from CDN.
+- Programmatic viewport positioning must dispatch the shared `site-scroll-to` event instead of calling native `window.scrollTo()` directly. `BaseLayout.astro` routes this event through Lenis, preventing competing scroll controllers from making smooth navigation intermittent. Respect `prefers-reduced-motion` by requesting the event's non-smooth behaviour.
 
 ## Layout and responsive rules
 
 - Global page containers use `div.global-px-box > div.base-container`. `.global-px-box` provides a full-width box with `20px` horizontal padding, growing to `32px` from the medium breakpoint; `.base-container` provides the centred `max-width: 1440px` content area. Use these shared CSS classes instead of repeating equivalent page-level utility strings. Future width/padding variants follow the same two-role naming pattern (for example, `global-large-px-box` and `full-container`).
 - The atlas workspace is a named inline-size container: `atlas-content`.
 - Below container width `42rem`, categories appear as a two-column grid above the detail content.
-- From `42rem`, the workspace uses a two-column layout: a `13rem–15rem` left navigation and a fluid detail area. The navigation is sticky with `top: 1.5rem`.
+- From `42rem`, the workspace uses a two-column layout: a `13rem–15rem` left navigation and a fluid detail area. The navigation is sticky below the measured top-menu height, with an additional `1.5rem` gap; this preserves clearance when the fixed menu reappears during upward scrolling.
 - Main workspace gap: `2rem`, growing to `clamp(2rem, 4cqw, 4rem)` at the container query.
 - Navigation item gap: `12px`.
 - Detail cards use `28px` separation, increasing to `32px` from the medium breakpoint.
@@ -75,6 +76,8 @@ Base tokens on `.site-body`:
 - The top menu is fixed and keeps an equal-height layout spacer. A native passive scroll listener tracks scroll distance independently of external CDN scripts: after a `12px` same-direction threshold, downward scrolling increases its negative Y transform and upward scrolling reduces it. The value is clamped from `0` to the menu’s measured height, so it cannot move farther than the menu itself. Rendering is coalesced to animation frames and interpolates 24% toward its target on each frame; do not restore timer-based polling.
 - The top menu does not use the atlas content entrance animation, so its functional scroll transform cannot conflict with page animation transforms.
 - Selecting an atlas category scrolls the viewport to the top, using smooth scrolling unless the user prefers reduced motion.
+- Atlas categories use copyable hash routes (for example, `/atlas/#league-mechanics`) without a document navigation. A click creates a browser-history entry; opening a category URL and browser back/forward restore the matching category.
+- The league-mechanics section uses one horizontal quick-navigation row. It can scroll horizontally on narrow screens; selecting a mechanism smoothly positions its sequential content block below the fixed top menu, unless the user prefers reduced motion.
 - Keep the gold tokens for hover and keyboard focus; do not use the reference image’s orange-red palette.
 
 ## Atlas category navigation
@@ -162,4 +165,5 @@ Before completing a visual change:
 3. Preserve content/readability over the undimmed global background.
 4. For interactive visual changes, retain button focus states and ensure decorative layers use `pointer-events: none`.
 5. Update this document when the approved baseline changes.
-6. Run `npm run build` after source changes.
+6. For any programmatic scroll interaction, verify it in Chrome after scrolling down: test both changing to another item and clicking the currently selected item again. Both must reach their intended position reliably; smooth motion must defer to the user's reduced-motion preference.
+7. Run `npm run build` after source changes.

@@ -51,6 +51,16 @@ const imageBase = `${import.meta.env.BASE_URL}images/`;
 
 				if (!window.Lenis) return;
 				const lenis = new window.Lenis({ anchors: true, autoRaf: false, lerp: 0.1 });
+				window.addEventListener('site-scroll-to', (event) => {
+					const detail = event instanceof CustomEvent ? event.detail : null;
+					if (!detail || typeof detail.top !== 'number') return;
+					const isInstant = detail.behavior !== 'smooth';
+					lenis.scrollTo(detail.top, {
+						duration: isInstant ? 0 : 0.7,
+						immediate: isInstant,
+					});
+					detail.handled = true;
+				});
 				const { gsap, ScrollTrigger } = window;
 				lenis.on('scroll', () => {
 					requestScrollbarUpdate();

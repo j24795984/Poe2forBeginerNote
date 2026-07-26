@@ -84,6 +84,7 @@ const utilityLinks = [
 			const syncMenuHeight = () => {
 				menuHeight = menu.offsetHeight;
 				spacer.style.height = `${menuHeight}px`;
+				document.documentElement.style.setProperty('--top-menu-height', `${menuHeight}px`);
 				hiddenDistance = Math.min(hiddenDistance, menuHeight);
 				renderedDistance = Math.min(renderedDistance, menuHeight);
 				applyTransform();
