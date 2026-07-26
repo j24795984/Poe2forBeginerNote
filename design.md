@@ -151,6 +151,7 @@ The asset URL is generated from `import.meta.env.BASE_URL`, so it remains valid 
 - Atlas page shell: `src/pages/atlas/index.astro`.
 - Shared styles and visual tokens: `src/styles/style.css`.
 - Base layout, CDNs, background images, Lenis, and custom scrollbar: `src/layouts/BaseLayout.astro`.
+- Production build assets use `dist/js/` (including `dist/js/chunks/`) and `dist/css/`. Do not use Astro's default `_astro/` output directory; this keeps assets compatible with GitHub Pages' default Jekyll processing.
 
 ## Change checklist
 
