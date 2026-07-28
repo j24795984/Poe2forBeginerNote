@@ -12,6 +12,15 @@ Manage the background server with `astro dev stop`, `astro dev status`, and `ast
 
 Files or data that must be served, rendered, or otherwise presented to users must not use names beginning with an underscore (`_`). GitHub Pages' Jekyll processing omits underscore-prefixed paths unless explicitly disabled.
 
+## Static JSON first render
+
+Static JSON under `public/data/` that supplies initial page content must be read during the Astro build with `src/services/loadStaticJson.ts` and passed to interactive framework components as initial props.
+
+- Vue islands must initialize their server-rendered state from those props so the generated HTML contains the first usable content view.
+- Do not defer initial static JSON loading to `onMounted()` or show a loading placeholder for content already available at build time.
+- Keep client directives such as `client:load` only when the component needs browser-side interaction or animation after the initial HTML is rendered.
+- Changes to build-time JSON require rebuilding and redeploying the static site.
+
 ## Design baseline
 
 Before changing any page layout or UI visual style, read [`design.md`](design.md) in full. Treat it as the current approved design baseline, preserve its documented contracts unless the user explicitly changes them, and update it when an approved visual or interaction change alters that baseline.

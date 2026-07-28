@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from 'vue';
 import { useCategoryTabs } from '../composables/useCategoryTabs';
-import { loadPublicJson } from '../services/dataService';
 import { requestSiteScrollToElement } from '../services/siteScroll';
 
 const categories = [
@@ -13,11 +12,12 @@ type AffixPair = { major?: string[]; minor?: string[] };
 type EquipmentAffix = { id: string; name: string; prefix?: AffixPair; suffix?: AffixPair };
 type BuildsData = { id: string; equipmentGroups: { id: string; name: string; items: EquipmentAffix[] }[] };
 
+const props = defineProps<{ initialData: BuildsData }>();
 const detailPanel = ref<HTMLElement>();
 const equipmentArticle = ref<HTMLElement>();
 const defenseArticle = ref<HTMLElement>();
 const cardOrnamentUrl = `${import.meta.env.BASE_URL}images/atlas-card-ornament.webp`;
-const buildsData = ref<BuildsData>();
+const buildsData = ref<BuildsData>(props.initialData);
 const error = ref('');
 const equipmentAffixes = computed(() => buildsData.value?.equipmentGroups.flatMap((group) => group.items) ?? []);
 const { selectedId, displayedId, leavingId, displayedItem: selectedCategory, select: selectCategory, initialize, dispose } = useCategoryTabs({ items: () => categories, panel: detailPanel, historyStateKey: 'buildsCategory' });
@@ -30,7 +30,6 @@ function scrollToArticle(article: HTMLElement | undefined) {
 
 onMounted(async () => {
 	try {
-		buildsData.value = await loadPublicJson<BuildsData>('data/builds.json');
 		await initialize();
 	} catch (cause) {
 		error.value = cause instanceof Error ? cause.message : '無法載入拓荒與流派資料。';
@@ -41,7 +40,6 @@ onUnmounted(dispose);
 
 <template>
 	<p v-if="error" class="border border-red-300/40 bg-red-950/45 p-5 text-red-100" role="alert">無法載入拓荒與流派資料：{{ error }}</p>
-	<p v-else-if="!buildsData" class="atlas-accent-border-20 border bg-black/35 p-5 text-stone-300">正在載入拓荒與流派資料。</p>
 	<div v-else class="atlas-shell">
 		<div class="atlas-workspace">
 			<nav class="atlas-category-nav" aria-label="拓荒與流派分類">

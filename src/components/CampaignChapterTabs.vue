@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue';
 import { useCategoryTabs } from '../composables/useCategoryTabs';
-import { loadPublicJson } from '../services/dataService';
 
 type CampaignMap = { id: string; name: string; image: string; alt: string };
 type CampaignQuest = {
@@ -31,7 +30,8 @@ type CampaignData = {
 	chapters: CampaignChapter[];
 };
 
-const campaignData = ref<CampaignData>();
+const props = defineProps<{ initialData: CampaignData }>();
+const campaignData = ref<CampaignData>(props.initialData);
 const error = ref('');
 const detailPanel = ref<HTMLElement>();
 const chapterTrack = ref<HTMLElement>();
@@ -201,7 +201,6 @@ function selectCampaignChapter(id: string) {
 
 onMounted(async () => {
 	try {
-		campaignData.value = await loadPublicJson<CampaignData>('data/campaign.json');
 		await initialize();
 		await nextTick();
 		syncIndicators();
@@ -221,7 +220,6 @@ onUnmounted(() => {
 
 <template>
 	<p v-if="error" class="border border-red-300/40 bg-red-950/45 p-5 text-red-100" role="alert">無法載入主線資料：{{ error }}</p>
-	<p v-else-if="!campaignData" class="atlas-accent-border-20 border bg-black/35 p-5 text-stone-300">正在載入主線資料。</p>
 	<div v-else class="campaign-shell">
 		<nav class="campaign-chapter-nav" aria-label="主線章節" @mouseleave="hoveredChapterIndex = null">
 			<ul

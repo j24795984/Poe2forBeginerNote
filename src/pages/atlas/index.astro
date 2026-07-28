@@ -1,8 +1,10 @@
 ---
 import AtlasCategoryTabs from '../../components/AtlasCategoryTabs.vue';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { loadStaticJson } from '../../services/loadStaticJson';
 
 const base = import.meta.env.BASE_URL;
+const atlasData = await loadStaticJson('atlas.json');
 ---
 
 <BaseLayout title="輿圖｜POE2 新手筆記" bodyClass="atlas-body">
@@ -15,7 +17,7 @@ const base = import.meta.env.BASE_URL;
 
 		<div class="global-px-box">
 			<section id="atlas-content" class="atlas-scroll-reveal base-container py-8 md:py-12">
-				<AtlasCategoryTabs client:load />
+				<AtlasCategoryTabs initialData={atlasData} client:load />
 			</section>
 		</div>
 

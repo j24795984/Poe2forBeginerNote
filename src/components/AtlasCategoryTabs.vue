@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref } from 'vue';
 import { useCategoryTabs } from '../composables/useCategoryTabs';
-import { loadPublicJson } from '../services/dataService';
 import { requestSiteScrollToElement } from '../services/siteScroll';
 
 type ContentItem = { id: string; text: string };
@@ -9,7 +8,8 @@ type ContentSection = { id: string; title: string; description?: string; bullets
 type AtlasCategory = { id: string; slug: string; name: string; summary: string; sections: ContentSection[]; leagueMechanicIds?: string[] };
 type LeagueMechanic = { id: string; name: string; summary: string };
 type AtlasData = { id: string; atlas: { id: string; categories: AtlasCategory[] }; leagueMechanics: LeagueMechanic[] };
-const atlasData = ref<AtlasData>();
+const props = defineProps<{ initialData: AtlasData }>();
+const atlasData = ref<AtlasData>(props.initialData);
 const error = ref('');
 const detailPanel = ref<HTMLElement>();
 const cardOrnamentUrl = `${import.meta.env.BASE_URL}images/atlas-card-ornament.webp`;
@@ -34,7 +34,6 @@ function scrollToMechanic(id: string) {
 }
 onMounted(async () => {
 	try {
-		atlasData.value = await loadPublicJson<AtlasData>('data/atlas.json');
 		await initialize();
 	} catch (cause) { error.value = cause instanceof Error ? cause.message : '無法讀取 atlas.json。'; }
 });
@@ -45,7 +44,6 @@ onUnmounted(() => {
 
 <template>
 	<p v-if="error" class="border border-red-300/40 bg-red-950/45 p-5 text-red-100" role="alert">無法讀取 atlas.json：{{ error }}</p>
-	<p v-else-if="!atlasData" class="atlas-accent-border-20 border bg-black/35 p-5 text-stone-300">正在載入輿圖資料。</p>
 	<div v-else-if="selectedCategory" class="atlas-shell">
 		<div class="atlas-workspace">
 			<nav class="atlas-category-nav" aria-label="輿圖分類"><ul class="atlas-category-nav-list m-0 list-none p-0">

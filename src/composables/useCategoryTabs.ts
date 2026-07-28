@@ -15,8 +15,9 @@ type UseCategoryTabsOptions<T extends CategoryTab> = {
 };
 
 export function useCategoryTabs<T extends CategoryTab>({ items, panel, historyStateKey }: UseCategoryTabsOptions<T>) {
-	const selectedId = ref('');
-	const displayedId = ref('');
+	const initialId = items()[0]?.id ?? '';
+	const selectedId = ref(initialId);
+	const displayedId = ref(initialId);
 	const leavingId = ref('');
 	const isChanging = ref(false);
 	const displayedItem = computed(() => items().find((item) => item.id === displayedId.value));
