@@ -150,6 +150,9 @@ The asset URL is generated from `import.meta.env.BASE_URL`, so it remains valid 
 ## Data and files
 
 - Atlas data: `public/data/atlas.json`.
+- Campaign data: `public/data/campaign.json`. It contains the five fixed chapter categories (`第一章` through `第四章`, plus `間歇`), map references, quest relationships, objectives, and rewards.
+- Campaign Vue island: `src/components/CampaignChapterTabs.vue`. Campaign uses an independent layout with a compact, horizontally scrollable chapter navigation; each tab presents the decorative English label above the Chinese chapter name. The chapter scrollbar remains visually hidden while touch, trackpad, and pointer scrolling stay available. The chapter navigation and compact map controls share one interruptible `748ms` Web Animations underline interaction generated from a continuous sampled curve. Position and width change together throughout the move, then the line contracts by `4.5%` near its destination and returns to normal with a decaying rebound. Extension follows `8% + movement units × 9%`. Every animation converges on that absolute width instead of adding extension to the currently rendered width, preventing repeated hover interruptions from accumulating line length. The underline sits inside the clipping boundary so it remains fully visible. The route-map stage spans the page container at the source images' `2624 / 1632` aspect ratio and displays one uncropped map at a time. The map controls and route-map frame use `4px` corners with clipped overflow. Its native radio controls (`地表` and `地底`) use a quiet, unsegmented surface without hover or selected background changes. The quest index remains an accessible native `<details>` list.
+- Campaign page shell: `src/pages/campaign/index.astro`.
 - Vue island: `src/components/AtlasCategoryTabs.vue`.
 - Shared top menu: `src/components/TopMenu.astro`, rendered by `src/layouts/BaseLayout.astro` on every page.
 - Atlas page shell: `src/pages/atlas/index.astro`.

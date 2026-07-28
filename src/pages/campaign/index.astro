@@ -1,0 +1,20 @@
+---
+import CampaignChapterTabs from '../../components/CampaignChapterTabs.vue';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="章節｜POE2 新手筆記" bodyClass="campaign-body">
+	<main class="relative w-full max-w-full overflow-x-hidden pb-16 text-stone-100">
+		<div class="global-px-box">
+			<header class="atlas-motion-hero base-container pt-8 md:pt-12">
+				<h1 class="atlas-page-title max-w-5xl font-english-body text-3xl font-bold text-stone-100 md:text-5xl">章節</h1>
+			</header>
+		</div>
+
+		<div class="global-px-box">
+			<section id="campaign-content" class="atlas-scroll-reveal base-container py-8 md:py-12">
+				<CampaignChapterTabs client:load />
+			</section>
+		</div>
+	</main>
+</BaseLayout>
