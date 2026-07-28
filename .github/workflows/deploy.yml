@@ -1,6 +1,8 @@
-name: Build and publish Astro site to main (manual)
+name: Build and publish Astro site to main
 
 on:
+  push:
+    branches: [creating-web]
   workflow_dispatch:
 
 permissions:
@@ -21,6 +23,7 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+      - run: touch dist/.nojekyll
       - name: Publish compiled site to main
         run: |
           cd dist
