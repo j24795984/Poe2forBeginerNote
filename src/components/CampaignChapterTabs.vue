@@ -21,6 +21,7 @@ type CampaignChapter = {
 	englishName: string;
 	status: 'complete' | 'pending';
 	summary: string;
+	quickGuideUrl: string;
 	maps: CampaignMap[];
 	quests: CampaignQuest[];
 };
@@ -41,6 +42,7 @@ const activeMapIndex = ref(0);
 const hoveredMapIndex = ref<number | null>(null);
 const hoveredChapterIndex = ref<number | null>(null);
 const cardOrnamentUrl = `${import.meta.env.BASE_URL}images/atlas-card-ornament.webp`;
+const mapBorderUrl = `${import.meta.env.BASE_URL}images/ui_img/img/border-2-body.webp`;
 const assetBase = import.meta.env.BASE_URL;
 const indicatorBaseExtensionRatio = .08;
 const indicatorExtensionPerUnit = .09;
@@ -252,6 +254,7 @@ onUnmounted(() => {
 						<p class="atlas-accent-text font-english-body text-sm font-semibold">AWAITING CONFIRMATION</p>
 						<h3 class="mt-3 text-2xl font-semibold text-stone-100">等待第一章版型確認</h3>
 						<p class="mt-4 max-w-2xl leading-8 text-stone-300">此章節分類與 JSON 欄位已建立。確認第一章的資訊密度與呈現方式後，再依相同模式補齊任務與地圖。</p>
+						<a class="campaign-pending-guide-link" :href="selectedChapter.quickGuideUrl" target="_blank" rel="noreferrer">查看 {{ selectedChapter.name }}建議流程</a>
 					</div>
 				</article>
 
@@ -284,13 +287,18 @@ onUnmounted(() => {
 							<span ref="mapIndicator" class="campaign-map-indicator" aria-hidden="true"></span>
 						</fieldset>
 
-						<div class="campaign-map-stage">
-							<Transition name="campaign-map-switch" mode="out-in">
-								<figure v-if="currentMap" :key="currentMap.id" class="campaign-map-figure">
-									<img :src="`${assetBase}${currentMap.image}`" :alt="currentMap.alt" loading="eager" />
-									<figcaption>{{ currentMap.name }}</figcaption>
-								</figure>
-							</Transition>
+						<div class="campaign-map-stage" :style="{ '--campaign-map-border': `url('${mapBorderUrl}')` }">
+							<div class="campaign-map-image-container">
+								<div class="campaign-map-image-box">
+									<Transition name="campaign-map-switch" mode="out-in">
+										<figure v-if="currentMap" :key="currentMap.id" class="campaign-map-figure">
+											<img :src="`${assetBase}${currentMap.image}`" :alt="currentMap.alt" loading="eager" />
+										</figure>
+									</Transition>
+								</div>
+								<div v-if="currentMap" class="campaign-map-info-box">{{ currentMap.name }}</div>
+							</div>
+							<div class="campaign-map-border-box" aria-hidden="true"></div>
 						</div>
 					</section>
 
@@ -344,7 +352,7 @@ onUnmounted(() => {
 					<footer class="campaign-sources">
 						<p>資料來源</p>
 						<a :href="campaignData.sources.quests" target="_blank" rel="noreferrer">Poe2DB 任務與獎勵</a>
-						<a :href="campaignData.sources.act1" target="_blank" rel="noreferrer">Poe2DB 第一章路線</a>
+						<a :href="selectedChapter.quickGuideUrl" target="_blank" rel="noreferrer">Poe2DB {{ selectedChapter.name }}建議流程</a>
 					</footer>
 				</div>
 		</section>

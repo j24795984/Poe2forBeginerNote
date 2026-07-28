@@ -6,7 +6,8 @@
   },
   "sources": {
     "quests": "https://poe2db.tw/tw/Quest#QuestRewards",
-    "act1": "https://poe2db.tw/tw/Act_1#%E7%AC%AC1%E7%AB%A0"
+    "act1": "https://poe2db.tw/tw/Act_1#%E7%AC%AC1%E7%AB%A0",
+    "questCatalog": "data/campaign-quests.json"
   },
   "chapters": [
     {
@@ -16,6 +17,7 @@
       "englishName": "ACT I",
       "status": "complete",
       "summary": "從河岸抵達皆伐，穿越艾茲麥森林與奧格姆領地，追上吉恩諾伯爵。",
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_1#%E7%AC%AC1%E7%AB%A0",
       "maps": [
         {
           "id": "campaign-map-007",
@@ -190,6 +192,7 @@
       "englishName": "ACT II",
       "status": "pending",
       "summary": "第一章版型確認後，將依相同資料結構整理。",
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_2#%E7%AC%AC2%E7%AB%A0",
       "maps": [],
       "quests": []
     },
@@ -200,6 +203,7 @@
       "englishName": "ACT III",
       "status": "pending",
       "summary": "第一章版型確認後，將依相同資料結構整理。",
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_3#%E7%AC%AC3%E7%AB%A0",
       "maps": [],
       "quests": []
     },
@@ -210,6 +214,7 @@
       "englishName": "ACT IV",
       "status": "pending",
       "summary": "第一章版型確認後，將依相同資料結構整理。",
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_4#%E7%AC%AC4%E7%AB%A0",
       "maps": [],
       "quests": []
     },
@@ -220,6 +225,7 @@
       "englishName": "INTERLUDE",
       "status": "pending",
       "summary": "第一章版型確認後，將依相同資料結構整理。",
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_6#%E7%AC%AC6%E7%AB%A0",
       "maps": [],
       "quests": []
     }

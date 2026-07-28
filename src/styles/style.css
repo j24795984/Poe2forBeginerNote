@@ -571,11 +571,45 @@ html::-webkit-scrollbar {
 
 .campaign-map-stage {
   width: 100%;
+  position: relative;
+  overflow: visible;
+  padding-top: calc(48 / 19.2 * 1vw);
+}
+
+.campaign-map-image-container {
+  width: 100%;
   aspect-ratio: 2624 / 1632;
+  position: relative;
   overflow: hidden;
   border: 1px solid rgb(245 245 244 / .16);
   border-radius: 4px;
   background: rgb(0 0 0 / .5);
+}
+
+.campaign-map-image-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.campaign-map-border-box {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: -6px;
+  bottom: -15px;
+  left: -6px;
+  box-sizing: border-box;
+  overflow: visible;
+  border: solid transparent;
+  border-width: calc(96 / 19.2 * 1vw) calc(64 / 19.2 * 1vw);
+  border-image-source: var(--campaign-map-border);
+  border-image-slice: 300 200;
+  border-image-width: calc(96 / 19.2 * 1vw) calc(64 / 19.2 * 1vw);
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  pointer-events: none;
+  user-select: none;
 }
 
 .campaign-map-figure {
@@ -594,8 +628,9 @@ html::-webkit-scrollbar {
   background: rgb(0 0 0 / .48);
 }
 
-.campaign-map-figure figcaption {
+.campaign-map-info-box {
   position: absolute;
+  z-index: 2;
   right: 0;
   bottom: 0;
   left: 0;
@@ -758,6 +793,16 @@ html::-webkit-scrollbar {
 .campaign-sources a:hover { color: var(--atlas-yellow-bright); }
 .campaign-sources a:focus-visible { outline: 2px solid var(--atlas-yellow); outline-offset: 3px; }
 
+.campaign-pending-guide-link {
+  display: inline-flex;
+  margin-top: 1.25rem;
+  color: var(--atlas-yellow);
+  text-underline-offset: .25rem;
+}
+
+.campaign-pending-guide-link:hover { color: var(--atlas-yellow-bright); }
+.campaign-pending-guide-link:focus-visible { outline: 2px solid var(--atlas-yellow); outline-offset: 3px; }
+
 .builds-affix-list {
   display: grid;
   gap: 1.5rem;
@@ -845,7 +890,7 @@ html::-webkit-scrollbar {
     padding: .55rem .85rem;
   }
   .campaign-map-controls { margin-bottom: .6rem; }
-  .campaign-map-figure figcaption { padding: 2.5rem 1rem .8rem; }
+  .campaign-map-info-box { padding: 2.5rem 1rem .8rem; }
   .campaign-quest summary {
     min-height: 4.75rem;
     grid-template-columns: 2.5rem minmax(0, 1fr) 1.5rem;

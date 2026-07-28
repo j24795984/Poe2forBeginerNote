@@ -1,0 +1,611 @@
+{
+  "id": "campaign-quest-catalog-001",
+  "updatedAt": "2026-07-29",
+  "classification": {
+    "main": "流亡編年史任務頁中標示為「主線」的任務；同一章內重複的任務階段合併為一筆。",
+    "requiredReward": "提供永久能力、武器套裝天賦、精魂、抗性、生命、昇華或永久增益選擇的任務與區域目標。",
+    "recommended": "不影響主線完成，也不提供必要永久能力，但對拓荒有明顯幫助的任務。"
+  },
+  "sources": {
+    "questIndex": "https://poe2db.tw/tw/Quest#%E4%BB%BB%E5%8B%99",
+    "act1": "https://poe2db.tw/tw/Act_1#%E7%AC%AC1%E7%AB%A0",
+    "act2": "https://poe2db.tw/tw/Act_2#%E7%AC%AC2%E7%AB%A0",
+    "act3": "https://poe2db.tw/tw/Act_3#%E7%AC%AC3%E7%AB%A0",
+    "act4": "https://poe2db.tw/tw/Act_4#%E7%AC%AC4%E7%AB%A0",
+    "interlude": "https://poe2db.tw/tw/Act_6#%E7%AC%AC6%E7%AB%A0"
+  },
+  "chapters": [
+    {
+      "id": "campaign-quest-chapter-act-1",
+      "chapterSlug": "act-1",
+      "name": "第一章",
+      "sourceChapters": [1],
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_1#%E7%AC%AC1%E7%AB%A0",
+      "main": [
+        {
+          "id": "act-1-main-reaching-clearfell",
+          "name": "抵達皆伐",
+          "url": "https://poe2db.tw/tw/Reaching_Clearfell"
+        },
+        {
+          "id": "act-1-main-secrets-in-the-dark",
+          "name": "黑暗中的秘密",
+          "url": "https://poe2db.tw/tw/Secrets_in_the_Dark"
+        },
+        {
+          "id": "act-1-main-the-mysterious-shade",
+          "name": "神祕的影魅",
+          "url": "https://poe2db.tw/tw/The_Mysterious_Shade"
+        },
+        {
+          "id": "act-1-main-sorrow-among-stones",
+          "name": "石頭上的悲傷",
+          "url": "https://poe2db.tw/tw/Sorrow_Among_Stones"
+        },
+        {
+          "id": "act-1-main-trail-of-corruption",
+          "name": "腐化痕跡",
+          "url": "https://poe2db.tw/tw/The_Trail_of_Corruption"
+        },
+        {
+          "id": "act-1-main-the-mad-wolf-of-ogham",
+          "name": "奧格姆的狂狼",
+          "url": "https://poe2db.tw/tw/The_Mad_Wolf_of_Ogham"
+        },
+        {
+          "id": "act-1-main-cracks-in-the-earth",
+          "name": "大地的裂痕",
+          "url": "https://poe2db.tw/tw/Cracks_in_the_Earth"
+        },
+        {
+          "id": "act-1-main-ancient-beacons",
+          "name": "遠古烽火",
+          "url": "https://poe2db.tw/tw/Ancient_Beacons"
+        },
+        {
+          "id": "act-1-main-the-runeseeker",
+          "name": "符文探求者",
+          "url": "https://poe2db.tw/tw/The_Runeseeker"
+        }
+      ],
+      "requiredRewards": [
+        {
+          "id": "act-1-required-beira",
+          "name": "擊敗腐敗獸群．貝伊拉",
+          "reward": "+10% 冰冷抗性",
+          "url": "https://poe2db.tw/tw/Act_1#%E7%AC%AC1%E7%AB%A0"
+        },
+        {
+          "id": "act-1-required-crowbell",
+          "name": "擊敗鴉鈴",
+          "reward": "+2 武器套裝天賦點數",
+          "url": "https://poe2db.tw/tw/Act_1#%E7%8D%B5%E5%A0%B4"
+        },
+        {
+          "id": "act-1-required-king-in-the-mists",
+          "name": "擊敗迷霧之王",
+          "reward": "+30 精魂",
+          "url": "https://poe2db.tw/tw/Act_1#%E5%BC%97%E9%9B%B7%E7%B4%A2%E6%81%A9"
+        },
+        {
+          "id": "act-1-required-the-lost-lute",
+          "name": "遺失的魯特琴",
+          "reward": "+2 武器套裝天賦點數",
+          "url": "https://poe2db.tw/tw/The_Lost_Lute"
+        },
+        {
+          "id": "act-1-required-candlemass",
+          "name": "擊敗存活儀式．燭光",
+          "reward": "+20 最大生命",
+          "url": "https://poe2db.tw/tw/Act_1#%E5%A5%A7%E6%A0%BC%E5%A7%86%E5%AE%85%E7%AC%AC"
+        }
+      ],
+      "recommended": [
+        {
+          "id": "act-1-recommended-treacherous-ground",
+          "name": "險惡之地",
+          "note": "取得拓荒期輔助寶石。",
+          "url": "https://poe2db.tw/tw/Treacherous_Ground"
+        },
+        {
+          "id": "act-1-recommended-ominous-altars",
+          "name": "不祥祭壇",
+          "note": "可選擇元素護符。",
+          "url": "https://poe2db.tw/tw/Ominous_Altars"
+        },
+        {
+          "id": "act-1-recommended-blank-runes",
+          "name": "空白符文",
+          "note": "可製作一枚自選低階符文。",
+          "url": "https://poe2db.tw/tw/Blank_Runes"
+        },
+        {
+          "id": "act-1-recommended-finding-the-forge",
+          "name": "尋找熔爐",
+          "note": "解鎖回收台。",
+          "url": "https://poe2db.tw/tw/Finding_the_Forge"
+        }
+      ]
+    },
+    {
+      "id": "campaign-quest-chapter-act-2",
+      "chapterSlug": "act-2",
+      "name": "第二章",
+      "sourceChapters": [2],
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_2#%E7%AC%AC2%E7%AB%A0",
+      "main": [
+        {
+          "id": "act-2-main-earning-passage",
+          "name": "獲得通行許可",
+          "url": "https://poe2db.tw/tw/Earning_Passage"
+        },
+        {
+          "id": "act-2-main-trail-of-corruption",
+          "name": "腐化痕跡",
+          "url": "https://poe2db.tw/tw/The_Trail_of_Corruption"
+        },
+        {
+          "id": "act-2-main-city-of-seven-waters",
+          "name": "七大水域之都",
+          "url": "https://poe2db.tw/tw/The_City_of_Seven_Waters"
+        },
+        {
+          "id": "act-2-main-a-theft-of-ivory",
+          "name": "象牙盜匪",
+          "url": "https://poe2db.tw/tw/A_Theft_of_Ivory"
+        },
+        {
+          "id": "act-2-main-a-crown-of-stone",
+          "name": "石皇冠",
+          "url": "https://poe2db.tw/tw/A_Crown_of_Stone"
+        },
+        {
+          "id": "act-2-main-the-forgotten-prisoner",
+          "name": "被遺忘的囚犯",
+          "url": "https://poe2db.tw/tw/The_Forgotten_Prisoner"
+        },
+        {
+          "id": "act-2-main-back-in-the-bottle",
+          "name": "返回瓶中",
+          "url": "https://poe2db.tw/tw/Back_in_the_Bottle"
+        },
+        {
+          "id": "act-2-main-ancient-beacons",
+          "name": "遠古烽火",
+          "url": "https://poe2db.tw/tw/Ancient_Beacons"
+        },
+        {
+          "id": "act-2-main-the-runeseeker",
+          "name": "符文探求者",
+          "url": "https://poe2db.tw/tw/The_Runeseeker"
+        }
+      ],
+      "requiredRewards": [
+        {
+          "id": "act-2-required-traditions-toll",
+          "name": "傳統的代價",
+          "reward": "+2 武器套裝天賦點數",
+          "url": "https://poe2db.tw/tw/Traditions_Toll"
+        },
+        {
+          "id": "act-2-required-ancient-vows",
+          "name": "遠古誓言",
+          "reward": "永久護符增益二選一，並解鎖額外護符欄位。",
+          "url": "https://poe2db.tw/tw/Ancient_Vows"
+        },
+        {
+          "id": "act-2-required-rise-to-power",
+          "name": "崛起掌權",
+          "reward": "開啟絲克瑪試煉與昇華流程。",
+          "url": "https://poe2db.tw/tw/Ascent_to_Power"
+        },
+        {
+          "id": "act-2-required-trial-of-time",
+          "name": "時間試煉",
+          "reward": "完成昇華試煉。",
+          "url": "https://poe2db.tw/tw/Quest#%E4%BB%BB%E5%8B%99"
+        },
+        {
+          "id": "act-2-required-sisters-of-garukhan",
+          "name": "啟動卡洛翰的姐妹祭壇",
+          "reward": "+10% 閃電抗性",
+          "url": "https://poe2db.tw/tw/Act_2#%E6%88%B4%E6%96%AF%E5%93%88%E5%B0%96%E5%A1%94"
+        }
+      ],
+      "recommended": []
+    },
+    {
+      "id": "campaign-quest-chapter-act-3",
+      "chapterSlug": "act-3",
+      "name": "第三章",
+      "sourceChapters": [3],
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_3#%E7%AC%AC3%E7%AB%A0",
+      "main": [
+        {
+          "id": "act-3-main-legacy-of-the-vaal",
+          "name": "瓦爾的傳承",
+          "url": "https://poe2db.tw/tw/Legacy_of_the_Vaal"
+        },
+        {
+          "id": "act-3-main-ancient-beacons",
+          "name": "遠古烽火",
+          "url": "https://poe2db.tw/tw/Ancient_Beacons"
+        },
+        {
+          "id": "act-3-main-the-runeseeker",
+          "name": "符文探求者",
+          "url": "https://poe2db.tw/tw/The_Runeseeker"
+        }
+      ],
+      "requiredRewards": [
+        {
+          "id": "act-3-required-slithering-dead",
+          "name": "滑行死者",
+          "reward": "依流派選擇永久增加暈眩門檻、元素異常門檻或魔力回復率。",
+          "url": "https://poe2db.tw/tw/The_Slithering_Dead"
+        },
+        {
+          "id": "act-3-required-treasures-of-utzaal",
+          "name": "奧札爾寶藏",
+          "reward": "取得未切割技能寶石與巧匠石。",
+          "url": "https://poe2db.tw/tw/Treasures_of_Utzaal"
+        },
+        {
+          "id": "act-3-required-trials-of-chaos",
+          "name": "混沌試煉",
+          "reward": "完成昇華試煉。",
+          "url": "https://poe2db.tw/tw/The_Trials_of_Chaos"
+        },
+        {
+          "id": "act-3-required-silverfist",
+          "name": "擊敗神威銀拳",
+          "reward": "+2 武器套裝天賦點數",
+          "url": "https://poe2db.tw/tw/Act_3#%E5%8F%A2%E6%9E%97%E9%81%BA%E8%B7%A1"
+        },
+        {
+          "id": "act-3-required-ignagduk",
+          "name": "擊敗沼澤女巫．尹娜杜克",
+          "reward": "+30 精魂",
+          "url": "https://poe2db.tw/tw/Act_3#%E9%98%BF%E6%9C%AD%E5%85%8B%E6%B3%A5%E6%B2%BC"
+        },
+        {
+          "id": "act-3-required-blackjaw",
+          "name": "擊敗遺忘的黑顎",
+          "reward": "+10% 火焰抗性",
+          "url": "https://poe2db.tw/tw/Act_3#%E5%90%89%E5%8D%A1%E5%B0%BC%E7%9A%84%E6%A9%9F%E6%A2%B0%E8%BF%B7%E5%9F%8E"
+        },
+        {
+          "id": "act-3-required-sacrificial-heart",
+          "name": "獻祭犧牲之心",
+          "reward": "+2 武器套裝天賦點數",
+          "url": "https://poe2db.tw/tw/Quest#%E4%BB%BB%E5%8B%99"
+        }
+      ],
+      "recommended": []
+    },
+    {
+      "id": "campaign-quest-chapter-act-4",
+      "chapterSlug": "act-4",
+      "name": "第四章",
+      "sourceChapters": [4],
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_4#%E7%AC%AC4%E7%AB%A0",
+      "main": [
+        {
+          "id": "act-4-main-the-search",
+          "name": "大搜索",
+          "url": "https://poe2db.tw/tw/The_Search"
+        },
+        {
+          "id": "act-4-main-shrike-island",
+          "name": "伯勞鳥之島",
+          "url": "https://poe2db.tw/tw/Shrike_Island"
+        },
+        {
+          "id": "act-4-main-land-of-the-kin",
+          "name": "金氏族地",
+          "url": "https://poe2db.tw/tw/Land_of_the_Kin"
+        },
+        {
+          "id": "act-4-main-utopia",
+          "name": "烏托邦",
+          "url": "https://poe2db.tw/tw/Utopia"
+        },
+        {
+          "id": "act-4-main-dark-mists",
+          "name": "暗黑迷霧",
+          "url": "https://poe2db.tw/tw/Dark_Mists"
+        },
+        {
+          "id": "act-4-main-siege-of-oriath",
+          "name": "奧瑞亞圍城戰",
+          "url": "https://poe2db.tw/tw/Siege_of_Oriath"
+        },
+        {
+          "id": "act-4-main-fate-of-the-vaal",
+          "name": "瓦爾命途",
+          "url": "https://poe2db.tw/tw/Fate_of_the_Vaal"
+        }
+      ],
+      "requiredRewards": [
+        {
+          "id": "act-4-required-blind-beast",
+          "name": "眼盲巨獸",
+          "reward": "硫酸藥劑：+10% 閃電抗性。",
+          "url": "https://poe2db.tw/tw/The_Blind_Beast"
+        },
+        {
+          "id": "act-4-required-tribal-medicine",
+          "name": "部落藥術",
+          "reward": "取得永久增益教誨。",
+          "url": "https://poe2db.tw/tw/Tribal_Medicine"
+        },
+        {
+          "id": "act-4-required-trial-of-the-ancestors",
+          "name": "祖靈的試煉",
+          "reward": "+2 武器套裝天賦點數與刺青獎勵。",
+          "url": "https://poe2db.tw/tw/Trial_of_the_Ancestors"
+        },
+        {
+          "id": "act-4-required-tawhoas-test",
+          "name": "塔赫亞的考驗",
+          "reward": "敏捷或閃電刺青。",
+          "url": "https://poe2db.tw/tw/Tawhoas_Test"
+        },
+        {
+          "id": "act-4-required-tasalios-test",
+          "name": "塔薩里奧的考驗",
+          "reward": "智慧或冰冷刺青。",
+          "url": "https://poe2db.tw/tw/Tasalios_Test"
+        },
+        {
+          "id": "act-4-required-ngamahus-test",
+          "name": "拿馬乎的考驗",
+          "reward": "力量或火焰刺青。",
+          "url": "https://poe2db.tw/tw/Ngamahus_Test"
+        },
+        {
+          "id": "act-4-required-journeys-end",
+          "name": "擊敗恐懼造物．歐姆弗畢亞",
+          "reward": "+2 武器套裝天賦點數",
+          "url": "https://poe2db.tw/tw/Quest#%E7%AC%AC4%E7%AB%A0"
+        },
+        {
+          "id": "act-4-required-eye-of-hinekora",
+          "name": "悉妮蔻拉之眼",
+          "reward": "增加 5% 最大魔力。",
+          "url": "https://poe2db.tw/tw/Quest#%E7%AC%AC4%E7%AB%A0"
+        },
+        {
+          "id": "act-4-required-halls-of-the-dead",
+          "name": "擊敗白之亞瑪",
+          "reward": "永久屬性或元素抗性選擇。",
+          "url": "https://poe2db.tw/tw/Quest#%E7%AC%AC4%E7%AB%A0"
+        },
+        {
+          "id": "act-4-required-justice-statue",
+          "name": "廢棄監獄的正義女神",
+          "reward": "永久增加生命或魔力藥劑恢復。",
+          "url": "https://poe2db.tw/tw/Act_4#%E5%BB%A2%E6%A3%84%E7%9B%A3%E7%8D%84"
+        },
+        {
+          "id": "act-4-required-great-white-one",
+          "name": "擊敗大白鯊",
+          "reward": "永久防禦增益選擇。",
+          "url": "https://poe2db.tw/tw/Act_4#%E7%93%A6%E5%8D%A1%E5%B8%95%E5%8A%AA%E5%B3%B6"
+        }
+      ],
+      "recommended": []
+    },
+    {
+      "id": "campaign-quest-chapter-interlude",
+      "chapterSlug": "interlude",
+      "name": "間歇",
+      "sourceChapters": [5, 6],
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_6#%E7%AC%AC6%E7%AB%A0",
+      "main": [
+        {
+          "id": "interlude-main-siege-of-oriath",
+          "name": "奧瑞亞圍城戰",
+          "url": "https://poe2db.tw/tw/Siege_of_Oriath"
+        },
+        {
+          "id": "interlude-main-infiltrating-oriath",
+          "name": "滲透奧瑞亞",
+          "url": "https://poe2db.tw/tw/Quest#%E4%BB%BB%E5%8B%99"
+        },
+        {
+          "id": "interlude-main-pinned-down",
+          "name": "動彈不得",
+          "url": "https://poe2db.tw/tw/Pinned_Down"
+        },
+        {
+          "id": "interlude-main-pleasure-and-pain",
+          "name": "快樂與痛苦",
+          "url": "https://poe2db.tw/tw/Pleasure_and_Pain"
+        },
+        {
+          "id": "interlude-main-the-blighted-never-rest",
+          "name": "凋落者永無寧日",
+          "url": "https://poe2db.tw/tw/Quest#%E4%BB%BB%E5%8B%99"
+        },
+        {
+          "id": "interlude-main-recruit-the-ezomytes",
+          "name": "招募艾茲麥人",
+          "url": "https://poe2db.tw/tw/Recruit_the_Ezomytes"
+        },
+        {
+          "id": "interlude-main-recruit-the-maraketh",
+          "name": "招募馬拉克斯人",
+          "url": "https://poe2db.tw/tw/Recruit_the_Maraketh"
+        },
+        {
+          "id": "interlude-main-recruit-the-vaal",
+          "name": "招募瓦爾人",
+          "url": "https://poe2db.tw/tw/Recruit_the_Vaal"
+        }
+      ],
+      "requiredRewards": [
+        {
+          "id": "interlude-required-clearing-the-way",
+          "name": "開闢道路",
+          "reward": "+2 武器套裝天賦點數；途中另可取得 +5% 最大生命。",
+          "url": "https://poe2db.tw/tw/Clearing_the_Way"
+        },
+        {
+          "id": "interlude-required-howling-winds",
+          "name": "狂嗥之風",
+          "reward": "+2 武器套裝天賦點數",
+          "url": "https://poe2db.tw/tw/Howling_Winds"
+        },
+        {
+          "id": "interlude-required-oswin",
+          "name": "擊敗恐懼典獄長．歐斯溫",
+          "reward": "+2 武器套裝天賦點數",
+          "url": "https://poe2db.tw/tw/Act_6#%E7%8B%BC%E4%B9%8B%E8%A6%81%E5%A1%9E"
+        },
+        {
+          "id": "interlude-required-seven-pillars",
+          "name": "奇瑪七靈柱",
+          "reward": "永久增益七選一。",
+          "url": "https://poe2db.tw/tw/Act_6#%E5%A5%87%E7%91%AA"
+        },
+        {
+          "id": "interlude-required-laytara",
+          "name": "擊敗迷失長矛．萊塔拉",
+          "reward": "+40 精魂",
+          "url": "https://poe2db.tw/tw/Act_6#%E5%BA%AB%E8%90%8A%E4%BA%9E%E6%9D%91"
+        },
+        {
+          "id": "interlude-required-finish",
+          "name": "完成間章",
+          "reward": "+2 武器套裝天賦點數",
+          "url": "https://poe2db.tw/tw/Quest#%E9%96%93%E7%AB%A0"
+        }
+      ],
+      "recommended": []
+    }
+  ],
+  "atlasStage": {
+    "id": "campaign-quest-stage-atlas",
+    "name": "輿圖階段相關主線",
+    "sourceChapter": 10,
+    "sourceUrl": "https://poe2db.tw/tw/Quest#%E4%BB%BB%E5%8B%99",
+    "main": [
+      {
+        "id": "atlas-main-cataclysms-wake",
+        "name": "浩劫覺醒",
+        "url": "https://poe2db.tw/tw/Cataclysms_Wake"
+      },
+      {
+        "id": "atlas-main-legacy-of-the-precursors",
+        "name": "先行者之遺",
+        "url": "https://poe2db.tw/tw/Legacy_of_the_Precursors"
+      },
+      {
+        "id": "atlas-main-ezomyte-infiltration",
+        "name": "艾茲麥滲透",
+        "url": "https://poe2db.tw/tw/Ezomyte_Infiltration"
+      },
+      {
+        "id": "atlas-main-faridun-raid",
+        "name": "法里登突襲",
+        "url": "https://poe2db.tw/tw/Quest#%E4%BB%BB%E5%8B%99"
+      },
+      {
+        "id": "atlas-main-vaal-incursion",
+        "name": "瓦爾侵略",
+        "url": "https://poe2db.tw/tw/Vaal_Incursion"
+      },
+      {
+        "id": "atlas-main-the-shadow-trickster",
+        "name": "暗影欺詐者",
+        "url": "https://poe2db.tw/tw/The_Shadow_Trickster"
+      },
+      {
+        "id": "atlas-main-facing-the-simulacrum",
+        "name": "面對幻像異界",
+        "url": "https://poe2db.tw/tw/Facing_the_Simulacrum"
+      },
+      {
+        "id": "atlas-main-mysterious-altars",
+        "name": "神秘祭壇",
+        "url": "https://poe2db.tw/tw/Mysterious_Altars"
+      },
+      {
+        "id": "atlas-main-the-edge-of-nothingness",
+        "name": "無量邊境",
+        "url": "https://poe2db.tw/tw/The_Edge_of_Nothingness"
+      },
+      {
+        "id": "atlas-main-the-grand-quest",
+        "name": "大型任務",
+        "url": "https://poe2db.tw/tw/The_Grand_Quest"
+      },
+      {
+        "id": "atlas-main-the-fallen-hero",
+        "name": "殞落英雄",
+        "url": "https://poe2db.tw/tw/The_Fallen_Hero"
+      },
+      {
+        "id": "atlas-main-the-captains-hideaway",
+        "name": "船長的藏身處",
+        "url": "https://poe2db.tw/tw/The_Captains_Hideaway"
+      },
+      {
+        "id": "atlas-main-endgame-lore-quest",
+        "name": "終局傳奇任務",
+        "url": "https://poe2db.tw/tw/Quest#%E4%BB%BB%E5%8B%99"
+      },
+      {
+        "id": "atlas-main-powerful-foe",
+        "name": "勁敵",
+        "url": "https://poe2db.tw/tw/Powerful_Foe"
+      },
+      {
+        "id": "atlas-main-precursor-towers",
+        "name": "先行者高塔",
+        "url": "https://poe2db.tw/tw/Precursor_Towers"
+      },
+      {
+        "id": "atlas-main-abyssal-power",
+        "name": "深淵之力",
+        "url": "https://poe2db.tw/tw/Abyssal_Power"
+      },
+      {
+        "id": "atlas-main-keepers-of-the-flame",
+        "name": "黯焰看守者",
+        "url": "https://poe2db.tw/tw/Keepers_of_the_Flame"
+      },
+      {
+        "id": "atlas-main-strange-reflection",
+        "name": "奇異反射",
+        "url": "https://poe2db.tw/tw/Strange_Reflection"
+      },
+      {
+        "id": "atlas-main-legacy-of-the-maji",
+        "name": "聖賢的遺產",
+        "url": "https://poe2db.tw/tw/Legacy_of_the_Maji"
+      },
+      {
+        "id": "atlas-main-the-grand-expedition",
+        "name": "大型探險",
+        "url": "https://poe2db.tw/tw/The_Grand_Expedition"
+      },
+      {
+        "id": "atlas-main-jados-spycraft",
+        "name": "賈多的諜報活動",
+        "url": "https://poe2db.tw/tw/Jados_Spycraft"
+      },
+      {
+        "id": "atlas-main-doryanis-science",
+        "name": "多里亞尼的科學",
+        "url": "https://poe2db.tw/tw/Doryanis_Science"
+      },
+      {
+        "id": "atlas-main-hildas-hunting",
+        "name": "希爾妲的狩獵",
+        "url": "https://poe2db.tw/tw/Hildas_Hunting"
+      }
+    ]
+  }
+}
