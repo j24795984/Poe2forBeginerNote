@@ -2,46 +2,73 @@
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue';
 import { useCategoryTabs } from '../composables/useCategoryTabs';
 
-type CampaignMap = { id: string; name: string; image: string; alt: string };
-type CampaignQuest = {
+type CampaignMapPoint = { name: string; x: number; y: number };
+type CampaignMap = { id: string; name: string; image: string; alt: string; points?: CampaignMapPoint[] };
+type LocalizedText = { zh_tw: string; en: string };
+type PermanentReward = {
+	text_zh_tw?: string;
+	choose?: number;
+	options?: PermanentReward[];
+	groups?: Array<{ name: LocalizedText; options: PermanentReward[] }>;
+};
+type CampaignRewardEntry = {
+	map: LocalizedText;
+	main_quest: LocalizedText | '無';
+	side_quest: LocalizedText | '無';
+	boss: LocalizedText | LocalizedText[] | '無';
+	permanent_reward: PermanentReward;
+	condition_zh_tw?: string;
+};
+type CampaignRewardChapter = {
 	id: string;
-	slug: string;
+	chapter: string;
+	chapter_en: string;
+	maps: CampaignRewardEntry[];
+};
+type CampaignRewardSource = {
 	name: string;
-	type: 'main' | 'side';
-	typeLabel: string;
-	locations: string[];
+	url?: string;
+	urls?: string[];
+};
+type CampaignRewardData = {
+	chapters: CampaignRewardChapter[];
+	sources: CampaignRewardSource[];
+};
+type CampaignRewardCard = {
+	id: string;
+	target: string;
 	objective: string;
 	rewards: string[];
+	location: string;
 };
 type CampaignChapter = {
 	id: string;
 	slug: string;
 	name: string;
 	englishName: string;
-	status: 'complete' | 'pending';
-	summary: string;
-	quickGuideUrl: string;
 	maps: CampaignMap[];
-	quests: CampaignQuest[];
 };
 type CampaignData = {
 	id: string;
-	sources: { quests: string; act1: string };
 	chapters: CampaignChapter[];
 };
 
-const props = defineProps<{ initialData: CampaignData }>();
+const props = defineProps<{ initialData: CampaignData; initialRewardData: CampaignRewardData }>();
 const campaignData = ref<CampaignData>(props.initialData);
+const campaignRewardData = ref<CampaignRewardData>(props.initialRewardData);
 const error = ref('');
 const detailPanel = ref<HTMLElement>();
 const chapterTrack = ref<HTMLElement>();
 const chapterIndicator = ref<HTMLElement>();
 const mapControls = ref<HTMLFieldSetElement>();
 const mapIndicator = ref<HTMLElement>();
+const mapViewport = ref<HTMLElement>();
 const activeMapIndex = ref(0);
+const isRewardsOpen = ref(true);
+const isMapDragging = ref(false);
+const activeMapPointName = ref('');
 const hoveredMapIndex = ref<number | null>(null);
 const hoveredChapterIndex = ref<number | null>(null);
-const cardOrnamentUrl = `${import.meta.env.BASE_URL}images/atlas-card-ornament.webp`;
 const mapBorderUrl = `${import.meta.env.BASE_URL}images/ui_img/img/border-2-body.webp`;
 const assetBase = import.meta.env.BASE_URL;
 const indicatorBaseExtensionRatio = .08;
@@ -50,6 +77,9 @@ const indicatorContractionRatio = .045;
 const indicatorDuration = 748;
 let chapterIndicatorAnimation: Animation | undefined;
 let mapIndicatorAnimation: Animation | undefined;
+let mapDragPointerId: number | undefined;
+let mapDragStartX = 0;
+let mapDragStartScrollLeft = 0;
 
 const { selectedId, displayedItem: selectedChapter, select: selectChapter, initialize, dispose } = useCategoryTabs({
 	items: () => campaignData.value?.chapters ?? [],
@@ -57,11 +87,64 @@ const { selectedId, displayedItem: selectedChapter, select: selectChapter, initi
 	historyStateKey: 'campaignChapter',
 });
 
-const mainQuestCount = computed(() => selectedChapter.value?.quests.filter((quest) => quest.type === 'main').length ?? 0);
-const sideQuestCount = computed(() => selectedChapter.value?.quests.filter((quest) => quest.type === 'side').length ?? 0);
+function rewardTexts(reward: PermanentReward) {
+	if (reward.text_zh_tw) return [reward.text_zh_tw];
+
+	if (reward.groups?.length) {
+		return reward.groups.map((group) => {
+			const options = group.options.map((option) => option.text_zh_tw).filter(Boolean);
+			return `${group.name.zh_tw}：${options.join('／')}`;
+		});
+	}
+
+	const options = reward.options?.map((option) => option.text_zh_tw).filter(Boolean) ?? [];
+	return options.length ? [`${reward.choose === 1 ? '選擇一項' : '可選效果'}：${options.join('／')}`] : ['永久獎勵'];
+}
+
+function displayReward(chapter: CampaignRewardChapter, entry: CampaignRewardEntry, index: number): CampaignRewardCard {
+	const bosses = entry.boss === '無'
+		? []
+		: (Array.isArray(entry.boss) ? entry.boss : [entry.boss]).map((boss) => boss.zh_tw);
+	const bossNames = bosses.join('、');
+	const questName = entry.side_quest !== '無'
+		? entry.side_quest.zh_tw
+		: (entry.main_quest !== '無' ? entry.main_quest.zh_tw : entry.map.zh_tw);
+	const target = bossNames || questName;
+	const fallbackObjective = bosses.length
+		? `擊敗${bossNames}。`
+		: `完成${questName}並取得永久獎勵。`;
+	const condition = entry.condition_zh_tw;
+	const objective = bosses.length && (!condition || /^擊敗(?:頭目|BOSS)並使用掉落/.test(condition))
+		? `擊敗${bossNames}。`
+		: (condition ?? fallbackObjective).replace(/頭目|BOSS/gi, bossNames || target);
+
+	return {
+		id: `${chapter.id}-${index}-${entry.map.en}`,
+		target,
+		objective,
+		rewards: rewardTexts(entry.permanent_reward),
+		location: entry.map.zh_tw,
+	};
+}
+
+const selectedRewardChapters = computed(() => {
+	const slug = selectedChapter.value?.slug;
+	if (!slug) return [];
+	if (slug === 'interlude') return campaignRewardData.value.chapters.filter((chapter) => chapter.id.startsWith('interlude_'));
+	return campaignRewardData.value.chapters.filter((chapter) => chapter.id === slug.replace('-', '_'));
+});
+const displayedQuests = computed(() => selectedRewardChapters.value.flatMap((chapter) => chapter.maps.map((entry, index) => displayReward(chapter, entry, index))));
+const rewardSourceLinks = computed(() => campaignRewardData.value.sources.flatMap((source) => {
+	const urls = source.urls ?? (source.url ? [source.url] : []);
+	return urls.map((url, index) => ({
+		name: urls.length > 1 ? `${source.name} ${index + 1}` : source.name,
+		url,
+	}));
+}));
 const activeChapterIndex = computed(() => Math.max(0, campaignData.value?.chapters.findIndex((chapter) => chapter.id === selectedId.value) ?? 0));
 const chapterIndicatorIndex = computed(() => hoveredChapterIndex.value ?? activeChapterIndex.value);
 const currentMap = computed(() => selectedChapter.value?.maps[activeMapIndex.value]);
+const activeMapPoint = computed(() => currentMap.value?.points?.find((point) => point.name === activeMapPointName.value));
 const mapIndicatorIndex = computed(() => hoveredMapIndex.value ?? activeMapIndex.value);
 const mapSurfaceLabels = ['地表', '地底'];
 
@@ -194,9 +277,78 @@ watch(mapIndicatorIndex, async (next, previous) => {
 
 function selectCampaignChapter(id: string) {
 	activeMapIndex.value = 0;
+	activeMapPointName.value = '';
+	if (mapViewport.value) mapViewport.value.scrollLeft = 0;
 	hoveredMapIndex.value = null;
 	hoveredChapterIndex.value = null;
 	selectChapter(id);
+}
+
+function startMapDrag(event: PointerEvent) {
+	if (!currentMap.value || event.pointerType !== 'mouse' || event.button !== 0 || !mapViewport.value) return;
+	mapDragPointerId = event.pointerId;
+	mapDragStartX = event.clientX;
+	mapDragStartScrollLeft = mapViewport.value.scrollLeft;
+	isMapDragging.value = true;
+	mapViewport.value.setPointerCapture(event.pointerId);
+	event.preventDefault();
+}
+
+function moveMapDrag(event: PointerEvent) {
+	if (!isMapDragging.value || event.pointerId !== mapDragPointerId || !mapViewport.value) return;
+	mapViewport.value.scrollLeft = mapDragStartScrollLeft - (event.clientX - mapDragStartX);
+}
+
+function endMapDrag(event: PointerEvent) {
+	if (event.pointerId !== mapDragPointerId || !mapViewport.value) return;
+	if (mapViewport.value.hasPointerCapture(event.pointerId)) mapViewport.value.releasePointerCapture(event.pointerId);
+	isMapDragging.value = false;
+	mapDragPointerId = undefined;
+}
+
+watch(activeMapIndex, () => {
+	activeMapPointName.value = '';
+	if (mapViewport.value) mapViewport.value.scrollLeft = 0;
+});
+
+function mapPointTargetFor(location: string) {
+	const maps = selectedChapter.value?.maps ?? [];
+	for (const [mapIndex, map] of maps.entries()) {
+		const point = map.points?.find((candidate) => candidate.name === location);
+		if (point) return { mapIndex, point };
+	}
+	return undefined;
+}
+
+function mapPointFor(location: string) {
+	return mapPointTargetFor(location)?.point;
+}
+
+async function focusMapPoint(location: string) {
+	const target = mapPointTargetFor(location);
+	if (!target) return;
+	if (activeMapIndex.value !== target.mapIndex) {
+		activeMapIndex.value = target.mapIndex;
+		await nextTick();
+	}
+	activeMapPointName.value = location;
+	await nextTick();
+
+	const viewport = mapViewport.value;
+	if (!viewport) return;
+	const viewportWidth = viewport.clientWidth;
+	const mapWidth = viewport.querySelector<HTMLElement>('.campaign-map-figure')?.offsetWidth ?? viewportWidth;
+	const rewardPanelWidth = isRewardsOpen.value && window.matchMedia('(min-width: 1024px)').matches
+		? viewport.parentElement?.querySelector<HTMLElement>('.campaign-map-rewards-panel')?.offsetWidth ?? 0
+		: 0;
+	const visibleMapWidth = viewportWidth - rewardPanelWidth;
+	const pointX = mapWidth * target.point.x / 100;
+	const maxScrollLeft = viewport.scrollWidth - viewport.clientWidth;
+	const targetScrollLeft = Math.min(maxScrollLeft, Math.max(0, pointX - visibleMapWidth / 2));
+	viewport.scrollTo({
+		left: targetScrollLeft,
+		behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+	});
 }
 
 onMounted(async () => {
@@ -246,111 +398,133 @@ onUnmounted(() => {
 		</nav>
 
 		<section v-if="selectedChapter" ref="detailPanel" class="campaign-detail atlas-detail-motion" aria-live="polite">
-				<article v-if="selectedChapter.status === 'pending'" class="atlas-content-card campaign-pending-card rounded-[8px] border border-stone-100/15 px-6 py-10 shadow-xl shadow-black/25 md:px-10 md:py-14">
-					<span class="atlas-content-card-ornament" :style="{ '--atlas-card-ornament': `url('${cardOrnamentUrl}')` }" aria-hidden="true"></span>
-					<div class="relative z-[1]">
-						<p class="atlas-accent-text font-english-body text-sm font-semibold">AWAITING CONFIRMATION</p>
-						<h3 class="mt-3 text-2xl font-semibold text-stone-100">等待第一章版型確認</h3>
-						<p class="mt-4 max-w-2xl leading-8 text-stone-300">此章節分類與 JSON 欄位已建立。確認第一章的資訊密度與呈現方式後，再依相同模式補齊任務與地圖。</p>
-						<a class="campaign-pending-guide-link" :href="selectedChapter.quickGuideUrl" target="_blank" rel="noreferrer">查看 {{ selectedChapter.name }}建議流程</a>
-					</div>
-				</article>
-
-				<div v-else class="grid gap-8">
-					<section class="campaign-map-section">
-						<fieldset
-							ref="mapControls"
-							class="campaign-map-controls"
-							aria-label="地圖區域"
-							@mouseleave="hoveredMapIndex = null"
-						>
-							<legend class="sr-only">選擇地圖區域</legend>
-							<label
-								v-for="(map, index) in selectedChapter.maps"
-								:key="map.id"
-								class="campaign-map-radio"
-								:class="{ 'campaign-map-radio-active': activeMapIndex === index }"
-								@mouseenter="hoveredMapIndex = index"
-							>
-								<input
-									v-model="activeMapIndex"
-									type="radio"
-									name="campaign-map-surface"
-									:value="index"
-									@focus="hoveredMapIndex = index"
-									@blur="hoveredMapIndex = null"
-								/>
-								<span>{{ mapSurfaceLabels[index] ?? map.name }}</span>
-							</label>
-							<span ref="mapIndicator" class="campaign-map-indicator" aria-hidden="true"></span>
-						</fieldset>
-
+				<div class="grid gap-8">
+					<section v-if="displayedQuests.length" class="campaign-map-section">
 						<div class="campaign-map-stage" :style="{ '--campaign-map-border': `url('${mapBorderUrl}')` }">
-							<div class="campaign-map-image-container">
-								<div class="campaign-map-image-box">
-									<Transition name="campaign-map-switch" mode="out-in">
-										<figure v-if="currentMap" :key="currentMap.id" class="campaign-map-figure">
-											<img :src="`${assetBase}${currentMap.image}`" :alt="currentMap.alt" loading="eager" />
-										</figure>
-									</Transition>
+							<div
+								class="campaign-map-image-container"
+								:class="{ 'campaign-map-image-container-rewards-open': isRewardsOpen }"
+							>
+								<fieldset
+									v-if="selectedChapter.maps.length"
+									ref="mapControls"
+									class="campaign-map-controls"
+									aria-label="地圖區域"
+									@mouseleave="hoveredMapIndex = null"
+								>
+									<legend class="sr-only">選擇地圖區域</legend>
+									<label
+										v-for="(map, index) in selectedChapter.maps"
+										:key="map.id"
+										class="campaign-map-radio"
+										:class="{ 'campaign-map-radio-active': activeMapIndex === index }"
+										@mouseenter="hoveredMapIndex = index"
+									>
+										<input
+											v-model="activeMapIndex"
+											type="radio"
+											name="campaign-map-surface"
+											:value="index"
+											@focus="hoveredMapIndex = index"
+											@blur="hoveredMapIndex = null"
+										/>
+										<span>{{ mapSurfaceLabels[index] ?? map.name }}</span>
+									</label>
+									<span ref="mapIndicator" class="campaign-map-indicator" aria-hidden="true"></span>
+								</fieldset>
+
+								<div
+									ref="mapViewport"
+									class="campaign-map-image-box"
+									:class="{ 'campaign-map-image-box-dragging': isMapDragging }"
+									aria-label="可左右拖曳的章節地圖"
+									@pointerdown="startMapDrag"
+									@pointermove="moveMapDrag"
+									@pointerup="endMapDrag"
+									@pointercancel="endMapDrag"
+								>
+									<div class="campaign-map-pan-canvas">
+										<Transition name="campaign-map-switch" mode="out-in">
+											<figure v-if="currentMap" :key="currentMap.id" class="campaign-map-figure">
+												<img :src="`${assetBase}${currentMap.image}`" :alt="currentMap.alt" loading="eager" draggable="false" />
+												<span
+													v-if="activeMapPoint"
+													class="campaign-map-hotspot"
+													:style="{ left: `${activeMapPoint.x}%`, top: `${activeMapPoint.y}%` }"
+													aria-hidden="true"
+												></span>
+											</figure>
+										</Transition>
+										<div v-if="!currentMap" class="campaign-map-empty" aria-hidden="true">
+											<span>{{ selectedChapter.englishName }}</span>
+											<strong>{{ selectedChapter.name }}</strong>
+										</div>
+									</div>
 								</div>
-								<div v-if="currentMap" class="campaign-map-info-box">{{ currentMap.name }}</div>
+
+								<button
+									class="campaign-map-rewards-toggle"
+									:class="{ 'campaign-map-rewards-toggle-collapsed': !isRewardsOpen }"
+									type="button"
+									:aria-expanded="isRewardsOpen"
+									aria-controls="campaign-map-rewards-panel"
+									:aria-label="isRewardsOpen ? '收合永久獎勵' : '展開永久獎勵'"
+									@click="isRewardsOpen = !isRewardsOpen"
+								>
+									<span class="campaign-map-rewards-toggle-icon-desktop material-symbols-outlined" aria-hidden="true">{{ isRewardsOpen ? 'chevron_right' : 'chevron_left' }}</span>
+									<span class="campaign-map-rewards-toggle-icon-mobile material-symbols-outlined" aria-hidden="true">{{ isRewardsOpen ? 'keyboard_arrow_down' : 'keyboard_arrow_up' }}</span>
+								</button>
+
+								<aside
+									id="campaign-map-rewards-panel"
+									class="campaign-map-rewards-panel"
+									:class="{ 'campaign-map-rewards-panel-open': isRewardsOpen }"
+									:aria-hidden="!isRewardsOpen"
+									:aria-label="`${selectedChapter.name}永久獎勵`"
+								>
+									<ol class="campaign-map-reward-list" data-lenis-prevent-wheel>
+										<li v-for="quest in displayedQuests" :key="quest.id">
+											<article
+												class="campaign-map-reward-card"
+												:class="{
+													'campaign-map-reward-card-interactive': mapPointFor(quest.location),
+													'campaign-map-reward-card-selected': activeMapPointName === quest.location,
+												}"
+											>
+												<button
+													v-if="mapPointFor(quest.location)"
+													class="campaign-map-reward-card-action"
+													type="button"
+													:aria-label="`在地圖上定位${quest.location}`"
+													:aria-pressed="activeMapPointName === quest.location"
+													@click="focusMapPoint(quest.location)"
+												></button>
+												<div class="campaign-map-reward-card-heading">
+													<div class="campaign-map-reward-method">
+														<p>取得方法</p>
+														<strong>{{ quest.target }}</strong>
+														<span>{{ quest.objective }}</span>
+													</div>
+													<strong class="campaign-map-reward-location">{{ quest.location }}</strong>
+												</div>
+												<div class="campaign-map-reward-meta">
+													<div>
+														<p>獎勵</p>
+														<ul><li v-for="reward in quest.rewards" :key="reward">{{ reward }}</li></ul>
+													</div>
+												</div>
+											</article>
+										</li>
+									</ol>
+								</aside>
 							</div>
 							<div class="campaign-map-border-box" aria-hidden="true"></div>
 						</div>
 					</section>
 
-					<section class="campaign-quests-section">
-						<header class="campaign-quest-header">
-							<div>
-								<p class="atlas-accent-bright-text font-english-decorative text-xs font-semibold">QUEST INDEX</p>
-								<h3 class="mt-2 font-english-body text-2xl font-semibold text-stone-100 md:text-3xl">第一章全部任務</h3>
-							</div>
-							<div class="campaign-counts" aria-label="任務數量">
-								<span><strong>{{ mainQuestCount }}</strong> 主線</span>
-								<span><strong>{{ sideQuestCount }}</strong> 支線</span>
-							</div>
-						</header>
-
-						<ol class="campaign-quest-list mt-7">
-							<li v-for="(quest, index) in selectedChapter.quests" :key="quest.id">
-								<details class="campaign-quest" :open="index === 0">
-									<summary>
-										<span class="campaign-quest-index">{{ String(index + 1).padStart(2, '0') }}</span>
-										<span class="campaign-quest-title">
-											<strong>{{ quest.name }}</strong>
-											<span :class="['campaign-quest-type', `campaign-quest-type-${quest.type}`]">{{ quest.typeLabel }}</span>
-										</span>
-										<span class="material-symbols-outlined campaign-quest-toggle" aria-hidden="true">add</span>
-									</summary>
-									<div class="campaign-quest-detail">
-										<dl>
-											<div>
-												<dt>相關區域</dt>
-												<dd>{{ quest.locations.join(' → ') }}</dd>
-											</div>
-											<div>
-												<dt>任務目標</dt>
-												<dd>{{ quest.objective }}</dd>
-											</div>
-											<div>
-												<dt>任務獎勵</dt>
-												<dd v-if="quest.rewards.length">
-													<ul><li v-for="reward in quest.rewards" :key="reward">{{ reward }}</li></ul>
-												</dd>
-												<dd v-else class="campaign-muted">Poe2DB 未列出固定獎勵</dd>
-											</div>
-										</dl>
-									</div>
-								</details>
-							</li>
-						</ol>
-					</section>
-
 					<footer class="campaign-sources">
 						<p>資料來源</p>
-						<a :href="campaignData.sources.quests" target="_blank" rel="noreferrer">Poe2DB 任務與獎勵</a>
-						<a :href="selectedChapter.quickGuideUrl" target="_blank" rel="noreferrer">Poe2DB {{ selectedChapter.name }}建議流程</a>
+						<a v-for="source in rewardSourceLinks" :key="source.url" :href="source.url" target="_blank" rel="noreferrer">{{ source.name }}</a>
 					</footer>
 				</div>
 		</section>

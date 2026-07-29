@@ -1,0 +1,799 @@
+{
+  "schema_version": "1.0.0",
+  "game": {
+    "zh_tw": "流亡黯道 2",
+    "en": "Path of Exile 2"
+  },
+  "dataset": {
+    "zh_tw": "章節永久屬性與獎勵清單",
+    "en": "Campaign Permanent Attributes and Rewards"
+  },
+  "scope": {
+    "version": "0.5",
+    "locale": "zh-TW",
+    "checked_at": "2026-07-29",
+    "note_zh_tw": "僅收錄可永久影響角色的屬性、精魂、天賦點、護符欄位與永久選擇。非主線或支線內容以「無」表示。"
+  },
+  "chapters": [
+    {
+      "id": "act_1",
+      "chapter": "第一章",
+      "chapter_en": "Act 1",
+      "maps": [
+        {
+          "map": {
+            "zh_tw": "皆伐",
+            "en": "Clearfell"
+          },
+          "main_quest": "無",
+          "side_quest": "無",
+          "boss": {
+            "zh_tw": "腐敗獸群．貝伊拉",
+            "en": "Beira of the Rotten Pack"
+          },
+          "permanent_reward": {
+            "type": "cold_resistance",
+            "value": 10,
+            "unit": "percent",
+            "text_zh_tw": "+10% 冰冷抗性"
+          },
+          "condition_zh_tw": "擊敗頭目並使用掉落的凜冬狼頭顱。"
+        },
+        {
+          "map": {
+            "zh_tw": "獵場",
+            "en": "Hunting Grounds"
+          },
+          "main_quest": "無",
+          "side_quest": "無",
+          "boss": {
+            "zh_tw": "鴉鈴",
+            "en": "The Crowbell"
+          },
+          "permanent_reward": {
+            "type": "weapon_set_passive_points",
+            "value": 2,
+            "unit": "points",
+            "text_zh_tw": "2 點武器套裝天賦點"
+          }
+        },
+        {
+          "map": {
+            "zh_tw": "弗雷索恩",
+            "en": "Freythorn"
+          },
+          "main_quest": "無",
+          "side_quest": {
+            "zh_tw": "不祥祭壇",
+            "en": "Ominous Altars"
+          },
+          "boss": {
+            "zh_tw": "迷霧之王",
+            "en": "The King in the Mists"
+          },
+          "permanent_reward": {
+            "type": "spirit",
+            "value": 30,
+            "unit": "flat",
+            "text_zh_tw": "+30 精魂"
+          },
+          "condition_zh_tw": "完成祭壇事件並擊敗頭目。"
+        },
+        {
+          "map": {
+            "zh_tw": "奧格姆農地",
+            "en": "Ogham Farmlands"
+          },
+          "main_quest": "無",
+          "side_quest": {
+            "zh_tw": "遺失的魯特琴",
+            "en": "The Lost Lute"
+          },
+          "boss": "無",
+          "permanent_reward": {
+            "type": "weapon_set_passive_points",
+            "value": 2,
+            "unit": "points",
+            "text_zh_tw": "2 點武器套裝天賦點"
+          },
+          "condition_zh_tw": "找到烏娜的魯特琴並交還。"
+        },
+        {
+          "map": {
+            "zh_tw": "奧格姆宅第",
+            "en": "Ogham Manor"
+          },
+          "main_quest": "無",
+          "side_quest": "無",
+          "boss": {
+            "zh_tw": "存活儀式．燭光",
+            "en": "Candlemass, the Living Rite"
+          },
+          "permanent_reward": {
+            "type": "maximum_life",
+            "value": 20,
+            "unit": "flat",
+            "text_zh_tw": "+20 最大生命"
+          }
+        }
+      ]
+    },
+    {
+      "id": "act_2",
+      "chapter": "第二章",
+      "chapter_en": "Act 2",
+      "maps": [
+        {
+          "map": {
+            "zh_tw": "凱斯城",
+            "en": "Keth"
+          },
+          "main_quest": "無",
+          "side_quest": "無",
+          "boss": {
+            "zh_tw": "蟒蛇女王．卡巴拉",
+            "en": "Kabala, Constrictor Queen"
+          },
+          "permanent_reward": {
+            "type": "weapon_set_passive_points",
+            "value": 2,
+            "unit": "points",
+            "text_zh_tw": "2 點武器套裝天賦點"
+          }
+        },
+        {
+          "map": {
+            "zh_tw": "凱斯城／骨坑／泰坦之谷",
+            "en": "Keth / Bone Pits / Valley of the Titans"
+          },
+          "main_quest": "無",
+          "side_quest": {
+            "zh_tw": "古老誓言",
+            "en": "Ancient Vows"
+          },
+          "boss": "無",
+          "permanent_reward": {
+            "type": "charm_choice",
+            "text_zh_tw": "+1 護符欄位，並在護符充能獲取與護符效果持續時間之間二選一",
+            "changeable": true,
+            "options": [
+              {
+                "type": "charm_charges_gained",
+                "value": 30,
+                "unit": "percent_increased",
+                "text_zh_tw": "增加 30% 護符充能獲取"
+              },
+              {
+                "type": "charm_effect_duration",
+                "value": 30,
+                "unit": "percent_increased",
+                "text_zh_tw": "增加 30% 護符效果持續時間"
+              }
+            ],
+            "fixed_effects": [
+              {
+                "type": "charm_slots",
+                "value": 1,
+                "unit": "slot",
+                "text_zh_tw": "+1 護符欄位"
+              }
+            ]
+          },
+          "condition_zh_tw": "收集兩件部落聖物並放入泰坦之谷祭壇。"
+        },
+        {
+          "map": {
+            "zh_tw": "戴斯哈",
+            "en": "Deshar"
+          },
+          "main_quest": "無",
+          "side_quest": {
+            "zh_tw": "傳統的代價",
+            "en": "Tradition's Toll"
+          },
+          "boss": "無",
+          "permanent_reward": {
+            "type": "weapon_set_passive_points",
+            "value": 2,
+            "unit": "points",
+            "text_zh_tw": "2 點武器套裝天賦點"
+          },
+          "condition_zh_tw": "找到死者遺書並交付。"
+        },
+        {
+          "map": {
+            "zh_tw": "戴斯哈尖塔",
+            "en": "The Spires of Deshar"
+          },
+          "main_quest": "無",
+          "side_quest": "無",
+          "boss": "無",
+          "permanent_reward": {
+            "type": "lightning_resistance",
+            "value": 10,
+            "unit": "percent",
+            "text_zh_tw": "+10% 閃電抗性"
+          },
+          "condition_zh_tw": "與卡洛翰姐妹祭壇互動。"
+        }
+      ]
+    },
+    {
+      "id": "act_3",
+      "chapter": "第三章",
+      "chapter_en": "Act 3",
+      "maps": [
+        {
+          "map": {
+            "zh_tw": "叢林遺跡",
+            "en": "Jungle Ruins"
+          },
+          "main_quest": "無",
+          "side_quest": "無",
+          "boss": {
+            "zh_tw": "神威銀拳",
+            "en": "Mighty Silverfist"
+          },
+          "permanent_reward": {
+            "type": "weapon_set_passive_points",
+            "value": 2,
+            "unit": "points",
+            "text_zh_tw": "2 點武器套裝天賦點"
+          }
+        },
+        {
+          "map": {
+            "zh_tw": "阿札克泥沼",
+            "en": "The Azak Bog"
+          },
+          "main_quest": "無",
+          "side_quest": {
+            "zh_tw": "部落復仇",
+            "en": "Tribal Vengeance"
+          },
+          "boss": {
+            "zh_tw": "沼澤女巫．尹娜杜克",
+            "en": "Ignagduk, the Bog Witch"
+          },
+          "permanent_reward": {
+            "type": "spirit",
+            "value": 30,
+            "unit": "flat",
+            "text_zh_tw": "+30 精魂"
+          },
+          "condition_zh_tw": "擊敗頭目並使用其掉落物。"
+        },
+        {
+          "map": {
+            "zh_tw": "劇毒墓穴",
+            "en": "The Venom Crypts"
+          },
+          "main_quest": "無",
+          "side_quest": {
+            "zh_tw": "滑行死者",
+            "en": "The Slithering Dead"
+          },
+          "boss": "無",
+          "permanent_reward": {
+            "type": "permanent_choice",
+            "changeable": false,
+            "choose": 1,
+            "options": [
+              {
+                "type": "stun_threshold",
+                "value": 25,
+                "unit": "percent_increased",
+                "text_zh_tw": "增加 25% 暈眩門檻"
+              },
+              {
+                "type": "elemental_ailment_threshold",
+                "value": 30,
+                "unit": "percent_increased",
+                "text_zh_tw": "增加 30% 元素異常狀態門檻"
+              },
+              {
+                "type": "mana_regeneration_rate",
+                "value": 25,
+                "unit": "percent_increased",
+                "text_zh_tw": "增加 25% 魔力回復率"
+              }
+            ]
+          }
+        },
+        {
+          "map": {
+            "zh_tw": "吉卡尼的機械迷城",
+            "en": "Jiquani's Machinarium"
+          },
+          "main_quest": "無",
+          "side_quest": "無",
+          "boss": {
+            "zh_tw": "遺忘的黑顎",
+            "en": "Blackjaw, the Remnant"
+          },
+          "permanent_reward": {
+            "type": "fire_resistance",
+            "value": 10,
+            "unit": "percent",
+            "text_zh_tw": "+10% 火焰抗性"
+          },
+          "condition_zh_tw": "開啟可選區域、擊敗頭目並使用火焰核心。"
+        },
+        {
+          "map": {
+            "zh_tw": "烏特薩／阿戈拉特",
+            "en": "Utzaal / Aggorat"
+          },
+          "main_quest": "無",
+          "side_quest": "無",
+          "boss": "無",
+          "permanent_reward": {
+            "type": "weapon_set_passive_points",
+            "value": 2,
+            "unit": "points",
+            "text_zh_tw": "2 點武器套裝天賦點"
+          },
+          "condition_zh_tw": "取得犧牲之心並於阿戈拉特祭壇獻祭。"
+        }
+      ]
+    },
+    {
+      "id": "act_4",
+      "chapter": "第四章",
+      "chapter_en": "Act 4",
+      "maps": [
+        {
+          "map": {
+            "zh_tw": "旅程之末",
+            "en": "Journey's End"
+          },
+          "main_quest": {
+            "zh_tw": "暗黑迷霧",
+            "en": "Dark Mists"
+          },
+          "side_quest": "無",
+          "boss": {
+            "zh_tw": "恐懼具現．全恐",
+            "en": "Omniphobia, Fear Manifest"
+          },
+          "permanent_reward": {
+            "type": "weapon_set_passive_points",
+            "value": 2,
+            "unit": "points",
+            "text_zh_tw": "2 點武器套裝天賦點"
+          }
+        },
+        {
+          "map": {
+            "zh_tw": "悉妮蔻拉之眼－沉默之廳",
+            "en": "The Eye of Hinekora - The Silent Hall"
+          },
+          "main_quest": "無",
+          "side_quest": "無",
+          "boss": "無",
+          "permanent_reward": {
+            "type": "maximum_mana",
+            "value": 5,
+            "unit": "percent_increased",
+            "text_zh_tw": "增加 5% 最大魔力"
+          },
+          "condition_zh_tw": "在娜瓦莉憩地獻上敬意。"
+        },
+        {
+          "map": {
+            "zh_tw": "瓦卡帕努島",
+            "en": "Whakapanu Island"
+          },
+          "main_quest": "無",
+          "side_quest": {
+            "zh_tw": "部落藥術",
+            "en": "Tribal Medicine"
+          },
+          "boss": {
+            "zh_tw": "大白鯊",
+            "en": "The Great White One"
+          },
+          "permanent_reward": {
+            "type": "permanent_defence_choice",
+            "changeable": false,
+            "choose": 1,
+            "options": [
+              {
+                "id": "kaoms_lesson",
+                "name": {
+                  "zh_tw": "岡姆的教誨",
+                  "en": "Kaom's Lesson"
+                },
+                "effects": [
+                  {
+                    "type": "global_armour_evasion_energy_shield",
+                    "value": 30,
+                    "unit": "percent_increased",
+                    "text_zh_tw": "增加 30% 全域護甲、閃避與能量護盾"
+                  }
+                ]
+              },
+              {
+                "id": "rakiatas_lesson",
+                "name": {
+                  "zh_tw": "萊基亞塔的教誨",
+                  "en": "Rakiata's Lesson"
+                },
+                "effects": [
+                  {
+                    "type": "armour_applies_to_elemental_damage",
+                    "value": 15,
+                    "unit": "percent",
+                    "text_zh_tw": "15% 護甲套用於元素傷害"
+                  },
+                  {
+                    "type": "deflection_from_evasion",
+                    "value": 12,
+                    "unit": "percent",
+                    "text_zh_tw": "獲得等同 12% 閃避值的偏斜值"
+                  },
+                  {
+                    "type": "energy_shield_recharge_start",
+                    "value": 12,
+                    "unit": "percent_faster",
+                    "text_zh_tw": "能量護盾開始充能速度加快 12%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "map": {
+            "zh_tw": "亡者之殿",
+            "en": "Halls of the Dead"
+          },
+          "main_quest": "無",
+          "side_quest": {
+            "zh_tw": "先祖試煉",
+            "en": "Trial of the Ancestors"
+          },
+          "boss": "無",
+          "permanent_reward": {
+            "type": "attribute_or_resistance_choices",
+            "changeable": false,
+            "groups": [
+              {
+                "name": {
+                  "zh_tw": "塔赫亞的考驗",
+                  "en": "Tawhoa's Test"
+                },
+                "options": [
+                  {
+                    "type": "dexterity",
+                    "value": 5,
+                    "unit": "flat",
+                    "text_zh_tw": "+5 敏捷"
+                  },
+                  {
+                    "type": "lightning_resistance",
+                    "value": 5,
+                    "unit": "percent",
+                    "text_zh_tw": "+5% 閃電抗性"
+                  }
+                ]
+              },
+              {
+                "name": {
+                  "zh_tw": "塔薩里奧的考驗",
+                  "en": "Tasalio's Test"
+                },
+                "options": [
+                  {
+                    "type": "intelligence",
+                    "value": 5,
+                    "unit": "flat",
+                    "text_zh_tw": "+5 智慧"
+                  },
+                  {
+                    "type": "cold_resistance",
+                    "value": 5,
+                    "unit": "percent",
+                    "text_zh_tw": "+5% 冰冷抗性"
+                  }
+                ]
+              },
+              {
+                "name": {
+                  "zh_tw": "拿馬乎的考驗",
+                  "en": "Ngamahu's Test"
+                },
+                "options": [
+                  {
+                    "type": "strength",
+                    "value": 5,
+                    "unit": "flat",
+                    "text_zh_tw": "+5 力量"
+                  },
+                  {
+                    "type": "fire_resistance",
+                    "value": 5,
+                    "unit": "percent",
+                    "text_zh_tw": "+5% 火焰抗性"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "map": {
+            "zh_tw": "亡者之殿",
+            "en": "Halls of the Dead"
+          },
+          "main_quest": "無",
+          "side_quest": {
+            "zh_tw": "先祖試煉",
+            "en": "Trial of the Ancestors"
+          },
+          "boss": {
+            "zh_tw": "白之亞瑪",
+            "en": "Yama the White"
+          },
+          "permanent_reward": {
+            "type": "weapon_set_passive_points",
+            "value": 2,
+            "unit": "points",
+            "text_zh_tw": "2 點武器套裝天賦點"
+          }
+        },
+        {
+          "map": {
+            "zh_tw": "廢棄監獄",
+            "en": "The Abandoned Prison"
+          },
+          "main_quest": "無",
+          "side_quest": "無",
+          "boss": "無",
+          "permanent_reward": {
+            "type": "flask_recovery_choice",
+            "changeable": true,
+            "choose": 1,
+            "options": [
+              {
+                "type": "life_recovery_from_flasks",
+                "value": 30,
+                "unit": "percent_increased",
+                "text_zh_tw": "增加 30% 藥劑生命恢復"
+              },
+              {
+                "type": "mana_recovery_from_flasks",
+                "value": 30,
+                "unit": "percent_increased",
+                "text_zh_tw": "增加 30% 藥劑魔力恢復"
+              }
+            ]
+          },
+          "condition_zh_tw": "與正義女神互動。"
+        }
+      ]
+    },
+    {
+      "id": "interlude_1",
+      "chapter": "間歇一：被偷的巨靈之幣",
+      "chapter_en": "Interlude 1: The Stolen Barya",
+      "maps": [
+        {
+          "map": {
+            "zh_tw": "卡里交匯道",
+            "en": "The Khari Crossing"
+          },
+          "main_quest": {
+            "zh_tw": "被偷的巨靈之幣",
+            "en": "The Stolen Barya"
+          },
+          "side_quest": "無",
+          "boss": [
+            {
+              "zh_tw": "終末毒刺．艾克提",
+              "en": "Akthi, the Final Sting"
+            },
+            {
+              "zh_tw": "沙蟲．艾能德",
+              "en": "Anundr, the Sandworm"
+            }
+          ],
+          "permanent_reward": {
+            "type": "weapon_set_passive_points",
+            "value": 2,
+            "unit": "points",
+            "text_zh_tw": "2 點武器套裝天賦點"
+          }
+        },
+        {
+          "map": {
+            "zh_tw": "顱顎階梯",
+            "en": "Skullmaw Stairway"
+          },
+          "main_quest": "無",
+          "side_quest": "無",
+          "boss": "無",
+          "permanent_reward": {
+            "type": "maximum_life",
+            "value": 5,
+            "unit": "percent_increased",
+            "text_zh_tw": "增加 5% 最大生命"
+          },
+          "condition_zh_tw": "找到熔岩神殿並使用熔岩之神的贈禮。"
+        },
+        {
+          "map": {
+            "zh_tw": "奇瑪",
+            "en": "Qimah"
+          },
+          "main_quest": "無",
+          "side_quest": "無",
+          "boss": "無",
+          "permanent_reward": {
+            "type": "qimah_boon",
+            "changeable": true,
+            "choose": 1,
+            "options": [
+              {
+                "type": "all_attributes",
+                "value": 5,
+                "unit": "flat",
+                "text_zh_tw": "+5 全能力值"
+              },
+              {
+                "type": "all_elemental_resistances",
+                "value": 5,
+                "unit": "percent",
+                "text_zh_tw": "+5% 全元素抗性"
+              },
+              {
+                "type": "cooldown_recovery_rate",
+                "value": 12,
+                "unit": "percent_increased",
+                "text_zh_tw": "增加 12% 冷卻時間恢復率"
+              },
+              {
+                "type": "movement_speed",
+                "value": 3,
+                "unit": "percent_increased",
+                "text_zh_tw": "增加 3% 移動速度"
+              },
+              {
+                "type": "presence_area_of_effect",
+                "value": 20,
+                "unit": "percent_increased",
+                "text_zh_tw": "增加 20% 存在範圍"
+              },
+              {
+                "type": "global_defences",
+                "value": 15,
+                "unit": "percent_increased",
+                "text_zh_tw": "增加 15% 全域防禦"
+              },
+              {
+                "type": "experience_gained",
+                "value": 5,
+                "unit": "percent_increased",
+                "text_zh_tw": "增加 5% 經驗獲取，但失去其他增益"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "interlude_2",
+      "chapter": "間歇二：多里亞尼的應變計畫",
+      "chapter_en": "Interlude 2: Doryani's Contingency",
+      "maps": [
+        {
+          "map": {
+            "zh_tw": "庫萊亞村",
+            "en": "Kriar Village"
+          },
+          "main_quest": {
+            "zh_tw": "多里亞尼的應變計畫",
+            "en": "Doryani's Contingency"
+          },
+          "side_quest": "無",
+          "boss": {
+            "zh_tw": "迷失長矛．萊塔拉",
+            "en": "Lythara, the Wayward Spear"
+          },
+          "permanent_reward": {
+            "type": "spirit",
+            "value": 40,
+            "unit": "flat",
+            "text_zh_tw": "+40 精魂"
+          }
+        },
+        {
+          "map": {
+            "zh_tw": "狂嗥洞穴",
+            "en": "Howling Caves"
+          },
+          "main_quest": "無",
+          "side_quest": "無",
+          "boss": {
+            "zh_tw": "怪異雪獸",
+            "en": "The Abominable Yeti"
+          },
+          "permanent_reward": {
+            "type": "weapon_set_passive_points",
+            "value": 2,
+            "unit": "points",
+            "text_zh_tw": "2 點武器套裝天賦點"
+          }
+        }
+      ]
+    },
+    {
+      "id": "interlude_3",
+      "chapter": "間歇三：霍爾登的詛咒",
+      "chapter_en": "Interlude 3: The Curse of Holten",
+      "maps": [
+        {
+          "map": {
+            "zh_tw": "狼之要塞",
+            "en": "Wolvenhold"
+          },
+          "main_quest": {
+            "zh_tw": "霍爾登的詛咒",
+            "en": "The Curse of Holten"
+          },
+          "side_quest": "無",
+          "boss": {
+            "zh_tw": "恐懼典獄長．歐斯溫",
+            "en": "Oswin, the Dread Warden"
+          },
+          "permanent_reward": {
+            "type": "weapon_set_passive_points",
+            "value": 2,
+            "unit": "points",
+            "text_zh_tw": "2 點武器套裝天賦點"
+          }
+        },
+        {
+          "map": {
+            "zh_tw": "金斯馬奇",
+            "en": "Kingsmarch"
+          },
+          "main_quest": {
+            "zh_tw": "完成三段間歇",
+            "en": "Complete all three Interludes"
+          },
+          "side_quest": "無",
+          "boss": "無",
+          "permanent_reward": {
+            "type": "weapon_set_passive_points",
+            "value": 2,
+            "unit": "points",
+            "text_zh_tw": "2 點武器套裝天賦點"
+          }
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "name": "PoE2DB",
+      "type": "game_database",
+      "urls": [
+        "https://poe2db.tw/us/Act_1",
+        "https://poe2db.tw/us/Act_2",
+        "https://poe2db.tw/us/Act_3",
+        "https://poe2db.tw/us/Act_4"
+      ]
+    },
+    {
+      "name": "Mobalytics 0.5 Campaign Checklist",
+      "type": "player_guide",
+      "url": "https://mobalytics.gg/poe-2/guides/0-5-campaign-checklist-stats-rewards-skillpoints-and-more"
+    },
+    {
+      "name": "Mobalytics 0.5 Challenges",
+      "type": "player_guide",
+      "url": "https://mobalytics.gg/poe-2/guides/0-5-challenges"
+    }
+  ]
+}
