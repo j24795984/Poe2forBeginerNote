@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0.0",
+  "game": {
+    "zh_tw": "流亡黯道 2",
+    "en": "Path of Exile 2"
+  },
+  "dataset": {
+    "zh_tw": "高價傳奇物品",
+    "en": "High-value Unique Items"
+  },
+  "scope": {
+    "patch_family": "0.5",
+    "league": "Runes of Aldur",
+    "realm": "US",
+    "minimum_value_d": 1,
+    "checked_at": "2026-07-29"
+  },
+  "status": {
+    "coverage": "initial_verified_list",
+    "is_comprehensive": false,
+    "note_zh_tw": "此版本只收錄目前可由搜尋結果直接核對價格的傳奇物品。後續應依各分類頁逐項擴充，不以未顯示價格的掛售頁推測數值。"
+  },
+  "sources": {
+    "market_categories": {
+      "unique_weapons": "https://poe.ninja/poe2/economy/runesofaldur/unique-weapons",
+      "unique_armours": "https://poe.ninja/poe2/economy/runesofaldur/unique-armours",
+      "unique_accessories": "https://poe.ninja/poe2/economy/runesofaldur/unique-accessories",
+      "unique_jewels": "https://poe.ninja/poe2/economy/runesofaldur/unique-jewels"
+    },
+    "poe2db_uniques": "https://poe2db.tw/us/Runes_of_Aldur_uniques"
+  },
+  "value_tiers": {
+    "valuable": {
+      "min_d": 1,
+      "max_d": 4.99
+    },
+    "high_value": {
+      "min_d": 5,
+      "max_d": 19.99
+    },
+    "very_high_value": {
+      "min_d": 20,
+      "max_d": 99.99
+    },
+    "jackpot": {
+      "min_d": 100,
+      "max_d": null
+    }
+  },
+  "items": [
+    {
+      "id": "winters-bite",
+      "name": {
+        "zh_tw": null,
+        "en": "Winter's Bite"
+      },
+      "base_type": {
+        "zh_tw": null,
+        "en": "Glass Shank"
+      },
+      "category": "unique_weapon",
+      "variant": "standard",
+      "price": {
+        "value_d": 3700,
+        "currency": "D",
+        "price_type": "poe_ninja_market_estimate"
+      },
+      "value_tier": "jackpot",
+      "requires_manual_check": true,
+      "translation_status": "zh_tw_unverified",
+      "poe2db_url": "https://poe2db.tw/us/Winters_Bite",
+      "market_url": "https://poe.ninja/poe2/economy/runesofaldur/unique-weapons/winters-bite-glass-shank"
+    },
+    {
+      "id": "the-dancing-dervish",
+      "name": {
+        "zh_tw": null,
+        "en": "The Dancing Dervish"
+      },
+      "base_type": {
+        "zh_tw": null,
+        "en": "Scimitar"
+      },
+      "category": "unique_weapon",
+      "variant": "standard",
+      "price": {
+        "value_d": 1600,
+        "currency": "D",
+        "price_type": "poe_ninja_market_estimate"
+      },
+      "value_tier": "jackpot",
+      "requires_manual_check": true,
+      "translation_status": "zh_tw_unverified",
+      "poe2db_url": "https://poe2db.tw/us/The_Dancing_Dervish",
+      "market_url": "https://poe.ninja/poe2/economy/runesofaldur/unique-weapons/the-dancing-dervish-scimitar"
+    },
+    {
+      "id": "voices",
+      "name": {
+        "zh_tw": null,
+        "en": "Voices"
+      },
+      "base_type": {
+        "zh_tw": "藍玉",
+        "en": "Sapphire"
+      },
+      "category": "unique_jewel",
+      "variant": "standard",
+      "price": {
+        "value_d": 880,
+        "currency": "D",
+        "price_type": "poe_ninja_market_estimate"
+      },
+      "value_tier": "jackpot",
+      "requires_manual_check": true,
+      "important_factors": [
+        "allocated_passive_count",
+        "corruption"
+      ],
+      "translation_status": "name_zh_tw_unverified",
+      "poe2db_url": "https://poe2db.tw/us/Voices",
+      "market_url": "https://poe.ninja/poe2/economy/runesofaldur/unique-jewels/voices-sapphire"
+    },
+    {
+      "id": "mageblood",
+      "name": {
+        "zh_tw": "魔血",
+        "en": "Mageblood"
+      },
+      "base_type": {
+        "zh_tw": "實用腰帶",
+        "en": "Utility Belt"
+      },
+      "category": "unique_accessory",
+      "sub_category": "belt",
+      "variant": "standard",
+      "price": {
+        "value_d": 350,
+        "currency": "D",
+        "price_type": "poe_ninja_market_estimate"
+      },
+      "value_tier": "jackpot",
+      "requires_manual_check": true,
+      "important_factors": [
+        "charm_slots",
+        "legacy_rolls",
+        "corruption"
+      ],
+      "translation_status": "verified",
+      "poe2db_url": "https://poe2db.tw/tw/Mageblood",
+      "market_url": "https://poe.ninja/poe2/economy/runesofaldur/unique-accessories/mageblood-utility-belt"
+    },
+    {
+      "id": "headhunter",
+      "name": {
+        "zh_tw": "獵首",
+        "en": "Headhunter"
+      },
+      "base_type": {
+        "zh_tw": "重革腰帶",
+        "en": "Heavy Belt"
+      },
+      "category": "unique_accessory",
+      "sub_category": "belt",
+      "variant": "standard",
+      "price": {
+        "value_d": 88,
+        "currency": "D",
+        "price_type": "poe_ninja_market_estimate"
+      },
+      "value_tier": "very_high_value",
+      "requires_manual_check": true,
+      "important_factors": [
+        "charm_slots",
+        "corruption"
+      ],
+      "translation_status": "verified",
+      "poe2db_url": "https://poe2db.tw/tw/Headhunter",
+      "market_url": "https://poe.ninja/poe2/economy/runesofaldur/unique-accessories/headhunter-heavy-belt"
+    },
+    {
+      "id": "the-adorned",
+      "name": {
+        "zh_tw": "朝氣之靈",
+        "en": "The Adorned"
+      },
+      "base_type": {
+        "zh_tw": "鑽石",
+        "en": "Diamond"
+      },
+      "category": "unique_jewel",
+      "variant": "standard",
+      "price": {
+        "value_d": 29,
+        "currency": "D",
+        "price_type": "poe_ninja_market_estimate"
+      },
+      "value_tier": "very_high_value",
+      "requires_manual_check": true,
+      "important_factors": [
+        "effect_roll",
+        "corrupted_magic_jewel_synergy"
+      ],
+      "translation_status": "verified",
+      "poe2db_url": "https://poe2db.tw/tw/The_Adorned",
+      "market_url": "https://poe.ninja/poe2/economy/runesofaldur/unique-jewels/the-adorned-diamond"
+    },
+    {
+      "id": "the-taming",
+      "name": {
+        "zh_tw": "元素之章",
+        "en": "The Taming"
+      },
+      "base_type": {
+        "zh_tw": "三相戒指",
+        "en": "Prismatic Ring"
+      },
+      "category": "unique_accessory",
+      "sub_category": "ring",
+      "variant": "standard",
+      "price": {
+        "value_d": 5,
+        "currency": "D",
+        "price_type": "poe_ninja_market_estimate"
+      },
+      "value_tier": "high_value",
+      "requires_manual_check": false,
+      "important_factors": [
+        "elemental_resistance_roll",
+        "damage_per_ailment_roll"
+      ],
+      "translation_status": "verified",
+      "poe2db_url": "https://poe2db.tw/tw/The_Taming",
+      "market_url": "https://poe.ninja/poe2/economy/runesofaldur/unique-accessories/the-taming-prismatic-ring"
+    }
+  ],
+  "excluded_categories": [
+    "rare_items",
+    "mechanic_fragments",
+    "boss_entry_items",
+    "currency",
+    "runes",
+    "lineage_support_gems"
+  ]
+}

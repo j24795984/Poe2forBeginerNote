@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0.0",
+  "game": {
+    "zh_tw": "流亡黯道 2",
+    "en": "Path of Exile 2"
+  },
+  "category": "高價通貨",
+  "category_en": "High-value Currency",
+  "scope": {
+    "patch_family": "0.5",
+    "realm": "US",
+    "price_currency": "D",
+    "price_currency_full": "Divine Orb",
+    "minimum_high_value_d": 1,
+    "checked_at": "2026-07-29"
+  },
+  "source": {
+    "name": "PoE2DB Economy Currency",
+    "url": "https://poe2db.tw/us/Economy_Currency",
+    "realm": "US",
+    "note_zh_tw": "價格會隨市場變動，請以來源頁面最新數據為準。"
+  },
+  "value_tiers": {
+    "baseline": {
+      "min_d": 1,
+      "max_d": 1,
+      "label_zh_tw": "基準通貨"
+    },
+    "valuable": {
+      "min_d": 1,
+      "max_d": 4.99,
+      "label_zh_tw": "值得保留"
+    },
+    "high_value": {
+      "min_d": 5,
+      "max_d": 19.99,
+      "label_zh_tw": "高價"
+    },
+    "very_high_value": {
+      "min_d": 20,
+      "max_d": 99.99,
+      "label_zh_tw": "極高價"
+    },
+    "jackpot": {
+      "min_d": 100,
+      "max_d": null,
+      "label_zh_tw": "頂級掉落"
+    }
+  },
+  "items": [
+    {
+      "id": "mirror-of-kalandra",
+      "name": {
+        "zh_tw": "卡蘭德的魔鏡",
+        "en": "Mirror of Kalandra"
+      },
+      "category": "currency",
+      "price": {
+        "value_d": 4900,
+        "min_d": 4800,
+        "max_d": 5000,
+        "currency": "D",
+        "price_type": "estimated_market_range",
+        "checked_at": "2026-07-29"
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Currency",
+      "note_zh_tw": "極低供給，實際掛價與成交價可能差異很大。"
+    },
+    {
+      "id": "hinekoras-lock",
+      "name": {
+        "zh_tw": "悉妮蔻拉的髮絲",
+        "en": "Hinekora's Lock"
+      },
+      "category": "currency",
+      "price": {
+        "value_d": 1115,
+        "min_d": 1100,
+        "max_d": 1130,
+        "currency": "D",
+        "price_type": "estimated_market_range",
+        "checked_at": "2026-07-29"
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Currency",
+      "note_zh_tw": "高價且供給有限，建議交易前重新查價。"
+    },
+    {
+      "id": "fracturing-orb",
+      "name": {
+        "zh_tw": "破裂石",
+        "en": "Fracturing Orb"
+      },
+      "category": "currency",
+      "price": {
+        "value_d": 8.8,
+        "min_d": 8.7,
+        "max_d": 8.9,
+        "currency": "D",
+        "price_type": "estimated_market_value",
+        "checked_at": "2026-07-29"
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Currency"
+    },
+    {
+      "id": "perfect-chaos-orb",
+      "name": {
+        "zh_tw": "完美混沌石",
+        "en": "Perfect Chaos Orb"
+      },
+      "category": "currency",
+      "price": {
+        "value_d": 6,
+        "min_d": 5.9,
+        "max_d": 6.1,
+        "currency": "D",
+        "price_type": "estimated_market_value",
+        "checked_at": "2026-07-29"
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Currency"
+    },
+    {
+      "id": "perfect-exalted-orb",
+      "name": {
+        "zh_tw": "完美崇高石",
+        "en": "Perfect Exalted Orb"
+      },
+      "category": "currency",
+      "price": {
+        "value_d": 2.6,
+        "min_d": 2.5,
+        "max_d": 2.7,
+        "currency": "D",
+        "price_type": "estimated_market_value",
+        "checked_at": "2026-07-29"
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Currency"
+    },
+    {
+      "id": "divine-orb",
+      "name": {
+        "zh_tw": "神聖石",
+        "en": "Divine Orb"
+      },
+      "category": "currency",
+      "price": {
+        "value_d": 1,
+        "min_d": 1,
+        "max_d": 1,
+        "currency": "D",
+        "price_type": "baseline",
+        "checked_at": "2026-07-29"
+      },
+      "value_tier": "baseline",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Currency",
+      "note_zh_tw": "所有價格換算的基準通貨。"
+    }
+  ],
+  "excluded_below_1d_examples": [
+    {
+      "id": "cryptic-key",
+      "name": {
+        "zh_tw": "神秘鑰匙",
+        "en": "Cryptic Key"
+      },
+      "estimated_value_d": 0.49,
+      "include_in_high_value_list": false
+    },
+    {
+      "id": "orb-of-annulment",
+      "name": {
+        "zh_tw": "無效石",
+        "en": "Orb of Annulment"
+      },
+      "estimated_value_d": 0.45,
+      "include_in_high_value_list": false
+    },
+    {
+      "id": "greater-chaos-orb",
+      "name": {
+        "zh_tw": "高階混沌石",
+        "en": "Greater Chaos Orb"
+      },
+      "estimated_value_d": 0.33,
+      "include_in_high_value_list": false
+    },
+    {
+      "id": "perfect-jewellers-orb",
+      "name": {
+        "zh_tw": "完美工匠石",
+        "en": "Perfect Jeweller's Orb"
+      },
+      "estimated_value_d": 0.28,
+      "include_in_high_value_list": false
+    },
+    {
+      "id": "chaos-orb",
+      "name": {
+        "zh_tw": "混沌石",
+        "en": "Chaos Orb"
+      },
+      "estimated_value_d": 0.108,
+      "include_in_high_value_list": false
+    }
+  ]
+}

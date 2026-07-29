@@ -1,0 +1,5601 @@
+{
+  "schema_version": "1.0.0",
+  "game": {
+    "zh_tw": "流亡黯道 2",
+    "en": "Path of Exile 2"
+  },
+  "dataset": {
+    "zh_tw": "高價機制物品、門票與特殊掉落物",
+    "en": "High-value Mechanic Items, Entry Items and Special Drops"
+  },
+  "scope": {
+    "patch_family": "0.5",
+    "league": "Runes of Aldur",
+    "realm": "US",
+    "minimum_value_d": 1,
+    "checked_at": "2026-07-29"
+  },
+  "pricing_note": {
+    "zh_tw": "value_d 為 PoE2DB US Realm Economy 頁面顯示的 24 小時估值。市場價格會持續變化；低交易量項目已標記 requires_manual_check。",
+    "en": "value_d is the 24-hour estimate shown on PoE2DB's US Realm Economy pages. Prices fluctuate; low-volume entries are marked requires_manual_check."
+  },
+  "translation_note": {
+    "zh_tw": "此檔優先保留 PoE2DB 英文正式名稱。尚未逐項從繁中資料頁確認的名稱，zh_tw 為 null 並標記 zh_tw_unverified，避免自行翻譯造成錯誤。",
+    "en": "English database names are retained. zh-TW names not individually verified against localized database pages are null and marked zh_tw_unverified."
+  },
+  "sources": {
+    "fragments": "https://poe2db.tw/us/Economy_Fragments",
+    "ritual": "https://poe2db.tw/us/Economy_Ritual",
+    "essences": "https://poe2db.tw/us/Economy_Essences",
+    "breach": "https://poe2db.tw/us/Economy_Breach",
+    "delirium": "https://poe2db.tw/us/Economy_Delirium",
+    "expedition": "https://poe2db.tw/us/Economy_Expedition",
+    "runes": "https://poe2db.tw/us/Economy_Runes",
+    "soul_cores": "https://poe2db.tw/us/Economy_Soul_Cores",
+    "idols": "https://poe2db.tw/us/Economy_Idols",
+    "uncut_gems": "https://poe2db.tw/us/Economy_Uncut_Gems",
+    "abyss": "https://poe2db.tw/us/Economy_Abyss",
+    "gems": "https://poe2db.tw/us/Economy_Gems",
+    "atziris_temple": "https://poe2db.tw/us/Economy_Atziris_Temple"
+  },
+  "value_tiers": {
+    "valuable": {
+      "min_d": 1,
+      "max_d": 4.99,
+      "label_zh_tw": "值得保留"
+    },
+    "high_value": {
+      "min_d": 5,
+      "max_d": 19.99,
+      "label_zh_tw": "高價"
+    },
+    "very_high_value": {
+      "min_d": 20,
+      "max_d": 99.99,
+      "label_zh_tw": "極高價"
+    },
+    "jackpot": {
+      "min_d": 100,
+      "max_d": null,
+      "label_zh_tw": "頂級掉落"
+    }
+  },
+  "category_summary": {
+    "fragments": {
+      "count": 17,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments"
+    },
+    "ritual": {
+      "count": 16,
+      "source_url": "https://poe2db.tw/us/Economy_Ritual"
+    },
+    "essences": {
+      "count": 21,
+      "source_url": "https://poe2db.tw/us/Economy_Essences"
+    },
+    "breach": {
+      "count": 5,
+      "source_url": "https://poe2db.tw/us/Economy_Breach"
+    },
+    "delirium": {
+      "count": 13,
+      "source_url": "https://poe2db.tw/us/Economy_Delirium"
+    },
+    "expedition": {
+      "count": 12,
+      "source_url": "https://poe2db.tw/us/Economy_Expedition"
+    },
+    "runes": {
+      "count": 17,
+      "source_url": "https://poe2db.tw/us/Economy_Runes"
+    },
+    "soul_cores": {
+      "count": 19,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores"
+    },
+    "idols": {
+      "count": 16,
+      "source_url": "https://poe2db.tw/us/Economy_Idols"
+    },
+    "uncut_gems": {
+      "count": 39,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems"
+    },
+    "abyss": {
+      "count": 16,
+      "source_url": "https://poe2db.tw/us/Economy_Abyss"
+    },
+    "gems": {
+      "count": 17,
+      "source_url": "https://poe2db.tw/us/Economy_Gems"
+    },
+    "atziris_temple": {
+      "count": 11,
+      "source_url": "https://poe2db.tw/us/Economy_Atziris_Temple"
+    }
+  },
+  "items": [
+    {
+      "id": "the-trialmaster-s-reliquary-key",
+      "name": {
+        "zh_tw": null,
+        "en": "The Trialmaster's Reliquary Key"
+      },
+      "category": "fragments",
+      "item_role": "reliquary_key",
+      "price": {
+        "value_d": 373,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 31
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "azmeri-reliquary-key",
+      "name": {
+        "zh_tw": null,
+        "en": "Azmeri Reliquary Key"
+      },
+      "category": "fragments",
+      "item_role": "reliquary_key",
+      "price": {
+        "value_d": 102,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 52
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "zarokh-s-reliquary-key-against-the-darkness",
+      "name": {
+        "zh_tw": null,
+        "en": "Zarokh's Reliquary Key: Against the Darkness"
+      },
+      "category": "fragments",
+      "item_role": "reliquary_key",
+      "price": {
+        "value_d": 87.3,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 15
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "xesht-s-reliquary-key",
+      "name": {
+        "zh_tw": null,
+        "en": "Xesht's Reliquary Key"
+      },
+      "category": "fragments",
+      "item_role": "reliquary_key",
+      "price": {
+        "value_d": 33.5,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 29
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "tangmazu-s-reliquary-key",
+      "name": {
+        "zh_tw": null,
+        "en": "Tangmazu's Reliquary Key"
+      },
+      "category": "fragments",
+      "item_role": "reliquary_key",
+      "price": {
+        "value_d": 14,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 255
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "the-arbiter-s-reliquary-key",
+      "name": {
+        "zh_tw": null,
+        "en": "The Arbiter's Reliquary Key"
+      },
+      "category": "fragments",
+      "item_role": "reliquary_key",
+      "price": {
+        "value_d": 12.9,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 154
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "olroth-s-reliquary-key",
+      "name": {
+        "zh_tw": null,
+        "en": "Olroth's Reliquary Key"
+      },
+      "category": "fragments",
+      "item_role": "reliquary_key",
+      "price": {
+        "value_d": 11.5,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 19
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "origin-core",
+      "name": {
+        "zh_tw": null,
+        "en": "Origin Core"
+      },
+      "category": "fragments",
+      "item_role": "boss_fragment",
+      "price": {
+        "value_d": 9.55,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 4054
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "faded-crisis-fragment",
+      "name": {
+        "zh_tw": null,
+        "en": "Faded Crisis Fragment"
+      },
+      "category": "fragments",
+      "item_role": "crisis_fragment",
+      "price": {
+        "value_d": 8.8,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 13153
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "cowardly-fate",
+      "name": {
+        "zh_tw": null,
+        "en": "Cowardly Fate"
+      },
+      "category": "fragments",
+      "item_role": "trialmaster_fate",
+      "price": {
+        "value_d": 7.5,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 4806
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "deadly-fate",
+      "name": {
+        "zh_tw": null,
+        "en": "Deadly Fate"
+      },
+      "category": "fragments",
+      "item_role": "trialmaster_fate",
+      "price": {
+        "value_d": 7.45,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 5022
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "victorious-fate",
+      "name": {
+        "zh_tw": null,
+        "en": "Victorious Fate"
+      },
+      "category": "fragments",
+      "item_role": "trialmaster_fate",
+      "price": {
+        "value_d": 7.33,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 4815
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "origin-spark",
+      "name": {
+        "zh_tw": null,
+        "en": "Origin Spark"
+      },
+      "category": "fragments",
+      "item_role": "boss_fragment",
+      "price": {
+        "value_d": 4.73,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 4301
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "origin-cradle",
+      "name": {
+        "zh_tw": null,
+        "en": "Origin Cradle"
+      },
+      "category": "fragments",
+      "item_role": "boss_fragment",
+      "price": {
+        "value_d": 3.72,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 3979
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "twilight-reliquary-key",
+      "name": {
+        "zh_tw": null,
+        "en": "Twilight Reliquary Key"
+      },
+      "category": "fragments",
+      "item_role": "reliquary_key",
+      "price": {
+        "value_d": 4.71,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 10170
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "ritualistic-reliquary-key",
+      "name": {
+        "zh_tw": null,
+        "en": "Ritualistic Reliquary Key"
+      },
+      "category": "fragments",
+      "item_role": "reliquary_key",
+      "price": {
+        "value_d": 1.95,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 74
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "ancient-crisis-fragment",
+      "name": {
+        "zh_tw": null,
+        "en": "Ancient Crisis Fragment"
+      },
+      "category": "fragments",
+      "item_role": "crisis_fragment",
+      "price": {
+        "value_d": 1.51,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 12012
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Fragments",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "omen-of-chance",
+      "name": {
+        "zh_tw": null,
+        "en": "Omen of Chance"
+      },
+      "category": "ritual",
+      "item_role": "omen",
+      "price": {
+        "value_d": 26.1,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1278
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Ritual",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "omen-of-sinistral-annulment",
+      "name": {
+        "zh_tw": null,
+        "en": "Omen of Sinistral Annulment"
+      },
+      "category": "ritual",
+      "item_role": "omen",
+      "price": {
+        "value_d": 15.2,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 13674
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Ritual",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "omen-of-sinistral-erasure",
+      "name": {
+        "zh_tw": null,
+        "en": "Omen of Sinistral Erasure"
+      },
+      "category": "ritual",
+      "item_role": "omen",
+      "price": {
+        "value_d": 14,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 13216
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Ritual",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "omen-of-dextral-annulment",
+      "name": {
+        "zh_tw": null,
+        "en": "Omen of Dextral Annulment"
+      },
+      "category": "ritual",
+      "item_role": "omen",
+      "price": {
+        "value_d": 10.7,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 12812
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Ritual",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "omen-of-whittling",
+      "name": {
+        "zh_tw": null,
+        "en": "Omen of Whittling"
+      },
+      "category": "ritual",
+      "item_role": "omen",
+      "price": {
+        "value_d": 10.6,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 67808
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Ritual",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "omen-of-dextral-erasure",
+      "name": {
+        "zh_tw": null,
+        "en": "Omen of Dextral Erasure"
+      },
+      "category": "ritual",
+      "item_role": "omen",
+      "price": {
+        "value_d": 10.3,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 12639
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Ritual",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "head-of-the-king",
+      "name": {
+        "zh_tw": null,
+        "en": "Head of the King"
+      },
+      "category": "ritual",
+      "item_role": "boss_entry_item",
+      "price": {
+        "value_d": 3.87,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 13536
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Ritual",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "omen-of-secret-compartments",
+      "name": {
+        "zh_tw": null,
+        "en": "Omen of Secret Compartments"
+      },
+      "category": "ritual",
+      "item_role": "omen",
+      "price": {
+        "value_d": 1.3,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 226
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Ritual",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "omen-of-the-hunt",
+      "name": {
+        "zh_tw": null,
+        "en": "Omen of the Hunt"
+      },
+      "category": "ritual",
+      "item_role": "omen",
+      "price": {
+        "value_d": 146,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 139
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Ritual",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "omen-of-reinforcements",
+      "name": {
+        "zh_tw": null,
+        "en": "Omen of Reinforcements"
+      },
+      "category": "ritual",
+      "item_role": "omen",
+      "price": {
+        "value_d": 135,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 122
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Ritual",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "omen-of-answered-prayers",
+      "name": {
+        "zh_tw": null,
+        "en": "Omen of Answered Prayers"
+      },
+      "category": "ritual",
+      "item_role": "omen",
+      "price": {
+        "value_d": 62.6,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 139
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Ritual",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "an-audience-with-the-king",
+      "name": {
+        "zh_tw": null,
+        "en": "An Audience with the King"
+      },
+      "category": "ritual",
+      "item_role": "boss_entry_item",
+      "price": {
+        "value_d": 31.1,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 9787
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Ritual",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "omen-of-resurgence",
+      "name": {
+        "zh_tw": null,
+        "en": "Omen of Resurgence"
+      },
+      "category": "ritual",
+      "item_role": "omen",
+      "price": {
+        "value_d": 11,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 29959
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Ritual",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "omen-of-catalysing-exaltation",
+      "name": {
+        "zh_tw": null,
+        "en": "Omen of Catalysing Exaltation"
+      },
+      "category": "ritual",
+      "item_role": "omen",
+      "price": {
+        "value_d": 9.5,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 4201
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Ritual",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "omen-of-the-ancients",
+      "name": {
+        "zh_tw": null,
+        "en": "Omen of the Ancients"
+      },
+      "category": "ritual",
+      "item_role": "omen",
+      "price": {
+        "value_d": 9.8,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 13161
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Ritual",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "omen-of-dextral-exaltation",
+      "name": {
+        "zh_tw": null,
+        "en": "Omen of Dextral Exaltation"
+      },
+      "category": "ritual",
+      "item_role": "omen",
+      "price": {
+        "value_d": 4.06,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 10524
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Ritual",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "essence-of-delirium",
+      "name": {
+        "zh_tw": null,
+        "en": "Essence of Delirium"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 1,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 116
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "essence-of-abrasion",
+      "name": {
+        "zh_tw": null,
+        "en": "Essence of Abrasion"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 151,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "essence-of-hysteria",
+      "name": {
+        "zh_tw": null,
+        "en": "Essence of Hysteria"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 117,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 47
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "essence-of-enhancement",
+      "name": {
+        "zh_tw": null,
+        "en": "Essence of Enhancement"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 70,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 2
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "essence-of-opulence",
+      "name": {
+        "zh_tw": null,
+        "en": "Essence of Opulence"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 48.3,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 4
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-essence-of-the-infinite",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Essence of the Infinite"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 20.6,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 436
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-essence-of-the-mind",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Essence of the Mind"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 17,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 151
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-essence-of-battle",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Essence of Battle"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 10.1,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 275
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-essence-of-haste",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Essence of Haste"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 8.85,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 250
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-essence-of-opulence",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Essence of Opulence"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 9.1,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 109
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "greater-essence-of-haste",
+      "name": {
+        "zh_tw": null,
+        "en": "Greater Essence of Haste"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 6.22,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 9
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "greater-essence-of-seeking",
+      "name": {
+        "zh_tw": null,
+        "en": "Greater Essence of Seeking"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 6.36,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 28
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "greater-essence-of-ruin",
+      "name": {
+        "zh_tw": null,
+        "en": "Greater Essence of Ruin"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 2.88,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 8
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "greater-essence-of-opulence",
+      "name": {
+        "zh_tw": null,
+        "en": "Greater Essence of Opulence"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 3.2,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 120
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-essence-of-enhancement",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Essence of Enhancement"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 2.97,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 496
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-essence-of-abrasion",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Essence of Abrasion"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 3.54,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 26
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-essence-of-flames",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Essence of Flames"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 1.83,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 6
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-essence-of-command",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Essence of Command"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 2,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 3
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-essence-of-alacrity",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Essence of Alacrity"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 2.49,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 99
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "essence-of-insanity",
+      "name": {
+        "zh_tw": null,
+        "en": "Essence of Insanity"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 1.71,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 96
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-essence-of-ice",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Essence of Ice"
+      },
+      "category": "essences",
+      "item_role": "essence",
+      "price": {
+        "value_d": 1.19,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 69
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Essences",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "breachlord-sac",
+      "name": {
+        "zh_tw": null,
+        "en": "Breachlord Sac"
+      },
+      "category": "breach",
+      "item_role": "boss_entry_item",
+      "price": {
+        "value_d": 13.5,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 703
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Breach",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "refined-sibilant-catalyst",
+      "name": {
+        "zh_tw": null,
+        "en": "Refined Sibilant Catalyst"
+      },
+      "category": "breach",
+      "item_role": "catalyst",
+      "price": {
+        "value_d": 7.4,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 3131
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Breach",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "refined-reaver-catalyst",
+      "name": {
+        "zh_tw": null,
+        "en": "Refined Reaver Catalyst"
+      },
+      "category": "breach",
+      "item_role": "catalyst",
+      "price": {
+        "value_d": 4.76,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 2242
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Breach",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "xoph-s-catalyst",
+      "name": {
+        "zh_tw": null,
+        "en": "Xoph's Catalyst"
+      },
+      "category": "breach",
+      "item_role": "catalyst",
+      "price": {
+        "value_d": 4.13,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 5010
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Breach",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "flesh-catalyst",
+      "name": {
+        "zh_tw": null,
+        "en": "Flesh Catalyst"
+      },
+      "category": "breach",
+      "item_role": "catalyst",
+      "price": {
+        "value_d": 2.94,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 5146
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Breach",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "raven-touched-shard",
+      "name": {
+        "zh_tw": null,
+        "en": "Raven-Touched Shard"
+      },
+      "category": "delirium",
+      "item_role": "mechanic_fragment",
+      "price": {
+        "value_d": 94.5,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1781
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Delirium",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "ancient-potent-liquid-contempt",
+      "name": {
+        "zh_tw": null,
+        "en": "Ancient Potent Liquid Contempt"
+      },
+      "category": "delirium",
+      "item_role": "distilled_emotion",
+      "price": {
+        "value_d": 4.23,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 3215
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Delirium",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "simulacrum",
+      "name": {
+        "zh_tw": null,
+        "en": "Simulacrum"
+      },
+      "category": "delirium",
+      "item_role": "boss_entry_item",
+      "price": {
+        "value_d": 3.39,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 47242
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Delirium",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "potent-liquid-ferocity",
+      "name": {
+        "zh_tw": null,
+        "en": "Potent Liquid Ferocity"
+      },
+      "category": "delirium",
+      "item_role": "distilled_emotion",
+      "price": {
+        "value_d": 2.07,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 8586
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Delirium",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "concentrated-liquid-isolation",
+      "name": {
+        "zh_tw": null,
+        "en": "Concentrated Liquid Isolation"
+      },
+      "category": "delirium",
+      "item_role": "distilled_emotion",
+      "price": {
+        "value_d": 4.57,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 2294
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Delirium",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "concentrated-liquid-suffering",
+      "name": {
+        "zh_tw": null,
+        "en": "Concentrated Liquid Suffering"
+      },
+      "category": "delirium",
+      "item_role": "distilled_emotion",
+      "price": {
+        "value_d": 57.8,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 2216
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Delirium",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "concentrated-liquid-fear",
+      "name": {
+        "zh_tw": null,
+        "en": "Concentrated Liquid Fear"
+      },
+      "category": "delirium",
+      "item_role": "distilled_emotion",
+      "price": {
+        "value_d": 21.3,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 3813
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Delirium",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "ancient-concentrated-liquid-isolation",
+      "name": {
+        "zh_tw": null,
+        "en": "Ancient Concentrated Liquid Isolation"
+      },
+      "category": "delirium",
+      "item_role": "distilled_emotion",
+      "price": {
+        "value_d": 9.7,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 145
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Delirium",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "ancient-potent-liquid-melancholy",
+      "name": {
+        "zh_tw": null,
+        "en": "Ancient Potent Liquid Melancholy"
+      },
+      "category": "delirium",
+      "item_role": "distilled_emotion",
+      "price": {
+        "value_d": 6.67,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 2071
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Delirium",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "liquid-despair",
+      "name": {
+        "zh_tw": null,
+        "en": "Liquid Despair"
+      },
+      "category": "delirium",
+      "item_role": "distilled_emotion",
+      "price": {
+        "value_d": 5.41,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 5211
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Delirium",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "ancient-concentrated-liquid-suffering",
+      "name": {
+        "zh_tw": null,
+        "en": "Ancient Concentrated Liquid Suffering"
+      },
+      "category": "delirium",
+      "item_role": "distilled_emotion",
+      "price": {
+        "value_d": 6.33,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 99
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Delirium",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "simulacrum-splinter",
+      "name": {
+        "zh_tw": null,
+        "en": "Simulacrum Splinter"
+      },
+      "category": "delirium",
+      "item_role": "mechanic_fragment",
+      "price": {
+        "value_d": 3.75,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 292878
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Delirium",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "potent-liquid-melancholy",
+      "name": {
+        "zh_tw": null,
+        "en": "Potent Liquid Melancholy"
+      },
+      "category": "delirium",
+      "item_role": "distilled_emotion",
+      "price": {
+        "value_d": 4.68,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 783
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Delirium",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "aldur-s-saga",
+      "name": {
+        "zh_tw": null,
+        "en": "Aldur's Saga"
+      },
+      "category": "expedition",
+      "item_role": "boss_entry_item",
+      "price": {
+        "value_d": 42,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 5298
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Expedition",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-flux",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Flux"
+      },
+      "category": "expedition",
+      "item_role": "runeforging_material",
+      "price": {
+        "value_d": 41.8,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1008
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Expedition",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "expedition-logbook",
+      "name": {
+        "zh_tw": null,
+        "en": "Expedition Logbook"
+      },
+      "category": "expedition",
+      "item_role": "mechanic_map",
+      "price": {
+        "value_d": 1.25,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 18078
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Expedition",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uhtred-s-saga",
+      "name": {
+        "zh_tw": null,
+        "en": "Uhtred's Saga"
+      },
+      "category": "expedition",
+      "item_role": "boss_entry_item",
+      "price": {
+        "value_d": 1.18,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 6984
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Expedition",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "olroth-s-saga",
+      "name": {
+        "zh_tw": null,
+        "en": "Olroth's Saga"
+      },
+      "category": "expedition",
+      "item_role": "boss_entry_item",
+      "price": {
+        "value_d": 1.93,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1662
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Expedition",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "veridical-starlit-ore",
+      "name": {
+        "zh_tw": null,
+        "en": "Veridical Starlit Ore"
+      },
+      "category": "expedition",
+      "item_role": "runeforging_material",
+      "price": {
+        "value_d": 86.6,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 169
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Expedition",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "thaumaturgic-flux-level-20",
+      "name": {
+        "zh_tw": null,
+        "en": "Thaumaturgic Flux (Level 20)"
+      },
+      "category": "expedition",
+      "item_role": "runeforging_material",
+      "price": {
+        "value_d": 61.9,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 150
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Expedition",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "sovereign-alloy",
+      "name": {
+        "zh_tw": null,
+        "en": "Sovereign Alloy"
+      },
+      "category": "expedition",
+      "item_role": "runeforging_material",
+      "price": {
+        "value_d": 51.5,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1400
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Expedition",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "adaptive-alloy",
+      "name": {
+        "zh_tw": null,
+        "en": "Adaptive Alloy"
+      },
+      "category": "expedition",
+      "item_role": "runeforging_material",
+      "price": {
+        "value_d": 48.6,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 803
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Expedition",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "warding-starlit-ore",
+      "name": {
+        "zh_tw": null,
+        "en": "Warding Starlit Ore"
+      },
+      "category": "expedition",
+      "item_role": "runeforging_material",
+      "price": {
+        "value_d": 41.9,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 360
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Expedition",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "olroth-s-crest-of-the-sun",
+      "name": {
+        "zh_tw": null,
+        "en": "Olroth's Crest of the Sun"
+      },
+      "category": "expedition",
+      "item_role": "runeforging_material",
+      "price": {
+        "value_d": 39.7,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1446
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Expedition",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "protective-alloy",
+      "name": {
+        "zh_tw": null,
+        "en": "Protective Alloy"
+      },
+      "category": "expedition",
+      "item_role": "runeforging_material",
+      "price": {
+        "value_d": 25.4,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 732
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Expedition",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "aldur-s-legacy",
+      "name": {
+        "zh_tw": null,
+        "en": "Aldur's Legacy"
+      },
+      "category": "runes",
+      "item_role": "special_rune",
+      "price": {
+        "value_d": 244,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 890
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Runes",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "emergent-possibility",
+      "name": {
+        "zh_tw": null,
+        "en": "Emergent Possibility"
+      },
+      "category": "runes",
+      "item_role": "special_rune",
+      "price": {
+        "value_d": 47.1,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 114
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Runes",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "emergent-vigour",
+      "name": {
+        "zh_tw": null,
+        "en": "Emergent Vigour"
+      },
+      "category": "runes",
+      "item_role": "special_rune",
+      "price": {
+        "value_d": 8.7,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 104
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Runes",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-ward-rune",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Ward Rune"
+      },
+      "category": "runes",
+      "item_role": "perfect_rune",
+      "price": {
+        "value_d": 2.88,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 98
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Runes",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-stone-rune",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Stone Rune"
+      },
+      "category": "runes",
+      "item_role": "perfect_rune",
+      "price": {
+        "value_d": 2.57,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 23
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Runes",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "astrid-s-creativity",
+      "name": {
+        "zh_tw": null,
+        "en": "Astrid's Creativity"
+      },
+      "category": "runes",
+      "item_role": "special_rune",
+      "price": {
+        "value_d": 2.44,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 2744
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Runes",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-adept-rune",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Adept Rune"
+      },
+      "category": "runes",
+      "item_role": "perfect_rune",
+      "price": {
+        "value_d": 2.01,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 99
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Runes",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-storm-rune",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Storm Rune"
+      },
+      "category": "runes",
+      "item_role": "perfect_rune",
+      "price": {
+        "value_d": 1.98,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 419
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Runes",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-inspiration-rune",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Inspiration Rune"
+      },
+      "category": "runes",
+      "item_role": "perfect_rune",
+      "price": {
+        "value_d": 1.97,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 115
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Runes",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-robust-rune",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Robust Rune"
+      },
+      "category": "runes",
+      "item_role": "perfect_rune",
+      "price": {
+        "value_d": 1.98,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 203
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Runes",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-desert-rune",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Desert Rune"
+      },
+      "category": "runes",
+      "item_role": "perfect_rune",
+      "price": {
+        "value_d": 1.96,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 411
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Runes",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-resolve-rune",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Resolve Rune"
+      },
+      "category": "runes",
+      "item_role": "perfect_rune",
+      "price": {
+        "value_d": 1.96,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 105
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Runes",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-glacial-rune",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Glacial Rune"
+      },
+      "category": "runes",
+      "item_role": "perfect_rune",
+      "price": {
+        "value_d": 1.96,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 361
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Runes",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-charging-rune",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Charging Rune"
+      },
+      "category": "runes",
+      "item_role": "perfect_rune",
+      "price": {
+        "value_d": 1.96,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 46
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Runes",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-vision-rune",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Vision Rune"
+      },
+      "category": "runes",
+      "item_role": "perfect_rune",
+      "price": {
+        "value_d": 1.95,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 359
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Runes",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-mind-rune",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Mind Rune"
+      },
+      "category": "runes",
+      "item_role": "perfect_rune",
+      "price": {
+        "value_d": 1.94,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1029
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Runes",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "perfect-rebirth-rune",
+      "name": {
+        "zh_tw": null,
+        "en": "Perfect Rebirth Rune"
+      },
+      "category": "runes",
+      "item_role": "perfect_rune",
+      "price": {
+        "value_d": 1.93,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 84
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Runes",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "soul-core-of-azcapa",
+      "name": {
+        "zh_tw": null,
+        "en": "Soul Core of Azcapa"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 1.53,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 797
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "xopec-s-soul-core-of-power",
+      "name": {
+        "zh_tw": null,
+        "en": "Xopec's Soul Core of Power"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 1.41,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 334
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "soul-core-of-quipolatl",
+      "name": {
+        "zh_tw": null,
+        "en": "Soul Core of Quipolatl"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 1.04,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 961
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "tzamoto-s-soul-core-of-ferocity",
+      "name": {
+        "zh_tw": null,
+        "en": "Tzamoto's Soul Core of Ferocity"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 2.85,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 424
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "soul-core-of-jiquani",
+      "name": {
+        "zh_tw": null,
+        "en": "Soul Core of Jiquani"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 95.5,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 435
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "opiloti-s-soul-core-of-assault",
+      "name": {
+        "zh_tw": null,
+        "en": "Opiloti's Soul Core of Assault"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 81,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 118
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "soul-core-of-zalatl",
+      "name": {
+        "zh_tw": null,
+        "en": "Soul Core of Zalatl"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 77.7,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 431
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "soul-core-of-cholotl",
+      "name": {
+        "zh_tw": null,
+        "en": "Soul Core of Cholotl"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 59,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 196
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "soul-core-of-zantipi",
+      "name": {
+        "zh_tw": null,
+        "en": "Soul Core of Zantipi"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 49.5,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 196
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "xipocado-s-soul-core-of-dominion",
+      "name": {
+        "zh_tw": null,
+        "en": "Xipocado's Soul Core of Dominion"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 41.6,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 154
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "quipolatl-s-soul-core-of-flow",
+      "name": {
+        "zh_tw": null,
+        "en": "Quipolatl's Soul Core of Flow"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 40.6,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 305
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "soul-core-of-citaqualotl",
+      "name": {
+        "zh_tw": null,
+        "en": "Soul Core of Citaqualotl"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 32.2,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1806
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "guatelitzi-s-soul-core-of-endurance",
+      "name": {
+        "zh_tw": null,
+        "en": "Guatelitzi's Soul Core of Endurance"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 31,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 61
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "soul-core-of-tacati",
+      "name": {
+        "zh_tw": null,
+        "en": "Soul Core of Tacati"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 23.6,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 2719
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "estazunti-s-soul-core-of-convalescence",
+      "name": {
+        "zh_tw": null,
+        "en": "Estazunti's Soul Core of Convalescence"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 23.6,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 208
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "soul-core-of-atmohua",
+      "name": {
+        "zh_tw": null,
+        "en": "Soul Core of Atmohua"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 17,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 107
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "hayoxi-s-soul-core-of-heatproofing",
+      "name": {
+        "zh_tw": null,
+        "en": "Hayoxi's Soul Core of Heatproofing"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 14.4,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 241
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "tacati-s-soul-core-of-affliction",
+      "name": {
+        "zh_tw": null,
+        "en": "Tacati's Soul Core of Affliction"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 12,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 93
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "soul-core-of-ticaba",
+      "name": {
+        "zh_tw": null,
+        "en": "Soul Core of Ticaba"
+      },
+      "category": "soul_cores",
+      "item_role": "soul_core",
+      "price": {
+        "value_d": 9.76,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 267
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Soul_Cores",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "carved-majesty",
+      "name": {
+        "zh_tw": null,
+        "en": "Carved Majesty"
+      },
+      "category": "idols",
+      "item_role": "idol",
+      "price": {
+        "value_d": 201,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 139
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Idols",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "carved-cunning",
+      "name": {
+        "zh_tw": null,
+        "en": "Carved Cunning"
+      },
+      "category": "idols",
+      "item_role": "idol",
+      "price": {
+        "value_d": 5.86,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 145
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Idols",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "fox-idol",
+      "name": {
+        "zh_tw": null,
+        "en": "Fox Idol"
+      },
+      "category": "idols",
+      "item_role": "idol",
+      "price": {
+        "value_d": 1.36,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1015
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Idols",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "rabbit-idol",
+      "name": {
+        "zh_tw": null,
+        "en": "Rabbit Idol"
+      },
+      "category": "idols",
+      "item_role": "idol",
+      "price": {
+        "value_d": 144,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1251
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Idols",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "carved-tenacity",
+      "name": {
+        "zh_tw": null,
+        "en": "Carved Tenacity"
+      },
+      "category": "idols",
+      "item_role": "idol",
+      "price": {
+        "value_d": 108,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 103
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Idols",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "idol-of-eramir",
+      "name": {
+        "zh_tw": null,
+        "en": "Idol of Eramir"
+      },
+      "category": "idols",
+      "item_role": "idol",
+      "price": {
+        "value_d": 80.1,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 454
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Idols",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "carved-mischief",
+      "name": {
+        "zh_tw": null,
+        "en": "Carved Mischief"
+      },
+      "category": "idols",
+      "item_role": "idol",
+      "price": {
+        "value_d": 68.3,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 51
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Idols",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "idol-of-sirrius",
+      "name": {
+        "zh_tw": null,
+        "en": "Idol of Sirrius"
+      },
+      "category": "idols",
+      "item_role": "idol",
+      "price": {
+        "value_d": 43,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1122
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Idols",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "idol-of-eeshta",
+      "name": {
+        "zh_tw": null,
+        "en": "Idol of Eeshta"
+      },
+      "category": "idols",
+      "item_role": "idol",
+      "price": {
+        "value_d": 41.3,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 996
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Idols",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "idol-of-ralakesh",
+      "name": {
+        "zh_tw": null,
+        "en": "Idol of Ralakesh"
+      },
+      "category": "idols",
+      "item_role": "idol",
+      "price": {
+        "value_d": 31.9,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 791
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Idols",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "idol-of-grold",
+      "name": {
+        "zh_tw": null,
+        "en": "Idol of Grold"
+      },
+      "category": "idols",
+      "item_role": "idol",
+      "price": {
+        "value_d": 20.4,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 174
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Idols",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "idol-of-the-pharisee",
+      "name": {
+        "zh_tw": null,
+        "en": "Idol of the Pharisee"
+      },
+      "category": "idols",
+      "item_role": "idol",
+      "price": {
+        "value_d": 20.9,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 234
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Idols",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "idol-of-the-sycophant",
+      "name": {
+        "zh_tw": null,
+        "en": "Idol of the Sycophant"
+      },
+      "category": "idols",
+      "item_role": "idol",
+      "price": {
+        "value_d": 15.2,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 338
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Idols",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "idol-of-greust",
+      "name": {
+        "zh_tw": null,
+        "en": "Idol of Greust"
+      },
+      "category": "idols",
+      "item_role": "idol",
+      "price": {
+        "value_d": 11.7,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 61
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Idols",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "idol-of-kraityn",
+      "name": {
+        "zh_tw": null,
+        "en": "Idol of Kraityn"
+      },
+      "category": "idols",
+      "item_role": "idol",
+      "price": {
+        "value_d": 9.94,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 67
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Idols",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "idol-of-egrin",
+      "name": {
+        "zh_tw": null,
+        "en": "Idol of Egrin"
+      },
+      "category": "idols",
+      "item_role": "idol",
+      "price": {
+        "value_d": 8.47,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 370
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Idols",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-skill-gem-level-20",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Skill Gem (Level 20)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_skill_gem",
+      "price": {
+        "value_d": 5.8,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 7584
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-spirit-gem-level-20",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Spirit Gem (Level 20)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_spirit_gem",
+      "price": {
+        "value_d": 5.73,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 4050
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-spirit-gem-level-8",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Spirit Gem (Level 8)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_spirit_gem",
+      "price": {
+        "value_d": 3.34,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 205
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-spirit-gem-level-14",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Spirit Gem (Level 14)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_spirit_gem",
+      "price": {
+        "value_d": 1.34,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 877
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-spirit-gem-level-15",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Spirit Gem (Level 15)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_spirit_gem",
+      "price": {
+        "value_d": 1.28,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 528
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-spirit-gem-level-9",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Spirit Gem (Level 9)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_spirit_gem",
+      "price": {
+        "value_d": 1.06,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 192
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-spirit-gem-level-16",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Spirit Gem (Level 16)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_spirit_gem",
+      "price": {
+        "value_d": 218,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 466
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-skill-gem-level-1",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Skill Gem (Level 1)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_skill_gem",
+      "price": {
+        "value_d": 110,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 804
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-spirit-gem-level-4",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Spirit Gem (Level 4)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_spirit_gem",
+      "price": {
+        "value_d": 105,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 222
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-skill-gem-level-7",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Skill Gem (Level 7)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_skill_gem",
+      "price": {
+        "value_d": 92.1,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 549
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-spirit-gem-level-11",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Spirit Gem (Level 11)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_spirit_gem",
+      "price": {
+        "value_d": 88.2,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 185
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-spirit-gem-level-7",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Spirit Gem (Level 7)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_spirit_gem",
+      "price": {
+        "value_d": 65.5,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 243
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-spirit-gem-level-5",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Spirit Gem (Level 5)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_spirit_gem",
+      "price": {
+        "value_d": 52.8,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 234
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-spirit-gem-level-19",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Spirit Gem (Level 19)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_spirit_gem",
+      "price": {
+        "value_d": 52.4,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 4745
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-spirit-gem-level-13",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Spirit Gem (Level 13)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_spirit_gem",
+      "price": {
+        "value_d": 49.8,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 378
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-spirit-gem-level-6",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Spirit Gem (Level 6)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_spirit_gem",
+      "price": {
+        "value_d": 42.1,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 161
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-skill-gem-level-8",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Skill Gem (Level 8)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_skill_gem",
+      "price": {
+        "value_d": 41.6,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 380
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-spirit-gem-level-17",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Spirit Gem (Level 17)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_spirit_gem",
+      "price": {
+        "value_d": 34,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 2849
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-spirit-gem-level-12",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Spirit Gem (Level 12)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_spirit_gem",
+      "price": {
+        "value_d": 32.2,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 655
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-spirit-gem-level-18",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Spirit Gem (Level 18)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_spirit_gem",
+      "price": {
+        "value_d": 30.1,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 8444
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-spirit-gem-level-10",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Spirit Gem (Level 10)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_spirit_gem",
+      "price": {
+        "value_d": 27.6,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 645
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-skill-gem-level-5",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Skill Gem (Level 5)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_skill_gem",
+      "price": {
+        "value_d": 21.3,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 793
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-skill-gem-level-11",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Skill Gem (Level 11)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_skill_gem",
+      "price": {
+        "value_d": 19.7,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 640
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-skill-gem-level-2",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Skill Gem (Level 2)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_skill_gem",
+      "price": {
+        "value_d": 15.1,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 264
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-skill-gem-level-9",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Skill Gem (Level 9)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_skill_gem",
+      "price": {
+        "value_d": 15.4,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 805
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-support-gem-level-3",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Support Gem (Level 3)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_support_gem",
+      "price": {
+        "value_d": 12.5,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 685
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-support-gem-level-4",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Support Gem (Level 4)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_support_gem",
+      "price": {
+        "value_d": 10.6,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 678
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-skill-gem-level-19",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Skill Gem (Level 19)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_skill_gem",
+      "price": {
+        "value_d": 9.54,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 8668
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-support-gem-level-5",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Support Gem (Level 5)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_support_gem",
+      "price": {
+        "value_d": 5.58,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 67924
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-skill-gem-level-6",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Skill Gem (Level 6)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_skill_gem",
+      "price": {
+        "value_d": 5.53,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 357
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-skill-gem-level-10",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Skill Gem (Level 10)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_skill_gem",
+      "price": {
+        "value_d": 5.8,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 622
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-support-gem-level-1",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Support Gem (Level 1)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_support_gem",
+      "price": {
+        "value_d": 4.04,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 670
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-support-gem-level-2",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Support Gem (Level 2)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_support_gem",
+      "price": {
+        "value_d": 3.94,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 358
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-skill-gem-level-3",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Skill Gem (Level 3)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_skill_gem",
+      "price": {
+        "value_d": 3.55,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 647
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-skill-gem-level-4",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Skill Gem (Level 4)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_skill_gem",
+      "price": {
+        "value_d": 3.81,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 126
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-skill-gem-level-12",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Skill Gem (Level 12)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_skill_gem",
+      "price": {
+        "value_d": 4.2,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1044
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-skill-gem-level-13",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Skill Gem (Level 13)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_skill_gem",
+      "price": {
+        "value_d": 3.88,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 906
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-skill-gem-level-15",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Skill Gem (Level 15)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_skill_gem",
+      "price": {
+        "value_d": 3.54,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1340
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uncut-skill-gem-level-16",
+      "name": {
+        "zh_tw": null,
+        "en": "Uncut Skill Gem (Level 16)"
+      },
+      "category": "uncut_gems",
+      "item_role": "uncut_skill_gem",
+      "price": {
+        "value_d": 2.66,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1346
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Uncut_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "kurgal-s-gaze",
+      "name": {
+        "zh_tw": null,
+        "en": "Kurgal's Gaze"
+      },
+      "category": "abyss",
+      "item_role": "abyss_jewel",
+      "price": {
+        "value_d": 86.3,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 268
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Abyss",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "omen-of-light",
+      "name": {
+        "zh_tw": null,
+        "en": "Omen of Light"
+      },
+      "category": "abyss",
+      "item_role": "omen",
+      "price": {
+        "value_d": 12.5,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 56662
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Abyss",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "preserved-cranium",
+      "name": {
+        "zh_tw": null,
+        "en": "Preserved Cranium"
+      },
+      "category": "abyss",
+      "item_role": "abyss_bone",
+      "price": {
+        "value_d": 11,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 19440
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Abyss",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "tecrod-s-gaze",
+      "name": {
+        "zh_tw": null,
+        "en": "Tecrod's Gaze"
+      },
+      "category": "abyss",
+      "item_role": "abyss_jewel",
+      "price": {
+        "value_d": 6.1,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1040
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Abyss",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "ancient-collarbone",
+      "name": {
+        "zh_tw": null,
+        "en": "Ancient Collarbone"
+      },
+      "category": "abyss",
+      "item_role": "abyss_bone",
+      "price": {
+        "value_d": 4.22,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 13530
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Abyss",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "altered-collarbone",
+      "name": {
+        "zh_tw": null,
+        "en": "Altered Collarbone"
+      },
+      "category": "abyss",
+      "item_role": "abyss_bone",
+      "price": {
+        "value_d": 3.9,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1382
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Abyss",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "ancient-rib",
+      "name": {
+        "zh_tw": null,
+        "en": "Ancient Rib"
+      },
+      "category": "abyss",
+      "item_role": "abyss_bone",
+      "price": {
+        "value_d": 3.83,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 16948
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Abyss",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "ancient-jawbone",
+      "name": {
+        "zh_tw": null,
+        "en": "Ancient Jawbone"
+      },
+      "category": "abyss",
+      "item_role": "abyss_bone",
+      "price": {
+        "value_d": 3.2,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 17869
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Abyss",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "kulemak-s-invitation",
+      "name": {
+        "zh_tw": null,
+        "en": "Kulemak's Invitation"
+      },
+      "category": "abyss",
+      "item_role": "boss_entry_item",
+      "price": {
+        "value_d": 2.79,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 17768
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Abyss",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "ulaman-s-gaze",
+      "name": {
+        "zh_tw": null,
+        "en": "Ulaman's Gaze"
+      },
+      "category": "abyss",
+      "item_role": "abyss_jewel",
+      "price": {
+        "value_d": 141,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 38
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Abyss",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "amanamu-s-gaze",
+      "name": {
+        "zh_tw": null,
+        "en": "Amanamu's Gaze"
+      },
+      "category": "abyss",
+      "item_role": "abyss_jewel",
+      "price": {
+        "value_d": 99.8,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 320
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Abyss",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "omen-of-the-blackblooded",
+      "name": {
+        "zh_tw": null,
+        "en": "Omen of the Blackblooded"
+      },
+      "category": "abyss",
+      "item_role": "omen",
+      "price": {
+        "value_d": 61.7,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1783
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Abyss",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "preserved-collarbone",
+      "name": {
+        "zh_tw": null,
+        "en": "Preserved Collarbone"
+      },
+      "category": "abyss",
+      "item_role": "abyss_bone",
+      "price": {
+        "value_d": 17.9,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 17305
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Abyss",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "gnawed-jawbone",
+      "name": {
+        "zh_tw": null,
+        "en": "Gnawed Jawbone"
+      },
+      "category": "abyss",
+      "item_role": "abyss_bone",
+      "price": {
+        "value_d": 10.6,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 331
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Abyss",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "gnawed-collarbone",
+      "name": {
+        "zh_tw": null,
+        "en": "Gnawed Collarbone"
+      },
+      "category": "abyss",
+      "item_role": "abyss_bone",
+      "price": {
+        "value_d": 9.95,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 423
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Abyss",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "omen-of-the-sovereign",
+      "name": {
+        "zh_tw": null,
+        "en": "Omen of the Sovereign"
+      },
+      "category": "abyss",
+      "item_role": "omen",
+      "price": {
+        "value_d": 6.09,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 546
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Abyss",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uul-netol-s-embrace",
+      "name": {
+        "zh_tw": null,
+        "en": "Uul-Netol's Embrace"
+      },
+      "category": "gems",
+      "item_role": "lineage_support_gem",
+      "price": {
+        "value_d": 572,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 268
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "garukhan-s-resolve",
+      "name": {
+        "zh_tw": null,
+        "en": "Garukhan's Resolve"
+      },
+      "category": "gems",
+      "item_role": "lineage_support_gem",
+      "price": {
+        "value_d": 492,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 738
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "atziri-s-communion",
+      "name": {
+        "zh_tw": null,
+        "en": "Atziri's Communion"
+      },
+      "category": "gems",
+      "item_role": "lineage_support_gem",
+      "price": {
+        "value_d": 320,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1096
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uhtred-s-exodus",
+      "name": {
+        "zh_tw": null,
+        "en": "Uhtred's Exodus"
+      },
+      "category": "gems",
+      "item_role": "lineage_support_gem",
+      "price": {
+        "value_d": 310,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 211
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "seraph-s-heart",
+      "name": {
+        "zh_tw": null,
+        "en": "Seraph's Heart"
+      },
+      "category": "gems",
+      "item_role": "lineage_support_gem",
+      "price": {
+        "value_d": 301,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 357
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "dialla-s-desire",
+      "name": {
+        "zh_tw": null,
+        "en": "Dialla's Desire"
+      },
+      "category": "gems",
+      "item_role": "lineage_support_gem",
+      "price": {
+        "value_d": 257,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 944
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "her-declaration",
+      "name": {
+        "zh_tw": null,
+        "en": "Her Declaration"
+      },
+      "category": "gems",
+      "item_role": "lineage_support_gem",
+      "price": {
+        "value_d": 217,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 660
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "rigwald-s-ferocity",
+      "name": {
+        "zh_tw": null,
+        "en": "Rigwald's Ferocity"
+      },
+      "category": "gems",
+      "item_role": "lineage_support_gem",
+      "price": {
+        "value_d": 149,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 776
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "rakiata-s-flow",
+      "name": {
+        "zh_tw": null,
+        "en": "Rakiata's Flow"
+      },
+      "category": "gems",
+      "item_role": "lineage_support_gem",
+      "price": {
+        "value_d": 124,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 2477
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "esh-s-radiance",
+      "name": {
+        "zh_tw": null,
+        "en": "Esh's Radiance"
+      },
+      "category": "gems",
+      "item_role": "lineage_support_gem",
+      "price": {
+        "value_d": 119,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 339
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "tul-s-stillness",
+      "name": {
+        "zh_tw": null,
+        "en": "Tul's Stillness"
+      },
+      "category": "gems",
+      "item_role": "lineage_support_gem",
+      "price": {
+        "value_d": 101,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 293
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uhtred-s-augury",
+      "name": {
+        "zh_tw": null,
+        "en": "Uhtred's Augury"
+      },
+      "category": "gems",
+      "item_role": "lineage_support_gem",
+      "price": {
+        "value_d": 93.1,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 702
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "xoph-s-pyre",
+      "name": {
+        "zh_tw": null,
+        "en": "Xoph's Pyre"
+      },
+      "category": "gems",
+      "item_role": "lineage_support_gem",
+      "price": {
+        "value_d": 68.3,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 250
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "breachlord-s-rift",
+      "name": {
+        "zh_tw": null,
+        "en": "Breachlord's Rift"
+      },
+      "category": "gems",
+      "item_role": "lineage_support_gem",
+      "price": {
+        "value_d": 23.2,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 218
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "uhtred-s-omen",
+      "name": {
+        "zh_tw": null,
+        "en": "Uhtred's Omen"
+      },
+      "category": "gems",
+      "item_role": "lineage_support_gem",
+      "price": {
+        "value_d": 16.8,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1194
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "vorana-s-siege",
+      "name": {
+        "zh_tw": null,
+        "en": "Vorana's Siege"
+      },
+      "category": "gems",
+      "item_role": "lineage_support_gem",
+      "price": {
+        "value_d": 15.9,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 1452
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "olroth-s-conviction",
+      "name": {
+        "zh_tw": null,
+        "en": "Olroth's Conviction"
+      },
+      "category": "gems",
+      "item_role": "lineage_support_gem",
+      "price": {
+        "value_d": 9.16,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 654
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Gems",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "jiquani-s-thesis",
+      "name": {
+        "zh_tw": null,
+        "en": "Jiquani's Thesis"
+      },
+      "category": "atziris_temple",
+      "item_role": "temple_thesis",
+      "price": {
+        "value_d": 563,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 127
+      },
+      "value_tier": "jackpot",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Atziris_Temple",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "guatelitzi-s-thesis",
+      "name": {
+        "zh_tw": null,
+        "en": "Guatelitzi's Thesis"
+      },
+      "category": "atziris_temple",
+      "item_role": "temple_thesis",
+      "price": {
+        "value_d": 7.18,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 60
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Atziris_Temple",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "architect-s-orb",
+      "name": {
+        "zh_tw": null,
+        "en": "Architect's Orb"
+      },
+      "category": "atziris_temple",
+      "item_role": "temple_currency",
+      "price": {
+        "value_d": 5.36,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 12379
+      },
+      "value_tier": "high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Atziris_Temple",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "vaal-catalysing-infuser",
+      "name": {
+        "zh_tw": null,
+        "en": "Vaal Catalysing Infuser"
+      },
+      "category": "atziris_temple",
+      "item_role": "temple_infuser",
+      "price": {
+        "value_d": 4.76,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 6429
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Atziris_Temple",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "crystallised-corruption",
+      "name": {
+        "zh_tw": null,
+        "en": "Crystallised Corruption"
+      },
+      "category": "atziris_temple",
+      "item_role": "temple_material",
+      "price": {
+        "value_d": 4.02,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 11449
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Atziris_Temple",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "core-destabiliser",
+      "name": {
+        "zh_tw": null,
+        "en": "Core Destabiliser"
+      },
+      "category": "atziris_temple",
+      "item_role": "temple_material",
+      "price": {
+        "value_d": 3.59,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 9888
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Atziris_Temple",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "quipolatl-s-thesis",
+      "name": {
+        "zh_tw": null,
+        "en": "Quipolatl's Thesis"
+      },
+      "category": "atziris_temple",
+      "item_role": "temple_thesis",
+      "price": {
+        "value_d": 3.05,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 21
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Atziris_Temple",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "vaal-cultivation-orb",
+      "name": {
+        "zh_tw": null,
+        "en": "Vaal Cultivation Orb"
+      },
+      "category": "atziris_temple",
+      "item_role": "temple_currency",
+      "price": {
+        "value_d": 1.81,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 10005
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Atziris_Temple",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "vaal-armourer-s-infuser",
+      "name": {
+        "zh_tw": null,
+        "en": "Vaal Armourer's Infuser"
+      },
+      "category": "atziris_temple",
+      "item_role": "temple_infuser",
+      "price": {
+        "value_d": 1.14,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 27334
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Atziris_Temple",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "citaqualotl-s-thesis",
+      "name": {
+        "zh_tw": null,
+        "en": "Citaqualotl's Thesis"
+      },
+      "category": "atziris_temple",
+      "item_role": "temple_thesis",
+      "price": {
+        "value_d": 1,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 12
+      },
+      "value_tier": "valuable",
+      "include_in_high_value_list": true,
+      "requires_manual_check": true,
+      "source_url": "https://poe2db.tw/us/Economy_Atziris_Temple",
+      "translation_status": "zh_tw_unverified"
+    },
+    {
+      "id": "kamasa-s-orb-of-sacrifice",
+      "name": {
+        "zh_tw": null,
+        "en": "Kamasa's Orb of Sacrifice"
+      },
+      "category": "atziris_temple",
+      "item_role": "temple_currency",
+      "price": {
+        "value_d": 54.9,
+        "currency": "D",
+        "price_type": "poe2db_24h_value",
+        "checked_at": "2026-07-29"
+      },
+      "market": {
+        "realm": "US",
+        "league": "Runes of Aldur",
+        "volume_24h": 294
+      },
+      "value_tier": "very_high_value",
+      "include_in_high_value_list": true,
+      "requires_manual_check": false,
+      "source_url": "https://poe2db.tw/us/Economy_Atziris_Temple",
+      "translation_status": "zh_tw_unverified"
+    }
+  ],
+  "excluded": [
+    "rare_items",
+    "unique_equipment",
+    "general_currency",
+    "items_below_1d",
+    "entries_with_unreadable_or_ambiguous_exchange_direction"
+  ]
+}
