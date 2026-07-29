@@ -4,6 +4,17 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { loadStaticJson } from '../../services/loadStaticJson';
 
 const campaignData = await loadStaticJson('campaign.json');
+const campaignRewardData = await loadStaticJson('poe2_campaign_permanent_rewards_by_map_0.5_zh-TW.json');
+const campaignDisplayData = {
+	id: campaignData.id,
+	chapters: campaignData.chapters.map(({ id, slug, name, englishName, maps }: Record<string, any>) => ({
+		id,
+		slug,
+		name,
+		englishName,
+		maps,
+	})),
+};
 ---
 
 <BaseLayout title="章節｜POE2 新手筆記" bodyClass="campaign-body">
@@ -16,7 +27,7 @@ const campaignData = await loadStaticJson('campaign.json');
 
 		<div class="global-px-box">
 			<section id="campaign-content" class="atlas-scroll-reveal base-container py-8 md:py-12">
-				<CampaignChapterTabs initialData={campaignData} client:load />
+				<CampaignChapterTabs initialData={campaignDisplayData} initialRewardData={campaignRewardData} client:load />
 			</section>
 		</div>
 	</main>
