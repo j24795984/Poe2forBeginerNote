@@ -699,17 +699,21 @@ html::-webkit-scrollbar {
   background: rgb(0 0 0 / .48);
 }
 
+.campaign-map-point-hover-target {
+  display: none;
+}
+
 .campaign-map-hotspot {
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
   position: absolute;
   z-index: 3;
   border: 2px solid var(--atlas-yellow-bright);
   border-radius: 50%;
   box-shadow:
-    0 0 0 .45rem rgb(232 191 82 / .16),
-    0 0 1.4rem .4rem rgb(232 191 82 / .72),
-    inset 0 0 .8rem rgb(232 191 82 / .45);
+    0 0 0 .3rem rgb(232 191 82 / .16),
+    0 0 1rem .25rem rgb(232 191 82 / .72),
+    inset 0 0 .55rem rgb(232 191 82 / .45);
   pointer-events: none;
   transform: translate(-50%, -50%);
 }
@@ -717,7 +721,7 @@ html::-webkit-scrollbar {
 .campaign-map-hotspot::after {
   content: '';
   position: absolute;
-  inset: -.7rem;
+  inset: -.45rem;
   border: 1px solid rgb(232 191 82 / .48);
   border-radius: inherit;
   animation: campaign-map-hotspot-pulse 1.8s ease-out infinite;
@@ -814,6 +818,11 @@ html::-webkit-scrollbar {
   padding: .7rem;
 }
 
+.campaign-map-reward-card-abyss {
+  background:
+    linear-gradient(105deg, rgb(0 0 0 / .92) 12%, rgb(4 22 13 / .9) 48%, rgb(12 73 39 / .82));
+}
+
 .campaign-map-reward-card-interactive {
   cursor: pointer;
   transition: border-color .25s ease, box-shadow .25s ease, background-color .25s ease;
@@ -826,6 +835,61 @@ html::-webkit-scrollbar {
 .campaign-map-reward-card-selected {
   border-color: var(--atlas-yellow);
   box-shadow: 0 0 1rem rgb(232 191 82 / .2), 0 .65rem 1.4rem rgb(0 0 0 / .18);
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 768px) {
+  .campaign-map-point-hover-target {
+    display: block;
+    width: 3.5rem;
+    height: 3.5rem;
+    position: absolute;
+    z-index: 4;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+  }
+
+  .campaign-map-point-hover-target::before {
+    content: '';
+    position: absolute;
+    inset: .5rem;
+    border: 2px solid transparent;
+    border-radius: inherit;
+    pointer-events: none;
+    transition: border-color .2s ease, background-color .2s ease, box-shadow .2s ease;
+  }
+
+  .campaign-map-point-hover-target::after {
+    content: '';
+    position: absolute;
+    inset: .15rem;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  .campaign-map-point-hover-target:hover::before {
+    border-color: var(--atlas-yellow-bright);
+    background: rgb(232 191 82 / .1);
+    box-shadow:
+      0 0 0 .35rem rgb(232 191 82 / .14),
+      0 0 1rem .25rem rgb(232 191 82 / .62),
+      inset 0 0 .6rem rgb(232 191 82 / .38);
+  }
+
+  .campaign-map-point-hover-target:hover::after {
+    border-color: rgb(232 191 82 / .48);
+    animation: campaign-map-hotspot-pulse 1.8s ease-out infinite;
+  }
+
+  .campaign-map-point-hover-target-disabled {
+    pointer-events: none;
+  }
+
+  .campaign-map-reward-card-map-hovered {
+    border-color: var(--atlas-yellow);
+    box-shadow: 0 0 1rem rgb(232 191 82 / .2), 0 .65rem 1.4rem rgb(0 0 0 / .18);
+  }
 }
 
 .campaign-map-reward-card:has(.campaign-map-reward-card-action:focus-visible) {
@@ -891,7 +955,8 @@ html::-webkit-scrollbar {
   text-wrap: pretty;
 }
 
-.campaign-map-reward-method span {
+.campaign-map-reward-condition {
+  grid-column: 1 / -1;
   color: rgb(214 211 209);
   font-size: .76rem;
   line-height: 1.5;
@@ -930,6 +995,13 @@ html::-webkit-scrollbar {
   font-size: .72rem;
   line-height: 1.35;
   white-space: nowrap;
+}
+
+.campaign-map-reward-card-heading > .campaign-map-reward-locations {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: .3rem;
 }
 
 .campaign-map-switch-enter-active,
@@ -1232,8 +1304,8 @@ html::-webkit-scrollbar {
   }
 
   .campaign-map-hotspot {
-    width: 2.75rem;
-    height: 2.75rem;
+    width: 2.25rem;
+    height: 2.25rem;
   }
 }
 
@@ -1243,7 +1315,8 @@ html::-webkit-scrollbar {
 
 @media (prefers-reduced-motion: reduce) {
   .site-background-image { scroll-behavior: auto; }
-  .campaign-map-hotspot::after { animation: none; }
+  .campaign-map-hotspot::after,
+  .campaign-map-point-hover-target:hover::after { animation: none; }
   .campaign-map-switch-enter-active,
   .campaign-map-switch-leave-active {
     transition: none;

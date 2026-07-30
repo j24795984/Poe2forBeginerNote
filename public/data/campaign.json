@@ -1,7 +1,7 @@
 {
   "id": "campaign-document-001",
   "idRegistry": {
-    "nextSequence": 24,
+    "nextSequence": 32,
     "retiredIds": []
   },
   "sources": {
@@ -206,7 +206,59 @@
       "status": "pending",
       "summary": "第一章版型確認後，將依相同資料結構整理。",
       "quickGuideUrl": "https://poe2db.tw/tw/Act_2#%E7%AC%AC2%E7%AB%A0",
-      "maps": [],
+      "maps": [
+        {
+          "id": "campaign-map-024",
+          "name": "瓦斯提里沙漠",
+          "image": "images/act_maps/act-2-1.webp",
+          "alt": "第二章瓦斯提里沙漠地表路線圖",
+          "points": [
+            {
+              "name": "凱斯城",
+              "x": 37.44,
+              "y": 41
+            },
+            {
+              "name": "骨坑",
+              "x": 38.69,
+              "y": 85.72
+            },
+            {
+              "name": "無光通道",
+              "x": 43.45,
+              "y": 84.93
+            },
+            {
+              "name": "泰坦之谷",
+              "x": 30.48,
+              "y": 34.81
+            },
+            {
+              "name": "戴斯哈",
+              "x": 92.22,
+              "y": 38.13
+            },
+            {
+              "name": "戴斯哈尖塔",
+              "x": 93.18,
+              "y": 47.85
+            }
+          ]
+        },
+        {
+          "id": "campaign-map-025",
+          "name": "第二章地下區域",
+          "image": "images/act_maps/act-2-2.webp",
+          "alt": "第二章地下區域路線圖",
+          "points": [
+            {
+              "name": "叛徒之路",
+              "x": 68.67,
+              "y": 38.89
+            }
+          ]
+        }
+      ],
       "quests": []
     },
     {
@@ -217,7 +269,77 @@
       "status": "pending",
       "summary": "第一章版型確認後，將依相同資料結構整理。",
       "quickGuideUrl": "https://poe2db.tw/tw/Act_3#%E7%AC%AC3%E7%AB%A0",
-      "maps": [],
+      "maps": [
+        {
+          "id": "campaign-map-026",
+          "name": "第三章現世地表",
+          "label": "現世地表",
+          "image": "images/act_maps/act-3-1.webp",
+          "alt": "第三章現世地表與金字塔區域路線圖",
+          "points": [
+            {
+              "name": "叢林遺跡",
+              "x": 30.25,
+              "y": 49.38
+            },
+            {
+              "name": "劇毒墓穴",
+              "x": 25.45,
+              "y": 47.85
+            },
+            {
+              "name": "阿札克泥沼",
+              "x": 59.52,
+              "y": 10.69
+            },
+            {
+              "name": "混沌神殿",
+              "x": 16.77,
+              "y": 18
+            }
+          ]
+        },
+        {
+          "id": "campaign-map-027",
+          "name": "第三章現世地底",
+          "label": "現世地底",
+          "image": "images/act_maps/act-3-2.webp",
+          "alt": "第三章現世地底區域路線圖",
+          "points": [
+            {
+              "name": "吉卡尼的機械迷城",
+              "x": 10.95,
+              "y": 52.22
+            }
+          ]
+        },
+        {
+          "id": "campaign-map-028",
+          "name": "第三章過去地表",
+          "label": "過去地表",
+          "image": "images/act_maps/act-3-3.webp",
+          "alt": "第三章過去地表與金字塔區域路線圖",
+          "points": [
+            {
+              "name": "阿戈拉",
+              "x": 64.23,
+              "y": 75.29
+            },
+            {
+              "name": "奧札爾",
+              "x": 59.47,
+              "y": 80.87
+            }
+          ]
+        },
+        {
+          "id": "campaign-map-029",
+          "name": "第三章過去地底",
+          "label": "過去地底",
+          "image": "images/act_maps/act-3-4.webp",
+          "alt": "第三章過去地底區域路線圖"
+        }
+      ],
       "quests": []
     },
     {
@@ -228,7 +350,15 @@
       "status": "pending",
       "summary": "第一章版型確認後，將依相同資料結構整理。",
       "quickGuideUrl": "https://poe2db.tw/tw/Act_4#%E7%AC%AC4%E7%AB%A0",
-      "maps": [],
+      "maps": [
+        {
+          "id": "campaign-map-030",
+          "name": "第四章群島",
+          "label": "群島",
+          "image": "images/act_maps/act-4.webp",
+          "alt": "第四章群島航線與各島區域路線圖"
+        }
+      ],
       "quests": []
     },
     {
@@ -239,7 +369,15 @@
       "status": "pending",
       "summary": "第一章版型確認後，將依相同資料結構整理。",
       "quickGuideUrl": "https://poe2db.tw/tw/Act_6#%E7%AC%AC6%E7%AB%A0",
-      "maps": [],
+      "maps": [
+        {
+          "id": "campaign-map-031",
+          "name": "間歇區域",
+          "label": "間歇",
+          "image": "images/act_maps/act-5.webp",
+          "alt": "三段間歇章節區域路線圖"
+        }
+      ],
       "quests": []
     }
   ]

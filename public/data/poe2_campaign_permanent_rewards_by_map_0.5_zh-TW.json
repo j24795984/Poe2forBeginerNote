@@ -179,7 +179,40 @@
               }
             ]
           },
-          "condition_zh_tw": "收集兩件部落聖物並放入泰坦之谷祭壇。"
+          "condition_zh_tw": "凱斯城：卡巴拉聖物｜骨坑：太陽聖物"
+        },
+        {
+          "map": {
+            "zh_tw": "叛徒之路",
+            "en": "Traitor's Passage"
+          },
+          "main_quest": "無",
+          "side_quest": "無",
+          "boss": {
+            "zh_tw": "叛徒芭芭拉",
+            "en": "Balbala, the Traitor"
+          },
+          "permanent_reward": {
+            "type": "ascendancy_trial_map",
+            "text_zh_tw": "昇華試煉－斯克馬試煉地圖"
+          }
+        },
+        {
+          "map": {
+            "zh_tw": "無光通道",
+            "en": "Lightless Passage"
+          },
+          "main_quest": "無",
+          "side_quest": {
+            "zh_tw": "深淵工藝",
+            "en": "Abyss Crafting"
+          },
+          "boss": "無",
+          "permanent_reward": {
+            "type": "abyss_crafting",
+            "text_zh_tw": "解鎖深淵工藝"
+          },
+          "condition_zh_tw": "由乳齒象惡地進入，前往靈魂之井。"
         },
         {
           "map": {
@@ -321,7 +354,26 @@
         },
         {
           "map": {
-            "zh_tw": "烏特薩／阿戈拉特",
+            "zh_tw": "混沌神殿",
+            "en": "Temple of Chaos"
+          },
+          "main_quest": "無",
+          "side_quest": {
+            "zh_tw": "昇華試煉 2",
+            "en": "Ascendancy Trial 2"
+          },
+          "boss": "無",
+          "permanent_reward": {
+            "type": "ascendancy_points",
+            "value": 2,
+            "unit": "points",
+            "text_zh_tw": "2 點昇華天賦點"
+          },
+          "condition_zh_tw": "完成混沌神殿試煉。"
+        },
+        {
+          "map": {
+            "zh_tw": "奧札爾／阿戈拉",
             "en": "Utzaal / Aggorat"
           },
           "main_quest": "無",
@@ -333,7 +385,7 @@
             "unit": "points",
             "text_zh_tw": "2 點武器套裝天賦點"
           },
-          "condition_zh_tw": "取得犧牲之心並於阿戈拉特祭壇獻祭。"
+          "condition_zh_tw": "取得犧牲之心並於阿戈拉祭壇獻祭。"
         }
       ]
     },

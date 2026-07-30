@@ -3,7 +3,7 @@ import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue';
 import { useCategoryTabs } from '../composables/useCategoryTabs';
 
 type CampaignMapPoint = { name: string; x: number; y: number };
-type CampaignMap = { id: string; name: string; image: string; alt: string; points?: CampaignMapPoint[] };
+type CampaignMap = { id: string; name: string; label?: string; image: string; alt: string; points?: CampaignMapPoint[] };
 type LocalizedText = { zh_tw: string; en: string };
 type PermanentReward = {
 	text_zh_tw?: string;
@@ -39,7 +39,7 @@ type CampaignRewardCard = {
 	target: string;
 	objective: string;
 	rewards: string[];
-	location: string;
+	locations: string[];
 };
 type CampaignChapter = {
 	id: string;
@@ -66,7 +66,8 @@ const mapViewport = ref<HTMLElement>();
 const activeMapIndex = ref(0);
 const isRewardsOpen = ref(true);
 const isMapDragging = ref(false);
-const activeMapPointName = ref('');
+const activeMapPointNames = ref<string[]>([]);
+const hoveredMapPointName = ref('');
 const hoveredMapIndex = ref<number | null>(null);
 const hoveredChapterIndex = ref<number | null>(null);
 const mapBorderUrl = `${import.meta.env.BASE_URL}images/ui_img/img/border-2-body.webp`;
@@ -123,7 +124,7 @@ function displayReward(chapter: CampaignRewardChapter, entry: CampaignRewardEntr
 		target,
 		objective,
 		rewards: rewardTexts(entry.permanent_reward),
-		location: entry.map.zh_tw,
+		locations: entry.map.zh_tw.split(/[／/]/).map((location) => location.trim()).filter(Boolean),
 	};
 }
 
@@ -144,7 +145,10 @@ const rewardSourceLinks = computed(() => campaignRewardData.value.sources.flatMa
 const activeChapterIndex = computed(() => Math.max(0, campaignData.value?.chapters.findIndex((chapter) => chapter.id === selectedId.value) ?? 0));
 const chapterIndicatorIndex = computed(() => hoveredChapterIndex.value ?? activeChapterIndex.value);
 const currentMap = computed(() => selectedChapter.value?.maps[activeMapIndex.value]);
-const activeMapPoint = computed(() => currentMap.value?.points?.find((point) => point.name === activeMapPointName.value));
+const activeMapPoints = computed(() => currentMap.value?.points?.filter((point) => activeMapPointNames.value.includes(point.name)) ?? []);
+const currentMapTaskPoints = computed(() => currentMap.value?.points?.filter((point) => (
+	displayedQuests.value.some((quest) => quest.locations.includes(point.name))
+)) ?? []);
 const mapIndicatorIndex = computed(() => hoveredMapIndex.value ?? activeMapIndex.value);
 const mapSurfaceLabels = ['地表', '地底'];
 
@@ -277,7 +281,8 @@ watch(mapIndicatorIndex, async (next, previous) => {
 
 function selectCampaignChapter(id: string) {
 	activeMapIndex.value = 0;
-	activeMapPointName.value = '';
+	activeMapPointNames.value = [];
+	hoveredMapPointName.value = '';
 	if (mapViewport.value) mapViewport.value.scrollLeft = 0;
 	hoveredMapIndex.value = null;
 	hoveredChapterIndex.value = null;
@@ -307,7 +312,8 @@ function endMapDrag(event: PointerEvent) {
 }
 
 watch(activeMapIndex, () => {
-	activeMapPointName.value = '';
+	activeMapPointNames.value = [];
+	hoveredMapPointName.value = '';
 	if (mapViewport.value) mapViewport.value.scrollLeft = 0;
 });
 
@@ -320,18 +326,32 @@ function mapPointTargetFor(location: string) {
 	return undefined;
 }
 
-function mapPointFor(location: string) {
-	return mapPointTargetFor(location)?.point;
+function mapPointTargetsFor(locations: string[]) {
+	return locations.flatMap((location) => {
+		const target = mapPointTargetFor(location);
+		return target ? [{ ...target, location }] : [];
+	});
 }
 
-async function focusMapPoint(location: string) {
-	const target = mapPointTargetFor(location);
-	if (!target) return;
-	if (activeMapIndex.value !== target.mapIndex) {
-		activeMapIndex.value = target.mapIndex;
+function hasMapPoints(locations: string[]) {
+	return mapPointTargetsFor(locations).length > 0;
+}
+
+function hasActiveMapPoint(locations: string[]) {
+	return locations.some((location) => activeMapPointNames.value.includes(location));
+}
+
+async function focusMapPoints(locations: string[]) {
+	const targets = mapPointTargetsFor(locations);
+	if (!targets.length) return;
+	hoveredMapPointName.value = '';
+	const targetMapIndex = targets[0].mapIndex;
+	const visibleTargets = targets.filter((target) => target.mapIndex === targetMapIndex);
+	if (activeMapIndex.value !== targetMapIndex) {
+		activeMapIndex.value = targetMapIndex;
 		await nextTick();
 	}
-	activeMapPointName.value = location;
+	activeMapPointNames.value = visibleTargets.map((target) => target.location);
 	await nextTick();
 
 	const viewport = mapViewport.value;
@@ -342,7 +362,8 @@ async function focusMapPoint(location: string) {
 		? viewport.parentElement?.querySelector<HTMLElement>('.campaign-map-rewards-panel')?.offsetWidth ?? 0
 		: 0;
 	const visibleMapWidth = viewportWidth - rewardPanelWidth;
-	const pointX = mapWidth * target.point.x / 100;
+	const pointXs = visibleTargets.map((target) => target.point.x);
+	const pointX = mapWidth * (Math.min(...pointXs) + Math.max(...pointXs)) / 200;
 	const maxScrollLeft = viewport.scrollWidth - viewport.clientWidth;
 	const targetScrollLeft = Math.min(maxScrollLeft, Math.max(0, pointX - visibleMapWidth / 2));
 	viewport.scrollTo({
@@ -428,7 +449,7 @@ onUnmounted(() => {
 											@focus="hoveredMapIndex = index"
 											@blur="hoveredMapIndex = null"
 										/>
-										<span>{{ mapSurfaceLabels[index] ?? map.name }}</span>
+										<span>{{ map.label ?? mapSurfaceLabels[index] ?? map.name }}</span>
 									</label>
 									<span ref="mapIndicator" class="campaign-map-indicator" aria-hidden="true"></span>
 								</fieldset>
@@ -448,9 +469,20 @@ onUnmounted(() => {
 											<figure v-if="currentMap" :key="currentMap.id" class="campaign-map-figure">
 												<img :src="`${assetBase}${currentMap.image}`" :alt="currentMap.alt" loading="eager" draggable="false" />
 												<span
-													v-if="activeMapPoint"
+													v-for="point in currentMapTaskPoints"
+													:key="point.name"
+													class="campaign-map-point-hover-target"
+													:class="{ 'campaign-map-point-hover-target-disabled': activeMapPointNames.length > 0 }"
+													:style="{ left: `${point.x}%`, top: `${point.y}%` }"
+													aria-hidden="true"
+													@mouseenter="activeMapPointNames.length === 0 && (hoveredMapPointName = point.name)"
+													@mouseleave="hoveredMapPointName = ''"
+												></span>
+												<span
+													v-for="point in activeMapPoints"
+													:key="`active-${point.name}`"
 													class="campaign-map-hotspot"
-													:style="{ left: `${activeMapPoint.x}%`, top: `${activeMapPoint.y}%` }"
+													:style="{ left: `${point.x}%`, top: `${point.y}%` }"
 													aria-hidden="true"
 												></span>
 											</figure>
@@ -487,25 +519,33 @@ onUnmounted(() => {
 											<article
 												class="campaign-map-reward-card"
 												:class="{
-													'campaign-map-reward-card-interactive': mapPointFor(quest.location),
-													'campaign-map-reward-card-selected': activeMapPointName === quest.location,
+													'campaign-map-reward-card-interactive': hasMapPoints(quest.locations),
+													'campaign-map-reward-card-selected': hasActiveMapPoint(quest.locations),
+													'campaign-map-reward-card-map-hovered': activeMapPointNames.length === 0 && quest.locations.includes(hoveredMapPointName),
+													'campaign-map-reward-card-abyss': quest.locations.includes('無光通道'),
 												}"
 											>
 												<button
-													v-if="mapPointFor(quest.location)"
+													v-if="hasMapPoints(quest.locations)"
 													class="campaign-map-reward-card-action"
 													type="button"
-													:aria-label="`在地圖上定位${quest.location}`"
-													:aria-pressed="activeMapPointName === quest.location"
-													@click="focusMapPoint(quest.location)"
+													:aria-label="`在地圖上定位${quest.locations.join('、')}`"
+													:aria-pressed="hasActiveMapPoint(quest.locations)"
+													@click="focusMapPoints(quest.locations)"
 												></button>
 												<div class="campaign-map-reward-card-heading">
 													<div class="campaign-map-reward-method">
 														<p>取得方法</p>
 														<strong>{{ quest.target }}</strong>
-														<span>{{ quest.objective }}</span>
 													</div>
-													<strong class="campaign-map-reward-location">{{ quest.location }}</strong>
+													<div class="campaign-map-reward-locations">
+														<strong
+															v-for="location in quest.locations"
+															:key="location"
+															class="campaign-map-reward-location"
+														>{{ location }}</strong>
+													</div>
+													<span class="campaign-map-reward-condition">{{ quest.objective }}</span>
 												</div>
 												<div class="campaign-map-reward-meta">
 													<div>
