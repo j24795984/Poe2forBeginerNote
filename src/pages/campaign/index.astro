@@ -7,11 +7,12 @@ const campaignData = await loadStaticJson('campaign.json');
 const campaignRewardData = await loadStaticJson('poe2_campaign_permanent_rewards_by_map_0.5_zh-TW.json');
 const campaignDisplayData = {
 	id: campaignData.id,
-	chapters: campaignData.chapters.map(({ id, slug, name, englishName, maps }: Record<string, any>) => ({
+	chapters: campaignData.chapters.map(({ id, slug, name, englishName, quickGuideUrl, maps }: Record<string, any>) => ({
 		id,
 		slug,
 		name,
 		englishName,
+		quickGuideUrl,
 		maps,
 	})),
 };

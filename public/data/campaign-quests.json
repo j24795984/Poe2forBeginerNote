@@ -1,6 +1,6 @@
 {
   "id": "campaign-quest-catalog-001",
-  "updatedAt": "2026-07-29",
+  "updatedAt": "2026-07-31",
   "classification": {
     "main": "流亡編年史任務頁中標示為「主線」的任務；同一章內重複的任務階段合併為一筆。",
     "requiredReward": "提供永久能力、武器套裝天賦、精魂、抗性、生命、昇華或永久增益選擇的任務與區域目標。",
@@ -12,7 +12,8 @@
     "act2": "https://poe2db.tw/tw/Act_2#%E7%AC%AC2%E7%AB%A0",
     "act3": "https://poe2db.tw/tw/Act_3#%E7%AC%AC3%E7%AB%A0",
     "act4": "https://poe2db.tw/tw/Act_4#%E7%AC%AC4%E7%AB%A0",
-    "interlude": "https://poe2db.tw/tw/Act_6#%E7%AC%AC6%E7%AB%A0"
+    "interlude": "https://poe2db.tw/tw/Act_6#%E7%AC%AC6%E7%AB%A0",
+    "campaignGuide": "https://forum.gamer.com.tw/C.php?bsn=82273&snA=2515"
   },
   "chapters": [
     {
@@ -181,6 +182,12 @@
         }
       ],
       "requiredRewards": [
+        {
+          "id": "act-2-required-kabala",
+          "name": "擊敗蟒蛇女王．卡巴拉",
+          "reward": "+2 武器套裝天賦點數",
+          "url": "https://poe2db.tw/tw/Act_2#%E5%87%B1%E6%96%AF%E5%9F%8E"
+        },
         {
           "id": "act-2-required-traditions-toll",
           "name": "傳統的代價",
@@ -384,7 +391,7 @@
         {
           "id": "act-4-required-justice-statue",
           "name": "廢棄監獄的正義女神",
-          "reward": "永久增加生命或魔力藥劑恢復。",
+          "reward": "鑰匙由小怪掉落；永久選擇藥劑魔力或生命恢復增加 30%，可更改。",
           "url": "https://poe2db.tw/tw/Act_4#%E5%BB%A2%E6%A3%84%E7%9B%A3%E7%8D%84"
         },
         {
@@ -394,7 +401,14 @@
           "url": "https://poe2db.tw/tw/Act_4#%E7%93%A6%E5%8D%A1%E5%B8%95%E5%8A%AA%E5%B3%B6"
         }
       ],
-      "recommended": []
+      "recommended": [
+        {
+          "id": "act-4-recommended-torn-map-pieces",
+          "name": "撕碎的地圖碎片",
+          "note": "在凱吉灣、金氏島、瓦卡帕努島與伯勞鳥之島收集四片地圖碎片。",
+          "url": "https://poe2db.tw/tw/Act_4#%E7%AC%AC4%E7%AB%A0"
+        }
+      ]
     },
     {
       "id": "campaign-quest-chapter-interlude",
@@ -446,14 +460,20 @@
       ],
       "requiredRewards": [
         {
-          "id": "interlude-required-clearing-the-way",
-          "name": "開闢道路",
-          "reward": "+2 武器套裝天賦點數；途中另可取得 +5% 最大生命。",
+          "id": "interlude-required-akthi-anundr",
+          "name": "擊敗終末毒刺．艾克提與沙蟲．艾能德",
+          "reward": "+2 武器套裝天賦點數",
           "url": "https://poe2db.tw/tw/Clearing_the_Way"
         },
         {
+          "id": "interlude-required-molten-shrine",
+          "name": "啟動熔岩神殿",
+          "reward": "+5% 最大生命",
+          "url": "https://poe2db.tw/tw/Act_6#%E7%AC%AC6%E7%AB%A0"
+        },
+        {
           "id": "interlude-required-howling-winds",
-          "name": "狂嗥之風",
+          "name": "擊敗怪異雪獸",
           "reward": "+2 武器套裝天賦點數",
           "url": "https://poe2db.tw/tw/Howling_Winds"
         },

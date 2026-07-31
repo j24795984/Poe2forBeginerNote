@@ -11,7 +11,7 @@
   "scope": {
     "version": "0.5",
     "locale": "zh-TW",
-    "checked_at": "2026-07-29",
+    "checked_at": "2026-07-31",
     "note_zh_tw": "僅收錄可永久影響角色的屬性、精魂、天賦點、護符欄位與永久選擇。非主線或支線內容以「無」表示。"
   },
   "chapters": [
@@ -600,7 +600,10 @@
             "en": "The Abandoned Prison"
           },
           "main_quest": "無",
-          "side_quest": "無",
+          "side_quest": {
+            "zh_tw": "正義女神",
+            "en": "Goddess of Justice"
+          },
           "boss": "無",
           "permanent_reward": {
             "type": "flask_recovery_choice",
@@ -608,20 +611,33 @@
             "choose": 1,
             "options": [
               {
-                "type": "life_recovery_from_flasks",
-                "value": 30,
-                "unit": "percent_increased",
-                "text_zh_tw": "增加 30% 藥劑生命恢復"
-              },
-              {
                 "type": "mana_recovery_from_flasks",
                 "value": 30,
                 "unit": "percent_increased",
-                "text_zh_tw": "增加 30% 藥劑魔力恢復"
+                "text_zh_tw": "藥劑的魔力恢復增加 30%"
+              },
+              {
+                "type": "life_recovery_from_flasks",
+                "value": 30,
+                "unit": "percent_increased",
+                "text_zh_tw": "藥劑的生命恢復增加 30%"
               }
             ]
           },
-          "condition_zh_tw": "與正義女神互動。"
+          "condition_zh_tw": "擊敗小怪取得鑰匙，與正義女神互動；永久能力二選一，可更改。"
+        },
+        {
+          "map": {
+            "zh_tw": "凱吉灣／金氏島／瓦卡帕努島／伯勞鳥之島",
+            "en": "Kedge Bay / Isle of Kin / Whakapanu Island / Shrike Island"
+          },
+          "main_quest": "無",
+          "side_quest": {
+            "zh_tw": "撕碎的地圖碎片",
+            "en": "Torn Map Pieces"
+          },
+          "boss": "無",
+          "condition_zh_tw": "收集四片撕碎的地圖碎片並交給瑪寇魯。"
         }
       ]
     },
@@ -632,7 +648,7 @@
       "maps": [
         {
           "map": {
-            "zh_tw": "卡里交匯道",
+            "zh_tw": "卡里交會道",
             "en": "The Khari Crossing"
           },
           "main_quest": {
@@ -659,8 +675,8 @@
         },
         {
           "map": {
-            "zh_tw": "顱顎階梯",
-            "en": "Skullmaw Stairway"
+            "zh_tw": "卡里交會道",
+            "en": "The Khari Crossing"
           },
           "main_quest": "無",
           "side_quest": "無",
@@ -671,7 +687,7 @@
             "unit": "percent_increased",
             "text_zh_tw": "增加 5% 最大生命"
           },
-          "condition_zh_tw": "找到熔岩神殿並使用熔岩之神的贈禮。"
+          "condition_zh_tw": "在卡里交會道進入骨顎階梯，找到熔岩神殿。"
         },
         {
           "map": {
@@ -685,6 +701,7 @@
             "type": "qimah_boon",
             "changeable": true,
             "choose": 1,
+            "text_zh_tw": "永久能力七選一（可更改）",
             "options": [
               {
                 "type": "all_attributes",
@@ -729,7 +746,8 @@
                 "text_zh_tw": "增加 5% 經驗獲取，但失去其他增益"
               }
             ]
-          }
+          },
+          "condition_zh_tw": "從七靈柱選擇一個永久能力。"
         }
       ]
     },
@@ -807,7 +825,7 @@
         },
         {
           "map": {
-            "zh_tw": "金斯馬奇",
+            "zh_tw": "金斯瑪區",
             "en": "Kingsmarch"
           },
           "main_quest": {
@@ -816,6 +834,7 @@
           },
           "side_quest": "無",
           "boss": "無",
+          "condition_zh_tw": "完成三張地圖後進入終章。",
           "permanent_reward": {
             "type": "weapon_set_passive_points",
             "value": 2,
@@ -846,6 +865,11 @@
       "name": "Mobalytics 0.5 Challenges",
       "type": "player_guide",
       "url": "https://mobalytics.gg/poe-2/guides/0-5-challenges"
+    },
+    {
+      "name": "巴哈姆特－主線劇情圖示全解攻略（0.5 版）",
+      "type": "player_guide",
+      "url": "https://forum.gamer.com.tw/C.php?bsn=82273&snA=2515"
     }
   ]
 }

@@ -743,8 +743,8 @@
             "en": "The Stolen Barya"
           },
           "area": {
-            "zh_tw": "卡里交匯道",
-            "en": "The Khari Crossing"
+            "zh_tw": "骨顎階梯",
+            "en": "Skullmaw Stairway"
           },
           "target": {
             "zh_tw": "艾克提與艾能德",
@@ -770,7 +770,7 @@
             "en": "The Stolen Barya"
           },
           "area": {
-            "zh_tw": "卡里交匯道",
+            "zh_tw": "卡里交會道",
             "en": "The Khari Crossing"
           },
           "target": {
@@ -778,8 +778,8 @@
             "en": "Molten Shrine"
           },
           "condition": {
-            "zh_tw": "找到並啟動熔岩神殿",
-            "en": "Find and activate the Molten Shrine"
+            "zh_tw": "在卡里交會道進入骨顎階梯，找到熔岩神殿。",
+            "en": "Enter the Skullmaw Stairway from the Khari Crossing and find the Molten Shrine."
           },
           "reward": [
             {
@@ -805,8 +805,8 @@
             "en": "Seven Spirit Pillars"
           },
           "condition": {
-            "zh_tw": "啟動七根靈柱並選擇一項增益",
-            "en": "Activate the seven spirit pillars and choose one boon"
+            "zh_tw": "從七靈柱選擇一個永久能力。",
+            "en": "Choose one permanent boon from the Seven Spirit Pillars."
           },
           "choice_group": {
             "changeable": true,
@@ -1012,7 +1012,7 @@
         {
           "id": "interlude_final_turn_in",
           "area": {
-            "zh_tw": "金斯馬奇",
+            "zh_tw": "金斯瑪區",
             "en": "Kingsmarch"
           },
           "target": {
@@ -1020,7 +1020,7 @@
             "en": "Interlude completion turn-in"
           },
           "condition": {
-            "zh_tw": "完成三段間歇並返回金斯馬奇交付",
+            "zh_tw": "完成三張地圖後進入終章。",
             "en": "Complete all three Interludes and turn in at Kingsmarch"
           },
           "reward": [

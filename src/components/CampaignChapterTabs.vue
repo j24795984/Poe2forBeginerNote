@@ -16,7 +16,7 @@ type CampaignRewardEntry = {
 	main_quest: LocalizedText | '無';
 	side_quest: LocalizedText | '無';
 	boss: LocalizedText | LocalizedText[] | '無';
-	permanent_reward: PermanentReward;
+	permanent_reward?: PermanentReward;
 	condition_zh_tw?: string;
 };
 type CampaignRewardChapter = {
@@ -46,6 +46,7 @@ type CampaignChapter = {
 	slug: string;
 	name: string;
 	englishName: string;
+	quickGuideUrl?: string;
 	maps: CampaignMap[];
 };
 type CampaignData = {
@@ -88,7 +89,8 @@ const { selectedId, displayedItem: selectedChapter, select: selectChapter, initi
 	historyStateKey: 'campaignChapter',
 });
 
-function rewardTexts(reward: PermanentReward) {
+function rewardTexts(reward?: PermanentReward) {
+	if (!reward) return [];
 	if (reward.text_zh_tw) return [reward.text_zh_tw];
 
 	if (reward.groups?.length) {
@@ -135,13 +137,26 @@ const selectedRewardChapters = computed(() => {
 	return campaignRewardData.value.chapters.filter((chapter) => chapter.id === slug.replace('-', '_'));
 });
 const displayedQuests = computed(() => selectedRewardChapters.value.flatMap((chapter) => chapter.maps.map((entry, index) => displayReward(chapter, entry, index))));
-const rewardSourceLinks = computed(() => campaignRewardData.value.sources.flatMap((source) => {
-	const urls = source.urls ?? (source.url ? [source.url] : []);
-	return urls.map((url, index) => ({
-		name: urls.length > 1 ? `${source.name} ${index + 1}` : source.name,
-		url,
-	}));
-}));
+const sourceHomepageByHost: Record<string, { name: string; url: string }> = {
+	'poe2db.tw': { name: 'PoE2DB', url: 'https://poe2db.tw/' },
+	'mobalytics.gg': { name: 'Mobalytics', url: 'https://mobalytics.gg/' },
+	'forum.gamer.com.tw': { name: '巴哈姆特', url: 'https://www.gamer.com.tw/' },
+};
+const rewardSourceLinks = computed(() => {
+	const sites = new Map<string, { name: string; url: string }>();
+	campaignRewardData.value.sources.forEach((source) => {
+		const urls = source.urls ?? (source.url ? [source.url] : []);
+		urls.forEach((url) => {
+			const parsedUrl = new URL(url);
+			const site = sourceHomepageByHost[parsedUrl.hostname] ?? {
+				name: source.name,
+				url: `${parsedUrl.origin}/`,
+			};
+			sites.set(site.url, site);
+		});
+	});
+	return [...sites.values()];
+});
 const activeChapterIndex = computed(() => Math.max(0, campaignData.value?.chapters.findIndex((chapter) => chapter.id === selectedId.value) ?? 0));
 const chapterIndicatorIndex = computed(() => hoveredChapterIndex.value ?? activeChapterIndex.value);
 const currentMap = computed(() => selectedChapter.value?.maps[activeMapIndex.value]);
@@ -394,7 +409,8 @@ onUnmounted(() => {
 <template>
 	<p v-if="error" class="border border-red-300/40 bg-red-950/45 p-5 text-red-100" role="alert">無法載入主線資料：{{ error }}</p>
 	<div v-else class="campaign-shell">
-		<nav class="campaign-chapter-nav" aria-label="主線章節" @mouseleave="hoveredChapterIndex = null">
+		<div class="campaign-chapter-toolbar">
+			<nav class="campaign-chapter-nav" aria-label="主線章節" @mouseleave="hoveredChapterIndex = null">
 			<ul
 				ref="chapterTrack"
 				class="campaign-chapter-list"
@@ -416,7 +432,25 @@ onUnmounted(() => {
 				</li>
 				<li ref="chapterIndicator" class="campaign-chapter-indicator" aria-hidden="true"></li>
 			</ul>
-		</nav>
+			</nav>
+			<div class="campaign-chapter-actions">
+				<a
+					v-if="selectedChapter?.quickGuideUrl"
+					class="campaign-quest-overview-link"
+					:href="selectedChapter.quickGuideUrl"
+					target="_blank"
+					rel="noreferrer"
+					aria-label="章節流程推薦（於新分頁開啟）"
+				>章節流程推薦</a>
+				<a
+					class="campaign-quest-overview-link"
+					href="https://poe2db.tw/tw/Quest#%E4%BB%BB%E5%8B%99_Markdown4"
+					target="_blank"
+					rel="noreferrer"
+					aria-label="任務總覽（於新分頁開啟）"
+				>任務總覽</a>
+			</div>
+		</div>
 
 		<section v-if="selectedChapter" ref="detailPanel" class="campaign-detail atlas-detail-motion" aria-live="polite">
 				<div class="grid gap-8">
@@ -547,11 +581,19 @@ onUnmounted(() => {
 													</div>
 													<span class="campaign-map-reward-condition">{{ quest.objective }}</span>
 												</div>
-												<div class="campaign-map-reward-meta">
+												<div v-if="quest.rewards.length" class="campaign-map-reward-meta">
 													<div>
 														<p>獎勵</p>
 														<ul><li v-for="reward in quest.rewards" :key="reward">{{ reward }}</li></ul>
 													</div>
+												</div>
+												<div class="campaign-map-reward-card-footer">
+													<button
+														class="campaign-map-reward-detail-button"
+														type="button"
+														:aria-label="`詳細內容：${quest.target}（功能製作中）`"
+														title="詳細內容功能將於後續提供"
+													>詳細內容</button>
 												</div>
 											</article>
 										</li>
