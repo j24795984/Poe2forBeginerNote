@@ -1,0 +1,1151 @@
+{
+  "schemaVersion": "1.0.0",
+  "dataVersion": "atlas-0.5-001",
+  "locale": "zh-TW",
+  "patchFamily": "0.5",
+  "id": "atlas-entities-document-001",
+  "idRegistry": {
+    "nextSequence": 58,
+    "retiredIds": []
+  },
+  "scopeNote": "依 poe2_atlas_guide (1).md 規畫；賽季與版本相關內容以 availability 標記。",
+  "sources": [
+    {
+      "id": "source-poe2db-atlas",
+      "name": "POE2DB－輿圖總覽",
+      "url": "https://poe2db.tw/tw/Atlas"
+    },
+    {
+      "id": "source-poe2db-waystones-content",
+      "name": "POE2DB－地圖內容",
+      "url": "https://poe2db.tw/tw/Waystones#%E5%9C%B0%E5%9C%96%E5%85%A7%E5%AE%B9"
+    },
+    {
+      "id": "source-poe2db-waystones-legends",
+      "name": "POE2DB－地圖標記",
+      "url": "https://poe2db.tw/tw/Waystones#MapLegends"
+    },
+    {
+      "id": "source-poe2db-citadel",
+      "name": "POE2DB－城塞",
+      "url": "https://poe2db.tw/tw/Citadel"
+    },
+    {
+      "id": "source-poe2db-biome",
+      "name": "POE2DB－生物群系",
+      "url": "https://poe2db.tw/tw/Biome"
+    },
+    {
+      "id": "source-poe2db-version-050",
+      "name": "POE2DB－版本 0.5.0",
+      "url": "https://poe2db.tw/tw/Version_0.5.0"
+    },
+    {
+      "id": "source-poe2db-pinnacle-keys",
+      "name": "POE2DB－巔峰鑰匙",
+      "url": "https://poe2db.tw/tw/Pinnacle_Keys"
+    },
+    {
+      "id": "source-poe2db-iron-citadel",
+      "name": "POE2DB－鋼鐵城塞",
+      "url": "https://poe2db.tw/tw/Iron_Citadel"
+    },
+    {
+      "id": "source-poe2db-copper-citadel",
+      "name": "POE2DB－青銅城塞",
+      "url": "https://poe2db.tw/tw/Copper_Citadel"
+    },
+    {
+      "id": "source-poe2db-stone-citadel",
+      "name": "POE2DB－岩石城塞",
+      "url": "https://poe2db.tw/tw/Stone_Citadel"
+    },
+    {
+      "id": "source-poe2db-burning-monolith",
+      "name": "POE2DB－燃燒豐碑",
+      "url": "https://poe2db.tw/tw/The_Burning_Monolith"
+    },
+    {
+      "id": "source-poe2db-patriarch-halls",
+      "name": "POE2DB－聖祖殿",
+      "url": "https://poe2db.tw/tw/The_Patriarch_Halls"
+    },
+    {
+      "id": "source-poe2db-matriarch-halls",
+      "name": "POE2DB－聖母殿",
+      "url": "https://poe2db.tw/tw/The_Matriarch_Halls"
+    },
+    {
+      "id": "source-poe2db-origin-core",
+      "name": "POE2DB－原初核心",
+      "url": "https://poe2db.tw/tw/Origin_Core"
+    },
+    {
+      "id": "source-poe2db-legacy-precursors",
+      "name": "POE2DB－先行者之遺",
+      "url": "https://poe2db.tw/tw/Legacy_of_the_Precursors"
+    },
+    {
+      "id": "source-poe2db-abyss",
+      "name": "POE2DB－深淵",
+      "url": "https://poe2db.tw/tw/Abyss"
+    },
+    {
+      "id": "source-poe2db-breach",
+      "name": "POE2DB－裂痕",
+      "url": "https://poe2db.tw/tw/Breach"
+    },
+    {
+      "id": "source-poe2db-breachstone",
+      "name": "POE2DB－裂痕石",
+      "url": "https://poe2db.tw/tw/Breachstone"
+    },
+    {
+      "id": "source-poe2db-ritual",
+      "name": "POE2DB－邪靈祭祀",
+      "url": "https://poe2db.tw/tw/Ritual"
+    },
+    {
+      "id": "source-poe2db-darkness-calls",
+      "name": "POE2DB－闇影呼喚",
+      "url": "https://poe2db.tw/tw/Darkness_Calls"
+    },
+    {
+      "id": "source-poe2db-delirium",
+      "name": "POE2DB－譫妄迷霧",
+      "url": "https://poe2db.tw/tw/Delirium"
+    },
+    {
+      "id": "source-poe2db-ravens-reflection",
+      "name": "POE2DB－渡鴉之映",
+      "url": "https://poe2db.tw/tw/Ravens_Reflection"
+    },
+    {
+      "id": "source-poe2db-expedition",
+      "name": "POE2DB－探險",
+      "url": "https://poe2db.tw/tw/Expedition"
+    },
+    {
+      "id": "source-poe2db-triskelion",
+      "name": "POE2DB－再鑄三曲",
+      "url": "https://poe2db.tw/tw/The_Triskelion_Reforged"
+    },
+    {
+      "id": "source-poe2db-incursion",
+      "name": "POE2DB－時空穿越",
+      "url": "https://poe2db.tw/tw/Incursion"
+    },
+    {
+      "id": "source-poe2db-cleansed",
+      "name": "POE2DB－已淨化",
+      "url": "https://poe2db.tw/tw/Cleansed"
+    },
+    {
+      "id": "source-poe2db-corrupted-nexus",
+      "name": "POE2DB－腐化聖域",
+      "url": "https://poe2db.tw/tw/Corrupted_Nexus"
+    }
+  ],
+  "items": [
+    {
+      "id": "item-ancient-crisis-fragment",
+      "name": {
+        "zhTw": "遠古危機碎片",
+        "en": "Ancient Crisis Fragment"
+      },
+      "category": "boss-entry-fragment",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-iron-citadel"
+      ]
+    },
+    {
+      "id": "item-faded-crisis-fragment",
+      "name": {
+        "zhTw": "褪色危機碎片",
+        "en": "Faded Crisis Fragment"
+      },
+      "category": "boss-entry-fragment",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-copper-citadel"
+      ]
+    },
+    {
+      "id": "item-weathered-crisis-fragment",
+      "name": {
+        "zhTw": "風化危機碎片",
+        "en": "Weathered Crisis Fragment"
+      },
+      "category": "boss-entry-fragment",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-stone-citadel"
+      ]
+    },
+    {
+      "id": "item-first-calamity-fragment",
+      "name": {
+        "zhTw": "第一災厄碎片",
+        "en": "First Calamity Fragment"
+      },
+      "category": "boss-entry-fragment",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-pinnacle-keys"
+      ],
+      "progressionTier": "advanced"
+    },
+    {
+      "id": "item-second-calamity-fragment",
+      "name": {
+        "zhTw": "第二災厄碎片",
+        "en": "Second Calamity Fragment"
+      },
+      "category": "boss-entry-fragment",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-pinnacle-keys"
+      ],
+      "progressionTier": "advanced"
+    },
+    {
+      "id": "item-third-calamity-fragment",
+      "name": {
+        "zhTw": "第三災厄碎片",
+        "en": "Third Calamity Fragment"
+      },
+      "category": "boss-entry-fragment",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-pinnacle-keys"
+      ],
+      "progressionTier": "advanced"
+    },
+    {
+      "id": "item-origin-spark",
+      "name": {
+        "zhTw": "原初光輝",
+        "en": "Origin Spark"
+      },
+      "category": "quest-item",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-patriarch-halls"
+      ]
+    },
+    {
+      "id": "item-origin-cradle",
+      "name": {
+        "zhTw": "原初搖籃",
+        "en": "Origin Cradle"
+      },
+      "category": "quest-item",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-matriarch-halls"
+      ]
+    },
+    {
+      "id": "item-origin-core",
+      "name": {
+        "zhTw": "原初核心",
+        "en": "Origin Core"
+      },
+      "category": "boss-entry-item",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-origin-core"
+      ]
+    },
+    {
+      "id": "item-morck-invitation",
+      "name": {
+        "zhTw": "骷髏馬克的邀請",
+        "en": "Morck's Invitation"
+      },
+      "category": "mechanic-ticket",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-abyss"
+      ]
+    },
+    {
+      "id": "item-breach-splinter",
+      "name": {
+        "zhTw": "裂痕石裂片",
+        "en": "Breachstone Splinter"
+      },
+      "category": "ticket-fragment",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-breach"
+      ]
+    },
+    {
+      "id": "item-breachstone",
+      "name": {
+        "zhTw": "裂痕石",
+        "en": "Breachstone"
+      },
+      "category": "mechanic-ticket",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-breachstone"
+      ]
+    },
+    {
+      "id": "item-breachlord-cyst",
+      "name": {
+        "zhTw": "裂痕領主囊腫",
+        "en": "Breachlord Cyst"
+      },
+      "category": "mechanic-ticket",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-breach"
+      ]
+    },
+    {
+      "id": "item-audience-with-the-king",
+      "name": {
+        "zhTw": "覲見國王",
+        "en": "An Audience with the King"
+      },
+      "category": "mechanic-ticket",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-ritual"
+      ]
+    },
+    {
+      "id": "item-kings-skull",
+      "name": {
+        "zhTw": "國王首級",
+        "en": "The King's Skull"
+      },
+      "category": "quest-item",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-ritual"
+      ]
+    },
+    {
+      "id": "item-darkness-calls",
+      "name": {
+        "zhTw": "闇影呼喚",
+        "en": "Darkness Calls"
+      },
+      "category": "mechanic-ticket",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-darkness-calls"
+      ]
+    },
+    {
+      "id": "item-simulacrum-splinter",
+      "name": {
+        "zhTw": "幻像斷片",
+        "en": "Simulacrum Splinter"
+      },
+      "category": "ticket-fragment",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-delirium"
+      ]
+    },
+    {
+      "id": "item-simulacrum",
+      "name": {
+        "zhTw": "幻像異界",
+        "en": "Simulacrum"
+      },
+      "category": "mechanic-ticket",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-delirium"
+      ]
+    },
+    {
+      "id": "item-ravens-reflection",
+      "name": {
+        "zhTw": "渡鴉之映",
+        "en": "Raven's Reflection"
+      },
+      "category": "mechanic-ticket",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-ravens-reflection"
+      ]
+    },
+    {
+      "id": "item-expedition-logbook",
+      "name": {
+        "zhTw": "探險日誌",
+        "en": "Expedition Logbook"
+      },
+      "category": "mechanic-ticket",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-expedition"
+      ]
+    },
+    {
+      "id": "item-triskelion-reforged",
+      "name": {
+        "zhTw": "再鑄三曲",
+        "en": "The Triskelion Reforged"
+      },
+      "category": "mechanic-ticket",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-triskelion"
+      ]
+    }
+  ],
+  "bosses": [
+    {
+      "id": "boss-count-geonor",
+      "name": {
+        "zhTw": "吉恩諾伯爵",
+        "en": "Count Geonor"
+      },
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-iron-citadel"
+      ]
+    },
+    {
+      "id": "boss-jamanra-the-abomination",
+      "name": {
+        "zhTw": "憎惡者．賈嫚拉",
+        "en": "Jamanra, the Abomination"
+      },
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-copper-citadel"
+      ]
+    },
+    {
+      "id": "boss-doryani-royal-thaumaturge",
+      "name": {
+        "zhTw": "皇家奇術師．多里亞尼",
+        "en": "Doryani, Royal Thaumaturge"
+      },
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-stone-citadel"
+      ]
+    },
+    {
+      "id": "boss-arbiter-of-ash",
+      "name": {
+        "zhTw": "灰燼仲裁者",
+        "en": "The Arbiter of Ash"
+      },
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-burning-monolith"
+      ]
+    },
+    {
+      "id": "boss-radiant-watcher-fiks",
+      "name": {
+        "zhTw": "光輝守望．菲克斯",
+        "en": "Radiant Watcher Fiks"
+      },
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-patriarch-halls"
+      ]
+    },
+    {
+      "id": "boss-cradle-watcher-fia",
+      "name": {
+        "zhTw": "搖籃守望．菲亞",
+        "en": "Cradle Watcher Fia"
+      },
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-matriarch-halls"
+      ]
+    },
+    {
+      "id": "boss-divine-arbiter",
+      "name": {
+        "zhTw": "神聖仲裁者",
+        "en": "The Divine Arbiter"
+      },
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-legacy-precursors"
+      ]
+    },
+    {
+      "id": "boss-king-in-the-mists",
+      "name": {
+        "zhTw": "迷霧之王",
+        "en": "The King in the Mists"
+      },
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-ritual"
+      ]
+    },
+    {
+      "id": "boss-bordeck",
+      "name": {
+        "zhTw": "博德克",
+        "en": "Bordeck"
+      },
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-darkness-calls"
+      ]
+    },
+    {
+      "id": "boss-corrupted-nexus-guardian",
+      "name": {
+        "zhTw": "腐化聖域頭目",
+        "en": "Corrupted Nexus Guardian"
+      },
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-corrupted-nexus"
+      ],
+      "isGeneric": true
+    }
+  ],
+  "locations": [
+    {
+      "id": "location-iron-citadel",
+      "name": {
+        "zhTw": "鋼鐵城塞",
+        "en": "Iron Citadel"
+      },
+      "locationType": "citadel",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-iron-citadel"
+      ],
+      "aliases": [
+        "鋼鐵城寨"
+      ],
+      "mapBeamColor": "淡藍色／藍色"
+    },
+    {
+      "id": "location-copper-citadel",
+      "name": {
+        "zhTw": "青銅城塞",
+        "en": "Copper Citadel"
+      },
+      "locationType": "citadel",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-copper-citadel"
+      ],
+      "aliases": [
+        "青銅城寨"
+      ],
+      "mapBeamColor": "橘色"
+    },
+    {
+      "id": "location-stone-citadel",
+      "name": {
+        "zhTw": "岩石城塞",
+        "en": "Stone Citadel"
+      },
+      "locationType": "citadel",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-stone-citadel"
+      ],
+      "aliases": [
+        "岩石城寨"
+      ],
+      "mapBeamColor": "紅色"
+    },
+    {
+      "id": "location-burning-monolith",
+      "name": {
+        "zhTw": "燃燒豐碑",
+        "en": "The Burning Monolith"
+      },
+      "locationType": "pinnacle-area",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-burning-monolith"
+      ]
+    },
+    {
+      "id": "location-patriarch-halls",
+      "name": {
+        "zhTw": "聖祖殿",
+        "en": "The Patriarch Halls"
+      },
+      "locationType": "special-stronghold",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-patriarch-halls"
+      ],
+      "mapBeamColor": "平滑、均勻的橘色"
+    },
+    {
+      "id": "location-matriarch-halls",
+      "name": {
+        "zhTw": "聖母殿",
+        "en": "The Matriarch Halls"
+      },
+      "locationType": "special-stronghold",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-matriarch-halls"
+      ],
+      "mapBeamColor": "平滑、均勻的橘色"
+    },
+    {
+      "id": "location-origin-tower",
+      "name": {
+        "zhTw": "起源高塔",
+        "en": "Origin Tower"
+      },
+      "locationType": "pinnacle-stronghold",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-legacy-precursors"
+      ],
+      "aliases": [
+        "起源之塔"
+      ]
+    },
+    {
+      "id": "location-origin-tower-lower",
+      "name": {
+        "zhTw": "起源高塔下層",
+        "en": "Origin Tower Lower Level"
+      },
+      "locationType": "sub-location",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-legacy-precursors"
+      ]
+    },
+    {
+      "id": "location-soul-well",
+      "name": {
+        "zhTw": "靈魂深井",
+        "en": "Soul Well"
+      },
+      "locationType": "mechanic-area",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-abyss"
+      ]
+    },
+    {
+      "id": "location-breach-domain",
+      "name": {
+        "zhTw": "裂痕領域",
+        "en": "Breach Domain"
+      },
+      "locationType": "mechanic-area",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-breach"
+      ]
+    },
+    {
+      "id": "location-infinite-misery",
+      "name": {
+        "zhTw": "無量困境",
+        "en": "An Infinite Misery"
+      },
+      "locationType": "mechanic-area",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-ritual"
+      ]
+    },
+    {
+      "id": "location-simulacrum",
+      "name": {
+        "zhTw": "幻像異界",
+        "en": "Simulacrum"
+      },
+      "locationType": "mechanic-area",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-delirium"
+      ]
+    },
+    {
+      "id": "location-delirium-pinnacle",
+      "name": {
+        "zhTw": "譫妄巔峰挑戰",
+        "en": "Delirium Pinnacle Challenge"
+      },
+      "locationType": "pinnacle-encounter",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-ravens-reflection"
+      ],
+      "isGeneric": true
+    },
+    {
+      "id": "location-large-expedition",
+      "name": {
+        "zhTw": "大型探險區域",
+        "en": "Large Expedition Area"
+      },
+      "locationType": "mechanic-area",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-expedition"
+      ],
+      "isGeneric": true
+    },
+    {
+      "id": "location-expedition-pinnacle",
+      "name": {
+        "zhTw": "探險巔峰遭遇",
+        "en": "Expedition Pinnacle Encounter"
+      },
+      "locationType": "pinnacle-encounter",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-triskelion"
+      ],
+      "isGeneric": true
+    },
+    {
+      "id": "location-atziri-temple",
+      "name": {
+        "zhTw": "阿茲里的神廟",
+        "en": "Atziri's Temple"
+      },
+      "locationType": "mechanic-area",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-incursion"
+      ]
+    },
+    {
+      "id": "location-corrupted-nexus",
+      "name": {
+        "zhTw": "腐化聖域",
+        "en": "Corrupted Nexus"
+      },
+      "locationType": "special-stronghold",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-corrupted-nexus"
+      ]
+    }
+  ],
+  "mechanics": [
+    {
+      "id": "league-abyss-053",
+      "name": {
+        "zhTw": "深淵",
+        "en": "Abyss"
+      },
+      "summary": "關閉地面裂縫並擊敗湧出的怪物，最後可能通往地下區域。",
+      "followUpSummary": "無盡深淵、骷髏馬克的邀請與褻瀆工藝。",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-abyss"
+      ]
+    },
+    {
+      "id": "league-breach-054",
+      "name": {
+        "zhTw": "裂痕",
+        "en": "Breach"
+      },
+      "summary": "開啟限時裂痕並持續擊殺異界怪物。",
+      "followUpSummary": "裂痕領域、裂痕石與裂痕頭目。",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-breach"
+      ]
+    },
+    {
+      "id": "league-ritual-052",
+      "name": {
+        "zhTw": "邪靈祭祀",
+        "en": "Ritual"
+      },
+      "aliases": [
+        "祭祀"
+      ],
+      "summary": "在祭祀法陣中擊殺復活怪物，以貢禮兌換恩惠。",
+      "followUpSummary": "覲見國王、無量困境與博德克。",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-ritual"
+      ]
+    },
+    {
+      "id": "league-delirium-057",
+      "name": {
+        "zhTw": "譫妄",
+        "en": "Delirium"
+      },
+      "aliases": [
+        "瞻望"
+      ],
+      "summary": "穿越譫妄之鏡，在迷霧內推進並累積獎勵。",
+      "followUpSummary": "幻像斷片、幻像異界與渡鴉之映。",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-delirium"
+      ]
+    },
+    {
+      "id": "league-expedition-055",
+      "name": {
+        "zhTw": "死境探險",
+        "en": "Expedition"
+      },
+      "aliases": [
+        "炸墳"
+      ],
+      "summary": "配置爆裂物，挖掘遺物、寶箱與卡爾葛怪物。",
+      "followUpSummary": "探險日誌與再鑄三曲。",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-expedition"
+      ]
+    },
+    {
+      "id": "league-vaal-056",
+      "name": {
+        "zhTw": "時空穿越",
+        "en": "Incursion"
+      },
+      "aliases": [
+        "瓦爾"
+      ],
+      "summary": "攻略瓦爾區域，調整房間並建造阿茲里的神廟。",
+      "followUpSummary": "阿茲里的神廟與房間獎勵。",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-incursion"
+      ]
+    },
+    {
+      "id": "mechanic-aldur-runes",
+      "name": {
+        "zhTw": "阿德爾的符文",
+        "en": "Runes of Aldur"
+      },
+      "summary": "隨聯盟更換的賽季機制，不與常駐機制共用固定顯示範圍。",
+      "availability": {
+        "kind": "seasonal",
+        "league": "Runes of Aldur",
+        "patchFamily": "0.5"
+      },
+      "sourceIds": [
+        "source-poe2db-atlas"
+      ]
+    }
+  ],
+  "mapStates": [
+    {
+      "id": "state-cleansed",
+      "name": {
+        "zhTw": "已淨化",
+        "en": "Cleansed"
+      },
+      "stateType": "map-state",
+      "summary": "腐化聖域完成淨化後，同一腐化區域內尚未完成的剩餘地圖取得的特殊狀態。",
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-cleansed",
+        "source-poe2db-corrupted-nexus"
+      ]
+    }
+  ],
+  "biomes": [
+    {
+      "id": "biome-forest",
+      "name": {
+        "zhTw": "森林",
+        "en": "Forest"
+      },
+      "biomeType": "general",
+      "tendencies": [
+        "野獸",
+        "阿茲莫里魂靈",
+        "寶石相關內容"
+      ],
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-biome"
+      ]
+    },
+    {
+      "id": "biome-desert",
+      "name": {
+        "zhTw": "沙漠",
+        "en": "Desert"
+      },
+      "biomeType": "general",
+      "tendencies": [
+        "稀有怪物",
+        "精髓",
+        "部分試煉門票"
+      ],
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-biome"
+      ]
+    },
+    {
+      "id": "biome-grassland",
+      "name": {
+        "zhTw": "草原",
+        "en": "Grassland"
+      },
+      "biomeType": "general",
+      "tendencies": [
+        "怪物群大小",
+        "魂靈",
+        "插槽通貨"
+      ],
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-biome"
+      ]
+    },
+    {
+      "id": "biome-mountain",
+      "name": {
+        "zhTw": "山地",
+        "en": "Mountain"
+      },
+      "biomeType": "general",
+      "tendencies": [
+        "保險箱",
+        "神殿",
+        "碑牌",
+        "物品數量"
+      ],
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-biome"
+      ]
+    },
+    {
+      "id": "biome-swamp",
+      "name": {
+        "zhTw": "沼澤",
+        "en": "Swamp"
+      },
+      "biomeType": "general",
+      "tendencies": [
+        "精髓",
+        "混沌相關敵人",
+        "稀有怪物"
+      ],
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-biome"
+      ]
+    },
+    {
+      "id": "biome-water",
+      "name": {
+        "zhTw": "水域",
+        "en": "Water"
+      },
+      "biomeType": "general",
+      "tendencies": [
+        "寶箱",
+        "魔法怪物",
+        "神殿",
+        "金幣"
+      ],
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-biome"
+      ]
+    },
+    {
+      "id": "biome-ezomyte-city",
+      "name": {
+        "zhTw": "艾茲麥城市",
+        "en": "Ezomyte City"
+      },
+      "biomeType": "city",
+      "tendencies": [
+        "尋找鋼鐵城塞的重要地形線索"
+      ],
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-biome",
+        "source-poe2db-citadel"
+      ]
+    },
+    {
+      "id": "biome-faridun-city",
+      "name": {
+        "zhTw": "法里登城市",
+        "en": "Faridun City"
+      },
+      "biomeType": "city",
+      "tendencies": [
+        "尋找青銅城塞的重要地形線索"
+      ],
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-biome",
+        "source-poe2db-citadel"
+      ]
+    },
+    {
+      "id": "biome-vaal-city",
+      "name": {
+        "zhTw": "瓦爾城市",
+        "en": "Vaal City"
+      },
+      "biomeType": "city",
+      "tendencies": [
+        "尋找岩石城塞的重要地形線索"
+      ],
+      "availability": {
+        "kind": "core"
+      },
+      "sourceIds": [
+        "source-poe2db-biome",
+        "source-poe2db-citadel"
+      ]
+    }
+  ]
+}

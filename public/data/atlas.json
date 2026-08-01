@@ -1,4 +1,6 @@
 {
+  "schemaVersion": "2.0.0",
+  "dataVersion": "atlas-0.5-001",
   "id": "atlas-document-001",
   "idRegistry": {
     "nextSequence": 58,
@@ -150,6 +152,84 @@
             ]
           }
         ]
+      }
+    ]
+  },
+  "referenceViews": {
+    "entityDocument": "atlas-entities.json",
+    "relationDocument": "atlas-relations.json",
+    "groups": [
+      {
+        "id": "atlas-reference-tickets",
+        "slug": "tickets-and-keys",
+        "name": "門票與關鍵物品",
+        "entityIds": [
+          "item-ancient-crisis-fragment", "item-faded-crisis-fragment", "item-weathered-crisis-fragment",
+          "item-first-calamity-fragment", "item-second-calamity-fragment", "item-third-calamity-fragment",
+          "item-origin-spark", "item-origin-cradle", "item-origin-core", "item-morck-invitation",
+          "item-breach-splinter", "item-breachstone", "item-breachlord-cyst", "item-audience-with-the-king",
+          "item-kings-skull", "item-darkness-calls", "item-simulacrum-splinter", "item-simulacrum",
+          "item-ravens-reflection", "item-expedition-logbook", "item-triskelion-reforged"
+        ],
+        "relationIds": [
+          "relation-crisis-fragments-open-burning-monolith", "relation-calamity-fragments-open-burning-monolith",
+          "relation-origin-parts-form-core", "relation-origin-core-opens-divine-arbiter",
+          "relation-morck-invitation-opens-soul-well", "relation-breach-splinters-form-breachstone",
+          "relation-breachstone-opens-domain", "relation-breach-domain-yields-cyst",
+          "relation-audience-opens-infinite-misery", "relation-darkness-calls-unlocks-bordeck",
+          "relation-simulacrum-splinters-form-ticket", "relation-simulacrum-opens-simulacrum",
+          "relation-ravens-reflection-opens-pinnacle", "relation-logbook-opens-large-expedition",
+          "relation-triskelion-opens-expedition-pinnacle"
+        ]
+      },
+      {
+        "id": "atlas-reference-special-locations",
+        "slug": "special-locations",
+        "name": "特殊區域與首領",
+        "entityIds": [
+          "location-iron-citadel", "location-copper-citadel", "location-stone-citadel", "location-burning-monolith",
+          "location-patriarch-halls", "location-matriarch-halls", "location-origin-tower", "location-origin-tower-lower",
+          "location-soul-well", "location-breach-domain", "location-infinite-misery", "location-simulacrum",
+          "location-delirium-pinnacle", "location-large-expedition", "location-expedition-pinnacle",
+          "location-atziri-temple", "location-corrupted-nexus",
+          "boss-count-geonor", "boss-jamanra-the-abomination", "boss-doryani-royal-thaumaturge",
+          "boss-arbiter-of-ash", "boss-radiant-watcher-fiks", "boss-cradle-watcher-fia",
+          "boss-divine-arbiter", "boss-king-in-the-mists", "boss-bordeck", "boss-corrupted-nexus-guardian"
+        ],
+        "relationIds": [
+          "relation-geonor-at-iron-citadel", "relation-jamanra-at-copper-citadel", "relation-doryani-at-stone-citadel",
+          "relation-arbiter-at-burning-monolith", "relation-fiks-at-patriarch-halls", "relation-fia-at-matriarch-halls",
+          "relation-divine-arbiter-at-origin-tower", "relation-king-at-infinite-misery",
+          "relation-corrupted-guardian-at-nexus", "relation-origin-tower-contains-lower"
+        ]
+      },
+      {
+        "id": "atlas-reference-league-mechanics",
+        "slug": "league-mechanics",
+        "name": "聯盟機制",
+        "entityIds": ["league-abyss-053", "league-breach-054", "league-ritual-052", "league-delirium-057", "league-expedition-055", "league-vaal-056"],
+        "relationIds": ["relation-abyss-members", "relation-breach-members", "relation-ritual-members", "relation-delirium-members", "relation-expedition-members", "relation-incursion-members"]
+      },
+      {
+        "id": "atlas-reference-terrain",
+        "slug": "terrain-clues",
+        "name": "地貌與堡壘線索",
+        "entityIds": ["biome-forest", "biome-desert", "biome-grassland", "biome-mountain", "biome-swamp", "biome-water", "biome-ezomyte-city", "biome-faridun-city", "biome-vaal-city"],
+        "relationIds": ["relation-ezomyte-city-signals-iron-citadel", "relation-faridun-city-signals-copper-citadel", "relation-vaal-city-signals-stone-citadel"]
+      },
+      {
+        "id": "atlas-reference-map-states",
+        "slug": "map-states",
+        "name": "地圖狀態",
+        "entityIds": ["state-cleansed", "location-corrupted-nexus", "boss-corrupted-nexus-guardian"],
+        "relationIds": ["relation-nexus-cleanses-region"]
+      },
+      {
+        "id": "atlas-reference-seasonal",
+        "slug": "seasonal-content",
+        "name": "賽季限定內容",
+        "entityIds": ["mechanic-aldur-runes"],
+        "relationIds": []
       }
     ]
   },

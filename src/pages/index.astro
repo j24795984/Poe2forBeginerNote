@@ -1,7 +1,27 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const rabbitImage = `${import.meta.env.BASE_URL}images/rabbit-background-removed.png`;
 ---
 
-<BaseLayout title="首頁">
-	<a href={`${import.meta.env.BASE_URL}atlas/`}>輿圖</a>
+<BaseLayout title="首頁｜POE2 新手筆記" bodyClass="home-body">
+	<main class="home-rabbit-page">
+		<div class="global-px-box">
+			<section class="home-rabbit-hero base-container" aria-labelledby="home-rabbit-title">
+				<div class="home-rabbit-copy">
+					<h1 id="home-rabbit-title">還沒想到要放什麼就先放一隻兔子</h1>
+				</div>
+
+				<figure class="home-rabbit-figure">
+					<img
+						src={rabbitImage}
+						alt="一隻抬起前腳的白兔"
+						width="1200"
+						height="1300"
+						fetchpriority="high"
+					/>
+				</figure>
+			</section>
+		</div>
+	</main>
 </BaseLayout>

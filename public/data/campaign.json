@@ -1,4 +1,6 @@
 {
+  "schemaVersion": "2.0.0",
+  "dataVersion": "campaign-0.5-001",
   "id": "campaign-document-001",
   "idRegistry": {
     "nextSequence": 32,
@@ -7,7 +9,18 @@
   "sources": {
     "quests": "https://poe2db.tw/tw/Quest#QuestRewards",
     "act1": "https://poe2db.tw/tw/Act_1#%E7%AC%AC1%E7%AB%A0",
-    "questCatalog": "data/campaign-quests.json"
+    "questCatalog": "data/campaign-entities.json"
+  },
+  "referenceViews": {
+    "entityDocument": "campaign-entities.json",
+    "relationDocument": "campaign-relations.json",
+    "groups": [
+      { "id": "campaign-reference-act-1", "slug": "act-1", "name": "第一章", "rootEntityId": "campaign-chapter-002" },
+      { "id": "campaign-reference-act-2", "slug": "act-2", "name": "第二章", "rootEntityId": "campaign-chapter-003" },
+      { "id": "campaign-reference-act-3", "slug": "act-3", "name": "第三章", "rootEntityId": "campaign-chapter-004" },
+      { "id": "campaign-reference-act-4", "slug": "act-4", "name": "第四章", "rootEntityId": "campaign-chapter-005" },
+      { "id": "campaign-reference-interlude", "slug": "interlude", "name": "間歇", "rootEntityId": "campaign-chapter-006" }
+    ]
   },
   "chapters": [
     {

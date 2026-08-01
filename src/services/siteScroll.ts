@@ -8,7 +8,8 @@ export function siteScrollBehavior(): ScrollBehavior {
 
 export function requestSiteScroll(top: number, behavior = siteScrollBehavior()) {
 	const detail = { top, behavior, handled: false };
-	window.dispatchEvent(new CustomEvent('site-scroll-to', { detail }));
+	const hasAnimationDriver = Boolean((window as typeof window & { gsap?: unknown }).gsap);
+	if (hasAnimationDriver) window.dispatchEvent(new CustomEvent('site-scroll-to', { detail }));
 	if (!detail.handled) window.scrollTo({ top, behavior });
 }
 

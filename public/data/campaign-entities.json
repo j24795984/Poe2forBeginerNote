@@ -1,0 +1,2474 @@
+{
+  "schemaVersion": "1.0.0",
+  "dataVersion": "campaign-0.5-001",
+  "locale": "zh-TW",
+  "patchFamily": "0.5",
+  "id": "campaign-entities-document-001",
+  "idRegistry": {
+    "nextSequence": 32,
+    "retiredIds": []
+  },
+  "sources": [
+    {
+      "id": "source-campaign-quest-questindex",
+      "name": "questIndex",
+      "url": "https://poe2db.tw/tw/Quest#%E4%BB%BB%E5%8B%99",
+      "usage": [
+        "quest-catalog"
+      ],
+      "originDataset": "campaign-quests.json"
+    },
+    {
+      "id": "source-campaign-quest-act1",
+      "name": "act1",
+      "url": "https://poe2db.tw/tw/Act_1#%E7%AC%AC1%E7%AB%A0",
+      "usage": [
+        "quest-catalog"
+      ],
+      "originDataset": "campaign-quests.json"
+    },
+    {
+      "id": "source-campaign-quest-act2",
+      "name": "act2",
+      "url": "https://poe2db.tw/tw/Act_2#%E7%AC%AC2%E7%AB%A0",
+      "usage": [
+        "quest-catalog"
+      ],
+      "originDataset": "campaign-quests.json"
+    },
+    {
+      "id": "source-campaign-quest-act3",
+      "name": "act3",
+      "url": "https://poe2db.tw/tw/Act_3#%E7%AC%AC3%E7%AB%A0",
+      "usage": [
+        "quest-catalog"
+      ],
+      "originDataset": "campaign-quests.json"
+    },
+    {
+      "id": "source-campaign-quest-act4",
+      "name": "act4",
+      "url": "https://poe2db.tw/tw/Act_4#%E7%AC%AC4%E7%AB%A0",
+      "usage": [
+        "quest-catalog"
+      ],
+      "originDataset": "campaign-quests.json"
+    },
+    {
+      "id": "source-campaign-quest-interlude",
+      "name": "interlude",
+      "url": "https://poe2db.tw/tw/Act_6#%E7%AC%AC6%E7%AB%A0",
+      "usage": [
+        "quest-catalog"
+      ],
+      "originDataset": "campaign-quests.json"
+    },
+    {
+      "id": "source-campaign-quest-campaignguide",
+      "name": "campaignGuide",
+      "url": "https://forum.gamer.com.tw/C.php?bsn=82273&snA=2515",
+      "usage": [
+        "quest-catalog"
+      ],
+      "originDataset": "campaign-quests.json"
+    },
+    {
+      "id": "source-campaign-reward-01-record",
+      "name": "PoE2DB",
+      "type": "game_database",
+      "urls": [
+        "https://poe2db.tw/us/Act_1",
+        "https://poe2db.tw/us/Act_2",
+        "https://poe2db.tw/us/Act_3",
+        "https://poe2db.tw/us/Act_4"
+      ],
+      "usage": [
+        "campaign-rewards"
+      ],
+      "originDataset": "poe2_campaign_permanent_rewards_by_map_0.5_zh-TW.json"
+    },
+    {
+      "id": "source-campaign-reward-02-record",
+      "name": "Mobalytics 0.5 Campaign Checklist",
+      "type": "player_guide",
+      "url": "https://mobalytics.gg/poe-2/guides/0-5-campaign-checklist-stats-rewards-skillpoints-and-more",
+      "usage": [
+        "campaign-rewards"
+      ],
+      "originDataset": "poe2_campaign_permanent_rewards_by_map_0.5_zh-TW.json"
+    },
+    {
+      "id": "source-campaign-reward-03-record",
+      "name": "Mobalytics 0.5 Challenges",
+      "type": "player_guide",
+      "url": "https://mobalytics.gg/poe-2/guides/0-5-challenges",
+      "usage": [
+        "campaign-rewards"
+      ],
+      "originDataset": "poe2_campaign_permanent_rewards_by_map_0.5_zh-TW.json"
+    },
+    {
+      "id": "source-campaign-reward-04-record",
+      "name": "巴哈姆特－主線劇情圖示全解攻略（0.5 版）",
+      "type": "player_guide",
+      "url": "https://forum.gamer.com.tw/C.php?bsn=82273&snA=2515",
+      "usage": [
+        "campaign-rewards"
+      ],
+      "originDataset": "poe2_campaign_permanent_rewards_by_map_0.5_zh-TW.json"
+    },
+    {
+      "0": "h",
+      "1": "t",
+      "2": "t",
+      "3": "p",
+      "4": "s",
+      "5": ":",
+      "6": "/",
+      "7": "/",
+      "8": "p",
+      "9": "i",
+      "10": "n",
+      "11": "o",
+      "12": "g",
+      "13": "a",
+      "14": "m",
+      "15": "e",
+      "16": "r",
+      "17": ".",
+      "18": "c",
+      "19": "o",
+      "20": "m",
+      "21": "/",
+      "22": "1",
+      "23": "8",
+      "24": "7",
+      "25": "1",
+      "26": "7",
+      "id": "source-campaign-legacy-reward-01-record",
+      "usage": [
+        "legacy-reward-reference"
+      ],
+      "originDataset": "poe2_campaign_permanent_rewards_0.5_zh-TW.json"
+    },
+    {
+      "0": "h",
+      "1": "t",
+      "2": "t",
+      "3": "p",
+      "4": "s",
+      "5": ":",
+      "6": "/",
+      "7": "/",
+      "8": "p",
+      "9": "o",
+      "10": "e",
+      "11": "2",
+      "12": "d",
+      "13": "b",
+      "14": ".",
+      "15": "t",
+      "16": "w",
+      "17": "/",
+      "18": "t",
+      "19": "w",
+      "20": "/",
+      "21": "A",
+      "22": "c",
+      "23": "t",
+      "24": "_",
+      "25": "1",
+      "id": "source-campaign-legacy-reward-02-record",
+      "usage": [
+        "legacy-reward-reference"
+      ],
+      "originDataset": "poe2_campaign_permanent_rewards_0.5_zh-TW.json"
+    },
+    {
+      "0": "h",
+      "1": "t",
+      "2": "t",
+      "3": "p",
+      "4": "s",
+      "5": ":",
+      "6": "/",
+      "7": "/",
+      "8": "p",
+      "9": "o",
+      "10": "e",
+      "11": "2",
+      "12": "d",
+      "13": "b",
+      "14": ".",
+      "15": "t",
+      "16": "w",
+      "17": "/",
+      "18": "t",
+      "19": "w",
+      "20": "/",
+      "21": "A",
+      "22": "c",
+      "23": "t",
+      "24": "_",
+      "25": "2",
+      "id": "source-campaign-legacy-reward-03-record",
+      "usage": [
+        "legacy-reward-reference"
+      ],
+      "originDataset": "poe2_campaign_permanent_rewards_0.5_zh-TW.json"
+    },
+    {
+      "0": "h",
+      "1": "t",
+      "2": "t",
+      "3": "p",
+      "4": "s",
+      "5": ":",
+      "6": "/",
+      "7": "/",
+      "8": "p",
+      "9": "o",
+      "10": "e",
+      "11": "2",
+      "12": "d",
+      "13": "b",
+      "14": ".",
+      "15": "t",
+      "16": "w",
+      "17": "/",
+      "18": "t",
+      "19": "w",
+      "20": "/",
+      "21": "A",
+      "22": "c",
+      "23": "t",
+      "24": "_",
+      "25": "3",
+      "id": "source-campaign-legacy-reward-04-record",
+      "usage": [
+        "legacy-reward-reference"
+      ],
+      "originDataset": "poe2_campaign_permanent_rewards_0.5_zh-TW.json"
+    },
+    {
+      "0": "h",
+      "1": "t",
+      "2": "t",
+      "3": "p",
+      "4": "s",
+      "5": ":",
+      "6": "/",
+      "7": "/",
+      "8": "p",
+      "9": "o",
+      "10": "e",
+      "11": "2",
+      "12": "d",
+      "13": "b",
+      "14": ".",
+      "15": "t",
+      "16": "w",
+      "17": "/",
+      "18": "t",
+      "19": "w",
+      "20": "/",
+      "21": "A",
+      "22": "c",
+      "23": "t",
+      "24": "_",
+      "25": "4",
+      "id": "source-campaign-legacy-reward-05-record",
+      "usage": [
+        "legacy-reward-reference"
+      ],
+      "originDataset": "poe2_campaign_permanent_rewards_0.5_zh-TW.json"
+    },
+    {
+      "0": "h",
+      "1": "t",
+      "2": "t",
+      "3": "p",
+      "4": "s",
+      "5": ":",
+      "6": "/",
+      "7": "/",
+      "8": "p",
+      "9": "o",
+      "10": "e",
+      "11": "2",
+      "12": "d",
+      "13": "b",
+      "14": ".",
+      "15": "t",
+      "16": "w",
+      "17": "/",
+      "18": "t",
+      "19": "w",
+      "20": "/",
+      "21": "I",
+      "22": "n",
+      "23": "t",
+      "24": "e",
+      "25": "r",
+      "26": "l",
+      "27": "u",
+      "28": "d",
+      "29": "e",
+      "id": "source-campaign-legacy-reward-06-record",
+      "usage": [
+        "legacy-reward-reference"
+      ],
+      "originDataset": "poe2_campaign_permanent_rewards_0.5_zh-TW.json"
+    },
+    {
+      "0": "h",
+      "1": "t",
+      "2": "t",
+      "3": "p",
+      "4": "s",
+      "5": ":",
+      "6": "/",
+      "7": "/",
+      "8": "p",
+      "9": "o",
+      "10": "e",
+      "11": "2",
+      "12": "d",
+      "13": "b",
+      "14": ".",
+      "15": "t",
+      "16": "w",
+      "17": "/",
+      "18": "t",
+      "19": "w",
+      "20": "/",
+      "21": "V",
+      "22": "e",
+      "23": "r",
+      "24": "s",
+      "25": "i",
+      "26": "o",
+      "27": "n",
+      "28": "_",
+      "29": "0",
+      "30": ".",
+      "31": "5",
+      "32": ".",
+      "33": "4",
+      "34": "b",
+      "id": "source-campaign-legacy-reward-07-record",
+      "usage": [
+        "legacy-reward-reference"
+      ],
+      "originDataset": "poe2_campaign_permanent_rewards_0.5_zh-TW.json"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "campaign-chapter-002",
+      "slug": "act-1",
+      "name": "第一章",
+      "englishName": "ACT I",
+      "status": "complete",
+      "summary": "從河岸抵達皆伐，穿越艾茲麥森林與奧格姆領地，追上吉恩諾伯爵。",
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_1#%E7%AC%AC1%E7%AB%A0"
+    },
+    {
+      "id": "campaign-chapter-003",
+      "slug": "act-2",
+      "name": "第二章",
+      "englishName": "ACT II",
+      "status": "pending",
+      "summary": "第一章版型確認後，將依相同資料結構整理。",
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_2#%E7%AC%AC2%E7%AB%A0"
+    },
+    {
+      "id": "campaign-chapter-004",
+      "slug": "act-3",
+      "name": "第三章",
+      "englishName": "ACT III",
+      "status": "pending",
+      "summary": "第一章版型確認後，將依相同資料結構整理。",
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_3#%E7%AC%AC3%E7%AB%A0"
+    },
+    {
+      "id": "campaign-chapter-005",
+      "slug": "act-4",
+      "name": "第四章",
+      "englishName": "ACT IV",
+      "status": "pending",
+      "summary": "第一章版型確認後，將依相同資料結構整理。",
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_4#%E7%AC%AC4%E7%AB%A0"
+    },
+    {
+      "id": "campaign-chapter-006",
+      "slug": "interlude",
+      "name": "間歇",
+      "englishName": "INTERLUDE",
+      "status": "pending",
+      "summary": "第一章版型確認後，將依相同資料結構整理。",
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_6#%E7%AC%AC6%E7%AB%A0"
+    }
+  ],
+  "chapterSegments": [
+    {
+      "id": "campaign-segment-act-1",
+      "sourceChapterKey": "act_1",
+      "chapterId": "campaign-chapter-002",
+      "chapter": "第一章",
+      "chapter_en": "Act 1"
+    },
+    {
+      "id": "campaign-segment-act-2",
+      "sourceChapterKey": "act_2",
+      "chapterId": "campaign-chapter-003",
+      "chapter": "第二章",
+      "chapter_en": "Act 2"
+    },
+    {
+      "id": "campaign-segment-act-3",
+      "sourceChapterKey": "act_3",
+      "chapterId": "campaign-chapter-004",
+      "chapter": "第三章",
+      "chapter_en": "Act 3"
+    },
+    {
+      "id": "campaign-segment-act-4",
+      "sourceChapterKey": "act_4",
+      "chapterId": "campaign-chapter-005",
+      "chapter": "第四章",
+      "chapter_en": "Act 4"
+    },
+    {
+      "id": "campaign-segment-interlude-1",
+      "sourceChapterKey": "interlude_1",
+      "chapterId": "campaign-chapter-006",
+      "chapter": "間歇一：被偷的巨靈之幣",
+      "chapter_en": "Interlude 1: The Stolen Barya"
+    },
+    {
+      "id": "campaign-segment-interlude-2",
+      "sourceChapterKey": "interlude_2",
+      "chapterId": "campaign-chapter-006",
+      "chapter": "間歇二：多里亞尼的應變計畫",
+      "chapter_en": "Interlude 2: Doryani's Contingency"
+    },
+    {
+      "id": "campaign-segment-interlude-3",
+      "sourceChapterKey": "interlude_3",
+      "chapterId": "campaign-chapter-006",
+      "chapter": "間歇三：霍爾登的詛咒",
+      "chapter_en": "Interlude 3: The Curse of Holten"
+    }
+  ],
+  "mapSurfaces": [
+    {
+      "id": "campaign-map-007",
+      "name": "皆伐與森林區域",
+      "image": "images/act_maps/act-1-1.webp",
+      "alt": "第一章皆伐、葛瑞爾林與周邊區域路線圖",
+      "points": [
+        {
+          "name": "赤谷",
+          "x": 25.229,
+          "y": 72.059
+        },
+        {
+          "name": "葛瑞爾林",
+          "x": 15.434,
+          "y": 62.132
+        },
+        {
+          "name": "遺忘墓穴",
+          "x": 15.434,
+          "y": 54.473
+        },
+        {
+          "name": "纏縛陰林",
+          "x": 17.607,
+          "y": 31.25
+        },
+        {
+          "name": "皆伐",
+          "x": 52.172,
+          "y": 69.424
+        },
+        {
+          "name": "獵場",
+          "x": 47.218,
+          "y": 18.137
+        },
+        {
+          "name": "弗雷索恩",
+          "x": 47.18,
+          "y": 47.304
+        },
+        {
+          "name": "奧格姆農地",
+          "x": 63.91,
+          "y": 28.002
+        }
+      ],
+      "chapterId": "campaign-chapter-002"
+    },
+    {
+      "id": "campaign-map-008",
+      "name": "墓園與奧格姆區域",
+      "image": "images/act_maps/act-1-2.webp",
+      "alt": "第一章不朽帝國之墓、獵場與奧格姆區域路線圖",
+      "points": [
+        {
+          "name": "奧格姆宅第",
+          "x": 86.8,
+          "y": 20.2
+        }
+      ],
+      "chapterId": "campaign-chapter-002"
+    },
+    {
+      "id": "campaign-map-024",
+      "name": "瓦斯提里沙漠",
+      "image": "images/act_maps/act-2-1.webp",
+      "alt": "第二章瓦斯提里沙漠地表路線圖",
+      "points": [
+        {
+          "name": "凱斯城",
+          "x": 37.44,
+          "y": 41
+        },
+        {
+          "name": "骨坑",
+          "x": 38.69,
+          "y": 85.72
+        },
+        {
+          "name": "無光通道",
+          "x": 43.45,
+          "y": 84.93
+        },
+        {
+          "name": "泰坦之谷",
+          "x": 30.48,
+          "y": 34.81
+        },
+        {
+          "name": "戴斯哈",
+          "x": 92.22,
+          "y": 38.13
+        },
+        {
+          "name": "戴斯哈尖塔",
+          "x": 93.18,
+          "y": 47.85
+        }
+      ],
+      "chapterId": "campaign-chapter-003"
+    },
+    {
+      "id": "campaign-map-025",
+      "name": "第二章地下區域",
+      "image": "images/act_maps/act-2-2.webp",
+      "alt": "第二章地下區域路線圖",
+      "points": [
+        {
+          "name": "叛徒之路",
+          "x": 68.67,
+          "y": 38.89
+        }
+      ],
+      "chapterId": "campaign-chapter-003"
+    },
+    {
+      "id": "campaign-map-026",
+      "name": "第三章現世地表",
+      "label": "現世地表",
+      "image": "images/act_maps/act-3-1.webp",
+      "alt": "第三章現世地表與金字塔區域路線圖",
+      "points": [
+        {
+          "name": "叢林遺跡",
+          "x": 30.25,
+          "y": 49.38
+        },
+        {
+          "name": "劇毒墓穴",
+          "x": 25.45,
+          "y": 47.85
+        },
+        {
+          "name": "阿札克泥沼",
+          "x": 59.52,
+          "y": 10.69
+        },
+        {
+          "name": "混沌神殿",
+          "x": 16.77,
+          "y": 18
+        }
+      ],
+      "chapterId": "campaign-chapter-004"
+    },
+    {
+      "id": "campaign-map-027",
+      "name": "第三章現世地底",
+      "label": "現世地底",
+      "image": "images/act_maps/act-3-2.webp",
+      "alt": "第三章現世地底區域路線圖",
+      "points": [
+        {
+          "name": "吉卡尼的機械迷城",
+          "x": 10.95,
+          "y": 52.22
+        }
+      ],
+      "chapterId": "campaign-chapter-004"
+    },
+    {
+      "id": "campaign-map-028",
+      "name": "第三章過去地表",
+      "label": "過去地表",
+      "image": "images/act_maps/act-3-3.webp",
+      "alt": "第三章過去地表與金字塔區域路線圖",
+      "points": [
+        {
+          "name": "阿戈拉",
+          "x": 64.23,
+          "y": 75.29
+        },
+        {
+          "name": "奧札爾",
+          "x": 59.47,
+          "y": 80.87
+        }
+      ],
+      "chapterId": "campaign-chapter-004"
+    },
+    {
+      "id": "campaign-map-029",
+      "name": "第三章過去地底",
+      "label": "過去地底",
+      "image": "images/act_maps/act-3-4.webp",
+      "alt": "第三章過去地底區域路線圖",
+      "chapterId": "campaign-chapter-004"
+    },
+    {
+      "id": "campaign-map-030",
+      "name": "第四章群島",
+      "label": "群島",
+      "image": "images/act_maps/act-4.webp",
+      "alt": "第四章群島航線與各島區域路線圖",
+      "points": [
+        {
+          "name": "旅程之末",
+          "x": 37.1,
+          "y": 11.8
+        },
+        {
+          "name": "凱吉灣",
+          "x": 34.52,
+          "y": 16.38
+        },
+        {
+          "name": "金氏島",
+          "x": 24.66,
+          "y": 45.3
+        },
+        {
+          "name": "廢棄監獄",
+          "x": 51.75,
+          "y": 36.5
+        },
+        {
+          "name": "瓦卡帕努島",
+          "x": 45.7,
+          "y": 55.3
+        },
+        {
+          "name": "亡者之殿",
+          "x": 59.39,
+          "y": 80.55
+        },
+        {
+          "name": "悉妮蔻拉之眼－沉默之廳",
+          "x": 63.3,
+          "y": 85.77
+        },
+        {
+          "name": "伯勞鳥之島",
+          "x": 26.86,
+          "y": 83.7
+        }
+      ],
+      "chapterId": "campaign-chapter-005"
+    },
+    {
+      "id": "campaign-map-031",
+      "name": "間歇區域",
+      "label": "間歇",
+      "image": "images/act_maps/act-5.webp",
+      "alt": "三段間歇章節區域路線圖",
+      "points": [
+        {
+          "name": "卡里交會道",
+          "x": 53,
+          "y": 60.6
+        },
+        {
+          "name": "奇瑪",
+          "x": 61.2,
+          "y": 30
+        },
+        {
+          "name": "庫萊亞村",
+          "x": 76.1,
+          "y": 56.2
+        },
+        {
+          "name": "狂嗥洞穴",
+          "x": 82.1,
+          "y": 43.8
+        },
+        {
+          "name": "狼之要塞",
+          "x": 15.7,
+          "y": 28.9
+        }
+      ],
+      "chapterId": "campaign-chapter-006"
+    }
+  ],
+  "quests": [
+    {
+      "id": "act-1-main-reaching-clearfell",
+      "name": "抵達皆伐",
+      "url": "https://poe2db.tw/tw/Reaching_Clearfell",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-1-main-secrets-in-the-dark",
+      "name": "黑暗中的秘密",
+      "url": "https://poe2db.tw/tw/Secrets_in_the_Dark",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-1-main-the-mysterious-shade",
+      "name": "神祕的影魅",
+      "url": "https://poe2db.tw/tw/The_Mysterious_Shade",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-1-main-sorrow-among-stones",
+      "name": "石頭上的悲傷",
+      "url": "https://poe2db.tw/tw/Sorrow_Among_Stones",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-1-main-trail-of-corruption",
+      "name": "腐化痕跡",
+      "url": "https://poe2db.tw/tw/The_Trail_of_Corruption",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-1-main-the-mad-wolf-of-ogham",
+      "name": "奧格姆的狂狼",
+      "url": "https://poe2db.tw/tw/The_Mad_Wolf_of_Ogham",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-1-main-cracks-in-the-earth",
+      "name": "大地的裂痕",
+      "url": "https://poe2db.tw/tw/Cracks_in_the_Earth",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-1-main-ancient-beacons",
+      "name": "遠古烽火",
+      "url": "https://poe2db.tw/tw/Ancient_Beacons",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-1-main-the-runeseeker",
+      "name": "符文探求者",
+      "url": "https://poe2db.tw/tw/The_Runeseeker",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-1-required-beira",
+      "name": "擊敗腐敗獸群．貝伊拉",
+      "reward": "+10% 冰冷抗性",
+      "url": "https://poe2db.tw/tw/Act_1#%E7%AC%AC1%E7%AB%A0",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "requiredRewards",
+      "sourceIds": [
+        "source-campaign-quest-act1"
+      ]
+    },
+    {
+      "id": "act-1-required-crowbell",
+      "name": "擊敗鴉鈴",
+      "reward": "+2 武器套裝天賦點數",
+      "url": "https://poe2db.tw/tw/Act_1#%E7%8D%B5%E5%A0%B4",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-1-required-king-in-the-mists",
+      "name": "擊敗迷霧之王",
+      "reward": "+30 精魂",
+      "url": "https://poe2db.tw/tw/Act_1#%E5%BC%97%E9%9B%B7%E7%B4%A2%E6%81%A9",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-1-required-the-lost-lute",
+      "name": "遺失的魯特琴",
+      "reward": "+2 武器套裝天賦點數",
+      "url": "https://poe2db.tw/tw/The_Lost_Lute",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-1-required-candlemass",
+      "name": "擊敗存活儀式．燭光",
+      "reward": "+20 最大生命",
+      "url": "https://poe2db.tw/tw/Act_1#%E5%A5%A7%E6%A0%BC%E5%A7%86%E5%AE%85%E7%AC%AC",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-1-recommended-treacherous-ground",
+      "name": "險惡之地",
+      "note": "取得拓荒期輔助寶石。",
+      "url": "https://poe2db.tw/tw/Treacherous_Ground",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "recommended",
+      "sourceIds": []
+    },
+    {
+      "id": "act-1-recommended-ominous-altars",
+      "name": "不祥祭壇",
+      "note": "可選擇元素護符。",
+      "url": "https://poe2db.tw/tw/Ominous_Altars",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "recommended",
+      "sourceIds": []
+    },
+    {
+      "id": "act-1-recommended-blank-runes",
+      "name": "空白符文",
+      "note": "可製作一枚自選低階符文。",
+      "url": "https://poe2db.tw/tw/Blank_Runes",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "recommended",
+      "sourceIds": []
+    },
+    {
+      "id": "act-1-recommended-finding-the-forge",
+      "name": "尋找熔爐",
+      "note": "解鎖回收台。",
+      "url": "https://poe2db.tw/tw/Finding_the_Forge",
+      "chapterId": "campaign-chapter-002",
+      "taskType": "recommended",
+      "sourceIds": []
+    },
+    {
+      "id": "act-2-main-earning-passage",
+      "name": "獲得通行許可",
+      "url": "https://poe2db.tw/tw/Earning_Passage",
+      "chapterId": "campaign-chapter-003",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-2-main-trail-of-corruption",
+      "name": "腐化痕跡",
+      "url": "https://poe2db.tw/tw/The_Trail_of_Corruption",
+      "chapterId": "campaign-chapter-003",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-2-main-city-of-seven-waters",
+      "name": "七大水域之都",
+      "url": "https://poe2db.tw/tw/The_City_of_Seven_Waters",
+      "chapterId": "campaign-chapter-003",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-2-main-a-theft-of-ivory",
+      "name": "象牙盜匪",
+      "url": "https://poe2db.tw/tw/A_Theft_of_Ivory",
+      "chapterId": "campaign-chapter-003",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-2-main-a-crown-of-stone",
+      "name": "石皇冠",
+      "url": "https://poe2db.tw/tw/A_Crown_of_Stone",
+      "chapterId": "campaign-chapter-003",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-2-main-the-forgotten-prisoner",
+      "name": "被遺忘的囚犯",
+      "url": "https://poe2db.tw/tw/The_Forgotten_Prisoner",
+      "chapterId": "campaign-chapter-003",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-2-main-back-in-the-bottle",
+      "name": "返回瓶中",
+      "url": "https://poe2db.tw/tw/Back_in_the_Bottle",
+      "chapterId": "campaign-chapter-003",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-2-main-ancient-beacons",
+      "name": "遠古烽火",
+      "url": "https://poe2db.tw/tw/Ancient_Beacons",
+      "chapterId": "campaign-chapter-003",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-2-main-the-runeseeker",
+      "name": "符文探求者",
+      "url": "https://poe2db.tw/tw/The_Runeseeker",
+      "chapterId": "campaign-chapter-003",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-2-required-kabala",
+      "name": "擊敗蟒蛇女王．卡巴拉",
+      "reward": "+2 武器套裝天賦點數",
+      "url": "https://poe2db.tw/tw/Act_2#%E5%87%B1%E6%96%AF%E5%9F%8E",
+      "chapterId": "campaign-chapter-003",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-2-required-traditions-toll",
+      "name": "傳統的代價",
+      "reward": "+2 武器套裝天賦點數",
+      "url": "https://poe2db.tw/tw/Traditions_Toll",
+      "chapterId": "campaign-chapter-003",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-2-required-ancient-vows",
+      "name": "遠古誓言",
+      "reward": "永久護符增益二選一，並解鎖額外護符欄位。",
+      "url": "https://poe2db.tw/tw/Ancient_Vows",
+      "chapterId": "campaign-chapter-003",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-2-required-rise-to-power",
+      "name": "崛起掌權",
+      "reward": "開啟絲克瑪試煉與昇華流程。",
+      "url": "https://poe2db.tw/tw/Ascent_to_Power",
+      "chapterId": "campaign-chapter-003",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-2-required-trial-of-time",
+      "name": "時間試煉",
+      "reward": "完成昇華試煉。",
+      "url": "https://poe2db.tw/tw/Quest#%E4%BB%BB%E5%8B%99",
+      "chapterId": "campaign-chapter-003",
+      "taskType": "requiredRewards",
+      "sourceIds": [
+        "source-campaign-quest-questindex"
+      ]
+    },
+    {
+      "id": "act-2-required-sisters-of-garukhan",
+      "name": "啟動卡洛翰的姐妹祭壇",
+      "reward": "+10% 閃電抗性",
+      "url": "https://poe2db.tw/tw/Act_2#%E6%88%B4%E6%96%AF%E5%93%88%E5%B0%96%E5%A1%94",
+      "chapterId": "campaign-chapter-003",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-3-main-legacy-of-the-vaal",
+      "name": "瓦爾的傳承",
+      "url": "https://poe2db.tw/tw/Legacy_of_the_Vaal",
+      "chapterId": "campaign-chapter-004",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-3-main-ancient-beacons",
+      "name": "遠古烽火",
+      "url": "https://poe2db.tw/tw/Ancient_Beacons",
+      "chapterId": "campaign-chapter-004",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-3-main-the-runeseeker",
+      "name": "符文探求者",
+      "url": "https://poe2db.tw/tw/The_Runeseeker",
+      "chapterId": "campaign-chapter-004",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-3-required-slithering-dead",
+      "name": "滑行死者",
+      "reward": "依流派選擇永久增加暈眩門檻、元素異常門檻或魔力回復率。",
+      "url": "https://poe2db.tw/tw/The_Slithering_Dead",
+      "chapterId": "campaign-chapter-004",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-3-required-treasures-of-utzaal",
+      "name": "奧札爾寶藏",
+      "reward": "取得未切割技能寶石與巧匠石。",
+      "url": "https://poe2db.tw/tw/Treasures_of_Utzaal",
+      "chapterId": "campaign-chapter-004",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-3-required-trials-of-chaos",
+      "name": "混沌試煉",
+      "reward": "完成昇華試煉。",
+      "url": "https://poe2db.tw/tw/The_Trials_of_Chaos",
+      "chapterId": "campaign-chapter-004",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-3-required-silverfist",
+      "name": "擊敗神威銀拳",
+      "reward": "+2 武器套裝天賦點數",
+      "url": "https://poe2db.tw/tw/Act_3#%E5%8F%A2%E6%9E%97%E9%81%BA%E8%B7%A1",
+      "chapterId": "campaign-chapter-004",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-3-required-ignagduk",
+      "name": "擊敗沼澤女巫．尹娜杜克",
+      "reward": "+30 精魂",
+      "url": "https://poe2db.tw/tw/Act_3#%E9%98%BF%E6%9C%AD%E5%85%8B%E6%B3%A5%E6%B2%BC",
+      "chapterId": "campaign-chapter-004",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-3-required-blackjaw",
+      "name": "擊敗遺忘的黑顎",
+      "reward": "+10% 火焰抗性",
+      "url": "https://poe2db.tw/tw/Act_3#%E5%90%89%E5%8D%A1%E5%B0%BC%E7%9A%84%E6%A9%9F%E6%A2%B0%E8%BF%B7%E5%9F%8E",
+      "chapterId": "campaign-chapter-004",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-3-required-sacrificial-heart",
+      "name": "獻祭犧牲之心",
+      "reward": "+2 武器套裝天賦點數",
+      "url": "https://poe2db.tw/tw/Quest#%E4%BB%BB%E5%8B%99",
+      "chapterId": "campaign-chapter-004",
+      "taskType": "requiredRewards",
+      "sourceIds": [
+        "source-campaign-quest-questindex"
+      ]
+    },
+    {
+      "id": "act-4-main-the-search",
+      "name": "大搜索",
+      "url": "https://poe2db.tw/tw/The_Search",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-main-shrike-island",
+      "name": "伯勞鳥之島",
+      "url": "https://poe2db.tw/tw/Shrike_Island",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-main-land-of-the-kin",
+      "name": "金氏族地",
+      "url": "https://poe2db.tw/tw/Land_of_the_Kin",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-main-utopia",
+      "name": "烏托邦",
+      "url": "https://poe2db.tw/tw/Utopia",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-main-dark-mists",
+      "name": "暗黑迷霧",
+      "url": "https://poe2db.tw/tw/Dark_Mists",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-main-siege-of-oriath",
+      "name": "奧瑞亞圍城戰",
+      "url": "https://poe2db.tw/tw/Siege_of_Oriath",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-main-fate-of-the-vaal",
+      "name": "瓦爾命途",
+      "url": "https://poe2db.tw/tw/Fate_of_the_Vaal",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-required-blind-beast",
+      "name": "眼盲巨獸",
+      "reward": "硫酸藥劑：+10% 閃電抗性。",
+      "url": "https://poe2db.tw/tw/The_Blind_Beast",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-required-tribal-medicine",
+      "name": "部落藥術",
+      "reward": "取得永久增益教誨。",
+      "url": "https://poe2db.tw/tw/Tribal_Medicine",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-required-trial-of-the-ancestors",
+      "name": "祖靈的試煉",
+      "reward": "+2 武器套裝天賦點數與刺青獎勵。",
+      "url": "https://poe2db.tw/tw/Trial_of_the_Ancestors",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-required-tawhoas-test",
+      "name": "塔赫亞的考驗",
+      "reward": "敏捷或閃電刺青。",
+      "url": "https://poe2db.tw/tw/Tawhoas_Test",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-required-tasalios-test",
+      "name": "塔薩里奧的考驗",
+      "reward": "智慧或冰冷刺青。",
+      "url": "https://poe2db.tw/tw/Tasalios_Test",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-required-ngamahus-test",
+      "name": "拿馬乎的考驗",
+      "reward": "力量或火焰刺青。",
+      "url": "https://poe2db.tw/tw/Ngamahus_Test",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-required-journeys-end",
+      "name": "擊敗恐懼造物．歐姆弗畢亞",
+      "reward": "+2 武器套裝天賦點數",
+      "url": "https://poe2db.tw/tw/Quest#%E7%AC%AC4%E7%AB%A0",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-required-eye-of-hinekora",
+      "name": "悉妮蔻拉之眼",
+      "reward": "增加 5% 最大魔力。",
+      "url": "https://poe2db.tw/tw/Quest#%E7%AC%AC4%E7%AB%A0",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-required-halls-of-the-dead",
+      "name": "擊敗白之亞瑪",
+      "reward": "永久屬性或元素抗性選擇。",
+      "url": "https://poe2db.tw/tw/Quest#%E7%AC%AC4%E7%AB%A0",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-required-justice-statue",
+      "name": "廢棄監獄的正義女神",
+      "reward": "鑰匙由小怪掉落；永久選擇藥劑魔力或生命恢復增加 30%，可更改。",
+      "url": "https://poe2db.tw/tw/Act_4#%E5%BB%A2%E6%A3%84%E7%9B%A3%E7%8D%84",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-required-great-white-one",
+      "name": "擊敗大白鯊",
+      "reward": "永久防禦增益選擇。",
+      "url": "https://poe2db.tw/tw/Act_4#%E7%93%A6%E5%8D%A1%E5%B8%95%E5%8A%AA%E5%B3%B6",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "act-4-recommended-torn-map-pieces",
+      "name": "撕碎的地圖碎片",
+      "note": "在凱吉灣、金氏島、瓦卡帕努島與伯勞鳥之島收集四片地圖碎片。",
+      "url": "https://poe2db.tw/tw/Act_4#%E7%AC%AC4%E7%AB%A0",
+      "chapterId": "campaign-chapter-005",
+      "taskType": "recommended",
+      "sourceIds": [
+        "source-campaign-quest-act4"
+      ]
+    },
+    {
+      "id": "interlude-main-siege-of-oriath",
+      "name": "奧瑞亞圍城戰",
+      "url": "https://poe2db.tw/tw/Siege_of_Oriath",
+      "chapterId": "campaign-chapter-006",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "interlude-main-infiltrating-oriath",
+      "name": "滲透奧瑞亞",
+      "url": "https://poe2db.tw/tw/Quest#%E4%BB%BB%E5%8B%99",
+      "chapterId": "campaign-chapter-006",
+      "taskType": "main",
+      "sourceIds": [
+        "source-campaign-quest-questindex"
+      ]
+    },
+    {
+      "id": "interlude-main-pinned-down",
+      "name": "動彈不得",
+      "url": "https://poe2db.tw/tw/Pinned_Down",
+      "chapterId": "campaign-chapter-006",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "interlude-main-pleasure-and-pain",
+      "name": "快樂與痛苦",
+      "url": "https://poe2db.tw/tw/Pleasure_and_Pain",
+      "chapterId": "campaign-chapter-006",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "interlude-main-the-blighted-never-rest",
+      "name": "凋落者永無寧日",
+      "url": "https://poe2db.tw/tw/Quest#%E4%BB%BB%E5%8B%99",
+      "chapterId": "campaign-chapter-006",
+      "taskType": "main",
+      "sourceIds": [
+        "source-campaign-quest-questindex"
+      ]
+    },
+    {
+      "id": "interlude-main-recruit-the-ezomytes",
+      "name": "招募艾茲麥人",
+      "url": "https://poe2db.tw/tw/Recruit_the_Ezomytes",
+      "chapterId": "campaign-chapter-006",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "interlude-main-recruit-the-maraketh",
+      "name": "招募馬拉克斯人",
+      "url": "https://poe2db.tw/tw/Recruit_the_Maraketh",
+      "chapterId": "campaign-chapter-006",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "interlude-main-recruit-the-vaal",
+      "name": "招募瓦爾人",
+      "url": "https://poe2db.tw/tw/Recruit_the_Vaal",
+      "chapterId": "campaign-chapter-006",
+      "taskType": "main",
+      "sourceIds": []
+    },
+    {
+      "id": "interlude-required-akthi-anundr",
+      "name": "擊敗終末毒刺．艾克提與沙蟲．艾能德",
+      "reward": "+2 武器套裝天賦點數",
+      "url": "https://poe2db.tw/tw/Clearing_the_Way",
+      "chapterId": "campaign-chapter-006",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "interlude-required-molten-shrine",
+      "name": "啟動熔岩神殿",
+      "reward": "+5% 最大生命",
+      "url": "https://poe2db.tw/tw/Act_6#%E7%AC%AC6%E7%AB%A0",
+      "chapterId": "campaign-chapter-006",
+      "taskType": "requiredRewards",
+      "sourceIds": [
+        "source-campaign-quest-interlude"
+      ]
+    },
+    {
+      "id": "interlude-required-howling-winds",
+      "name": "擊敗怪異雪獸",
+      "reward": "+2 武器套裝天賦點數",
+      "url": "https://poe2db.tw/tw/Howling_Winds",
+      "chapterId": "campaign-chapter-006",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "interlude-required-oswin",
+      "name": "擊敗恐懼典獄長．歐斯溫",
+      "reward": "+2 武器套裝天賦點數",
+      "url": "https://poe2db.tw/tw/Act_6#%E7%8B%BC%E4%B9%8B%E8%A6%81%E5%A1%9E",
+      "chapterId": "campaign-chapter-006",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "interlude-required-seven-pillars",
+      "name": "奇瑪七靈柱",
+      "reward": "永久增益七選一。",
+      "url": "https://poe2db.tw/tw/Act_6#%E5%A5%87%E7%91%AA",
+      "chapterId": "campaign-chapter-006",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "interlude-required-laytara",
+      "name": "擊敗迷失長矛．萊塔拉",
+      "reward": "+40 精魂",
+      "url": "https://poe2db.tw/tw/Act_6#%E5%BA%AB%E8%90%8A%E4%BA%9E%E6%9D%91",
+      "chapterId": "campaign-chapter-006",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    },
+    {
+      "id": "interlude-required-finish",
+      "name": "完成間章",
+      "reward": "+2 武器套裝天賦點數",
+      "url": "https://poe2db.tw/tw/Quest#%E9%96%93%E7%AB%A0",
+      "chapterId": "campaign-chapter-006",
+      "taskType": "requiredRewards",
+      "sourceIds": []
+    }
+  ],
+  "rewards": [
+    {
+      "id": "campaign-segment-act-1-reward-01-entry",
+      "chapterId": "campaign-chapter-002",
+      "segmentId": "campaign-segment-act-1",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "皆伐",
+        "en": "Clearfell"
+      },
+      "main_quest": "無",
+      "side_quest": "無",
+      "boss": {
+        "zh_tw": "腐敗獸群．貝伊拉",
+        "en": "Beira of the Rotten Pack"
+      },
+      "permanent_reward": {
+        "type": "cold_resistance",
+        "value": 10,
+        "unit": "percent",
+        "text_zh_tw": "+10% 冰冷抗性"
+      },
+      "condition_zh_tw": "擊敗頭目並使用掉落的凜冬狼頭顱。"
+    },
+    {
+      "id": "campaign-segment-act-1-reward-02-entry",
+      "chapterId": "campaign-chapter-002",
+      "segmentId": "campaign-segment-act-1",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "獵場",
+        "en": "Hunting Grounds"
+      },
+      "main_quest": "無",
+      "side_quest": "無",
+      "boss": {
+        "zh_tw": "鴉鈴",
+        "en": "The Crowbell"
+      },
+      "permanent_reward": {
+        "type": "weapon_set_passive_points",
+        "value": 2,
+        "unit": "points",
+        "text_zh_tw": "2 點武器套裝天賦點"
+      }
+    },
+    {
+      "id": "campaign-segment-act-1-reward-03-entry",
+      "chapterId": "campaign-chapter-002",
+      "segmentId": "campaign-segment-act-1",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "弗雷索恩",
+        "en": "Freythorn"
+      },
+      "main_quest": "無",
+      "side_quest": {
+        "zh_tw": "不祥祭壇",
+        "en": "Ominous Altars"
+      },
+      "boss": {
+        "zh_tw": "迷霧之王",
+        "en": "The King in the Mists"
+      },
+      "permanent_reward": {
+        "type": "spirit",
+        "value": 30,
+        "unit": "flat",
+        "text_zh_tw": "+30 精魂"
+      },
+      "condition_zh_tw": "完成祭壇事件並擊敗頭目。"
+    },
+    {
+      "id": "campaign-segment-act-1-reward-04-entry",
+      "chapterId": "campaign-chapter-002",
+      "segmentId": "campaign-segment-act-1",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "奧格姆農地",
+        "en": "Ogham Farmlands"
+      },
+      "main_quest": "無",
+      "side_quest": {
+        "zh_tw": "遺失的魯特琴",
+        "en": "The Lost Lute"
+      },
+      "boss": "無",
+      "permanent_reward": {
+        "type": "weapon_set_passive_points",
+        "value": 2,
+        "unit": "points",
+        "text_zh_tw": "2 點武器套裝天賦點"
+      },
+      "condition_zh_tw": "找到烏娜的魯特琴並交還。"
+    },
+    {
+      "id": "campaign-segment-act-1-reward-05-entry",
+      "chapterId": "campaign-chapter-002",
+      "segmentId": "campaign-segment-act-1",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "奧格姆宅第",
+        "en": "Ogham Manor"
+      },
+      "main_quest": "無",
+      "side_quest": "無",
+      "boss": {
+        "zh_tw": "存活儀式．燭光",
+        "en": "Candlemass, the Living Rite"
+      },
+      "permanent_reward": {
+        "type": "maximum_life",
+        "value": 20,
+        "unit": "flat",
+        "text_zh_tw": "+20 最大生命"
+      }
+    },
+    {
+      "id": "campaign-segment-act-2-reward-01-entry",
+      "chapterId": "campaign-chapter-003",
+      "segmentId": "campaign-segment-act-2",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "凱斯城",
+        "en": "Keth"
+      },
+      "main_quest": "無",
+      "side_quest": "無",
+      "boss": {
+        "zh_tw": "蟒蛇女王．卡巴拉",
+        "en": "Kabala, Constrictor Queen"
+      },
+      "permanent_reward": {
+        "type": "weapon_set_passive_points",
+        "value": 2,
+        "unit": "points",
+        "text_zh_tw": "2 點武器套裝天賦點"
+      }
+    },
+    {
+      "id": "campaign-segment-act-2-reward-02-entry",
+      "chapterId": "campaign-chapter-003",
+      "segmentId": "campaign-segment-act-2",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "凱斯城／骨坑／泰坦之谷",
+        "en": "Keth / Bone Pits / Valley of the Titans"
+      },
+      "main_quest": "無",
+      "side_quest": {
+        "zh_tw": "古老誓言",
+        "en": "Ancient Vows"
+      },
+      "boss": "無",
+      "permanent_reward": {
+        "type": "charm_choice",
+        "text_zh_tw": "+1 護符欄位，並在護符充能獲取與護符效果持續時間之間二選一",
+        "changeable": true,
+        "options": [
+          {
+            "type": "charm_charges_gained",
+            "value": 30,
+            "unit": "percent_increased",
+            "text_zh_tw": "增加 30% 護符充能獲取"
+          },
+          {
+            "type": "charm_effect_duration",
+            "value": 30,
+            "unit": "percent_increased",
+            "text_zh_tw": "增加 30% 護符效果持續時間"
+          }
+        ],
+        "fixed_effects": [
+          {
+            "type": "charm_slots",
+            "value": 1,
+            "unit": "slot",
+            "text_zh_tw": "+1 護符欄位"
+          }
+        ]
+      },
+      "condition_zh_tw": "凱斯城：卡巴拉聖物｜骨坑：太陽聖物"
+    },
+    {
+      "id": "campaign-segment-act-2-reward-03-entry",
+      "chapterId": "campaign-chapter-003",
+      "segmentId": "campaign-segment-act-2",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "叛徒之路",
+        "en": "Traitor's Passage"
+      },
+      "main_quest": "無",
+      "side_quest": "無",
+      "boss": {
+        "zh_tw": "叛徒芭芭拉",
+        "en": "Balbala, the Traitor"
+      },
+      "permanent_reward": {
+        "type": "ascendancy_trial_map",
+        "text_zh_tw": "昇華試煉－斯克馬試煉地圖"
+      }
+    },
+    {
+      "id": "campaign-segment-act-2-reward-04-entry",
+      "chapterId": "campaign-chapter-003",
+      "segmentId": "campaign-segment-act-2",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "無光通道",
+        "en": "Lightless Passage"
+      },
+      "main_quest": "無",
+      "side_quest": {
+        "zh_tw": "深淵工藝",
+        "en": "Abyss Crafting"
+      },
+      "boss": "無",
+      "permanent_reward": {
+        "type": "abyss_crafting",
+        "text_zh_tw": "解鎖深淵工藝"
+      },
+      "condition_zh_tw": "由乳齒象惡地進入，前往靈魂之井。"
+    },
+    {
+      "id": "campaign-segment-act-2-reward-05-entry",
+      "chapterId": "campaign-chapter-003",
+      "segmentId": "campaign-segment-act-2",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "戴斯哈",
+        "en": "Deshar"
+      },
+      "main_quest": "無",
+      "side_quest": {
+        "zh_tw": "傳統的代價",
+        "en": "Tradition's Toll"
+      },
+      "boss": "無",
+      "permanent_reward": {
+        "type": "weapon_set_passive_points",
+        "value": 2,
+        "unit": "points",
+        "text_zh_tw": "2 點武器套裝天賦點"
+      },
+      "condition_zh_tw": "找到死者遺書並交付。"
+    },
+    {
+      "id": "campaign-segment-act-2-reward-06-entry",
+      "chapterId": "campaign-chapter-003",
+      "segmentId": "campaign-segment-act-2",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "戴斯哈尖塔",
+        "en": "The Spires of Deshar"
+      },
+      "main_quest": "無",
+      "side_quest": "無",
+      "boss": "無",
+      "permanent_reward": {
+        "type": "lightning_resistance",
+        "value": 10,
+        "unit": "percent",
+        "text_zh_tw": "+10% 閃電抗性"
+      },
+      "condition_zh_tw": "與卡洛翰姐妹祭壇互動。"
+    },
+    {
+      "id": "campaign-segment-act-3-reward-01-entry",
+      "chapterId": "campaign-chapter-004",
+      "segmentId": "campaign-segment-act-3",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "叢林遺跡",
+        "en": "Jungle Ruins"
+      },
+      "main_quest": "無",
+      "side_quest": "無",
+      "boss": {
+        "zh_tw": "神威銀拳",
+        "en": "Mighty Silverfist"
+      },
+      "permanent_reward": {
+        "type": "weapon_set_passive_points",
+        "value": 2,
+        "unit": "points",
+        "text_zh_tw": "2 點武器套裝天賦點"
+      }
+    },
+    {
+      "id": "campaign-segment-act-3-reward-02-entry",
+      "chapterId": "campaign-chapter-004",
+      "segmentId": "campaign-segment-act-3",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "阿札克泥沼",
+        "en": "The Azak Bog"
+      },
+      "main_quest": "無",
+      "side_quest": {
+        "zh_tw": "部落復仇",
+        "en": "Tribal Vengeance"
+      },
+      "boss": {
+        "zh_tw": "沼澤女巫．尹娜杜克",
+        "en": "Ignagduk, the Bog Witch"
+      },
+      "permanent_reward": {
+        "type": "spirit",
+        "value": 30,
+        "unit": "flat",
+        "text_zh_tw": "+30 精魂"
+      },
+      "condition_zh_tw": "擊敗頭目並使用其掉落物。"
+    },
+    {
+      "id": "campaign-segment-act-3-reward-03-entry",
+      "chapterId": "campaign-chapter-004",
+      "segmentId": "campaign-segment-act-3",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "劇毒墓穴",
+        "en": "The Venom Crypts"
+      },
+      "main_quest": "無",
+      "side_quest": {
+        "zh_tw": "滑行死者",
+        "en": "The Slithering Dead"
+      },
+      "boss": "無",
+      "permanent_reward": {
+        "type": "permanent_choice",
+        "changeable": false,
+        "choose": 1,
+        "options": [
+          {
+            "type": "stun_threshold",
+            "value": 25,
+            "unit": "percent_increased",
+            "text_zh_tw": "增加 25% 暈眩門檻"
+          },
+          {
+            "type": "elemental_ailment_threshold",
+            "value": 30,
+            "unit": "percent_increased",
+            "text_zh_tw": "增加 30% 元素異常狀態門檻"
+          },
+          {
+            "type": "mana_regeneration_rate",
+            "value": 25,
+            "unit": "percent_increased",
+            "text_zh_tw": "增加 25% 魔力回復率"
+          }
+        ]
+      }
+    },
+    {
+      "id": "campaign-segment-act-3-reward-04-entry",
+      "chapterId": "campaign-chapter-004",
+      "segmentId": "campaign-segment-act-3",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "吉卡尼的機械迷城",
+        "en": "Jiquani's Machinarium"
+      },
+      "main_quest": "無",
+      "side_quest": "無",
+      "boss": {
+        "zh_tw": "遺忘的黑顎",
+        "en": "Blackjaw, the Remnant"
+      },
+      "permanent_reward": {
+        "type": "fire_resistance",
+        "value": 10,
+        "unit": "percent",
+        "text_zh_tw": "+10% 火焰抗性"
+      },
+      "condition_zh_tw": "開啟可選區域、擊敗頭目並使用火焰核心。"
+    },
+    {
+      "id": "campaign-segment-act-3-reward-05-entry",
+      "chapterId": "campaign-chapter-004",
+      "segmentId": "campaign-segment-act-3",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "混沌神殿",
+        "en": "Temple of Chaos"
+      },
+      "main_quest": "無",
+      "side_quest": {
+        "zh_tw": "昇華試煉 2",
+        "en": "Ascendancy Trial 2"
+      },
+      "boss": "無",
+      "permanent_reward": {
+        "type": "ascendancy_points",
+        "value": 2,
+        "unit": "points",
+        "text_zh_tw": "2 點昇華天賦點"
+      },
+      "condition_zh_tw": "完成混沌神殿試煉。"
+    },
+    {
+      "id": "campaign-segment-act-3-reward-06-entry",
+      "chapterId": "campaign-chapter-004",
+      "segmentId": "campaign-segment-act-3",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "奧札爾／阿戈拉",
+        "en": "Utzaal / Aggorat"
+      },
+      "main_quest": "無",
+      "side_quest": "無",
+      "boss": "無",
+      "permanent_reward": {
+        "type": "weapon_set_passive_points",
+        "value": 2,
+        "unit": "points",
+        "text_zh_tw": "2 點武器套裝天賦點"
+      },
+      "condition_zh_tw": "取得犧牲之心並於阿戈拉祭壇獻祭。"
+    },
+    {
+      "id": "campaign-segment-act-4-reward-01-entry",
+      "chapterId": "campaign-chapter-005",
+      "segmentId": "campaign-segment-act-4",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "旅程之末",
+        "en": "Journey's End"
+      },
+      "main_quest": {
+        "zh_tw": "暗黑迷霧",
+        "en": "Dark Mists"
+      },
+      "side_quest": "無",
+      "boss": {
+        "zh_tw": "恐懼具現．全恐",
+        "en": "Omniphobia, Fear Manifest"
+      },
+      "permanent_reward": {
+        "type": "weapon_set_passive_points",
+        "value": 2,
+        "unit": "points",
+        "text_zh_tw": "2 點武器套裝天賦點"
+      }
+    },
+    {
+      "id": "campaign-segment-act-4-reward-02-entry",
+      "chapterId": "campaign-chapter-005",
+      "segmentId": "campaign-segment-act-4",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "悉妮蔻拉之眼－沉默之廳",
+        "en": "The Eye of Hinekora - The Silent Hall"
+      },
+      "main_quest": "無",
+      "side_quest": "無",
+      "boss": "無",
+      "permanent_reward": {
+        "type": "maximum_mana",
+        "value": 5,
+        "unit": "percent_increased",
+        "text_zh_tw": "增加 5% 最大魔力"
+      },
+      "condition_zh_tw": "在娜瓦莉憩地獻上敬意。"
+    },
+    {
+      "id": "campaign-segment-act-4-reward-03-entry",
+      "chapterId": "campaign-chapter-005",
+      "segmentId": "campaign-segment-act-4",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "瓦卡帕努島",
+        "en": "Whakapanu Island"
+      },
+      "main_quest": "無",
+      "side_quest": {
+        "zh_tw": "部落藥術",
+        "en": "Tribal Medicine"
+      },
+      "boss": {
+        "zh_tw": "大白鯊",
+        "en": "The Great White One"
+      },
+      "permanent_reward": {
+        "type": "permanent_defence_choice",
+        "changeable": false,
+        "choose": 1,
+        "options": [
+          {
+            "id": "kaoms_lesson",
+            "name": {
+              "zh_tw": "岡姆的教誨",
+              "en": "Kaom's Lesson"
+            },
+            "effects": [
+              {
+                "type": "global_armour_evasion_energy_shield",
+                "value": 30,
+                "unit": "percent_increased",
+                "text_zh_tw": "增加 30% 全域護甲、閃避與能量護盾"
+              }
+            ]
+          },
+          {
+            "id": "rakiatas_lesson",
+            "name": {
+              "zh_tw": "萊基亞塔的教誨",
+              "en": "Rakiata's Lesson"
+            },
+            "effects": [
+              {
+                "type": "armour_applies_to_elemental_damage",
+                "value": 15,
+                "unit": "percent",
+                "text_zh_tw": "15% 護甲套用於元素傷害"
+              },
+              {
+                "type": "deflection_from_evasion",
+                "value": 12,
+                "unit": "percent",
+                "text_zh_tw": "獲得等同 12% 閃避值的偏斜值"
+              },
+              {
+                "type": "energy_shield_recharge_start",
+                "value": 12,
+                "unit": "percent_faster",
+                "text_zh_tw": "能量護盾開始充能速度加快 12%"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "campaign-segment-act-4-reward-04-entry",
+      "chapterId": "campaign-chapter-005",
+      "segmentId": "campaign-segment-act-4",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "亡者之殿",
+        "en": "Halls of the Dead"
+      },
+      "main_quest": "無",
+      "side_quest": {
+        "zh_tw": "先祖試煉",
+        "en": "Trial of the Ancestors"
+      },
+      "boss": "無",
+      "permanent_reward": {
+        "type": "attribute_or_resistance_choices",
+        "changeable": false,
+        "groups": [
+          {
+            "name": {
+              "zh_tw": "塔赫亞的考驗",
+              "en": "Tawhoa's Test"
+            },
+            "options": [
+              {
+                "type": "dexterity",
+                "value": 5,
+                "unit": "flat",
+                "text_zh_tw": "+5 敏捷"
+              },
+              {
+                "type": "lightning_resistance",
+                "value": 5,
+                "unit": "percent",
+                "text_zh_tw": "+5% 閃電抗性"
+              }
+            ]
+          },
+          {
+            "name": {
+              "zh_tw": "塔薩里奧的考驗",
+              "en": "Tasalio's Test"
+            },
+            "options": [
+              {
+                "type": "intelligence",
+                "value": 5,
+                "unit": "flat",
+                "text_zh_tw": "+5 智慧"
+              },
+              {
+                "type": "cold_resistance",
+                "value": 5,
+                "unit": "percent",
+                "text_zh_tw": "+5% 冰冷抗性"
+              }
+            ]
+          },
+          {
+            "name": {
+              "zh_tw": "拿馬乎的考驗",
+              "en": "Ngamahu's Test"
+            },
+            "options": [
+              {
+                "type": "strength",
+                "value": 5,
+                "unit": "flat",
+                "text_zh_tw": "+5 力量"
+              },
+              {
+                "type": "fire_resistance",
+                "value": 5,
+                "unit": "percent",
+                "text_zh_tw": "+5% 火焰抗性"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "campaign-segment-act-4-reward-05-entry",
+      "chapterId": "campaign-chapter-005",
+      "segmentId": "campaign-segment-act-4",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "亡者之殿",
+        "en": "Halls of the Dead"
+      },
+      "main_quest": "無",
+      "side_quest": {
+        "zh_tw": "先祖試煉",
+        "en": "Trial of the Ancestors"
+      },
+      "boss": {
+        "zh_tw": "白之亞瑪",
+        "en": "Yama the White"
+      },
+      "permanent_reward": {
+        "type": "weapon_set_passive_points",
+        "value": 2,
+        "unit": "points",
+        "text_zh_tw": "2 點武器套裝天賦點"
+      }
+    },
+    {
+      "id": "campaign-segment-act-4-reward-06-entry",
+      "chapterId": "campaign-chapter-005",
+      "segmentId": "campaign-segment-act-4",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "廢棄監獄",
+        "en": "The Abandoned Prison"
+      },
+      "main_quest": "無",
+      "side_quest": {
+        "zh_tw": "正義女神",
+        "en": "Goddess of Justice"
+      },
+      "boss": "無",
+      "permanent_reward": {
+        "type": "flask_recovery_choice",
+        "changeable": true,
+        "choose": 1,
+        "options": [
+          {
+            "type": "mana_recovery_from_flasks",
+            "value": 30,
+            "unit": "percent_increased",
+            "text_zh_tw": "藥劑的魔力恢復增加 30%"
+          },
+          {
+            "type": "life_recovery_from_flasks",
+            "value": 30,
+            "unit": "percent_increased",
+            "text_zh_tw": "藥劑的生命恢復增加 30%"
+          }
+        ]
+      },
+      "condition_zh_tw": "擊敗小怪取得鑰匙，與正義女神互動；永久能力二選一，可更改。"
+    },
+    {
+      "id": "campaign-segment-act-4-reward-07-entry",
+      "chapterId": "campaign-chapter-005",
+      "segmentId": "campaign-segment-act-4",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "凱吉灣／金氏島／瓦卡帕努島／伯勞鳥之島",
+        "en": "Kedge Bay / Isle of Kin / Whakapanu Island / Shrike Island"
+      },
+      "main_quest": "無",
+      "side_quest": {
+        "zh_tw": "撕碎的地圖碎片",
+        "en": "Torn Map Pieces"
+      },
+      "boss": "無",
+      "condition_zh_tw": "收集四片撕碎的地圖碎片並交給瑪寇魯。"
+    },
+    {
+      "id": "campaign-segment-interlude-1-reward-01-entry",
+      "chapterId": "campaign-chapter-006",
+      "segmentId": "campaign-segment-interlude-1",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "卡里交會道",
+        "en": "The Khari Crossing"
+      },
+      "main_quest": {
+        "zh_tw": "被偷的巨靈之幣",
+        "en": "The Stolen Barya"
+      },
+      "side_quest": "無",
+      "boss": [
+        {
+          "zh_tw": "終末毒刺．艾克提",
+          "en": "Akthi, the Final Sting"
+        },
+        {
+          "zh_tw": "沙蟲．艾能德",
+          "en": "Anundr, the Sandworm"
+        }
+      ],
+      "permanent_reward": {
+        "type": "weapon_set_passive_points",
+        "value": 2,
+        "unit": "points",
+        "text_zh_tw": "2 點武器套裝天賦點"
+      }
+    },
+    {
+      "id": "campaign-segment-interlude-1-reward-02-entry",
+      "chapterId": "campaign-chapter-006",
+      "segmentId": "campaign-segment-interlude-1",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "卡里交會道",
+        "en": "The Khari Crossing"
+      },
+      "main_quest": "無",
+      "side_quest": "無",
+      "boss": "無",
+      "permanent_reward": {
+        "type": "maximum_life",
+        "value": 5,
+        "unit": "percent_increased",
+        "text_zh_tw": "增加 5% 最大生命"
+      },
+      "condition_zh_tw": "在卡里交會道進入骨顎階梯，找到熔岩神殿。"
+    },
+    {
+      "id": "campaign-segment-interlude-1-reward-03-entry",
+      "chapterId": "campaign-chapter-006",
+      "segmentId": "campaign-segment-interlude-1",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "奇瑪",
+        "en": "Qimah"
+      },
+      "main_quest": "無",
+      "side_quest": "無",
+      "boss": "無",
+      "permanent_reward": {
+        "type": "qimah_boon",
+        "changeable": true,
+        "choose": 1,
+        "text_zh_tw": "永久能力七選一（可更改）",
+        "options": [
+          {
+            "type": "all_attributes",
+            "value": 5,
+            "unit": "flat",
+            "text_zh_tw": "+5 全能力值"
+          },
+          {
+            "type": "all_elemental_resistances",
+            "value": 5,
+            "unit": "percent",
+            "text_zh_tw": "+5% 全元素抗性"
+          },
+          {
+            "type": "cooldown_recovery_rate",
+            "value": 12,
+            "unit": "percent_increased",
+            "text_zh_tw": "增加 12% 冷卻時間恢復率"
+          },
+          {
+            "type": "movement_speed",
+            "value": 3,
+            "unit": "percent_increased",
+            "text_zh_tw": "增加 3% 移動速度"
+          },
+          {
+            "type": "presence_area_of_effect",
+            "value": 20,
+            "unit": "percent_increased",
+            "text_zh_tw": "增加 20% 存在範圍"
+          },
+          {
+            "type": "global_defences",
+            "value": 15,
+            "unit": "percent_increased",
+            "text_zh_tw": "增加 15% 全域防禦"
+          },
+          {
+            "type": "experience_gained",
+            "value": 5,
+            "unit": "percent_increased",
+            "text_zh_tw": "增加 5% 經驗獲取，但失去其他增益"
+          }
+        ]
+      },
+      "condition_zh_tw": "從七靈柱選擇一個永久能力。"
+    },
+    {
+      "id": "campaign-segment-interlude-2-reward-01-entry",
+      "chapterId": "campaign-chapter-006",
+      "segmentId": "campaign-segment-interlude-2",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "庫萊亞村",
+        "en": "Kriar Village"
+      },
+      "main_quest": {
+        "zh_tw": "多里亞尼的應變計畫",
+        "en": "Doryani's Contingency"
+      },
+      "side_quest": "無",
+      "boss": {
+        "zh_tw": "迷失長矛．萊塔拉",
+        "en": "Lythara, the Wayward Spear"
+      },
+      "permanent_reward": {
+        "type": "spirit",
+        "value": 40,
+        "unit": "flat",
+        "text_zh_tw": "+40 精魂"
+      }
+    },
+    {
+      "id": "campaign-segment-interlude-2-reward-02-entry",
+      "chapterId": "campaign-chapter-006",
+      "segmentId": "campaign-segment-interlude-2",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "狂嗥洞穴",
+        "en": "Howling Caves"
+      },
+      "main_quest": "無",
+      "side_quest": "無",
+      "boss": {
+        "zh_tw": "怪異雪獸",
+        "en": "The Abominable Yeti"
+      },
+      "permanent_reward": {
+        "type": "weapon_set_passive_points",
+        "value": 2,
+        "unit": "points",
+        "text_zh_tw": "2 點武器套裝天賦點"
+      }
+    },
+    {
+      "id": "campaign-segment-interlude-3-reward-01-entry",
+      "chapterId": "campaign-chapter-006",
+      "segmentId": "campaign-segment-interlude-3",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "狼之要塞",
+        "en": "Wolvenhold"
+      },
+      "main_quest": {
+        "zh_tw": "霍爾登的詛咒",
+        "en": "The Curse of Holten"
+      },
+      "side_quest": "無",
+      "boss": {
+        "zh_tw": "恐懼典獄長．歐斯溫",
+        "en": "Oswin, the Dread Warden"
+      },
+      "permanent_reward": {
+        "type": "weapon_set_passive_points",
+        "value": 2,
+        "unit": "points",
+        "text_zh_tw": "2 點武器套裝天賦點"
+      }
+    },
+    {
+      "id": "campaign-segment-interlude-3-reward-02-entry",
+      "chapterId": "campaign-chapter-006",
+      "segmentId": "campaign-segment-interlude-3",
+      "sourceIds": [
+        "source-campaign-reward-01-record",
+        "source-campaign-reward-02-record",
+        "source-campaign-reward-03-record",
+        "source-campaign-reward-04-record"
+      ],
+      "map": {
+        "zh_tw": "金斯瑪區",
+        "en": "Kingsmarch"
+      },
+      "main_quest": {
+        "zh_tw": "完成三段間歇",
+        "en": "Complete all three Interludes"
+      },
+      "side_quest": "無",
+      "boss": "無",
+      "condition_zh_tw": "完成三張地圖後進入終章。",
+      "permanent_reward": {
+        "type": "weapon_set_passive_points",
+        "value": 2,
+        "unit": "points",
+        "text_zh_tw": "2 點武器套裝天賦點"
+      }
+    }
+  ]
+}

@@ -1,12 +1,19 @@
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
 type SiteShellElements = { scrollbar: HTMLElement | null; thumb: HTMLElement | null };
 type LenisInstance = { scrollTo: (top: number, options: Record<string, unknown>) => void; on: (event: 'scroll', callback: () => void) => void; raf: (time: number) => void };
 type BrowserWindow = typeof window & {
 	Lenis?: new (options: Record<string, unknown>) => LenisInstance;
-	gsap?: { ticker: { add: (callback: (time: number) => void) => void; lagSmoothing: (threshold: number) => void } };
-	ScrollTrigger?: { update: () => void; refresh: () => void };
+	gsap?: typeof gsap;
+	ScrollTrigger?: typeof ScrollTrigger;
 };
 
 export function initializeSiteShell({ scrollbar, thumb }: SiteShellElements) {
+	gsap.registerPlugin(ScrollTrigger);
+	const browserWindow = window as BrowserWindow;
+	browserWindow.gsap = gsap;
+	browserWindow.ScrollTrigger = ScrollTrigger;
 	let frame = 0;
 	const updateScrollbar = () => {
 		frame = 0;
@@ -27,7 +34,6 @@ export function initializeSiteShell({ scrollbar, thumb }: SiteShellElements) {
 	window.addEventListener('site-content-resize', requestScrollbarUpdate);
 	requestScrollbarUpdate();
 
-	const browserWindow = window as BrowserWindow;
 	if (!browserWindow.Lenis) return;
 	const lenis = new browserWindow.Lenis({ anchors: true, autoRaf: false, lerp: 0.1 });
 	window.addEventListener('site-scroll-to', (event) => {
@@ -37,12 +43,10 @@ export function initializeSiteShell({ scrollbar, thumb }: SiteShellElements) {
 		lenis.scrollTo(detail.top, { duration: isInstant ? 0 : 0.7, immediate: isInstant });
 		detail.handled = true;
 	});
-	const { gsap, ScrollTrigger } = browserWindow;
 	lenis.on('scroll', () => {
 		requestScrollbarUpdate();
-		ScrollTrigger?.update();
+		ScrollTrigger.update();
 	});
-	if (!gsap || !ScrollTrigger) return;
 	gsap.ticker.add((time) => lenis.raf(time * 1000));
 	gsap.ticker.lagSmoothing(0);
 	ScrollTrigger.refresh();

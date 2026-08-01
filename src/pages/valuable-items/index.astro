@@ -3,11 +3,29 @@ import ValuableItemsGrid from '../../components/ValuableItemsGrid.vue';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { loadStaticJson } from '../../services/loadStaticJson';
 
-const [currency, uniques, fragments] = await Promise.all([
-	loadStaticJson('poe2_high_value_currency_0.5_us.json'),
-	loadStaticJson('poe2_high_value_uniques_0.5_us.json'),
-	loadStaticJson('poe2_high_value_mechanic_items_0.5_us.json'),
-]);
+type SpecialDrop = {
+	id: string;
+	typeId: string;
+	name: { zhTw: string; en: string };
+	itemUrl: string;
+	dropArea: string;
+	boss: string;
+	valueLabel: string;
+	acquisition: {
+		summary: string;
+		detail?: { title: string; html: string };
+	};
+};
+
+type SpecialDropData = {
+	title: string;
+	scope: { checkedAt: string; priceNote: string };
+	source: { name: string; url: string };
+	types: Array<{ id: string; label: string }>;
+	items: SpecialDrop[];
+};
+
+const specialDrops = await loadStaticJson<SpecialDropData>('special-high-value-drops.json');
 ---
 
 <BaseLayout title="高價值物品｜POE2 新手筆記" bodyClass="valuable-items-body">
@@ -20,7 +38,7 @@ const [currency, uniques, fragments] = await Promise.all([
 
 		<div class="global-px-box">
 			<section id="valuable-items-content" class="atlas-scroll-reveal base-container py-8 md:py-12">
-				<ValuableItemsGrid initialData={{ currency, uniques, fragments }} client:load />
+				<ValuableItemsGrid initialData={specialDrops} client:load />
 			</section>
 		</div>
 	</main>

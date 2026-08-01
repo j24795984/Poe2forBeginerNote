@@ -24,7 +24,7 @@ Astro 產生的初始 HTML 因此只包含「正在載入主線資料」、「�
 
 ## 驗收條件
 
-- [ ] `npm run data:validate` 成功。
+- [x] `npm run data:validate` 成功。
 - [x] `npm run build` 成功。
 - [x] Campaign、Atlas 與 Builds 的建置 HTML 不包含「正在載入」提示。
 - [x] 三個頁面的建置 HTML 已包含第一個分類的正式內容。
@@ -37,4 +37,4 @@ Astro 產生的初始 HTML 因此只包含「正在載入主線資料」、「�
 - `client:load` 仍保留，因為頁面需要 Vue 的互動行為；它不再負責取得首屏資料。
 - JSON 內容更新後必須重新建置並部署 GitHub Pages。
 - 外部同步 CDN 腳本的最佳化不包含在本 Issue 範圍內，可另案處理。
-- 既有 `npm run data:validate` 目前會因 `campaign-quests.json` 缺少 `idRegistry.nextSequence` 而失敗，需由資料規格修正工作另行處理。
+- Campaign 與 Atlas 關聯資料已各自具備 ID、版本與跨檔引用驗證；被取代的舊 Campaign 資料已移至 `archive/data/legacy/`。

@@ -123,6 +123,31 @@
     padding-block: .4rem;
   }
 
+  .atlas-league-mechanics-card {
+    height: min(46rem, calc(100dvh - var(--top-menu-height, 6.5rem) - 3rem));
+  }
+
+  .atlas-league-mechanics-panel {
+    display: grid;
+    height: 100%;
+    min-height: 0;
+    grid-template-rows: auto auto minmax(0, 1fr);
+  }
+
+  .atlas-shell .atlas-league-mechanics-card .content-quick-nav {
+    position: relative;
+    top: auto;
+  }
+
+  .atlas-league-mechanic-list {
+    min-height: 0;
+  }
+
+  .atlas-league-mechanic-track {
+    display: grid;
+    gap: 1px;
+  }
+
   .atlas-category-nav-list {
     grid-template-columns: minmax(0, 1fr);
   }

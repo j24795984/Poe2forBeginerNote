@@ -4,7 +4,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { loadStaticJson } from '../../services/loadStaticJson';
 
 const campaignData = await loadStaticJson('campaign.json');
-const campaignRewardData = await loadStaticJson('poe2_campaign_permanent_rewards_by_map_0.5_zh-TW.json');
+const campaignEntityData = await loadStaticJson('campaign-entities.json');
+const campaignRewardData = {
+	chapters: campaignEntityData.chapterSegments.map(({ id: segmentId, sourceChapterKey: id, chapter, chapter_en }: Record<string, any>) => ({
+		id,
+		chapter,
+		chapter_en,
+		maps: campaignEntityData.rewards
+			.filter((reward: Record<string, any>) => reward.segmentId === segmentId)
+			.map(({ id: _id, chapterId: _chapterId, segmentId: _segmentId, sourceIds: _sourceIds, ...entry }: Record<string, any>) => entry),
+	})),
+	sources: campaignEntityData.sources.filter((source: Record<string, any>) => source.usage.includes('campaign-rewards')),
+};
 const campaignDisplayData = {
 	id: campaignData.id,
 	chapters: campaignData.chapters.map(({ id, slug, name, englishName, quickGuideUrl, maps }: Record<string, any>) => ({

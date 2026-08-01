@@ -2,7 +2,10 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const dataDirectory = join(process.cwd(), 'public', 'data');
-const files = readdirSync(dataDirectory).filter((file) => file.endsWith('.json'));
+const requestedFiles = process.argv.slice(2);
+const files = requestedFiles.length
+	? requestedFiles
+	: readdirSync(dataDirectory).filter((file) => file.endsWith('.json'));
 let hasErrors = false;
 
 function collectIds(value, ids) {
@@ -40,7 +43,7 @@ for (const file of files) {
 	const sequences = allIds
 		.map((id) => Number(id.match(/-(\d+)$/)?.[1]))
 		.filter((sequence) => Number.isInteger(sequence));
-	if (sequences.length && document.idRegistry.nextSequence <= Math.max(...sequences)) {
+	if (sequences.length && document.idRegistry?.nextSequence <= Math.max(...sequences)) {
 		console.error(`${file}: idRegistry.nextSequence must be greater than every allocated ID sequence`);
 		hasErrors = true;
 	}
