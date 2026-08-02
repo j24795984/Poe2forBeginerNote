@@ -1,0 +1,463 @@
+{
+  "schemaVersion": "1.0.0",
+  "dataVersion": "crafting-0.2-001",
+  "id": "crafting-progression-001",
+  "idRegistry": { "nextSequence": 7, "retiredIds": [] },
+  "title": "裝備成長與製作分級",
+  "summary": "用角色能完成的內容、裝備有效詞綴與下一次升級成本，判斷目前裝備階段。角色進度與裝備造價分開標示。",
+  "coreDifferenceGuide": {
+    "title": "裝備製作的核心差異",
+    "introduction": [
+      { "text": "POE2 各階段使用的製作方式其實有不少重疊，真正的差別在於玩家對裝備的" },
+      { "text": "妥協程度", "emphasis": true },
+      { "text": "。隨著進度提高，玩家會逐步降低對普通基底、低 Tier 詞綴與無效詞綴的容忍度。" }
+    ],
+    "sections": [
+      {
+        "id": "campaign",
+        "title": "章節階段：能用即可",
+        "paragraphs": [[
+          { "text": "以順利推進主線為目標，裝備只要有 " },
+          { "text": "1～2 條有效詞綴", "emphasis": true },
+          { "text": "即可。防具不必刻意追求特定基底，以能力值符合、能正常裝備為主；武器則仍需注意基礎傷害，鞋子可優先保留移動速度。此階段可以接受低 Tier 詞綴與多條無效詞綴，不值得投入高價通貨。" }
+        ]]
+      },
+      {
+        "id": "early-atlas",
+        "title": "輿圖初期：讓流派成形",
+        "paragraphs": [[
+          { "text": "進入 T1～T5 後，重點是補齊抗性、生存與流派運作條件。裝備目標為 " },
+          { "text": "3～4 條有效詞綴", "emphasis": true },
+          { "text": "，但不要求全部都是高 Tier。基底只要類型與防禦方向正確即可，也可以接受少量無效詞綴。" }
+        ]]
+      },
+      {
+        "id": "mid-atlas",
+        "title": "輿圖中期：提升刷圖效率",
+        "paragraphs": [[
+          { "text": "進入 T7～T15 後，角色需要穩定刷圖並累積通貨。此時開始追求 " },
+          { "text": "1～2 條高 Tier 核心詞綴", "emphasis": true },
+          { "text": "，再搭配其他有效詞綴。裝備應盡量避免出現多條無效詞，但不必為了清除最後一條普通詞綴投入過高成本。" }
+        ]]
+      },
+      {
+        "id": "late-atlas",
+        "title": "輿圖後期：使用強力基底製作",
+        "paragraphs": [[
+          { "text": "能穩定處理 T15～T16 後，製作重心會轉向高物品等級與強力基底。這類基底本身具有較高的護甲、閃避、能量護盾、武器傷害，或具備有價值的固有詞綴。裝備目標為 " },
+          { "text": "3～4 條高 Tier 核心詞綴", "emphasis": true },
+          { "text": "，其餘詞綴也應能補足傷害、生存或配置需求。" }
+        ]]
+      },
+      {
+        "id": "graduation",
+        "title": "畢業裝：逐步控制詞綴",
+        "paragraphs": [
+          [
+            { "text": "畢業裝需要事先規劃目標前綴、後綴與可接受的替代詞。通常先取得最難重現的核心詞，再嘗試以破裂石將其固定，之後利用精髓、Alloy、預兆、混沌石、無效石與崇高石控制詞綴的移除與新增。" }
+          ],
+          [
+            { "text": "這些工具並不能直接指定所有詞綴，而是用來縮小隨機範圍、保護已完成的部分，並逐步完成 " },
+            { "text": "5～6 條高 Tier 有效詞綴", "emphasis": true },
+            { "text": "。" }
+          ]
+        ]
+      }
+    ],
+    "comparison": {
+      "title": "階段對照",
+      "columns": ["階段", "裝備目標", "可接受的妥協"],
+      "rows": [
+        { "stage": "章節", "target": "1～2 條有效詞", "compromise": "普通基底、低 Tier、多條無效詞" },
+        { "stage": "輿圖初期", "target": "3～4 條有效詞", "compromise": "低至中 Tier、少量無效詞" },
+        { "stage": "輿圖中期", "target": "1～2 條高 Tier 核心詞，加上其他有效詞", "compromise": "最多約一條低價值詞" },
+        { "stage": "輿圖後期", "target": "3～4 條高 Tier 核心詞", "compromise": "一至兩條普通但有效的詞" },
+        { "stage": "畢業裝", "target": "5～6 條高 Tier 有效詞", "compromise": "僅接受預先設定的替代詞" }
+      ]
+    },
+    "closingNote": "本篇只說明製作階段、基底選擇、妥協程度與操作方向；各裝備部位應選擇哪些詞綴，另外整理成獨立的部位詞綴指南。"
+  },
+  "processAndFundingGuide": {
+    "title": "製作流程與資金管理",
+    "fundingManagement": {
+      "title": "各階段的資金與製作管理",
+      "columns": ["階段", "裝備目標", "建議製作對象", "停手條件"],
+      "rows": [
+        {
+          "stage": "章節",
+          "target": "1～2 條有效詞綴，能順利推進",
+          "recommendedTarget": "掉落的白裝、藍裝或普通金裝",
+          "stopCondition": "已能正常打怪，能力值、傷害與基本生存足夠"
+        },
+        {
+          "stage": "輿圖初期 T1～T5",
+          "target": "3～4 條有效詞綴，確保流派正常運作",
+          "recommendedTarget": "正確類型的藍裝或金裝；掉落裝備本身已有 1～2 條中 Tier 有效詞綴",
+          "stopCondition": "抗性、生存與流派核心需求已補齊"
+        },
+        {
+          "stage": "輿圖中期 T7～T15",
+          "target": "1～2 條高 Tier 核心詞綴，搭配其他有效詞綴",
+          "recommendedTarget": "較好的高物等基底；掉落裝備本身已有 1～2 條高 Tier 有效詞綴",
+          "stopCondition": "已能穩定刷圖與累積通貨，裝備最多保留約一條低價值詞綴"
+        },
+        {
+          "stage": "輿圖後期 T15～T16",
+          "target": "3～4 條高 Tier 核心詞綴，其餘詞綴有效",
+          "recommendedTarget": "高物等強力基底；掉落裝備本身已有 1～2 條高 Tier 有效詞綴",
+          "stopCondition": "生存與傷害足以穩定處理 T15～T16，不需為普通提升承擔過高成本"
+        },
+        {
+          "stage": "畢業裝",
+          "target": "5～6 條高 Tier 有效詞綴",
+          "recommendedTarget": "頂級強力基底、卓越基底、成功破裂核心詞的基底",
+          "stopCondition": "已完成目標詞或預先設定的替代詞，後續成本與風險高於實際提升"
+        }
+      ],
+      "note": "「建議製作對象」代表值得進一步投入的起點，不代表符合條件就一定應該製作。還需要同時確認基底、物品等級、詞綴位置與市場成品價格。"
+    },
+    "methodStages": {
+      "title": "各種製作方式的使用階段",
+      "columns": ["製作方式", "使用方式", "可投入情況", "不建議投入情況"],
+      "stageOptions": [
+        { "id": "campaign", "label": "章節" },
+        { "id": "earlyAtlas", "label": "輿圖初期" },
+        { "id": "midAtlas", "label": "輿圖中期" },
+        { "id": "lateAtlas", "label": "輿圖後期" },
+        { "id": "graduation", "label": "畢業裝" }
+      ],
+      "rows": [
+        {
+          "method": "蛻變／增幅／富豪",
+          "campaign": ["蛻變", "增幅", "富豪"],
+          "earlyAtlas": "適合",
+          "midAtlas": "點出需要的指定詞綴「才」進行後續製作",
+          "lateAtlas": "點出需要的指定詞綴「才」進行後續製作",
+          "graduation": ["用於低權重自然詞起手", "步驟繁瑣，額外說明"],
+          "recommendedWhen": "基底便宜、可大量替換，或藍裝已出現值得保留的核心詞",
+          "avoidWhen": "基底錯誤、物品等級不足，或藍裝只有普通詞綴",
+          "stageConditions": {
+            "campaign": { "recommendedWhen": "基底便宜且可快速替換，使用普通通貨補出當下需要的詞綴。", "avoidWhen": "能力值不符、武器基礎傷害過低，或裝備很快就會被掉落物替換。" },
+            "earlyAtlas": { "recommendedWhen": "正確基底的藍裝已出現值得保留的核心詞，可用增幅與富豪繼續補詞。", "avoidWhen": "藍裝只有普通詞綴，或直接購買三至四條有效詞的成品更便宜。" },
+            "midAtlas": { "recommendedWhen": "有足量同類基底可反覆點出指定起手詞，成功後才進入後續製作。", "avoidWhen": "基底難以替換、指定詞權重過低，或沒有先設定成功後的製作路線。" },
+            "lateAtlas": { "recommendedWhen": "高物等強力基底可大量取得，並已明確指定必須先出現的自然核心詞。", "avoidWhen": "基底本身昂貴且僅有一件，反覆重置的成本會高於使用其他定向方法。" },
+            "graduation": { "recommendedWhen": "完整流程要求以低權重自然詞起手，且已準備足夠基底與後續保護方案。", "avoidWhen": "沒有完整詞綴規劃、替代詞或失敗預算，只想用普通通貨碰運氣。" }
+          }
+        },
+        {
+          "method": "精髓",
+          "campaign": "低階精髓",
+          "earlyAtlas": "低階或中階精髓",
+          "midAtlas": "中階精髓",
+          "lateAtlas": "使用高階或完美精髓",
+          "graduation": "建立指定核心詞",
+          "recommendedWhen": "保證詞能直接補足流派需求，且值得占用前綴或後綴",
+          "avoidWhen": "保證詞不是核心需求，或會占用後續必要詞位",
+          "stageConditions": {
+            "campaign": { "recommendedWhen": "低階精髓能直接補足傷害、抗性或屬性缺口，且不需要保留精髓。", "avoidWhen": "保證詞與當前需求無關，或裝備會在短時間內更換。" },
+            "earlyAtlas": { "recommendedWhen": "低階或中階精髓能保證流派核心詞，並讓正確基底快速成形。", "avoidWhen": "保證詞會占用必要前綴或後綴，或成品市場價格低於材料成本。" },
+            "midAtlas": { "recommendedWhen": "中階精髓可固定一條核心需求，再以其他方法補足剩餘有效詞。", "avoidWhen": "現有裝備已有多條不能失去的好詞，使用精髓會全部重製。" },
+            "lateAtlas": { "recommendedWhen": "高階或完美精髓用於高物等強力基底，保證詞本身就是目標高 Tier 核心詞。", "avoidWhen": "基底普通、精髓保證詞不是終局需求，或後續無法控制另一側詞綴。" },
+            "graduation": { "recommendedWhen": "指定核心詞已納入完整前後綴規劃，且願意承擔反覆重製成本。", "avoidWhen": "保證詞只是替代選項，或會阻塞更難重現的必要詞位。" }
+          }
+        },
+        {
+          "method": "崇高石",
+          "campaign": "少量補詞",
+          "earlyAtlas": "補足空詞",
+          "midAtlas": "補充有效詞",
+          "lateAtlas": ["搭配預兆定向補前綴或後綴", "高階崇高"],
+          "graduation": ["完成後段詞綴", "高階崇高", "完美崇高"],
+          "recommendedWhen": "裝備已有足夠有效詞，新增任何可用詞都有提升",
+          "avoidWhen": "裝備底子差、只有一條普通有效詞，或市場替代品更便宜",
+          "stageConditions": {
+            "campaign": { "recommendedWhen": "裝備已有可用核心詞且存在空詞位，新增任何有效詞都能立即改善推進。", "avoidWhen": "底子只有普通詞、即將替換，或崇高石更適合保留換裝資金。" },
+            "earlyAtlas": { "recommendedWhen": "裝備已有兩至三條有效詞並留有空位，補到抗性或生存詞即可停手。", "avoidWhen": "市場上完整成品更便宜，或新增詞綴池過大而實際命中率過低。" },
+            "midAtlas": { "recommendedWhen": "裝備已有高 Tier 核心詞與多條有效詞，只需要補上一條可用詞。", "avoidWhen": "只有一條值得保留的詞，或新增低價值詞後仍無法達到穩定刷圖標準。" },
+            "lateAtlas": { "recommendedWhen": "使用高階崇高搭配預兆，定向補足已規劃的一側前綴或後綴。", "avoidWhen": "未保護完成側、沒有可接受詞池，或一次失敗就會破壞主要製作路線。" },
+            "graduation": { "recommendedWhen": "使用高階或完美崇高完成後段詞綴，所有可新增結果均在目標或替代詞內。", "avoidWhen": "仍有錯誤詞需先清理，或完美通貨的最低詞綴等級無法有效縮小詞池。" }
+          }
+        },
+        {
+          "method": "混沌石",
+          "campaign": "通常不值得",
+          "earlyAtlas": "少量修正",
+          "midAtlas": "替換單一低價值詞",
+          "lateAtlas": "搭配預兆重製指定一側",
+          "graduation": "控制側別後反覆替換",
+          "recommendedWhen": "核心詞已受保護，且移除任何候選詞後仍有修復路線",
+          "avoidWhen": "裝備有多條不能失去的好詞，或無法控制移除範圍",
+          "stageConditions": {
+            "campaign": { "recommendedWhen": "僅在材料幾乎沒有成本、裝備失敗也能立刻替換時進行嘗試。", "avoidWhen": "任何需要保留的主線裝備；此階段通常不值得投入混沌石。" },
+            "earlyAtlas": { "recommendedWhen": "裝備只有單一低價值詞需要替換，失去其餘詞也不影響流派運作。", "avoidWhen": "已有兩條以上不能失去的有效詞，或沒有替換裝備。" },
+            "midAtlas": { "recommendedWhen": "核心詞已受保護，只需替換單一低價值詞，且移除候選詞皆可接受。", "avoidWhen": "無法限制移除範圍，或失去任何一條現有好詞都會使裝備倒退。" },
+            "lateAtlas": { "recommendedWhen": "搭配預兆鎖定前綴或後綴，重製指定一側並保留已完成部分。", "avoidWhen": "完成側沒有保護，或被重製的一側沒有足夠好的可接受結果。" },
+            "graduation": { "recommendedWhen": "分側完成其中一側後，以完整修復路線和充足預算反覆替換另一側。", "avoidWhen": "沒有停手條件、替代詞或修復預案，單次失敗就會讓基底報廢。" }
+          }
+        },
+        {
+          "method": "無效石",
+          "campaign": "不建議",
+          "earlyAtlas": "不建議",
+          "midAtlas": "高風險清理詞位",
+          "lateAtlas": "有修復方案時使用",
+          "graduation": "分側製作與清理錯誤詞",
+          "recommendedWhen": "移除成功後能開啟明確製作路線，且失敗成本可承受",
+          "avoidWhen": "沒有預兆、破裂或其他保護方式；移除任何好詞都會使裝備報廢",
+          "stageConditions": {
+            "campaign": { "recommendedWhen": "此階段不規劃使用；只有完全可替換的測試裝備能承受結果。", "avoidWhen": "任何正在使用的主線裝備，移除有效詞的損失遠高於收益。" },
+            "earlyAtlas": { "recommendedWhen": "原則上不投入；僅限移除失敗也不影響角色運作的低價測試。", "avoidWhen": "裝備仍負責抗性、生存或流派核心功能。" },
+            "midAtlas": { "recommendedWhen": "移除成功能開啟明確補詞路線，且失敗後仍有替代裝備或修復方法。", "avoidWhen": "沒有保護方式，或任何有效詞被移除都會讓裝備報廢。" },
+            "lateAtlas": { "recommendedWhen": "搭配預兆、破裂或側別保護清理詞位，成功後可立即執行下一步。", "avoidWhen": "尚未計算所有移除候選詞，或無法承擔核心詞消失的成本。" },
+            "graduation": { "recommendedWhen": "用於分側製作與清理錯誤詞，完整流程已包含成功與失敗分支。", "avoidWhen": "只依賴單次賭博，沒有保護、替代詞與重建資金。" }
+          }
+        },
+        {
+          "method": "破裂石",
+          "campaign": "不使用",
+          "earlyAtlas": "不使用",
+          "midAtlas": "通常不使用",
+          "lateAtlas": "固定高價核心詞",
+          "graduation": "畢業裝核心步驟",
+          "recommendedWhen": "基底正確，已有極難重現的核心詞，其他候選詞也具有一定價值",
+          "avoidWhen": "普通基底、過渡裝，或只有一條有價值、其餘皆為無效詞",
+          "stageConditions": {
+            "campaign": { "recommendedWhen": "不投入；主線裝備的使用時間與價值不足以支撐破裂成本。", "avoidWhen": "所有主線、普通基底與快速替換裝備。" },
+            "earlyAtlas": { "recommendedWhen": "不投入；優先以低成本成品或精髓補足流派需求。", "avoidWhen": "T1～T5 過渡裝、低物等基底或尚未成形的詞綴組合。" },
+            "midAtlas": { "recommendedWhen": "通常不使用；只有極特殊且可長期沿用的核心基底才考慮。", "avoidWhen": "只有一條好詞、其餘候選詞皆無價值，破裂失敗率與成本不合理。" },
+            "lateAtlas": { "recommendedWhen": "基底正確且已有極難重現的高價核心詞，其他破裂候選詞也具有價值。", "avoidWhen": "普通基底、詞綴 Tier 不足，或破裂後仍沒有清楚的後續製作路線。" },
+            "graduation": { "recommendedWhen": "固定最難重現的畢業核心詞，且所有候選詞與失敗分支均已納入預算。", "avoidWhen": "未確認詞綴權重、候選數量與重建成本，或資金不足以重新取得基底。" }
+          }
+        },
+        {
+          "method": "骸骨（深淵）",
+          "campaign": ["破碎的顎骨：武器／箭袋", "破碎的肋骨：護甲", "破碎的鎖骨：飾品", "僅適用物品等級 64 以下"],
+          "earlyAtlas": ["保存良好的顎骨：武器／箭袋", "保存良好的肋骨：護甲", "保存良好的鎖骨：飾品"],
+          "midAtlas": ["保存良好的骸骨", "保存良好的顱骨：珠寶", "保存良好的脊椎：換界石"],
+          "lateAtlas": ["古老的顎骨／肋骨／鎖骨", "最低詞綴等級 40"],
+          "graduation": ["古老骸骨", "畸變的鎖骨：有機率獲得異界詞綴"],
+          "recommendedWhen": "需要為對應類型的稀有物品加入並揭露褻瀆詞綴，且基底與現有詞綴值得繼續投入",
+          "avoidWhen": "物品不是稀有、裝備類型與骸骨不符，或基底仍會在短期內替換",
+          "stageConditions": {
+            "campaign": { "recommendedWhen": "對物品等級 64 以下的稀有裝備使用對應破碎骸骨，補出可用褻瀆詞綴。", "avoidWhen": "物品超過等級限制、不是稀有，或顎骨、肋骨、鎖骨與裝備類型不符。" },
+            "earlyAtlas": { "recommendedWhen": "正確基底已有可保留詞綴，使用保存良好的顎骨、肋骨或鎖骨補強對應部位。", "avoidWhen": "基底很快會替換，或尚未確認褻瀆詞綴是否能補足流派需求。" },
+            "midAtlas": { "recommendedWhen": "使用保存良好的骸骨製作長期裝備；顱骨用於珠寶，脊椎用於換界石。", "avoidWhen": "裝備類型錯誤、現有詞綴價值不足，或沒有可接受的褻瀆結果。" },
+            "lateAtlas": { "recommendedWhen": "在高物等強力稀有基底使用古老骸骨，以最低詞綴等級 40 的條件製作。", "avoidWhen": "基底、防禦方向或現有高 Tier 詞不值得承擔高階骸骨成本。" },
+            "graduation": { "recommendedWhen": "使用古老骸骨完成目標褻瀆詞；飾品需要異界詞綴時再評估畸變鎖骨。", "avoidWhen": "未規劃褻瀆詞位置與替代選項，或無法承受畸變鎖骨的隨機結果。" }
+          }
+        },
+        {
+          "method": "高階／完美通貨",
+          "campaign": "不使用",
+          "earlyAtlas": "通常不使用",
+          "midAtlas": "視裝備價值少量使用",
+          "lateAtlas": "主要高階製作資源",
+          "graduation": "常用資源",
+          "recommendedWhen": "裝備已使用高物等強力基底，且現有高 Tier 詞值得保留",
+          "avoidWhen": "只是一般過渡裝，或提高最低詞綴等級仍無法有效縮小詞綴池",
+          "stageConditions": {
+            "campaign": { "recommendedWhen": "不投入，保留高階與完美通貨作為後期製作資源。", "avoidWhen": "所有主線裝備與普通低物等基底。" },
+            "earlyAtlas": { "recommendedWhen": "通常不投入；只有可長期使用且提升幅度明確的特殊裝備才評估。", "avoidWhen": "一般 T1～T5 過渡裝或市場已有低價替代品。" },
+            "midAtlas": { "recommendedWhen": "裝備已具高 Tier 核心詞且基底優秀，可少量使用高階通貨完成明確升級。", "avoidWhen": "提高最低詞綴等級仍無法縮小詞池，或失敗後沒有修復路線。" },
+            "lateAtlas": { "recommendedWhen": "高物等強力基底與現有高 Tier 詞值得保留，高階通貨能有效提高後續結果品質。", "avoidWhen": "基底普通、核心詞不足，或相同資金可直接購買更穩定的成品。" },
+            "graduation": { "recommendedWhen": "完整畢業製作流程已規劃詞池、保護方式與停手條件，再使用完美通貨。", "avoidWhen": "只因通貨稀有就投入，卻未驗證最低詞綴等級對實際詞池的影響。" }
+          }
+        },
+        {
+          "method": "神聖石",
+          "campaign": "不使用",
+          "earlyAtlas": "不使用",
+          "midAtlas": "通常不使用",
+          "lateAtlas": "成品數值加工",
+          "graduation": "完成詞綴後調整數值",
+          "recommendedWhen": "詞綴種類與 Tier 已正確，只剩數值區間需要改善",
+          "avoidWhen": "裝備仍有錯誤詞綴，或數值提升不影響實際表現",
+          "stageConditions": {
+            "campaign": { "recommendedWhen": "不投入；主線裝備尚未完成詞綴種類，數值加工沒有成本效益。", "avoidWhen": "所有仍會快速更換的主線裝備。" },
+            "earlyAtlas": { "recommendedWhen": "不投入，優先補齊有效詞與流派需求。", "avoidWhen": "詞綴種類、Tier 或基底仍未達到長期使用標準。" },
+            "midAtlas": { "recommendedWhen": "通常不投入；只有接近成品且數值會跨越明確門檻時才考慮。", "avoidWhen": "仍有低價值詞，或數值提升不影響傷害、生存與配置。" },
+            "lateAtlas": { "recommendedWhen": "詞綴種類與 Tier 已正確，只剩關鍵數值區間需要改善。", "avoidWhen": "裝備仍需重製、清詞或補詞，神聖後仍可能被後續操作覆蓋。" },
+            "graduation": { "recommendedWhen": "所有目標詞均已完成，在最終加工前調整會影響實際表現的數值。", "avoidWhen": "沒有先確認可變數值範圍，或完工後仍計畫進行會重骰數值的操作。" }
+          }
+        },
+        {
+          "method": "聖化／腐化",
+          "campaign": "不使用",
+          "earlyAtlas": "不使用",
+          "midAtlas": "通常不使用",
+          "lateAtlas": "完工後視需求使用",
+          "graduation": "最終加工",
+          "recommendedWhen": "主要詞綴、數值、品質、插槽與符文均已完成",
+          "avoidWhen": "裝備仍需普通製作，或無法承受不可逆結果",
+          "stageConditions": {
+            "campaign": { "recommendedWhen": "不投入；此階段不應對過渡裝進行不可逆加工。", "avoidWhen": "所有主線裝備與尚未完成普通製作的物品。" },
+            "earlyAtlas": { "recommendedWhen": "不投入，先完成抗性、生存與流派核心需求。", "avoidWhen": "任何仍可能用普通通貨改善的裝備。" },
+            "midAtlas": { "recommendedWhen": "通常不投入；僅限低成本、失敗也不影響角色的實驗性成品。", "avoidWhen": "裝備仍有空詞、錯誤詞或尚未完成數值與插槽加工。" },
+            "lateAtlas": { "recommendedWhen": "主要詞綴、數值、品質、插槽與符文都已完成，且能接受不可逆結果。", "avoidWhen": "仍需任何普通製作，或失敗會讓角色失去關鍵裝備。" },
+            "graduation": { "recommendedWhen": "所有可逆加工均已完成，將聖化或腐化視為整體流程的最後一步。", "avoidWhen": "無法承受裝備鎖定、損失或偏離目標結果，且沒有替代成品。" }
+          }
+        }
+      ]
+    },
+    "resourcePrinciples": {
+      "title": "資源投入原則",
+      "introduction": "同一種通貨在不同階段的差別，不是能否使用，而是投入上限與失敗成本。",
+      "items": [
+        { "stage": "章節與輿圖初期", "guidance": "以低成本補足當下需求為主。" },
+        { "stage": "輿圖中期", "guidance": "只對已有中高 Tier 有效詞的裝備繼續投入。" },
+        { "stage": "輿圖後期", "guidance": "資源應集中在高物等強力基底與高 Tier 核心詞。" },
+        { "stage": "畢業裝", "guidance": "必須先完成整體製作規劃，再投入破裂、無效、混沌與高價預兆。" }
+      ],
+      "closingNote": "混沌石與無效石主要用於調整或清理詞位，並不能直接保證取得指定詞綴。高階製作的核心是先保護已完成的部分，再逐步縮小後續操作的隨機範圍。"
+    }
+  },
+  "principles": [
+    { "title": "內容進度", "description": "角色目前能穩定完成哪些主線、輿圖與終局內容。" },
+    { "title": "裝備功能", "description": "裝備是否具備流派核心詞綴、生存需求與資源循環。" },
+    { "title": "升級成本", "description": "下一次有效升級所需成本，而不是單看目前市場價格。" }
+  ],
+  "evaluationDimensions": [
+    { "title": "核心功能", "description": "是否提供流派必需的技能等級、傷害或特殊效果。" },
+    { "title": "生存能力", "description": "生命、護盾、防禦、抗性、減傷與回復是否有效。" },
+    { "title": "詞綴品質", "description": "有效詞綴數量、詞綴階級、數值範圍與基底品質。" },
+    { "title": "可替換性", "description": "是否能用相對低的成本找到明顯更好的替代品。" }
+  ],
+  "equipmentTags": [
+    { "label": "缺口裝", "description": "只負責補足抗性、屬性或單一需求。" },
+    { "label": "過渡裝", "description": "符合目前需求，但容易被後續裝備替換。" },
+    { "label": "成形裝", "description": "具有多個有效詞綴，可穩定使用一段時間。" },
+    { "label": "終局裝", "description": "足以穩定挑戰終局內容。" },
+    { "label": "畢業裝", "description": "再升級的成本遠高於實際收益。" }
+  ],
+  "upgradeOrder": [
+    "先讓流派核心機制正常運作。",
+    "補滿元素抗性與基本生存能力。",
+    "升級武器或主要傷害來源。",
+    "建立穩定回復與第二層防禦。",
+    "補足混沌抗性與異常狀態處理。",
+    "完善終局傷害、最大抗性與特殊機制。",
+    "最後再追求最高階詞綴與數值精修。"
+  ],
+  "stages": [
+    {
+      "id": "crafting-stage-g0",
+      "code": "G0",
+      "name": "拓荒裝",
+      "progress": "主線前中期",
+      "positioning": "能用即可，快速替換",
+      "investment": "極低",
+      "effectiveMods": "1～3 條",
+      "target": "解決當下的傷害、生存、抗性、移動速度與屬性需求。",
+      "qualification": [
+        "武器能明顯提高主要技能傷害。",
+        "防具有生命、能量護盾或主要防禦屬性。",
+        "鞋子優先取得移動速度。",
+        "力量、敏捷、智慧足以使用技能與裝備。"
+      ],
+      "acquisition": ["地面掉落", "商店裝備", "普通通貨", "低階精髓"],
+      "nextStep": "補齊元素抗性、鞋子移動速度與流派最明顯的缺口；不要在快速淘汰的基底投入高價材料。"
+    },
+    {
+      "id": "crafting-stage-g1",
+      "code": "G1",
+      "name": "過渡裝",
+      "progress": "主線後期～剛進輿圖",
+      "positioning": "補足抗性、生存與核心傷害",
+      "investment": "低",
+      "effectiveMods": "2～3 條",
+      "target": "補齊角色最明顯的缺口，讓角色能穩定完成主線並進入輿圖。",
+      "qualification": [
+        "火焰、冰冷、閃電抗性接近或達到上限。",
+        "武器具有至少 1～2 項有效傷害詞綴。",
+        "鞋子具有移動速度。",
+        "流派需要的精魂、技能等級、攻速或施放速度已可運作。"
+      ],
+      "acquisition": ["撿拾", "簡單加工", "普通精髓", "低價交易"],
+      "nextStep": "開始檢查整套裝備，準備正確基底並讓每件稀有裝具有 3～4 條有效詞綴。"
+    },
+    {
+      "id": "crafting-stage-g2",
+      "code": "G2",
+      "name": "輿圖入門裝",
+      "progress": "約 T1～T7",
+      "positioning": "基礎防禦成形，流派開始穩定",
+      "investment": "低至中",
+      "effectiveMods": "3～4 條",
+      "target": "從單件補洞轉向整套配置，建立可持續的回復與至少一項主要防禦。",
+      "qualification": [
+        "元素抗性穩定達標並保留少量溢出。",
+        "混沌抗性不再長期維持大幅負值。",
+        "每件稀有裝約有 3～4 條有效詞綴。",
+        "主武器使用適合流派的基底。",
+        "能穩定清圖，不需頻繁依賴復活。"
+      ],
+      "acquisition": ["合格基底", "精髓定向", "崇高石補詞", "符文補缺口"],
+      "nextStep": "取得流派關鍵裝備，提高主要稀有裝的詞綴配合度，準備高物品等級基底。"
+    },
+    {
+      "id": "crafting-stage-g3",
+      "code": "G3",
+      "name": "流派成形裝",
+      "progress": "約 T8～T15",
+      "positioning": "核心機制完整，可穩定刷圖",
+      "fundingNote": "少量資金，確保流派成形",
+      "investment": "中",
+      "effectiveMods": "4～5 條",
+      "target": "讓角色從可以運作提升到穩定且有效率，正式處理符文、插槽、品質與資源問題。",
+      "qualification": [
+        "已取得流派必要傳奇或關鍵稀有裝。",
+        "主要稀有裝約有 4～5 條有效詞綴。",
+        "武器具有數個互相配合的傷害詞綴。",
+        "防具兼顧抗性、生存與基礎防禦。",
+        "能穩定完成高階輿圖。"
+      ],
+      "acquisition": ["高物品等級基底", "高階精髓", "破裂基底", "預兆控制", "交易升級"],
+      "nextStep": "設定四至五條必要詞綴，開始評估是否存在值得破裂的極難核心詞。"
+    },
+    {
+      "id": "crafting-stage-g4",
+      "code": "G4",
+      "name": "終局裝",
+      "progress": "T15～T16、城塞與一般終局頭目",
+      "positioning": "對應高強度刷圖與頭目戰",
+      "fundingNote": "能穩定有通貨收入時",
+      "investment": "高",
+      "effectiveMods": "4～5 條高品質有效詞綴",
+      "target": "以合理成本完成能穩定挑戰終局的裝備，不為最後一條小幅提升破壞整件成品。",
+      "qualification": [
+        "核心詞綴具有較高階級與良好數值。",
+        "混沌抗性與異常狀態處理趨於完整。",
+        "技能資源、冷卻與維持問題已解決。",
+        "開始配置最大抗性、傷害轉換或進階減傷。",
+        "最多只接受 1 條普通或無效詞綴。"
+      ],
+      "acquisition": ["高階基底", "定向製作", "破裂核心詞", "高階通貨", "特殊詞綴"],
+      "nextStep": "若角色已能穩定完成目標內容便應停手；只有追求流派上限時才進入 G5。"
+    },
+    {
+      "id": "crafting-stage-g5",
+      "code": "G5",
+      "name": "畢業裝",
+      "progress": "高難度終局／極限內容",
+      "positioning": "接近流派上限",
+      "fundingNote": "有大量資金可以使用時。",
+      "investment": "極高／奢侈",
+      "effectiveMods": "5～6 條高階有效詞綴",
+      "target": "先固定最難重現的核心詞，再分側完成其餘高階詞綴與最終加工。",
+      "qualification": [
+        "幾乎所有詞綴都對流派有效。",
+        "多項關鍵詞綴接近最高階。",
+        "使用理想破裂詞、特殊詞綴或限定基底。",
+        "品質、符文、插槽與數值調整已完成。",
+        "下一次升級成本極高且實際提升有限。"
+      ],
+      "acquisition": ["多步驟破裂製作", "分側製作", "完美通貨", "定向預兆", "最終加工"],
+      "nextStep": "比較目前裝備價值、平均製作成本、失敗損失與角色提升；邊際收益不合理時停止。"
+    }
+  ],
+  "sources": [
+    { "name": "POE2DB 通貨經濟", "url": "https://poe2db.tw/tw/Economy" },
+    { "name": "POE2DB 換界石", "url": "https://poe2db.tw/tw/Waystones" },
+    { "name": "POE2DB 深淵與骸骨", "url": "https://poe2db.tw/tw/Abyss" }
+  ]
+}

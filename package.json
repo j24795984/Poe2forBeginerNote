@@ -10,11 +10,12 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "data:validate:ids": "node scripts/validate-json-ids.mjs atlas.json atlas-entities.json atlas-relations.json campaign.json campaign-entities.json campaign-relations.json special-high-value-drops.json",
+    "data:validate:ids": "node scripts/validate-json-ids.mjs atlas.json atlas-entities.json atlas-relations.json campaign.json campaign-entities.json campaign-relations.json crafting-progression.json crafting-methods.json special-high-value-drops.json",
     "data:validate:atlas": "node scripts/validate-atlas-relations.mjs",
     "data:validate:campaign": "node scripts/validate-campaign-relations.mjs",
+    "data:validate:crafting": "node scripts/validate-crafting-data.mjs",
     "data:validate:valuable-items": "node scripts/validate-valuable-items.mjs",
-    "data:validate": "npm run data:validate:ids && npm run data:validate:atlas && npm run data:validate:campaign && npm run data:validate:valuable-items"
+    "data:validate": "npm run data:validate:ids && npm run data:validate:atlas && npm run data:validate:campaign && npm run data:validate:crafting && npm run data:validate:valuable-items"
   },
   "dependencies": {
     "@astrojs/vue": "^7.0.1",

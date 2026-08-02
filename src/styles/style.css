@@ -1706,6 +1706,12 @@ html::-webkit-scrollbar {
   padding: 1rem;
 }
 
+html.is-modal-scroll-locked,
+html.is-modal-scroll-locked body {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
 .valuable-item-dialog[open] { display: grid; place-items: center; }
 .valuable-item-dialog::backdrop {
   background-color: transparent;
@@ -1761,11 +1767,82 @@ html::-webkit-scrollbar {
   max-height: min(65dvh, 34rem);
   gap: 1.25rem;
   overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 1.5rem;
+  touch-action: pan-y;
 }
-.valuable-item-dialog-content section { display: grid; gap: .6rem; }
-.valuable-item-dialog-content h3 { margin: 0; color: var(--atlas-yellow-bright); font-size: .82rem; }
-.valuable-item-dialog-content p { margin: 0; color: rgb(214 211 209); font-size: .86rem; line-height: 1.9; text-wrap: pretty; }
+
+.valuable-item-dialog-content {
+  scrollbar-color: rgb(232 191 82 / .78) rgb(0 0 0 / .24);
+  scrollbar-width: thin;
+}
+
+.valuable-item-dialog-content::-webkit-scrollbar { width: 8px; }
+.valuable-item-dialog-content::-webkit-scrollbar-track {
+  border-radius: 999px;
+  background: rgb(0 0 0 / .24);
+}
+.valuable-item-dialog-content::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: linear-gradient(rgb(246 224 153), rgb(216 159 35)) padding-box;
+}
+.valuable-item-dialog-content::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(rgb(255 238 176), rgb(232 191 82)) padding-box;
+}
+
+.valuable-item-detail-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.valuable-item-detail-nav button {
+  min-height: 2.25rem;
+  border: 1px solid rgb(232 191 82 / .45);
+  border-radius: 999px;
+  background: rgb(0 0 0 / .28);
+  color: var(--atlas-yellow-bright);
+  cursor: pointer;
+  font: inherit;
+  font-size: .8rem;
+  font-weight: 700;
+  padding: .4rem .85rem;
+  transition: border-color .2s ease, background-color .2s ease;
+}
+.valuable-item-detail-nav button:hover { border-color: var(--atlas-yellow); background: rgb(232 191 82 / .1); }
+.valuable-item-detail-nav button:focus-visible { outline: 2px solid var(--atlas-yellow); outline-offset: 2px; }
+
+.valuable-item-detail-body,
+.valuable-item-detail-group { display: grid; gap: 1.4rem; }
+.valuable-item-detail-body { gap: 1.8rem; }
+.valuable-item-detail-group-title {
+  margin: 0;
+  border-left: 4px solid var(--atlas-yellow);
+  color: rgb(250 250 249);
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  line-height: 1.35;
+  padding-left: .75rem;
+}
+.valuable-item-dialog-content section { display: grid; gap: .65rem; }
+.valuable-item-dialog-content h3 { margin: 0; color: var(--atlas-yellow-bright); font-size: 1.02rem; }
+.valuable-item-dialog-content p { margin: 0; color: rgb(214 211 209); font-size: .95rem; line-height: 1.9; text-wrap: pretty; }
+.valuable-item-detail-list {
+  display: grid;
+  gap: .65rem;
+  margin: 0;
+  padding-left: 1.25rem;
+  color: rgb(214 211 209);
+  font-size: .95rem;
+  line-height: 1.9;
+}
+.valuable-item-detail-list li::marker { color: var(--atlas-yellow); }
+.valuable-item-dialog-content .valuable-item-detail-note {
+  color: rgb(168 162 158);
+  font-size: .88rem;
+}
 .valuable-item-dialog-content a { color: var(--atlas-yellow); font-weight: 700; text-underline-offset: .3rem; }
 .valuable-item-dialog-content a:focus-visible { outline: 2px solid var(--atlas-yellow); outline-offset: 3px; }
 
@@ -1850,6 +1927,817 @@ html::-webkit-scrollbar {
   .special-drop-acquisition button { transition: none; }
 
   .valuable-item-dialog::backdrop { transition: none; }
+}
+
+/* Crafting guide */
+.crafting-shell { container: crafting-content / inline-size; }
+
+.crafting-category-list > .campaign-chapter-indicator {
+  transition: left .48s cubic-bezier(.22, 1, .36, 1), width .48s cubic-bezier(.22, 1, .36, 1);
+}
+
+.crafting-lead {
+  display: grid;
+  max-width: 58rem;
+  gap: .75rem;
+}
+
+.crafting-methods-card .crafting-lead { width: 100%; max-width: none; }
+
+.crafting-lead h3,
+.crafting-support-grid h3,
+.crafting-flow-header h3,
+.crafting-checklist-card h3,
+.crafting-outcomes > h3 {
+  margin: 0;
+  color: var(--atlas-yellow-bright);
+  font-family: 'Ramabhadra', 'Noto Sans TC', sans-serif;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+  line-height: 1.35;
+  text-wrap: pretty;
+}
+
+.crafting-lead > p,
+.crafting-flow-header > p,
+.crafting-checklist-card header p {
+  margin: 0;
+  color: rgb(214 211 209);
+  font-size: .92rem;
+  line-height: 1.9;
+  text-wrap: pretty;
+}
+
+.crafting-lead > a {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: .35rem;
+  color: var(--atlas-yellow);
+  font-size: .78rem;
+  font-weight: 700;
+  text-underline-offset: .3rem;
+}
+
+.crafting-lead > a .material-symbols-outlined { font-size: 1rem; }
+.crafting-lead > a:focus-visible,
+.crafting-source-footer a:focus-visible { outline: 2px solid var(--atlas-yellow); outline-offset: 3px; }
+
+.crafting-difference-layout {
+  display: grid;
+  gap: clamp(2.25rem, 5vw, 4rem);
+}
+
+.crafting-difference-lead {
+  display: grid;
+  max-width: 60rem;
+  gap: .8rem;
+}
+
+.crafting-difference-lead > p:first-child {
+  margin: 0;
+  color: var(--atlas-yellow);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.crafting-difference-lead h3,
+.crafting-difference-comparison > h4 {
+  margin: 0;
+  color: var(--atlas-yellow-bright);
+  font-family: 'Ramabhadra', 'Noto Sans TC', sans-serif;
+  line-height: 1.35;
+  text-wrap: pretty;
+}
+
+.crafting-difference-lead h3 { font-size: clamp(1.65rem, 4vw, 2.6rem); }
+
+.crafting-rich-text {
+  margin: 0;
+  color: rgb(231 229 228);
+  font-size: clamp(.9rem, 1.5vw, 1rem);
+  line-height: 2;
+  text-wrap: pretty;
+}
+
+.crafting-rich-text strong {
+  color: var(--atlas-yellow-bright);
+  font-weight: 800;
+}
+
+.crafting-difference-sections {
+  display: grid;
+  border-top: 1px solid rgb(245 245 244 / .15);
+}
+
+.crafting-difference-section {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  border-bottom: 1px solid rgb(245 245 244 / .12);
+  padding-block: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.crafting-difference-section > span {
+  color: rgb(232 191 82 / .65);
+  font-family: 'Ramabhadra', sans-serif;
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  padding-top: .25rem;
+}
+
+.crafting-difference-section > div { display: grid; gap: .9rem; }
+
+.crafting-difference-section h4 {
+  margin: 0;
+  color: var(--atlas-yellow);
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  line-height: 1.45;
+  text-wrap: pretty;
+}
+
+.crafting-difference-comparison { display: grid; gap: 1.25rem; }
+.crafting-difference-comparison > h4 { font-size: clamp(1.35rem, 3vw, 1.8rem); }
+
+.crafting-difference-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgb(245 245 244 / .15);
+  border-radius: 8px;
+  scrollbar-color: var(--atlas-yellow) rgb(7 12 20 / .7);
+  scrollbar-width: thin;
+}
+
+.crafting-difference-table-wrap table {
+  width: 100%;
+  min-width: 43rem;
+  border-collapse: collapse;
+  color: rgb(231 229 228);
+  font-size: .82rem;
+  line-height: 1.7;
+}
+
+.crafting-difference-table-wrap th,
+.crafting-difference-table-wrap td {
+  border-bottom: 1px solid rgb(245 245 244 / .11);
+  padding: 1rem 1.1rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.crafting-difference-table-wrap thead th {
+  background: rgb(7 12 20 / .9);
+  color: var(--atlas-yellow);
+  font-size: .72rem;
+  letter-spacing: .05em;
+}
+
+.crafting-difference-table-wrap tbody th {
+  width: 8rem;
+  background: rgb(0 0 0 / .2);
+  color: var(--atlas-yellow-bright);
+  white-space: nowrap;
+}
+
+.crafting-difference-table-wrap tbody tr:last-child > * { border-bottom: 0; }
+
+.crafting-difference-note {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: .8rem;
+  border-left: 3px solid var(--atlas-yellow);
+  background: rgb(0 0 0 / .28);
+  padding: 1rem 1.15rem;
+}
+
+.crafting-difference-note .material-symbols-outlined {
+  color: var(--atlas-yellow);
+  font-size: 1.15rem;
+}
+
+.crafting-difference-note p {
+  margin: 0;
+  color: rgb(214 211 209);
+  font-size: .8rem;
+  line-height: 1.8;
+}
+
+.crafting-management-layout {
+  display: grid;
+  gap: clamp(2.75rem, 6vw, 5rem);
+}
+
+.crafting-management-section {
+  display: grid;
+  min-width: 0;
+  gap: 1.25rem;
+}
+
+.crafting-management-section > header {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  align-items: baseline;
+  gap: .75rem;
+  border-bottom: 1px solid rgb(245 245 244 / .14);
+  padding-bottom: .9rem;
+}
+
+.crafting-management-section > header span {
+  color: rgb(232 191 82 / .65);
+  font-family: 'Ramabhadra', sans-serif;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+.crafting-management-section > header h4 {
+  margin: 0;
+  color: var(--atlas-yellow-bright);
+  font-family: 'Ramabhadra', 'Noto Sans TC', sans-serif;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  line-height: 1.4;
+  text-wrap: pretty;
+}
+
+.crafting-data-grid {
+  display: grid;
+  min-width: 0;
+  overflow-x: auto;
+  border: 1px solid rgb(245 245 244 / .15);
+  border-radius: 8px;
+  scrollbar-color: var(--atlas-yellow) rgb(7 12 20 / .7);
+  scrollbar-width: thin;
+  color: rgb(231 229 228);
+  font-size: .9rem;
+  line-height: 1.75;
+}
+
+.crafting-funding-grid {
+  grid-template-columns: minmax(9rem, .8fr) minmax(15rem, 1.2fr) minmax(18rem, 1.4fr) minmax(18rem, 1.4fr);
+}
+
+.crafting-method-stage-grid {
+  grid-template-columns: minmax(11rem, .8fr) minmax(15rem, 1.1fr) repeat(2, minmax(22rem, 1.6fr));
+}
+
+.crafting-management-stage-tabs {
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  overflow-x: auto;
+  border-bottom: 1px solid rgb(245 245 244 / .14);
+  scrollbar-width: none;
+}
+
+.crafting-management-stage-tabs::-webkit-scrollbar { display: none; }
+
+.crafting-management-stage-tabs button {
+  position: relative;
+  flex: 0 0 auto;
+  min-width: 7.25rem;
+  border: 0;
+  background: rgb(0 0 0 / .3);
+  color: rgb(168 162 158);
+  cursor: pointer;
+  font: inherit;
+  font-size: .82rem;
+  font-weight: 700;
+  padding: .85rem 1rem;
+}
+
+.crafting-management-stage-tabs button + button { border-left: 1px solid rgb(245 245 244 / .1); }
+
+.crafting-management-stage-tabs button::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: transparent;
+  content: '';
+}
+
+.crafting-management-stage-tabs button.is-active {
+  background: linear-gradient(rgb(232 191 82 / .14), rgb(232 191 82 / .04));
+  color: var(--atlas-yellow-bright);
+}
+
+.crafting-management-stage-tabs button.is-active::after { background: var(--atlas-yellow); }
+.crafting-management-stage-tabs button:focus-visible { z-index: 1; outline: 2px solid var(--atlas-yellow); outline-offset: -3px; }
+
+.crafting-data-grid-row {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: subgrid;
+}
+
+.crafting-data-grid-row > div {
+  min-width: 0;
+  border-right: 1px solid rgb(245 245 244 / .09);
+  border-bottom: 1px solid rgb(245 245 244 / .11);
+  padding: 1rem;
+}
+
+.crafting-data-grid-row > div:last-child { border-right: 0; }
+.crafting-data-grid-row:last-child > div { border-bottom: 0; }
+
+.crafting-data-grid-header > div {
+  background: rgb(7 12 20 / .94);
+  color: var(--atlas-yellow);
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.crafting-data-grid-row > [role='rowheader'] {
+  background: rgb(0 0 0 / .28);
+  color: var(--atlas-yellow-bright);
+  font-weight: 800;
+}
+
+.crafting-data-grid-row ul {
+  display: grid;
+  gap: .2rem;
+  padding-left: 1.1rem;
+}
+
+.crafting-data-grid-row .is-muted { color: rgb(168 162 158 / .58); }
+.crafting-data-grid-label { display: none; }
+
+.crafting-resource-principles > p {
+  margin: 0;
+  color: rgb(231 229 228);
+  font-size: .9rem;
+  line-height: 1.9;
+}
+
+.crafting-resource-principles > ul {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-block: 1px solid rgb(245 245 244 / .13);
+}
+
+.crafting-resource-principles > ul li {
+  display: grid;
+  gap: .5rem;
+  padding: 1.15rem 1.25rem;
+}
+
+.crafting-resource-principles > ul li + li { border-left: 1px solid rgb(245 245 244 / .1); }
+.crafting-resource-principles li strong { color: var(--atlas-yellow); font-size: .8rem; }
+.crafting-resource-principles li span { color: rgb(214 211 209); font-size: .8rem; line-height: 1.75; }
+
+.crafting-principle-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-block: 1px solid rgb(245 245 244 / .13);
+}
+
+.crafting-principle-grid section {
+  min-width: 0;
+  padding: 1.25rem 1.5rem;
+}
+
+.crafting-principle-grid section + section { border-left: 1px solid rgb(245 245 244 / .13); }
+.crafting-principle-grid h4,
+.crafting-stage-content h4,
+.crafting-method-detail h4,
+.crafting-flow-steps h4,
+.crafting-checklist-card h4,
+.crafting-outcomes h4 {
+  margin: 0;
+  color: var(--atlas-yellow);
+  font-size: .85rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+}
+
+.crafting-principle-grid p,
+.crafting-stage-content p,
+.crafting-method-detail p,
+.crafting-flow-steps p,
+.crafting-outcomes p {
+  margin: 0;
+  color: rgb(214 211 209);
+  font-size: .8rem;
+  line-height: 1.8;
+  text-wrap: pretty;
+}
+
+.crafting-principle-grid h4 + p { margin-top: .55rem; }
+.crafting-stage-nav { position: relative; top: auto; }
+
+.crafting-stage-list {
+  position: relative;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.crafting-stage-list::before {
+  position: absolute;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  left: 2.25rem;
+  width: 1px;
+  background: linear-gradient(var(--atlas-yellow), rgb(232 191 82 / .12));
+  content: '';
+  pointer-events: none;
+}
+
+.crafting-stage-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: 1.25rem;
+  scroll-margin-top: calc(var(--top-menu-height, 0px) + 1.5rem);
+}
+
+.crafting-stage-marker {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  width: 4.5rem;
+  height: 4.5rem;
+  place-items: center;
+  border: 1px solid rgb(232 191 82 / .55);
+  border-radius: 50%;
+  background: rgb(7 12 20 / .96);
+  box-shadow: 0 0 0 .45rem rgb(6 10 17 / .74);
+}
+
+.crafting-stage-marker span {
+  color: var(--atlas-yellow-bright);
+  font-family: 'Ramabhadra', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.crafting-stage-item > article {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgb(245 245 244 / .14);
+  border-radius: 8px;
+  background: linear-gradient(115deg, rgb(0 0 0 / .45), rgb(11 42 92 / .22));
+}
+
+.crafting-stage-item > article > header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1.25rem;
+  border-bottom: 1px solid rgb(245 245 244 / .12);
+  padding: 1.2rem 1.35rem;
+}
+
+.crafting-stage-item > article > header > div:first-child { display: grid; gap: .3rem; }
+.crafting-stage-item > article > header p,
+.crafting-stage-positioning {
+  margin: 0;
+  color: rgb(168 162 158);
+  font-size: .7rem;
+}
+
+.crafting-stage-item > article > header h3 {
+  margin: 0;
+  color: rgb(250 250 249);
+  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+  line-height: 1.3;
+}
+
+.crafting-stage-meta,
+.crafting-stage-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+}
+
+.crafting-stage-meta { justify-content: flex-end; }
+.crafting-stage-meta span,
+.crafting-stage-tags span {
+  display: inline-flex;
+  min-height: 1.75rem;
+  align-items: center;
+  border: 1px solid rgb(232 191 82 / .34);
+  border-radius: 99999px;
+  background: rgb(0 0 0 / .25);
+  color: var(--atlas-yellow);
+  font-size: .66rem;
+  font-weight: 700;
+  padding: .25rem .65rem;
+}
+
+.crafting-stage-positioning {
+  border-bottom: 1px solid rgb(245 245 244 / .08);
+  padding: .75rem 1.35rem;
+}
+
+.crafting-stage-funding-note {
+  display: flex;
+  align-items: baseline;
+  gap: .65rem;
+  margin: 0;
+  border-bottom: 1px solid rgb(245 245 244 / .08);
+  background: rgb(232 191 82 / .05);
+  padding: .7rem 1.35rem;
+}
+
+.crafting-stage-funding-note strong { color: var(--atlas-yellow); font-size: .7rem; }
+.crafting-stage-funding-note span { color: rgb(231 229 228); font-size: .76rem; line-height: 1.7; }
+
+.crafting-stage-content {
+  display: grid;
+  grid-template-columns: .85fr 1.25fr .72fr .9fr;
+}
+
+.crafting-stage-content section { min-width: 0; padding: 1.2rem 1.35rem; }
+.crafting-stage-content section + section { border-left: 1px solid rgb(245 245 244 / .1); }
+.crafting-stage-content h4 + p,
+.crafting-stage-content h4 + ul { margin-top: .65rem; }
+.crafting-stage-content ul,
+.crafting-method-detail ul,
+.crafting-method-detail ol,
+.crafting-checklist-card ul {
+  display: grid;
+  gap: .45rem;
+  margin: 0;
+  padding-left: 1.15rem;
+  color: rgb(214 211 209);
+  font-size: .76rem;
+  line-height: 1.75;
+}
+
+.crafting-stage-content li::marker,
+.crafting-method-detail li::marker,
+.crafting-checklist-card li::marker { color: var(--atlas-yellow); }
+
+.crafting-stage-methods > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-top: .65rem;
+}
+
+.crafting-stage-methods button {
+  border: 1px solid rgb(232 191 82 / .38);
+  border-radius: 99999px;
+  background: rgb(0 0 0 / .34);
+  color: rgb(231 229 228);
+  cursor: pointer;
+  font: inherit;
+  font-size: .68rem;
+  font-weight: 700;
+  padding: .42rem .7rem;
+  transition: background-color .22s ease, border-color .22s ease, color .22s ease;
+}
+
+.crafting-stage-methods button:hover {
+  border-color: var(--atlas-yellow);
+  background: var(--atlas-yellow);
+  color: rgb(16 16 18);
+}
+
+.crafting-stage-methods button:focus-visible {
+  outline: 2px solid var(--atlas-yellow-bright);
+  outline-offset: 3px;
+}
+
+.crafting-stage-item > article > footer {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: .75rem;
+  border-top: 1px solid rgb(245 245 244 / .12);
+  background: rgb(0 0 0 / .2);
+  padding: .9rem 1.35rem;
+}
+
+.crafting-stage-item > article > footer strong { color: var(--atlas-yellow); font-size: .72rem; }
+.crafting-stage-item > article > footer p { margin: 0; color: rgb(214 211 209); font-size: .75rem; line-height: 1.7; }
+
+.crafting-support-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.crafting-support-grid article > div { display: grid; gap: 1.25rem; }
+.crafting-support-grid h3 { font-size: 1.25rem; }
+.crafting-support-grid dl { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: .7rem 1rem; margin: 0; }
+.crafting-support-grid dt { color: var(--atlas-yellow); font-size: .75rem; font-weight: 700; }
+.crafting-support-grid dd { margin: 0; color: rgb(214 211 209); font-size: .75rem; line-height: 1.7; }
+.crafting-support-grid ol { display: grid; gap: .65rem; margin: 0; padding-left: 1.25rem; color: rgb(214 211 209); font-size: .76rem; line-height: 1.7; }
+.crafting-support-grid li::marker { color: var(--atlas-yellow); font-weight: 800; }
+
+.crafting-method-list { display: grid; gap: .75rem; }
+.crafting-method-item {
+  border: 1px solid rgb(245 245 244 / .14);
+  border-radius: 8px;
+  background: rgb(0 0 0 / .25);
+  overflow: clip;
+}
+
+.crafting-method-item summary {
+  display: flex;
+  min-height: 4.5rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  list-style: none;
+  padding: 1rem 1.25rem;
+}
+
+.crafting-method-item summary::-webkit-details-marker { display: none; }
+.crafting-method-item summary > span:first-child { display: grid; gap: .3rem; }
+.crafting-method-item summary strong { color: rgb(250 250 249); font-size: .95rem; }
+.crafting-method-item summary small { color: rgb(168 162 158); font-size: .68rem; }
+.crafting-method-item summary > .material-symbols-outlined { color: var(--atlas-yellow); transition: transform .24s ease; }
+.crafting-method-item[open] summary > .material-symbols-outlined { transform: rotate(45deg); }
+.crafting-method-item summary:hover { background: rgb(232 191 82 / .06); }
+.crafting-method-item summary:focus-visible { outline: 2px solid var(--atlas-yellow); outline-offset: -3px; }
+
+.crafting-method-detail {
+  display: grid;
+  gap: 1.25rem;
+  border-top: 1px solid rgb(245 245 244 / .12);
+  padding: 1.25rem;
+}
+
+.crafting-method-title-row {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.crafting-method-title-row > div:first-child { display: grid; gap: .45rem; }
+.crafting-method-title-row > div:first-child > p { margin: 0; color: var(--atlas-yellow); font-size: .7rem; font-weight: 700; }
+.crafting-method-page-detail { border: 1px solid rgb(245 245 244 / .12); border-radius: 8px; background: rgb(0 0 0 / .18); }
+
+.crafting-advanced-flow-heading {
+  display: grid;
+  max-width: 58rem;
+  gap: .5rem;
+  padding: .5rem .25rem 0;
+}
+
+.crafting-advanced-flow-heading :where(h3, p) { margin: 0; }
+.crafting-advanced-flow-heading h3 { color: rgb(250 250 249); font-size: clamp(1.5rem, 3vw, 2rem); }
+.crafting-advanced-flow-heading > p:last-child { color: rgb(214 211 209); font-size: .86rem; line-height: 1.8; }
+
+.crafting-method-columns,
+.crafting-result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.crafting-method-columns section,
+.crafting-result-grid section {
+  border: 1px solid rgb(245 245 244 / .1);
+  background: rgb(11 29 62 / .18);
+  padding: 1rem;
+}
+
+.crafting-method-detail h4 + ul,
+.crafting-method-detail h4 + ol,
+.crafting-method-detail h4 + p { margin-top: .65rem; }
+.crafting-method-steps > ol { counter-reset: method-step; list-style: none; padding: 0; }
+.crafting-method-steps > ol li { position: relative; padding-left: 2rem; }
+.crafting-method-steps > ol li::before { position: absolute; left: 0; color: var(--atlas-yellow); content: counter(method-step, decimal-leading-zero); counter-increment: method-step; font-size: .66rem; font-weight: 800; }
+
+.crafting-basic-decision-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-block: 1px solid rgb(245 245 244 / .13);
+}
+
+.crafting-basic-decision-list li {
+  display: grid;
+  min-width: 0;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: .85rem;
+  padding: 1.25rem;
+}
+
+.crafting-basic-decision-list li + li { border-left: 1px solid rgb(245 245 244 / .13); }
+.crafting-basic-decision-list > li > span { color: var(--atlas-yellow); font-size: .68rem; font-weight: 800; }
+.crafting-basic-decision-list div { display: grid; gap: .55rem; }
+.crafting-basic-decision-list h4 { margin: 0; color: var(--atlas-yellow-bright); font-size: .9rem; }
+.crafting-basic-decision-list p { margin: 0; color: rgb(214 211 209); font-size: .8rem; line-height: 1.8; text-wrap: pretty; }
+.crafting-basic-method-card { scroll-margin-top: calc(var(--top-menu-height, 0px) + 1.5rem); }
+
+.crafting-flow-header {
+  display: grid;
+  grid-template-columns: minmax(15rem, .78fr) minmax(0, 1.22fr);
+  align-items: end;
+  gap: 2rem;
+}
+
+.crafting-flow-header > div { display: grid; gap: .5rem; }
+.crafting-flow-header > div > p { margin: 0; color: var(--atlas-yellow); font-size: .7rem; font-weight: 700; }
+.crafting-high-budget-notice {
+  display: grid;
+  gap: .65rem;
+  border-left: 3px solid var(--atlas-yellow);
+  background: rgb(0 0 0 / .28);
+  padding: 1rem 1.15rem;
+}
+
+.crafting-high-budget-notice p,
+.crafting-high-budget-notice strong {
+  margin: 0;
+  font-size: .95rem;
+  line-height: 1.8;
+  text-wrap: pretty;
+}
+
+.crafting-high-budget-notice p { color: rgb(214 211 209); font-weight: 500; }
+.crafting-high-budget-notice strong { color: var(--atlas-yellow-bright); }
+
+.crafting-flow-steps { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.crafting-flow-steps li { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr); gap: 1.25rem; border-top: 1px solid rgb(245 245 244 / .12); padding: 1.2rem 0; }
+.crafting-flow-steps li:last-child { border-bottom: 1px solid rgb(245 245 244 / .12); }
+.crafting-flow-steps li > span { color: var(--atlas-yellow); font-family: 'Ramabhadra', sans-serif; font-size: .8rem; }
+.crafting-flow-steps li > div { display: grid; gap: .5rem; }
+
+.crafting-outcomes { display: grid; gap: 1.25rem; }
+.crafting-outcomes > h3 { font-size: 1.25rem; }
+.crafting-outcomes > div { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border: 1px solid rgb(245 245 244 / .12); }
+.crafting-outcomes article { min-width: 0; padding: 1.25rem; }
+.crafting-outcomes article + article { border-left: 1px solid rgb(245 245 244 / .12); }
+.crafting-outcomes article[data-tone='success'] { background: rgb(65 94 48 / .14); }
+.crafting-outcomes article[data-tone='redirect'] { background: rgb(94 74 48 / .14); }
+.crafting-outcomes article[data-tone='stop'] { background: rgb(94 48 48 / .14); }
+.crafting-outcomes h4 + p { margin-top: .55rem; }
+
+.crafting-checklist-card > div { display: grid; gap: 1.5rem; }
+.crafting-checklist-card header { display: grid; gap: .55rem; }
+.crafting-checklist-card header h3 { font-size: 1.25rem; }
+.crafting-checklist-card > div > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.crafting-checklist-card section { border: 1px solid rgb(245 245 244 / .11); padding: 1rem; }
+.crafting-checklist-card h4 + ul { margin-top: .65rem; }
+
+.crafting-source-footer {
+  display: grid;
+  gap: .85rem;
+  border-top: 1px solid rgb(245 245 244 / .15);
+  padding: 1.25rem .25rem 0;
+}
+
+.crafting-source-footer p { margin: 0; color: rgb(168 162 158); font-size: .72rem; line-height: 1.7; }
+.crafting-source-footer > div { display: flex; flex-wrap: wrap; gap: .65rem 1.1rem; }
+.crafting-source-footer a { display: inline-flex; align-items: center; gap: .25rem; color: var(--atlas-yellow); font-size: .7rem; text-underline-offset: .25rem; }
+.crafting-source-footer .material-symbols-outlined { font-size: .9rem; }
+
+@container crafting-content (max-width: 56rem) {
+  .crafting-principle-grid,
+  .crafting-stage-content,
+  .crafting-flow-header { grid-template-columns: minmax(0, 1fr); }
+  .crafting-principle-grid section + section,
+  .crafting-stage-content section + section { border-top: 1px solid rgb(245 245 244 / .1); border-left: 0; }
+  .crafting-support-grid { grid-template-columns: minmax(0, 1fr); }
+  .crafting-flow-header { align-items: start; gap: 1rem; }
+  .crafting-method-title-row { display: grid; align-items: start; }
+	.crafting-resource-principles > ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.crafting-resource-principles > ul li:nth-child(odd) { border-left: 0; }
+	.crafting-resource-principles > ul li:nth-child(n + 3) { border-top: 1px solid rgb(245 245 244 / .1); }
+	.crafting-basic-decision-list { grid-template-columns: minmax(0, 1fr); }
+	.crafting-basic-decision-list li + li { border-top: 1px solid rgb(245 245 244 / .13); border-left: 0; }
+}
+
+@container crafting-content (max-width: 38rem) {
+	.crafting-difference-card { padding-inline: 1.25rem; }
+	.crafting-difference-section { grid-template-columns: minmax(0, 1fr); gap: .5rem; }
+	.crafting-difference-section > span { padding-top: 0; }
+	.crafting-management-card { padding-inline: 1.25rem; }
+	.crafting-data-grid { display: block; overflow: visible; border: 0; border-radius: 0; font-size: .86rem; }
+	.crafting-data-grid-header { display: none; }
+	.crafting-data-grid-row { display: grid; grid-template-columns: minmax(0, 1fr); overflow: hidden; border: 1px solid rgb(245 245 244 / .15); border-radius: 8px; }
+	.crafting-data-grid-row + .crafting-data-grid-row { margin-top: 1rem; }
+	.crafting-data-grid-row > div { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: .8rem; border-right: 0; padding: .85rem 1rem; }
+	.crafting-data-grid-row > div:last-child { border-bottom: 0; }
+	.crafting-data-grid-label { display: block; color: var(--atlas-yellow); font-size: .72rem; font-weight: 800; }
+	.crafting-resource-principles > ul { grid-template-columns: minmax(0, 1fr); }
+	.crafting-resource-principles > ul li { border-left: 0 !important; }
+	.crafting-resource-principles > ul li + li { border-top: 1px solid rgb(245 245 244 / .1); }
+  .crafting-stage-item { grid-template-columns: minmax(0, 1fr); }
+  .crafting-stage-list::before { display: none; }
+  .crafting-stage-marker { width: 3.25rem; height: 3.25rem; }
+  .crafting-stage-item > article > header { display: grid; }
+  .crafting-stage-meta { justify-content: flex-start; }
+  .crafting-method-columns,
+  .crafting-result-grid,
+  .crafting-outcomes > div,
+  .crafting-checklist-card > div > div { grid-template-columns: minmax(0, 1fr); }
+  .crafting-outcomes article + article { border-top: 1px solid rgb(245 245 244 / .12); border-left: 0; }
+  .crafting-flow-steps li { grid-template-columns: 2.25rem minmax(0, 1fr); gap: .75rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crafting-method-item summary > .material-symbols-outlined,
+  .crafting-category-list > .campaign-chapter-indicator,
+  .crafting-stage-methods button { transition: none; }
 }
 
 /* Homepage rabbit placeholder */

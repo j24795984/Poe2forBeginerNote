@@ -1,0 +1,26 @@
+---
+import CraftingGuide from '../../components/CraftingGuide.vue';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { loadStaticJson } from '../../services/loadStaticJson';
+
+const [progression, methods] = await Promise.all([
+	loadStaticJson('crafting-progression.json'),
+	loadStaticJson('crafting-methods.json'),
+]);
+---
+
+<BaseLayout title="做裝｜POE2 新手筆記" bodyClass="crafting-body">
+	<main class="relative overflow-x-clip pb-12 text-stone-100">
+		<div class="global-px-box">
+			<header class="atlas-motion-hero base-container pt-8 md:pt-12">
+				<h1 class="atlas-page-title font-english-body text-3xl font-bold text-stone-100 md:text-5xl">做裝</h1>
+			</header>
+		</div>
+
+		<div class="global-px-box">
+			<section id="crafting-content" class="atlas-scroll-reveal base-container py-8 md:py-12">
+				<CraftingGuide progression={progression} methods={methods} client:load />
+			</section>
+		</div>
+	</main>
+</BaseLayout>

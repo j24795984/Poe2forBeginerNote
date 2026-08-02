@@ -24,7 +24,7 @@ type SpecialDrop = {
 	valueLabel: string;
 	acquisition: {
 		summary: string;
-		detail?: { title: string; html: string };
+		detail?: { title: string; navigation?: { id: string; label: string }[]; html: string };
 	};
 };
 type SpecialDropData = {
@@ -40,6 +40,7 @@ const query = ref('');
 const selectedTypeIds = ref<string[]>([]);
 const detailDialog = ref<HTMLDialogElement>();
 const detailDialogPanel = ref<HTMLElement>();
+const detailDialogContent = ref<HTMLElement>();
 const activeItem = ref<SpecialDrop>();
 let detailDialogTween: GsapTween | undefined;
 let detailDialogCloseTimer: number | undefined;
@@ -65,12 +66,18 @@ function clearFilters() {
 	selectedTypeIds.value = [];
 }
 
+function setPageScrollLocked(locked: boolean) {
+	document.documentElement.classList.toggle('is-modal-scroll-locked', locked);
+}
+
 async function openDetails(item: SpecialDrop) {
 	activeItem.value = item;
 	await nextTick();
 	if (!detailDialog.value || detailDialog.value.open) return;
 	detailDialog.value.classList.remove('is-closing');
 	detailDialog.value.showModal();
+	setPageScrollLocked(true);
+	if (detailDialogContent.value) detailDialogContent.value.scrollTop = 0;
 
 	const panel = detailDialogPanel.value;
 	const gsap = (window as typeof window & { gsap?: GsapApi }).gsap;
@@ -82,6 +89,17 @@ async function openDetails(item: SpecialDrop) {
 		{ autoAlpha: 0, y: 18 },
 		{ autoAlpha: 1, y: 0, duration: .38, ease: 'power2.out', clearProps: 'opacity,transform,visibility' },
 	);
+}
+
+function scrollDetailTo(id: string) {
+	const content = detailDialogContent.value;
+	const target = content?.querySelector<HTMLElement>(`#${CSS.escape(id)}`);
+	if (!content || !target) return;
+	const top = content.scrollTop + target.getBoundingClientRect().top - content.getBoundingClientRect().top;
+	content.scrollTo({
+		top,
+		behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+	});
 }
 
 function closeDetails() {
@@ -117,6 +135,7 @@ function finishDetailsClose() {
 	detailDialogCloseTimer = undefined;
 	detailDialogTween = undefined;
 	detailDialog.value?.classList.remove('is-closing');
+	setPageScrollLocked(false);
 	activeItem.value = undefined;
 }
 
@@ -127,6 +146,7 @@ watch(filteredItems, () => {
 onUnmounted(() => {
 	detailDialogTween?.kill();
 	if (detailDialogCloseTimer !== undefined) window.clearTimeout(detailDialogCloseTimer);
+	setPageScrollLocked(false);
 });
 </script>
 
@@ -231,6 +251,7 @@ onUnmounted(() => {
 		<dialog
 			ref="detailDialog"
 			class="valuable-item-dialog"
+			data-lenis-prevent
 			aria-labelledby="valuable-item-dialog-title"
 			@click="closeFromBackdrop"
 			@cancel.prevent="closeDetails"
@@ -246,7 +267,19 @@ onUnmounted(() => {
 						<span class="material-symbols-outlined" aria-hidden="true">close</span>
 					</button>
 				</header>
-				<div class="valuable-item-dialog-content" v-html="activeItem.acquisition.detail.html"></div>
+				<div ref="detailDialogContent" class="valuable-item-dialog-content">
+					<nav v-if="activeItem.acquisition.detail.navigation?.length" class="valuable-item-detail-nav" aria-label="詳細內容分類">
+						<button
+							v-for="item in activeItem.acquisition.detail.navigation"
+							:key="item.id"
+							type="button"
+							@click="scrollDetailTo(item.id)"
+						>
+							{{ item.label }}
+						</button>
+					</nav>
+					<div class="valuable-item-detail-body" v-html="activeItem.acquisition.detail.html"></div>
+				</div>
 			</article>
 		</dialog>
 	</article>

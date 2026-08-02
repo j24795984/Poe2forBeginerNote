@@ -7,6 +7,7 @@
 - 通貨價格改由 POE2DB 經濟頁提供；本專案不重複維護一般通貨清單。
 - `special-high-value-drops.json` 目前只維護特殊高價掉落；每筆資料以 `typeId` 關聯檔內類型，並以 `acquisition.summary` 提供列表簡述。只有具備完整說明的項目才加入 `acquisition.detail.title` 與受信任的 `acquisition.detail.html`，供頁面燈箱排版。類型預留通貨、碎片、門票、傳奇與限定傳奇；傳奇裝備待資料確認後再加入正式項目。
 - Campaign 與 Atlas 都採用 `*-entities.json`、`*-relations.json` 與呈現層 JSON，三者的 `dataVersion` 必須一致。
+- 做裝頁使用 `crafting-progression.json` 定義 G0～G5 裝備成長階段，並以 `crafting-methods.json` 的 `stageIds`／`stageId` 關聯實際製作方法與後期流程；兩檔 `dataVersion` 必須一致。
 - `campaign.json` 維護章節呈現順序與地圖路徑；任務、永久獎勵及其地圖關聯由 Campaign 的實體與關聯檔提供。圖片路徑以 `public/` 為基準。
 - 已停用或被取代的資料保留於 `archive/data/legacy/`，不得從執行期頁面載入。
 

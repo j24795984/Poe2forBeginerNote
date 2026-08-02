@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "dataVersion": "valuable-items-0.6-001",
+  "dataVersion": "valuable-items-0.6-005",
   "id": "special-high-value-drops-001",
   "idRegistry": {
     "nextSequence": 2,
@@ -59,14 +59,18 @@
       "typeId": "valuable-item-type-currency",
       "name": { "zhTw": "破裂石", "en": "Fracturing Orb" },
       "itemUrl": "https://poe2db.tw/tw/Fracturing_Orb",
-      "dropArea": "已淨化區域／腐化聖域",
-      "boss": "淨化頭目",
+      "dropArea": "已淨化區域",
+      "boss": "召喚法陣頭目",
       "valueLabel": "約 7.5 D",
       "acquisition": {
-        "summary": "於周圍「已淨化」區域掉落。",
+        "summary": "配置相關輿圖天賦後，於腐化聖域周圍的「已淨化」區域掉落。",
         "detail": {
           "title": "破裂石",
-          "html": "<section><h3>詳細說明</h3><p>通過「腐敗聖域」後，周圍尚未完成的地圖將轉為「已淨化」區域；破裂石可於這些區域內掉落。</p></section><section><h3>相關詞綴</h3><p>查看流亡編年史的 <a href=\"https://poe2db.tw/tw/Cleansed#CleansedRef\" target=\"_blank\" rel=\"noreferrer\">已淨化地區</a> 詞綴資料。</p></section>"
+          "navigation": [
+            { "id": "fracturing-orb-prerequisites", "label": "前置條件" },
+            { "id": "fracturing-orb-drop-area", "label": "掉落區域" }
+          ],
+          "html": "<div id=\"fracturing-orb-prerequisites\" class=\"valuable-item-detail-group\"><h2 class=\"valuable-item-detail-group-title\">前置條件</h2><section><h3>取得條件</h3><p>先完成燃燒豐碑。下列高階輿圖天賦皆只套用於區域等級 75 以上的地圖。</p></section><section><h3>直接影響破裂石</h3><ul class=\"valuable-item-detail-list\"><li><strong><a href=\"https://poe2db.tw/tw/Hidden_Scars\" target=\"_blank\" rel=\"noreferrer\">隱蔽傷痕</a></strong>：使已淨化怪物有機率掉落破裂石。</li><li><strong><a href=\"https://poe2db.tw/tw/From_Distances_Untold\" target=\"_blank\" rel=\"noreferrer\">遙聲未語</a></strong>：已淨化區域中的召喚法陣頭目有 25% 機率獲得 1 條額外怪物詞綴；具有額外怪物詞綴的召喚法陣頭目有 5% 機率掉落破裂石。</li></ul></section><section><h3>強化已淨化區域</h3><ul class=\"valuable-item-detail-list\"><li><strong><a href=\"https://poe2db.tw/tw/Cleansed#CleansedRef\" target=\"_blank\" rel=\"noreferrer\">額外已淨化怪物群</a></strong>：每配置 1 點，使已淨化區域額外含有 1 群已淨化怪物；此項小型天賦可重複配置。</li><li><strong><a href=\"https://poe2db.tw/tw/Cleansed#CleansedRef\" target=\"_blank\" rel=\"noreferrer\">腐化解脫</a></strong>：擊敗已淨化區域中的魂靈掌控怪物時，增加 50% 阿茲莫里魂靈的強化量。</li><li><strong><a href=\"https://poe2db.tw/tw/Cleansed#CleansedRef\" target=\"_blank\" rel=\"noreferrer\">已淨化地圖中的聖潔魂靈機率</a></strong>：增加 50% 已淨化區域中的阿茲莫里魂靈成為聖潔魂靈的機率。</li></ul><p class=\"valuable-item-detail-note\">這三項主要強化已淨化區域的怪物數量或其他獎勵，不會直接提高破裂石的掉落率。</p></section></div><div id=\"fracturing-orb-drop-area\" class=\"valuable-item-detail-group\"><h2 class=\"valuable-item-detail-group-title\">掉落區域</h2><section><h3>製造已淨化區域</h3><p>找到腐化區域中央的「腐化聖域」，使用至少具有 4 條詞綴的換界石進入並擊敗腐化頭目。完成淨化後，同一腐化區域內尚未完成的剩餘地圖會轉為「已淨化」區域；已經完成的周圍地圖不會參與這次轉換。</p></section><section><h3>掉落來源</h3><p>盡可能完整清除地圖中的所有怪物，增加 <a href=\"https://poe2db.tw/tw/Hidden_Scars\" target=\"_blank\" rel=\"noreferrer\">隱蔽傷痕</a> 的掉落判定機會。若地圖含有召喚法陣，也應擊敗召喚法陣頭目，以觸發 <a href=\"https://poe2db.tw/tw/From_Distances_Untold\" target=\"_blank\" rel=\"noreferrer\">遙聲未語</a> 的 5% 掉落機率。</p></section><section><h3>地圖準備建議</h3><p>查看 <a href=\"https://poe2db.tw/tw/Cleansed#CleansedRef\" target=\"_blank\" rel=\"noreferrer\">已淨化特殊詞綴</a>，並優先使用能增加物品數量、怪物群大小、已淨化怪物群、額外怪物群或召喚法陣的換界石，藉此增加整張地圖的掉落判定次數。</p></section><section><h3>注意事項</h3><p>物品稀有度不等於破裂石掉落率，一般換界石詞綴也無法保證掉落破裂石。「禁錮之怒」會套用特殊通貨轉換規則，但不代表必定產出破裂石。</p></section></div>"
         }
       }
     },
