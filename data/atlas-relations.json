@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.0.0",
+  "dataVersion": "atlas-0.5-001",
+  "locale": "zh-TW",
+  "patchFamily": "0.5",
+  "id": "atlas-relations-document-001",
+  "idRegistry": {
+    "nextSequence": 2,
+    "retiredIds": []
+  },
+  "relations": [
+    { "id": "relation-geonor-at-iron-citadel", "type": "bossAt", "bossId": "boss-count-geonor", "locationId": "location-iron-citadel" },
+    { "id": "relation-jamanra-at-copper-citadel", "type": "bossAt", "bossId": "boss-jamanra-the-abomination", "locationId": "location-copper-citadel" },
+    { "id": "relation-doryani-at-stone-citadel", "type": "bossAt", "bossId": "boss-doryani-royal-thaumaturge", "locationId": "location-stone-citadel" },
+    { "id": "relation-arbiter-at-burning-monolith", "type": "bossAt", "bossId": "boss-arbiter-of-ash", "locationId": "location-burning-monolith" },
+    { "id": "relation-fiks-at-patriarch-halls", "type": "bossAt", "bossId": "boss-radiant-watcher-fiks", "locationId": "location-patriarch-halls" },
+    { "id": "relation-fia-at-matriarch-halls", "type": "bossAt", "bossId": "boss-cradle-watcher-fia", "locationId": "location-matriarch-halls" },
+    { "id": "relation-divine-arbiter-at-origin-tower", "type": "bossAt", "bossId": "boss-divine-arbiter", "locationId": "location-origin-tower" },
+    { "id": "relation-king-at-infinite-misery", "type": "bossAt", "bossId": "boss-king-in-the-mists", "locationId": "location-infinite-misery" },
+    { "id": "relation-corrupted-guardian-at-nexus", "type": "bossAt", "bossId": "boss-corrupted-nexus-guardian", "locationId": "location-corrupted-nexus" },
+
+    { "id": "relation-geonor-drops-ancient-crisis", "type": "drops", "bossId": "boss-count-geonor", "itemId": "item-ancient-crisis-fragment", "locationId": "location-iron-citadel", "condition": "以階級 15 以上的換界石完成堡壘。" },
+    { "id": "relation-jamanra-drops-faded-crisis", "type": "drops", "bossId": "boss-jamanra-the-abomination", "itemId": "item-faded-crisis-fragment", "locationId": "location-copper-citadel", "condition": "以階級 15 以上的換界石完成堡壘。" },
+    { "id": "relation-doryani-drops-weathered-crisis", "type": "drops", "bossId": "boss-doryani-royal-thaumaturge", "itemId": "item-weathered-crisis-fragment", "locationId": "location-stone-citadel", "condition": "以階級 15 以上的換界石完成堡壘。" },
+    { "id": "relation-fiks-drops-origin-spark", "type": "drops", "bossId": "boss-radiant-watcher-fiks", "itemId": "item-origin-spark", "locationId": "location-patriarch-halls", "condition": "啟動遠古神器後擊敗首領。" },
+    { "id": "relation-fia-drops-origin-cradle", "type": "drops", "bossId": "boss-cradle-watcher-fia", "itemId": "item-origin-cradle", "locationId": "location-matriarch-halls", "condition": "啟動遠古神器後擊敗首領。" },
+    { "id": "relation-king-drops-kings-skull", "type": "drops", "bossId": "boss-king-in-the-mists", "itemId": "item-kings-skull", "locationId": "location-infinite-misery" },
+
+    { "id": "relation-crisis-fragments-open-burning-monolith", "type": "opens", "inputIds": ["item-ancient-crisis-fragment", "item-faded-crisis-fragment", "item-weathered-crisis-fragment"], "targetId": "location-burning-monolith", "mode": "standard" },
+    { "id": "relation-calamity-fragments-open-burning-monolith", "type": "opens", "inputIds": ["item-first-calamity-fragment", "item-second-calamity-fragment", "item-third-calamity-fragment"], "targetId": "location-burning-monolith", "mode": "advanced" },
+    { "id": "relation-origin-parts-form-core", "type": "recipe", "inputIds": ["item-origin-spark", "item-origin-cradle"], "outputId": "item-origin-core", "locationId": "location-origin-tower-lower" },
+    { "id": "relation-origin-core-opens-divine-arbiter", "type": "unlocksBoss", "inputIds": ["item-origin-core"], "targetId": "boss-divine-arbiter", "locationId": "location-origin-tower" },
+    { "id": "relation-origin-tower-contains-lower", "type": "contains", "sourceId": "location-origin-tower", "targetId": "location-origin-tower-lower" },
+
+    { "id": "relation-abyss-members", "type": "belongsToMechanic", "mechanicId": "league-abyss-053", "memberIds": ["item-morck-invitation", "location-soul-well"] },
+    { "id": "relation-morck-invitation-opens-soul-well", "type": "opens", "inputIds": ["item-morck-invitation"], "targetId": "location-soul-well" },
+    { "id": "relation-breach-members", "type": "belongsToMechanic", "mechanicId": "league-breach-054", "memberIds": ["item-breach-splinter", "item-breachstone", "item-breachlord-cyst", "location-breach-domain"] },
+    { "id": "relation-breach-splinters-form-breachstone", "type": "recipe", "inputIds": ["item-breach-splinter"], "outputId": "item-breachstone", "quantity": null, "note": "需求數量可能隨版本調整，資料層暫不硬編。" },
+    { "id": "relation-breachstone-opens-domain", "type": "opens", "inputIds": ["item-breachstone"], "targetId": "location-breach-domain" },
+    { "id": "relation-breach-domain-yields-cyst", "type": "acquiredAt", "itemId": "item-breachlord-cyst", "locationId": "location-breach-domain", "condition": "擊敗裂痕首領。" },
+    { "id": "relation-cyst-opens-advanced-breach", "type": "opens", "inputIds": ["item-breachlord-cyst"], "targetId": "location-breach-domain", "mode": "advanced" },
+    { "id": "relation-ritual-members", "type": "belongsToMechanic", "mechanicId": "league-ritual-052", "memberIds": ["item-audience-with-the-king", "item-kings-skull", "item-darkness-calls", "location-infinite-misery", "boss-king-in-the-mists", "boss-bordeck"] },
+    { "id": "relation-audience-opens-infinite-misery", "type": "opens", "inputIds": ["item-audience-with-the-king"], "targetId": "location-infinite-misery" },
+    { "id": "relation-darkness-calls-unlocks-bordeck", "type": "unlocksBoss", "inputIds": ["item-darkness-calls"], "targetId": "boss-bordeck" },
+    { "id": "relation-delirium-members", "type": "belongsToMechanic", "mechanicId": "league-delirium-057", "memberIds": ["item-simulacrum-splinter", "item-simulacrum", "item-ravens-reflection", "location-simulacrum", "location-delirium-pinnacle"] },
+    { "id": "relation-simulacrum-splinters-form-ticket", "type": "recipe", "inputIds": ["item-simulacrum-splinter"], "outputId": "item-simulacrum", "quantity": null, "note": "需求數量可能隨版本調整，資料層暫不硬編。" },
+    { "id": "relation-simulacrum-opens-simulacrum", "type": "opens", "inputIds": ["item-simulacrum"], "targetId": "location-simulacrum" },
+    { "id": "relation-ravens-reflection-acquired-in-simulacrum", "type": "acquiredAt", "itemId": "item-ravens-reflection", "locationId": "location-simulacrum" },
+    { "id": "relation-ravens-reflection-opens-pinnacle", "type": "opens", "inputIds": ["item-ravens-reflection"], "targetId": "location-delirium-pinnacle" },
+    { "id": "relation-expedition-members", "type": "belongsToMechanic", "mechanicId": "league-expedition-055", "memberIds": ["item-expedition-logbook", "item-triskelion-reforged", "location-large-expedition", "location-expedition-pinnacle"] },
+    { "id": "relation-logbook-opens-large-expedition", "type": "opens", "inputIds": ["item-expedition-logbook"], "targetId": "location-large-expedition" },
+    { "id": "relation-triskelion-acquired-in-expedition", "type": "acquiredAt", "itemId": "item-triskelion-reforged", "locationId": "location-large-expedition", "condition": "在大型探險區域完成相關碎片流程。" },
+    { "id": "relation-triskelion-opens-expedition-pinnacle", "type": "opens", "inputIds": ["item-triskelion-reforged"], "targetId": "location-expedition-pinnacle" },
+    { "id": "relation-incursion-members", "type": "belongsToMechanic", "mechanicId": "league-vaal-056", "memberIds": ["location-atziri-temple"] },
+
+    { "id": "relation-nexus-cleanses-region", "type": "transformsMapState", "triggerBossId": "boss-corrupted-nexus-guardian", "triggerLocationId": "location-corrupted-nexus", "resultStateId": "state-cleansed", "scope": "同一腐化區域內尚未完成的其餘地圖" },
+    { "id": "relation-ezomyte-city-signals-iron-citadel", "type": "signals", "sourceId": "biome-ezomyte-city", "targetId": "location-iron-citadel", "strength": "clue", "biomeIds": ["biome-grassland", "biome-swamp"] },
+    { "id": "relation-faridun-city-signals-copper-citadel", "type": "signals", "sourceId": "biome-faridun-city", "targetId": "location-copper-citadel", "strength": "clue", "biomeIds": ["biome-desert", "biome-mountain"] },
+    { "id": "relation-vaal-city-signals-stone-citadel", "type": "signals", "sourceId": "biome-vaal-city", "targetId": "location-stone-citadel", "strength": "clue", "biomeIds": ["biome-forest", "biome-water"] }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "schemaVersion": "1.0.0",
+  "dataVersion": "valuable-items-0.6-005",
+  "id": "special-high-value-drops-001",
+  "idRegistry": {
+    "nextSequence": 2,
+    "retiredIds": []
+  },
+  "title": "特殊高價掉落",
+  "scope": {
+    "category": "special-drops",
+    "realm": "TW",
+    "checkedAt": "2026-08-01",
+    "priceNote": "價值為台服市場約值，會隨供需變動；與國際服價格可能不同。"
+  },
+  "source": {
+    "name": "流亡2編年史 Economy",
+    "url": "https://poe2db.tw/tw/Economy"
+  },
+  "types": [
+    { "id": "valuable-item-type-currency", "label": "通貨" },
+    { "id": "valuable-item-type-fragment-ticket", "label": "碎片／門票" },
+    { "id": "valuable-item-type-unique", "label": "傳奇" },
+    { "id": "valuable-item-type-limited-unique", "label": "限定傳奇" }
+  ],
+  "items": [
+    {
+      "id": "mirror-of-kalandra",
+      "typeId": "valuable-item-type-currency",
+      "name": { "zhTw": "卡蘭德的魔鏡", "en": "Mirror of Kalandra" },
+      "itemUrl": "https://poe2db.tw/tw/Mirror_of_Kalandra",
+      "dropArea": "無",
+      "boss": "無",
+      "valueLabel": "約 3,167 D",
+      "acquisition": { "summary": "隨機掉落" }
+    },
+    {
+      "id": "hinekoras-lock",
+      "typeId": "valuable-item-type-currency",
+      "name": { "zhTw": "悉妮蔻拉的髮絲", "en": "Hinekora's Lock" },
+      "itemUrl": "https://poe2db.tw/tw/Hinekoras_Lock",
+      "dropArea": "無",
+      "boss": "無",
+      "valueLabel": "約 2,389 D",
+      "acquisition": { "summary": "隨機掉落" }
+    },
+    {
+      "id": "perfect-chaos-orb",
+      "typeId": "valuable-item-type-currency",
+      "name": { "zhTw": "完美混沌石", "en": "Perfect Chaos Orb" },
+      "itemUrl": "https://poe2db.tw/tw/Perfect_Chaos_Orb",
+      "dropArea": "無",
+      "boss": "無",
+      "valueLabel": "約 9.2 D",
+      "acquisition": { "summary": "隨機掉落" }
+    },
+    {
+      "id": "fracturing-orb",
+      "typeId": "valuable-item-type-currency",
+      "name": { "zhTw": "破裂石", "en": "Fracturing Orb" },
+      "itemUrl": "https://poe2db.tw/tw/Fracturing_Orb",
+      "dropArea": "已淨化區域",
+      "boss": "召喚法陣頭目",
+      "valueLabel": "約 7.5 D",
+      "acquisition": {
+        "summary": "配置相關輿圖天賦後，於腐化聖域周圍的「已淨化」區域掉落。",
+        "detail": {
+          "title": "破裂石",
+          "navigation": [
+            { "id": "fracturing-orb-prerequisites", "label": "前置條件" },
+            { "id": "fracturing-orb-drop-area", "label": "掉落區域" }
+          ],
+          "html": "<div id=\"fracturing-orb-prerequisites\" class=\"valuable-item-detail-group\"><h2 class=\"valuable-item-detail-group-title\">前置條件</h2><section><h3>取得條件</h3><p>先完成燃燒豐碑。下列高階輿圖天賦皆只套用於區域等級 75 以上的地圖。</p></section><section><h3>直接影響破裂石</h3><ul class=\"valuable-item-detail-list\"><li><strong><a href=\"https://poe2db.tw/tw/Hidden_Scars\" target=\"_blank\" rel=\"noreferrer\">隱蔽傷痕</a></strong>：使已淨化怪物有機率掉落破裂石。</li><li><strong><a href=\"https://poe2db.tw/tw/From_Distances_Untold\" target=\"_blank\" rel=\"noreferrer\">遙聲未語</a></strong>：已淨化區域中的召喚法陣頭目有 25% 機率獲得 1 條額外怪物詞綴；具有額外怪物詞綴的召喚法陣頭目有 5% 機率掉落破裂石。</li></ul></section><section><h3>強化已淨化區域</h3><ul class=\"valuable-item-detail-list\"><li><strong><a href=\"https://poe2db.tw/tw/Cleansed#CleansedRef\" target=\"_blank\" rel=\"noreferrer\">額外已淨化怪物群</a></strong>：每配置 1 點，使已淨化區域額外含有 1 群已淨化怪物；此項小型天賦可重複配置。</li><li><strong><a href=\"https://poe2db.tw/tw/Cleansed#CleansedRef\" target=\"_blank\" rel=\"noreferrer\">腐化解脫</a></strong>：擊敗已淨化區域中的魂靈掌控怪物時，增加 50% 阿茲莫里魂靈的強化量。</li><li><strong><a href=\"https://poe2db.tw/tw/Cleansed#CleansedRef\" target=\"_blank\" rel=\"noreferrer\">已淨化地圖中的聖潔魂靈機率</a></strong>：增加 50% 已淨化區域中的阿茲莫里魂靈成為聖潔魂靈的機率。</li></ul><p class=\"valuable-item-detail-note\">這三項主要強化已淨化區域的怪物數量或其他獎勵，不會直接提高破裂石的掉落率。</p></section></div><div id=\"fracturing-orb-drop-area\" class=\"valuable-item-detail-group\"><h2 class=\"valuable-item-detail-group-title\">掉落區域</h2><section><h3>製造已淨化區域</h3><p>找到腐化區域中央的「腐化聖域」，使用至少具有 4 條詞綴的換界石進入並擊敗腐化頭目。完成淨化後，同一腐化區域內尚未完成的剩餘地圖會轉為「已淨化」區域；已經完成的周圍地圖不會參與這次轉換。</p></section><section><h3>掉落來源</h3><p>盡可能完整清除地圖中的所有怪物，增加 <a href=\"https://poe2db.tw/tw/Hidden_Scars\" target=\"_blank\" rel=\"noreferrer\">隱蔽傷痕</a> 的掉落判定機會。若地圖含有召喚法陣，也應擊敗召喚法陣頭目，以觸發 <a href=\"https://poe2db.tw/tw/From_Distances_Untold\" target=\"_blank\" rel=\"noreferrer\">遙聲未語</a> 的 5% 掉落機率。</p></section><section><h3>地圖準備建議</h3><p>查看 <a href=\"https://poe2db.tw/tw/Cleansed#CleansedRef\" target=\"_blank\" rel=\"noreferrer\">已淨化特殊詞綴</a>，並優先使用能增加物品數量、怪物群大小、已淨化怪物群、額外怪物群或召喚法陣的換界石，藉此增加整張地圖的掉落判定次數。</p></section><section><h3>注意事項</h3><p>物品稀有度不等於破裂石掉落率，一般換界石詞綴也無法保證掉落破裂石。「禁錮之怒」會套用特殊通貨轉換規則，但不代表必定產出破裂石。</p></section></div>"
+        }
+      }
+    },
+    {
+      "id": "perfect-exalted-orb",
+      "typeId": "valuable-item-type-currency",
+      "name": { "zhTw": "完美崇高石", "en": "Perfect Exalted Orb" },
+      "itemUrl": "https://poe2db.tw/tw/Perfect_Exalted_Orb",
+      "dropArea": "無",
+      "boss": "無",
+      "valueLabel": "約 3.6 D",
+      "acquisition": { "summary": "隨機掉落" }
+    },
+    {
+      "id": "perfect-jewellers-orb",
+      "typeId": "valuable-item-type-currency",
+      "name": { "zhTw": "完美工匠石", "en": "Perfect Jeweller's Orb" },
+      "itemUrl": "https://poe2db.tw/tw/Perfect_Jewellers_Orb",
+      "dropArea": "無",
+      "boss": "無",
+      "valueLabel": "約 0.1 D",
+      "acquisition": { "summary": "隨機掉落" }
+    },
+    {
+      "id": "perfect-regal-orb",
+      "typeId": "valuable-item-type-currency",
+      "name": { "zhTw": "完美富豪石", "en": "Perfect Regal Orb" },
+      "itemUrl": "https://poe2db.tw/tw/Perfect_Regal_Orb",
+      "dropArea": "無",
+      "boss": "無",
+      "valueLabel": "約 0.1 D",
+      "acquisition": { "summary": "隨機掉落" }
+    },
+    {
+      "id": "ritualistic-reliquary-key",
+      "typeId": "valuable-item-type-fragment-ticket",
+      "name": { "zhTw": "儀式寶庫鑰匙", "en": "Ritualistic Reliquary Key" },
+      "itemUrl": "https://poe2db.tw/tw/Ritualistic_Reliquary_Key",
+      "dropArea": "無",
+      "boss": "無",
+      "valueLabel": "約 15.5 D",
+      "acquisition": { "summary": "極低機率隨機掉落" }
+    },
+    {
+      "id": "deadly-fate",
+      "typeId": "valuable-item-type-fragment-ticket",
+      "name": { "zhTw": "致命之運", "en": "Deadly Fate" },
+      "itemUrl": "https://poe2db.tw/tw/Deadly_Fate",
+      "dropArea": "混沌試煉",
+      "boss": "混沌禿鷹．伊薩穆坎",
+      "valueLabel": "約 7 D",
+      "acquisition": { "summary": "完成終局混沌試煉第 10 房並擊敗對應頭目" }
+    },
+    {
+      "id": "origin-cradle",
+      "typeId": "valuable-item-type-fragment-ticket",
+      "name": { "zhTw": "原初搖籃", "en": "Origin Cradle" },
+      "itemUrl": "https://poe2db.tw/tw/Origin_Cradle",
+      "dropArea": "聖母殿",
+      "boss": "搖籃守望．菲亞",
+      "valueLabel": "約 4.3 D",
+      "acquisition": { "summary": "啟動遠古神器後擊敗首領" }
+    },
+    {
+      "id": "origin-core",
+      "typeId": "valuable-item-type-fragment-ticket",
+      "name": { "zhTw": "原初核心", "en": "Origin Core" },
+      "itemUrl": "https://poe2db.tw/tw/Origin_Core",
+      "dropArea": "起源高塔下層",
+      "boss": "無",
+      "valueLabel": "約 3.5 D",
+      "acquisition": { "summary": "在起源高塔將原初光輝與原初搖籃合成" }
+    },
+    {
+      "id": "cowardly-fate",
+      "typeId": "valuable-item-type-fragment-ticket",
+      "name": { "zhTw": "怯懦之運", "en": "Cowardly Fate" },
+      "itemUrl": "https://poe2db.tw/tw/Cowardly_Fate",
+      "dropArea": "混沌試煉",
+      "boss": "獸王．烏克斯莫",
+      "valueLabel": "約 2.9 D",
+      "acquisition": { "summary": "完成終局混沌試煉第 10 房並擊敗對應頭目" }
+    },
+    {
+      "id": "ancient-crisis-fragment",
+      "typeId": "valuable-item-type-fragment-ticket",
+      "name": { "zhTw": "遠古危機碎片", "en": "Ancient Crisis Fragment" },
+      "itemUrl": "https://poe2db.tw/tw/Ancient_Crisis_Fragment",
+      "dropArea": "鋼鐵城塞",
+      "boss": "吉恩諾伯爵",
+      "valueLabel": "約 2.5 D",
+      "acquisition": { "summary": "以階級 15 以上換界石完成城塞並擊敗首領" }
+    },
+    {
+      "id": "victorious-fate",
+      "typeId": "valuable-item-type-fragment-ticket",
+      "name": { "zhTw": "勝利之運", "en": "Victorious Fate" },
+      "itemUrl": "https://poe2db.tw/tw/Victorious_Fate",
+      "dropArea": "混沌試煉",
+      "boss": "羽毛瘟疫．切札",
+      "valueLabel": "約 2.3 D",
+      "acquisition": { "summary": "完成終局混沌試煉第 10 房並擊敗對應頭目" }
+    },
+    {
+      "id": "origin-spark",
+      "typeId": "valuable-item-type-fragment-ticket",
+      "name": { "zhTw": "原初光輝", "en": "Origin Spark" },
+      "itemUrl": "https://poe2db.tw/tw/Origin_Spark",
+      "dropArea": "聖祖殿",
+      "boss": "光輝守望．菲克斯",
+      "valueLabel": "約 2 D",
+      "acquisition": { "summary": "啟動遠古神器後擊敗首領" }
+    },
+    {
+      "id": "faded-crisis-fragment",
+      "typeId": "valuable-item-type-fragment-ticket",
+      "name": { "zhTw": "褪色危機碎片", "en": "Faded Crisis Fragment" },
+      "itemUrl": "https://poe2db.tw/tw/Faded_Crisis_Fragment",
+      "dropArea": "青銅城塞",
+      "boss": "憎惡者．賈嫚拉",
+      "valueLabel": "約 1.7 D",
+      "acquisition": { "summary": "以階級 15 以上換界石完成城塞並擊敗首領" }
+    },
+    {
+      "id": "weathered-crisis-fragment",
+      "typeId": "valuable-item-type-fragment-ticket",
+      "name": { "zhTw": "風化危機碎片", "en": "Weathered Crisis Fragment" },
+      "itemUrl": "https://poe2db.tw/tw/Weathered_Crisis_Fragment",
+      "dropArea": "岩石城塞",
+      "boss": "皇家奇術師．多里亞尼",
+      "valueLabel": "約 1 D",
+      "acquisition": { "summary": "以階級 15 以上換界石完成城塞並擊敗首領" }
+    }
+  ]
+}

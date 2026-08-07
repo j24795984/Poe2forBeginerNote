@@ -1,0 +1,466 @@
+{
+  "schemaVersion": "2.0.0",
+  "dataVersion": "campaign-0.5-001",
+  "id": "campaign-document-001",
+  "idRegistry": {
+    "nextSequence": 32,
+    "retiredIds": []
+  },
+  "sources": {
+    "quests": "https://poe2db.tw/tw/Quest#QuestRewards",
+    "act1": "https://poe2db.tw/tw/Act_1#%E7%AC%AC1%E7%AB%A0",
+    "questCatalog": "data/campaign-entities.json"
+  },
+  "referenceViews": {
+    "entityDocument": "campaign-entities.json",
+    "relationDocument": "campaign-relations.json",
+    "groups": [
+      { "id": "campaign-reference-act-1", "slug": "act-1", "name": "第一章", "rootEntityId": "campaign-chapter-002" },
+      { "id": "campaign-reference-act-2", "slug": "act-2", "name": "第二章", "rootEntityId": "campaign-chapter-003" },
+      { "id": "campaign-reference-act-3", "slug": "act-3", "name": "第三章", "rootEntityId": "campaign-chapter-004" },
+      { "id": "campaign-reference-act-4", "slug": "act-4", "name": "第四章", "rootEntityId": "campaign-chapter-005" },
+      { "id": "campaign-reference-interlude", "slug": "interlude", "name": "間歇", "rootEntityId": "campaign-chapter-006" }
+    ]
+  },
+  "chapters": [
+    {
+      "id": "campaign-chapter-002",
+      "slug": "act-1",
+      "name": "第一章",
+      "englishName": "ACT I",
+      "status": "complete",
+      "summary": "從河岸抵達皆伐，穿越艾茲麥森林與奧格姆領地，追上吉恩諾伯爵。",
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_1#%E7%AC%AC1%E7%AB%A0",
+      "maps": [
+        {
+          "id": "campaign-map-007",
+          "name": "皆伐與森林區域",
+          "image": "images/act_maps/act-1-1.webp",
+          "alt": "第一章皆伐、葛瑞爾林與周邊區域路線圖",
+          "points": [
+            { "name": "赤谷", "x": 25.229, "y": 72.059 },
+            { "name": "葛瑞爾林", "x": 15.434, "y": 62.132 },
+            { "name": "遺忘墓穴", "x": 15.434, "y": 54.473 },
+            { "name": "纏縛陰林", "x": 17.607, "y": 31.25 },
+            { "name": "皆伐", "x": 52.172, "y": 69.424 },
+            { "name": "獵場", "x": 47.218, "y": 18.137 },
+            { "name": "弗雷索恩", "x": 47.18, "y": 47.304 },
+            { "name": "奧格姆農地", "x": 63.91, "y": 28.002 }
+          ]
+        },
+        {
+          "id": "campaign-map-008",
+          "name": "墓園與奧格姆區域",
+          "image": "images/act_maps/act-1-2.webp",
+          "alt": "第一章不朽帝國之墓、獵場與奧格姆區域路線圖",
+          "points": [
+            { "name": "奧格姆宅第", "x": 86.8, "y": 20.2 }
+          ]
+        }
+      ],
+      "quests": [
+        {
+          "id": "campaign-quest-009",
+          "slug": "reaching-clearfell",
+          "name": "抵達皆伐",
+          "type": "main",
+          "typeLabel": "主線",
+          "locations": ["河岸", "皆伐營地"],
+          "objective": "擊敗浮腫米勒，沿河岸前進並抵達皆伐營地。",
+          "rewards": ["未切割的技能寶石（等級 1）"]
+        },
+        {
+          "id": "campaign-quest-010",
+          "slug": "ominous-ground",
+          "name": "險惡之地",
+          "type": "side",
+          "typeLabel": "支線",
+          "locations": ["泥沼陋居"],
+          "objective": "在泥沼陋居找到並擊殺吞噬獸。",
+          "rewards": ["未切割的輔助寶石", "100 Gold"]
+        },
+        {
+          "id": "campaign-quest-011",
+          "slug": "secrets-in-the-dark",
+          "name": "黑暗中的秘密",
+          "type": "main",
+          "typeLabel": "主線",
+          "locations": ["葛瑞爾林", "赤谷"],
+          "objective": "調查攝魂之樹，在赤谷啟動三座鐵鏽方尖碑，取得符文護帶並完成符文尖刺。",
+          "rewards": ["符文尖刺"]
+        },
+        {
+          "id": "campaign-quest-012",
+          "slug": "the-mysterious-shade",
+          "name": "神祕的影魅",
+          "type": "main",
+          "typeLabel": "主線",
+          "locations": ["纏縛陰林", "不朽帝國之墓"],
+          "objective": "找出阻擋纏縛陰林道路的根鬚來源，繼續追蹤黑衣幽魂。",
+          "rewards": []
+        },
+        {
+          "id": "campaign-quest-013",
+          "slug": "finding-the-forge",
+          "name": "尋找熔爐",
+          "type": "side",
+          "typeLabel": "支線",
+          "locations": ["奧格姆村", "皆伐營地"],
+          "objective": "在奧格姆村找到倫利的鍛造工具，帶回皆伐營地交給倫利。",
+          "rewards": ["解鎖回收台"]
+        },
+        {
+          "id": "campaign-quest-014",
+          "slug": "the-lost-lute",
+          "name": "遺失的魯特琴",
+          "type": "side",
+          "typeLabel": "支線",
+          "locations": ["奧格姆農地", "皆伐營地"],
+          "objective": "在奧格姆農地找到烏娜的魯特琴，帶回皆伐營地交給烏娜。",
+          "rewards": ["專精之書", "2 點天賦點數", "2 點天賦重置點"]
+        },
+        {
+          "id": "campaign-quest-015",
+          "slug": "sorrow-among-stones",
+          "name": "石頭上的悲傷",
+          "type": "main",
+          "typeLabel": "主線",
+          "locations": ["不朽帝國之墓", "配偶的墓室", "政務官陵墓"],
+          "objective": "分別擊敗阿席妮雅與德雷文，取得兩枚回憶之鑰碎片並打開紀念之門。",
+          "rewards": ["未切割的輔助寶石"]
+        },
+        {
+          "id": "campaign-quest-016",
+          "slug": "the-ominous-altars",
+          "name": "不祥祭壇",
+          "type": "side",
+          "typeLabel": "支線",
+          "locations": ["弗雷索恩"],
+          "objective": "淨化三座祭祀祭壇，完成最後儀式並擊敗迷霧之王。",
+          "rewards": ["紅玉護符、藍玉護符或黃玉護符（三選一）", "+30 最大精魂", "未切割的精魂寶石（等級 4）"]
+        },
+        {
+          "id": "campaign-quest-017",
+          "slug": "trail-of-corruption",
+          "name": "腐化痕跡",
+          "type": "main",
+          "typeLabel": "主線",
+          "locations": ["獵場", "奧格姆村"],
+          "objective": "穿越獵場抵達奧格姆村，擊敗劊子手並釋放囚犯。",
+          "rewards": ["未切割的技能寶石"]
+        },
+        {
+          "id": "campaign-quest-018",
+          "slug": "the-mad-wolf-of-ogham",
+          "name": "奧格姆的狂狼",
+          "type": "main",
+          "typeLabel": "主線",
+          "locations": ["宅第壁壘", "奧格姆宅第"],
+          "objective": "找出進入奧格姆宅第的方法，擊敗吉恩諾伯爵。",
+          "rewards": ["未切割的輔助寶石", "解鎖第二章"]
+        },
+        {
+          "id": "campaign-quest-019",
+          "slug": "the-hunt-begins",
+          "name": "狩獵開始",
+          "type": "side",
+          "typeLabel": "支線",
+          "locations": ["獵場"],
+          "objective": "在獵場與阿茲莫里獵人德爾溫交談，跟隨魂靈完成狩獵。",
+          "rewards": []
+        },
+        {
+          "id": "campaign-quest-020",
+          "slug": "blank-rune",
+          "name": "空白符文",
+          "type": "side",
+          "typeLabel": "支線",
+          "locations": ["第一章區域"],
+          "objective": "取得空白符文並帶給倫利，打造選擇的低階符文。",
+          "rewards": ["低階沙漠符文、低階冰川符文、低階暴風符文或低階鍛鐵符文（四選一）"]
+        },
+        {
+          "id": "campaign-quest-021",
+          "slug": "fissure-in-the-earth",
+          "name": "大地的裂痕",
+          "type": "main",
+          "typeLabel": "主線",
+          "locations": ["第一章區域"],
+          "objective": "調查大地裂痕並完成任務目標。",
+          "rewards": ["未切割的輔助寶石", "100 Gold"]
+        },
+        {
+          "id": "campaign-quest-022",
+          "slug": "ancient-beacon",
+          "name": "遠古烽火",
+          "type": "main",
+          "typeLabel": "主線",
+          "locations": ["遠古烽塔"],
+          "objective": "擊敗遠古烽塔周邊受腐化能量灌注的怪物。",
+          "rewards": []
+        },
+        {
+          "id": "campaign-quest-023",
+          "slug": "runeseeker",
+          "name": "符文探求者",
+          "type": "main",
+          "typeLabel": "主線",
+          "locations": ["第一章區域"],
+          "objective": "調查區域中的符文石並協助求助者。",
+          "rewards": ["維里西姆"]
+        }
+      ]
+    },
+    {
+      "id": "campaign-chapter-003",
+      "slug": "act-2",
+      "name": "第二章",
+      "englishName": "ACT II",
+      "status": "pending",
+      "summary": "第一章版型確認後，將依相同資料結構整理。",
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_2#%E7%AC%AC2%E7%AB%A0",
+      "maps": [
+        {
+          "id": "campaign-map-024",
+          "name": "瓦斯提里沙漠",
+          "image": "images/act_maps/act-2-1.webp",
+          "alt": "第二章瓦斯提里沙漠地表路線圖",
+          "points": [
+            {
+              "name": "凱斯城",
+              "x": 37.44,
+              "y": 41
+            },
+            {
+              "name": "骨坑",
+              "x": 38.69,
+              "y": 85.72
+            },
+            {
+              "name": "無光通道",
+              "x": 43.45,
+              "y": 84.93
+            },
+            {
+              "name": "泰坦之谷",
+              "x": 30.48,
+              "y": 34.81
+            },
+            {
+              "name": "戴斯哈",
+              "x": 92.22,
+              "y": 38.13
+            },
+            {
+              "name": "戴斯哈尖塔",
+              "x": 93.18,
+              "y": 47.85
+            }
+          ]
+        },
+        {
+          "id": "campaign-map-025",
+          "name": "第二章地下區域",
+          "image": "images/act_maps/act-2-2.webp",
+          "alt": "第二章地下區域路線圖",
+          "points": [
+            {
+              "name": "叛徒之路",
+              "x": 68.67,
+              "y": 38.89
+            }
+          ]
+        }
+      ],
+      "quests": []
+    },
+    {
+      "id": "campaign-chapter-004",
+      "slug": "act-3",
+      "name": "第三章",
+      "englishName": "ACT III",
+      "status": "pending",
+      "summary": "第一章版型確認後，將依相同資料結構整理。",
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_3#%E7%AC%AC3%E7%AB%A0",
+      "maps": [
+        {
+          "id": "campaign-map-026",
+          "name": "第三章現世地表",
+          "label": "現世地表",
+          "image": "images/act_maps/act-3-1.webp",
+          "alt": "第三章現世地表與金字塔區域路線圖",
+          "points": [
+            {
+              "name": "叢林遺跡",
+              "x": 30.25,
+              "y": 49.38
+            },
+            {
+              "name": "劇毒墓穴",
+              "x": 25.45,
+              "y": 47.85
+            },
+            {
+              "name": "阿札克泥沼",
+              "x": 59.52,
+              "y": 10.69
+            },
+            {
+              "name": "混沌神殿",
+              "x": 16.77,
+              "y": 18
+            }
+          ]
+        },
+        {
+          "id": "campaign-map-027",
+          "name": "第三章現世地底",
+          "label": "現世地底",
+          "image": "images/act_maps/act-3-2.webp",
+          "alt": "第三章現世地底區域路線圖",
+          "points": [
+            {
+              "name": "吉卡尼的機械迷城",
+              "x": 10.95,
+              "y": 52.22
+            }
+          ]
+        },
+        {
+          "id": "campaign-map-028",
+          "name": "第三章過去地表",
+          "label": "過去地表",
+          "image": "images/act_maps/act-3-3.webp",
+          "alt": "第三章過去地表與金字塔區域路線圖",
+          "points": [
+            {
+              "name": "阿戈拉",
+              "x": 64.23,
+              "y": 75.29
+            },
+            {
+              "name": "奧札爾",
+              "x": 59.47,
+              "y": 80.87
+            }
+          ]
+        },
+        {
+          "id": "campaign-map-029",
+          "name": "第三章過去地底",
+          "label": "過去地底",
+          "image": "images/act_maps/act-3-4.webp",
+          "alt": "第三章過去地底區域路線圖"
+        }
+      ],
+      "quests": []
+    },
+    {
+      "id": "campaign-chapter-005",
+      "slug": "act-4",
+      "name": "第四章",
+      "englishName": "ACT IV",
+      "status": "pending",
+      "summary": "第一章版型確認後，將依相同資料結構整理。",
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_4#%E7%AC%AC4%E7%AB%A0",
+      "maps": [
+        {
+          "id": "campaign-map-030",
+          "name": "第四章群島",
+          "label": "群島",
+          "image": "images/act_maps/act-4.webp",
+          "alt": "第四章群島航線與各島區域路線圖",
+          "points": [
+            {
+              "name": "旅程之末",
+              "x": 37.1,
+              "y": 11.8
+            },
+            {
+              "name": "凱吉灣",
+              "x": 34.52,
+              "y": 16.38
+            },
+            {
+              "name": "金氏島",
+              "x": 24.66,
+              "y": 45.3
+            },
+            {
+              "name": "廢棄監獄",
+              "x": 51.75,
+              "y": 36.5
+            },
+            {
+              "name": "瓦卡帕努島",
+              "x": 45.7,
+              "y": 55.3
+            },
+            {
+              "name": "亡者之殿",
+              "x": 59.39,
+              "y": 80.55
+            },
+            {
+              "name": "悉妮蔻拉之眼－沉默之廳",
+              "x": 63.3,
+              "y": 85.77
+            },
+            {
+              "name": "伯勞鳥之島",
+              "x": 26.86,
+              "y": 83.7
+            }
+          ]
+        }
+      ],
+      "quests": []
+    },
+    {
+      "id": "campaign-chapter-006",
+      "slug": "interlude",
+      "name": "間歇",
+      "englishName": "INTERLUDE",
+      "status": "pending",
+      "summary": "第一章版型確認後，將依相同資料結構整理。",
+      "quickGuideUrl": "https://poe2db.tw/tw/Act_6#%E7%AC%AC6%E7%AB%A0",
+      "maps": [
+        {
+          "id": "campaign-map-031",
+          "name": "間歇區域",
+          "label": "間歇",
+          "image": "images/act_maps/act-5.webp",
+          "alt": "三段間歇章節區域路線圖",
+          "points": [
+            {
+              "name": "卡里交會道",
+              "x": 53,
+              "y": 60.6
+            },
+            {
+              "name": "奇瑪",
+              "x": 61.2,
+              "y": 30
+            },
+            {
+              "name": "庫萊亞村",
+              "x": 76.1,
+              "y": 56.2
+            },
+            {
+              "name": "狂嗥洞穴",
+              "x": 82.1,
+              "y": 43.8
+            },
+            {
+              "name": "狼之要塞",
+              "x": 15.7,
+              "y": 28.9
+            }
+          ]
+        }
+      ],
+      "quests": []
+    }
+  ]
+}

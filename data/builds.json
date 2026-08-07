@@ -1,0 +1,40 @@
+{
+  "id": "builds-document-001",
+  "idRegistry": { "nextSequence": 16, "retiredIds": [] },
+  "equipmentGroups": [
+    {
+      "id": "builds-group-002",
+      "name": "武器",
+      "items": [
+        { "id": "builds-equipment-003", "name": "主手" },
+        { "id": "builds-equipment-004", "name": "副手" },
+        { "id": "builds-equipment-005", "name": "雙手武器" }
+      ]
+    },
+    {
+      "id": "builds-group-006",
+      "name": "防具",
+      "items": [
+        { "id": "builds-equipment-007", "name": "頭盔" },
+        { "id": "builds-equipment-008", "name": "胸甲", "prefix": { "major": ["生命（點）", "防禦機制（ES／閃避／護甲）（點）", "精魂", "魔力（法／ES）"], "minor": ["生命％"] }, "suffix": { "major": ["抗性"], "minor": ["能力值"] } },
+        { "id": "builds-equipment-009", "name": "手套", "prefix": { "major": ["點傷"] } },
+        { "id": "builds-equipment-010", "name": "鞋子" }
+      ]
+    },
+    {
+      "id": "builds-group-011",
+      "name": "飾品",
+      "items": [
+        { "id": "builds-equipment-012", "name": "項鍊", "prefix": { "major": ["防禦機制（ES／閃避／護甲）（點）", "精魂", "魔力（法／ES）", "法傷"], "minor": ["生命％", "生命（點）"] }, "suffix": { "major": ["抗性"], "minor": ["能力值"] } },
+        { "id": "builds-equipment-013", "name": "戒指", "prefix": { "major": ["點傷"] } }
+      ]
+    },
+    {
+      "id": "builds-group-014",
+      "name": "腰帶",
+      "items": [
+        { "id": "builds-equipment-015", "name": "腰帶" }
+      ]
+    }
+  ]
+}

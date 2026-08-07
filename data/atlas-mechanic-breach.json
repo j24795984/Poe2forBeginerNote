@@ -1,0 +1,106 @@
+{
+  "schemaVersion": "1.0.0",
+  "dataVersion": "atlas-0.5-001",
+  "id": "atlas-mechanic-guide-breach-001",
+  "idRegistry": {
+    "nextSequence": 100,
+    "retiredIds": []
+  },
+  "mechanicId": "league-breach-054",
+  "sourceMarkdown": "willAddmarkdown/基本說明/裂痕/基本說明-裂痕.md",
+  "slug": "breach",
+  "name": "裂痕",
+  "title": "裂痕－基本說明",
+  "versionNote": "",
+  "summary": "在限時裂痕中快速清怪，收集裂痕斷片、巢裔之血與胎贈，再透過創生之樹推進後續內容。",
+  "sections": [
+    {
+      "id": "breach-guide-section-001",
+      "number": "01",
+      "title": "主要機制",
+      "blocks": [
+        { "type": "list", "ordered": true, "items": ["開啟不穩定裂痕。", "快速擊殺裂痕怪物。", "延展裂痕範圍。", "擊殺穩定後出現的強敵。", "取得裂痕斷片、巢裔之血、胎贈及其他掉落物。"] }
+      ]
+    },
+    {
+      "id": "breach-guide-section-002",
+      "number": "02",
+      "title": "裂痕的整體流程",
+      "blocks": [
+        { "type": "paragraph", "text": "裂痕機制主要由以下循環構成：" },
+        { "type": "list", "ordered": true, "items": ["在輿圖中進入含有裂痕的地圖。", "開啟不穩定裂痕並擊殺裂痕怪物。", "收集裂痕斷片、巢裔之血、胎贈與一般掉落物。", "收集 300 個裂痕斷片，於背包內合成「啟示之胎贈」（若沒有自動合成，先分成 299 的堆疊數量，再往上堆疊即可自動合成）。", "在創生之樹取得裂痕石。", "在輿圖中揭露裂痕區域（背包中須有裂痕石）。", "完成區域周圍的裂痕事件、巢穴與頭目戰。"] },
+        { "type": "callout", "text": "一般裂痕 → 裂痕斷片、巢裔之血、胎贈 → 創生之樹 → 裂痕石或其他產物 → 裂痕區域、巢穴與頭目 → 返回一般裂痕繼續累積資源" }
+      ]
+    },
+    {
+      "id": "breach-guide-section-003",
+      "number": "03",
+      "title": "主要掉落物",
+      "blocks": [
+        { "type": "table", "headers": ["產物", "主要用途"], "columns": "minmax(7rem, .24fr) minmax(0, 1fr)", "rows": [["裂痕斷片", "收集 300 個後合成啟示之胎贈"], ["巢裔之血", "創生之樹的主要消耗資源"], ["胎贈", "放入創生之樹，產生不同獎勵或製作結果"], ["裂痕石", "揭露輿圖上的裂痕區域，推進巢穴與後續內容"], ["催化劑", "用於強化飾品上的特定詞綴類型"], ["裂痕限定裝備", "由胎贈、創生之樹或裂痕相關內容取得"], ["一般掉落物", "通貨、金幣及其他地圖物品"]] }
+      ]
+    },
+    {
+      "id": "breach-guide-section-004",
+      "number": "04",
+      "title": "巢裔之血",
+      "blocks": [
+        { "type": "paragraph", "text": "巢裔之血為裂痕主要消耗資源，用於創生之樹。" },
+        { "type": "table", "headers": ["項目", "內容"], "columns": "minmax(6rem, .25fr) minmax(0, 1fr)", "rows": [["取得方式", "擊殺巢裔怪物"], ["用途", "投入創生之樹，轉換胎贈為對應物品"]] }
+      ]
+    },
+    {
+      "id": "breach-guide-section-005",
+      "number": "05",
+      "title": "胎贈",
+      "blocks": [
+        { "type": "paragraph", "text": "消耗「巢裔之血」轉換成對應類型的獎勵。" },
+        { "type": "table", "headers": ["胎贈類型", "內容"], "columns": "minmax(7.5rem, .28fr) minmax(0, 1fr)", "rows": [["進度型胎贈", "啟示之胎贈"], ["獎勵型胎贈", "包含催化劑等各類型通貨。"], ["製作型胎贈", "轉化成各類型飾品（腰帶、戒指、項鍊等），包含特殊裂痕戒指。"]] },
+        { "type": "paragraph", "text": "不同胎贈可能具有不同的產物類型、物品等級、巢裔之血消耗量、製作風險與市場價值。投入前應先確認胎贈的產物方向，避免把巢裔之血消耗在不符合目前需求的項目上。" }
+      ]
+    },
+    {
+      "id": "breach-guide-section-006",
+      "number": "06",
+      "title": "創生之樹",
+      "titleUrl": "https://poe2db.tw/tw/The_Genesis_Tree#Tree",
+      "blocks": [
+        { "type": "paragraph", "text": "創生之樹是裂痕資源的主要處理系統。" },
+        { "type": "subheading", "text": "基本操作流程" },
+        { "type": "list", "ordered": true, "items": ["將胎贈放入創生之樹。", "轉化成對應物品。", "配置「創生之樹」天賦點。（前期需要先轉化物品才會給對應的天賦點數）"] }
+      ]
+    },
+    {
+      "id": "breach-guide-section-007",
+      "number": "07",
+      "title": "裂痕石",
+      "blocks": [
+        { "type": "paragraph", "text": "裂痕石是從一般裂痕進入後續裂痕內容的關鍵物品。" },
+        { "type": "callout", "text": "收集 300 個裂痕斷片 → 合成啟示之胎贈 → 將啟示之胎贈放入創生之樹 → 取得裂痕石" },
+        { "type": "paragraph", "text": "使用裂痕石時，需要注意：" },
+        { "type": "list", "ordered": false, "items": ["裂痕石必須放在角色背包內。", "符合條件後，輿圖才會顯示可揭露的裂痕區域。", "揭露區域後，可以進行周圍的裂痕系列事件。", "後續內容包含裂痕巢穴、核心與頭目。"] }
+      ]
+    },
+    {
+      "id": "breach-guide-section-008",
+      "number": "08",
+      "title": "裂痕巢穴與後續內容",
+      "blocks": [
+        { "type": "paragraph", "text": "裂痕巢穴屬於裂痕石揭露後的進階內容。玩家可能需要：" },
+        { "type": "list", "ordered": true, "items": ["進入指定的裂痕巢穴。", "保護艾里絲。", "擊退持續出現的敵人。", "協助艾里絲完成摧毀核心的程序。", "完成相關頭目。", "返回據點與 NPC 對話，繼續後續任務。"] },
+        { "type": "callout", "text": "如果防守失敗、關鍵 NPC 死亡或沒有完成後續對話，可能會造成任務看似沒有繼續推進。" }
+      ]
+    },
+    {
+      "id": "breach-guide-section-009",
+      "number": "09",
+      "title": "任務流程簡述",
+      "blocks": [
+        { "type": "paragraph", "text": "裂痕任務主要是引導玩家依序接觸不同層級的裂痕內容：" },
+        { "type": "list", "ordered": true, "items": ["接觸看守者的修道院與周邊裂痕。", "完成據點周圍的指定地圖。", "取得裂痕相關輿圖天賦點。", "透過一般裂痕收集裂痕斷片與相關資源。", "取得裂痕石並揭露後續區域。", "完成裂痕巢穴、核心與頭目內容。", "返回據點完成對話，解鎖後續裂痕內容。"] },
+        { "type": "paragraph", "text": "任務本身是線性引導，不需要在基本說明中逐項列出每個任務名稱。" }
+      ]
+    }
+  ],
+  "sources": []
+}

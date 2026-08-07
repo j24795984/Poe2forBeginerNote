@@ -1,0 +1,1100 @@
+{
+  "schemaVersion": "1.0.0",
+  "dataVersion": "campaign-0.5-001",
+  "locale": "zh-TW",
+  "patchFamily": "0.5",
+  "id": "campaign-relations-document-001",
+  "idRegistry": {
+    "nextSequence": 32,
+    "retiredIds": []
+  },
+  "relations": [
+    {
+      "id": "relation-campaign-chapter-002-contains-campaign-map-007",
+      "type": "containsMapSurface",
+      "chapterId": "campaign-chapter-002",
+      "mapSurfaceId": "campaign-map-007"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-campaign-map-008",
+      "type": "containsMapSurface",
+      "chapterId": "campaign-chapter-002",
+      "mapSurfaceId": "campaign-map-008"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-campaign-map-024",
+      "type": "containsMapSurface",
+      "chapterId": "campaign-chapter-003",
+      "mapSurfaceId": "campaign-map-024"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-campaign-map-025",
+      "type": "containsMapSurface",
+      "chapterId": "campaign-chapter-003",
+      "mapSurfaceId": "campaign-map-025"
+    },
+    {
+      "id": "relation-campaign-chapter-004-contains-campaign-map-026",
+      "type": "containsMapSurface",
+      "chapterId": "campaign-chapter-004",
+      "mapSurfaceId": "campaign-map-026"
+    },
+    {
+      "id": "relation-campaign-chapter-004-contains-campaign-map-027",
+      "type": "containsMapSurface",
+      "chapterId": "campaign-chapter-004",
+      "mapSurfaceId": "campaign-map-027"
+    },
+    {
+      "id": "relation-campaign-chapter-004-contains-campaign-map-028",
+      "type": "containsMapSurface",
+      "chapterId": "campaign-chapter-004",
+      "mapSurfaceId": "campaign-map-028"
+    },
+    {
+      "id": "relation-campaign-chapter-004-contains-campaign-map-029",
+      "type": "containsMapSurface",
+      "chapterId": "campaign-chapter-004",
+      "mapSurfaceId": "campaign-map-029"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-campaign-map-030",
+      "type": "containsMapSurface",
+      "chapterId": "campaign-chapter-005",
+      "mapSurfaceId": "campaign-map-030"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-campaign-map-031",
+      "type": "containsMapSurface",
+      "chapterId": "campaign-chapter-006",
+      "mapSurfaceId": "campaign-map-031"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-main-reaching-clearfell",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-main-reaching-clearfell"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-main-secrets-in-the-dark",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-main-secrets-in-the-dark"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-main-the-mysterious-shade",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-main-the-mysterious-shade"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-main-sorrow-among-stones",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-main-sorrow-among-stones"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-main-trail-of-corruption",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-main-trail-of-corruption"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-main-the-mad-wolf-of-ogham",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-main-the-mad-wolf-of-ogham"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-main-cracks-in-the-earth",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-main-cracks-in-the-earth"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-main-ancient-beacons",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-main-ancient-beacons"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-main-the-runeseeker",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-main-the-runeseeker"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-required-beira",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-required-beira"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-required-crowbell",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-required-crowbell"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-required-king-in-the-mists",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-required-king-in-the-mists"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-required-the-lost-lute",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-required-the-lost-lute"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-required-candlemass",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-required-candlemass"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-recommended-treacherous-ground",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-recommended-treacherous-ground"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-recommended-ominous-altars",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-recommended-ominous-altars"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-recommended-blank-runes",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-recommended-blank-runes"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-act-1-recommended-finding-the-forge",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-002",
+      "questId": "act-1-recommended-finding-the-forge"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-act-2-main-earning-passage",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-003",
+      "questId": "act-2-main-earning-passage"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-act-2-main-trail-of-corruption",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-003",
+      "questId": "act-2-main-trail-of-corruption"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-act-2-main-city-of-seven-waters",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-003",
+      "questId": "act-2-main-city-of-seven-waters"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-act-2-main-a-theft-of-ivory",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-003",
+      "questId": "act-2-main-a-theft-of-ivory"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-act-2-main-a-crown-of-stone",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-003",
+      "questId": "act-2-main-a-crown-of-stone"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-act-2-main-the-forgotten-prisoner",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-003",
+      "questId": "act-2-main-the-forgotten-prisoner"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-act-2-main-back-in-the-bottle",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-003",
+      "questId": "act-2-main-back-in-the-bottle"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-act-2-main-ancient-beacons",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-003",
+      "questId": "act-2-main-ancient-beacons"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-act-2-main-the-runeseeker",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-003",
+      "questId": "act-2-main-the-runeseeker"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-act-2-required-kabala",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-003",
+      "questId": "act-2-required-kabala"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-act-2-required-traditions-toll",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-003",
+      "questId": "act-2-required-traditions-toll"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-act-2-required-ancient-vows",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-003",
+      "questId": "act-2-required-ancient-vows"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-act-2-required-rise-to-power",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-003",
+      "questId": "act-2-required-rise-to-power"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-act-2-required-trial-of-time",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-003",
+      "questId": "act-2-required-trial-of-time"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-act-2-required-sisters-of-garukhan",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-003",
+      "questId": "act-2-required-sisters-of-garukhan"
+    },
+    {
+      "id": "relation-campaign-chapter-004-contains-act-3-main-legacy-of-the-vaal",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-004",
+      "questId": "act-3-main-legacy-of-the-vaal"
+    },
+    {
+      "id": "relation-campaign-chapter-004-contains-act-3-main-ancient-beacons",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-004",
+      "questId": "act-3-main-ancient-beacons"
+    },
+    {
+      "id": "relation-campaign-chapter-004-contains-act-3-main-the-runeseeker",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-004",
+      "questId": "act-3-main-the-runeseeker"
+    },
+    {
+      "id": "relation-campaign-chapter-004-contains-act-3-required-slithering-dead",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-004",
+      "questId": "act-3-required-slithering-dead"
+    },
+    {
+      "id": "relation-campaign-chapter-004-contains-act-3-required-treasures-of-utzaal",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-004",
+      "questId": "act-3-required-treasures-of-utzaal"
+    },
+    {
+      "id": "relation-campaign-chapter-004-contains-act-3-required-trials-of-chaos",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-004",
+      "questId": "act-3-required-trials-of-chaos"
+    },
+    {
+      "id": "relation-campaign-chapter-004-contains-act-3-required-silverfist",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-004",
+      "questId": "act-3-required-silverfist"
+    },
+    {
+      "id": "relation-campaign-chapter-004-contains-act-3-required-ignagduk",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-004",
+      "questId": "act-3-required-ignagduk"
+    },
+    {
+      "id": "relation-campaign-chapter-004-contains-act-3-required-blackjaw",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-004",
+      "questId": "act-3-required-blackjaw"
+    },
+    {
+      "id": "relation-campaign-chapter-004-contains-act-3-required-sacrificial-heart",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-004",
+      "questId": "act-3-required-sacrificial-heart"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-main-the-search",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-main-the-search"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-main-shrike-island",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-main-shrike-island"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-main-land-of-the-kin",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-main-land-of-the-kin"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-main-utopia",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-main-utopia"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-main-dark-mists",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-main-dark-mists"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-main-siege-of-oriath",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-main-siege-of-oriath"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-main-fate-of-the-vaal",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-main-fate-of-the-vaal"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-required-blind-beast",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-required-blind-beast"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-required-tribal-medicine",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-required-tribal-medicine"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-required-trial-of-the-ancestors",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-required-trial-of-the-ancestors"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-required-tawhoas-test",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-required-tawhoas-test"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-required-tasalios-test",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-required-tasalios-test"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-required-ngamahus-test",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-required-ngamahus-test"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-required-journeys-end",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-required-journeys-end"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-required-eye-of-hinekora",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-required-eye-of-hinekora"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-required-halls-of-the-dead",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-required-halls-of-the-dead"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-required-justice-statue",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-required-justice-statue"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-required-great-white-one",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-required-great-white-one"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-act-4-recommended-torn-map-pieces",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-005",
+      "questId": "act-4-recommended-torn-map-pieces"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-interlude-main-siege-of-oriath",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-006",
+      "questId": "interlude-main-siege-of-oriath"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-interlude-main-infiltrating-oriath",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-006",
+      "questId": "interlude-main-infiltrating-oriath"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-interlude-main-pinned-down",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-006",
+      "questId": "interlude-main-pinned-down"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-interlude-main-pleasure-and-pain",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-006",
+      "questId": "interlude-main-pleasure-and-pain"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-interlude-main-the-blighted-never-rest",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-006",
+      "questId": "interlude-main-the-blighted-never-rest"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-interlude-main-recruit-the-ezomytes",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-006",
+      "questId": "interlude-main-recruit-the-ezomytes"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-interlude-main-recruit-the-maraketh",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-006",
+      "questId": "interlude-main-recruit-the-maraketh"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-interlude-main-recruit-the-vaal",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-006",
+      "questId": "interlude-main-recruit-the-vaal"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-interlude-required-akthi-anundr",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-006",
+      "questId": "interlude-required-akthi-anundr"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-interlude-required-molten-shrine",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-006",
+      "questId": "interlude-required-molten-shrine"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-interlude-required-howling-winds",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-006",
+      "questId": "interlude-required-howling-winds"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-interlude-required-oswin",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-006",
+      "questId": "interlude-required-oswin"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-interlude-required-seven-pillars",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-006",
+      "questId": "interlude-required-seven-pillars"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-interlude-required-laytara",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-006",
+      "questId": "interlude-required-laytara"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-interlude-required-finish",
+      "type": "containsQuest",
+      "chapterId": "campaign-chapter-006",
+      "questId": "interlude-required-finish"
+    },
+    {
+      "id": "relation-campaign-chapter-002-contains-campaign-segment-act-1",
+      "type": "containsChapterSegment",
+      "chapterId": "campaign-chapter-002",
+      "segmentId": "campaign-segment-act-1"
+    },
+    {
+      "id": "relation-campaign-chapter-003-contains-campaign-segment-act-2",
+      "type": "containsChapterSegment",
+      "chapterId": "campaign-chapter-003",
+      "segmentId": "campaign-segment-act-2"
+    },
+    {
+      "id": "relation-campaign-chapter-004-contains-campaign-segment-act-3",
+      "type": "containsChapterSegment",
+      "chapterId": "campaign-chapter-004",
+      "segmentId": "campaign-segment-act-3"
+    },
+    {
+      "id": "relation-campaign-chapter-005-contains-campaign-segment-act-4",
+      "type": "containsChapterSegment",
+      "chapterId": "campaign-chapter-005",
+      "segmentId": "campaign-segment-act-4"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-campaign-segment-interlude-1",
+      "type": "containsChapterSegment",
+      "chapterId": "campaign-chapter-006",
+      "segmentId": "campaign-segment-interlude-1"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-campaign-segment-interlude-2",
+      "type": "containsChapterSegment",
+      "chapterId": "campaign-chapter-006",
+      "segmentId": "campaign-segment-interlude-2"
+    },
+    {
+      "id": "relation-campaign-chapter-006-contains-campaign-segment-interlude-3",
+      "type": "containsChapterSegment",
+      "chapterId": "campaign-chapter-006",
+      "segmentId": "campaign-segment-interlude-3"
+    },
+    {
+      "id": "relation-campaign-segment-act-1-contains-campaign-segment-act-1-reward-01-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-002",
+      "segmentId": "campaign-segment-act-1",
+      "rewardId": "campaign-segment-act-1-reward-01-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-1-reward-01-entry-located-on-campaign-map-007",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-002",
+      "rewardId": "campaign-segment-act-1-reward-01-entry",
+      "mapSurfaceId": "campaign-map-007",
+      "pointNames": [
+        "皆伐"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-1-contains-campaign-segment-act-1-reward-02-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-002",
+      "segmentId": "campaign-segment-act-1",
+      "rewardId": "campaign-segment-act-1-reward-02-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-1-reward-02-entry-located-on-campaign-map-007",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-002",
+      "rewardId": "campaign-segment-act-1-reward-02-entry",
+      "mapSurfaceId": "campaign-map-007",
+      "pointNames": [
+        "獵場"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-1-contains-campaign-segment-act-1-reward-03-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-002",
+      "segmentId": "campaign-segment-act-1",
+      "rewardId": "campaign-segment-act-1-reward-03-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-1-reward-03-entry-located-on-campaign-map-007",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-002",
+      "rewardId": "campaign-segment-act-1-reward-03-entry",
+      "mapSurfaceId": "campaign-map-007",
+      "pointNames": [
+        "弗雷索恩"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-1-contains-campaign-segment-act-1-reward-04-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-002",
+      "segmentId": "campaign-segment-act-1",
+      "rewardId": "campaign-segment-act-1-reward-04-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-1-reward-04-entry-located-on-campaign-map-007",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-002",
+      "rewardId": "campaign-segment-act-1-reward-04-entry",
+      "mapSurfaceId": "campaign-map-007",
+      "pointNames": [
+        "奧格姆農地"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-1-contains-campaign-segment-act-1-reward-05-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-002",
+      "segmentId": "campaign-segment-act-1",
+      "rewardId": "campaign-segment-act-1-reward-05-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-1-reward-05-entry-located-on-campaign-map-008",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-002",
+      "rewardId": "campaign-segment-act-1-reward-05-entry",
+      "mapSurfaceId": "campaign-map-008",
+      "pointNames": [
+        "奧格姆宅第"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-2-contains-campaign-segment-act-2-reward-01-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-003",
+      "segmentId": "campaign-segment-act-2",
+      "rewardId": "campaign-segment-act-2-reward-01-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-2-reward-01-entry-located-on-campaign-map-024",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-003",
+      "rewardId": "campaign-segment-act-2-reward-01-entry",
+      "mapSurfaceId": "campaign-map-024",
+      "pointNames": [
+        "凱斯城"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-2-contains-campaign-segment-act-2-reward-02-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-003",
+      "segmentId": "campaign-segment-act-2",
+      "rewardId": "campaign-segment-act-2-reward-02-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-2-reward-02-entry-located-on-campaign-map-024",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-003",
+      "rewardId": "campaign-segment-act-2-reward-02-entry",
+      "mapSurfaceId": "campaign-map-024",
+      "pointNames": [
+        "凱斯城",
+        "骨坑",
+        "泰坦之谷"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-2-contains-campaign-segment-act-2-reward-03-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-003",
+      "segmentId": "campaign-segment-act-2",
+      "rewardId": "campaign-segment-act-2-reward-03-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-2-reward-03-entry-located-on-campaign-map-025",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-003",
+      "rewardId": "campaign-segment-act-2-reward-03-entry",
+      "mapSurfaceId": "campaign-map-025",
+      "pointNames": [
+        "叛徒之路"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-2-contains-campaign-segment-act-2-reward-04-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-003",
+      "segmentId": "campaign-segment-act-2",
+      "rewardId": "campaign-segment-act-2-reward-04-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-2-reward-04-entry-located-on-campaign-map-024",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-003",
+      "rewardId": "campaign-segment-act-2-reward-04-entry",
+      "mapSurfaceId": "campaign-map-024",
+      "pointNames": [
+        "無光通道"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-2-contains-campaign-segment-act-2-reward-05-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-003",
+      "segmentId": "campaign-segment-act-2",
+      "rewardId": "campaign-segment-act-2-reward-05-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-2-reward-05-entry-located-on-campaign-map-024",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-003",
+      "rewardId": "campaign-segment-act-2-reward-05-entry",
+      "mapSurfaceId": "campaign-map-024",
+      "pointNames": [
+        "戴斯哈"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-2-contains-campaign-segment-act-2-reward-06-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-003",
+      "segmentId": "campaign-segment-act-2",
+      "rewardId": "campaign-segment-act-2-reward-06-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-2-reward-06-entry-located-on-campaign-map-024",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-003",
+      "rewardId": "campaign-segment-act-2-reward-06-entry",
+      "mapSurfaceId": "campaign-map-024",
+      "pointNames": [
+        "戴斯哈尖塔"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-3-contains-campaign-segment-act-3-reward-01-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-004",
+      "segmentId": "campaign-segment-act-3",
+      "rewardId": "campaign-segment-act-3-reward-01-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-3-reward-01-entry-located-on-campaign-map-026",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-004",
+      "rewardId": "campaign-segment-act-3-reward-01-entry",
+      "mapSurfaceId": "campaign-map-026",
+      "pointNames": [
+        "叢林遺跡"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-3-contains-campaign-segment-act-3-reward-02-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-004",
+      "segmentId": "campaign-segment-act-3",
+      "rewardId": "campaign-segment-act-3-reward-02-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-3-reward-02-entry-located-on-campaign-map-026",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-004",
+      "rewardId": "campaign-segment-act-3-reward-02-entry",
+      "mapSurfaceId": "campaign-map-026",
+      "pointNames": [
+        "阿札克泥沼"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-3-contains-campaign-segment-act-3-reward-03-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-004",
+      "segmentId": "campaign-segment-act-3",
+      "rewardId": "campaign-segment-act-3-reward-03-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-3-reward-03-entry-located-on-campaign-map-026",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-004",
+      "rewardId": "campaign-segment-act-3-reward-03-entry",
+      "mapSurfaceId": "campaign-map-026",
+      "pointNames": [
+        "劇毒墓穴"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-3-contains-campaign-segment-act-3-reward-04-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-004",
+      "segmentId": "campaign-segment-act-3",
+      "rewardId": "campaign-segment-act-3-reward-04-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-3-reward-04-entry-located-on-campaign-map-027",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-004",
+      "rewardId": "campaign-segment-act-3-reward-04-entry",
+      "mapSurfaceId": "campaign-map-027",
+      "pointNames": [
+        "吉卡尼的機械迷城"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-3-contains-campaign-segment-act-3-reward-05-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-004",
+      "segmentId": "campaign-segment-act-3",
+      "rewardId": "campaign-segment-act-3-reward-05-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-3-reward-05-entry-located-on-campaign-map-026",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-004",
+      "rewardId": "campaign-segment-act-3-reward-05-entry",
+      "mapSurfaceId": "campaign-map-026",
+      "pointNames": [
+        "混沌神殿"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-3-contains-campaign-segment-act-3-reward-06-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-004",
+      "segmentId": "campaign-segment-act-3",
+      "rewardId": "campaign-segment-act-3-reward-06-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-3-reward-06-entry-located-on-campaign-map-028",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-004",
+      "rewardId": "campaign-segment-act-3-reward-06-entry",
+      "mapSurfaceId": "campaign-map-028",
+      "pointNames": [
+        "阿戈拉",
+        "奧札爾"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-4-contains-campaign-segment-act-4-reward-01-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-005",
+      "segmentId": "campaign-segment-act-4",
+      "rewardId": "campaign-segment-act-4-reward-01-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-4-reward-01-entry-located-on-campaign-map-030",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-005",
+      "rewardId": "campaign-segment-act-4-reward-01-entry",
+      "mapSurfaceId": "campaign-map-030",
+      "pointNames": [
+        "旅程之末"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-4-contains-campaign-segment-act-4-reward-02-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-005",
+      "segmentId": "campaign-segment-act-4",
+      "rewardId": "campaign-segment-act-4-reward-02-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-4-reward-02-entry-located-on-campaign-map-030",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-005",
+      "rewardId": "campaign-segment-act-4-reward-02-entry",
+      "mapSurfaceId": "campaign-map-030",
+      "pointNames": [
+        "悉妮蔻拉之眼－沉默之廳"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-4-contains-campaign-segment-act-4-reward-03-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-005",
+      "segmentId": "campaign-segment-act-4",
+      "rewardId": "campaign-segment-act-4-reward-03-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-4-reward-03-entry-located-on-campaign-map-030",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-005",
+      "rewardId": "campaign-segment-act-4-reward-03-entry",
+      "mapSurfaceId": "campaign-map-030",
+      "pointNames": [
+        "瓦卡帕努島"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-4-contains-campaign-segment-act-4-reward-04-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-005",
+      "segmentId": "campaign-segment-act-4",
+      "rewardId": "campaign-segment-act-4-reward-04-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-4-reward-04-entry-located-on-campaign-map-030",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-005",
+      "rewardId": "campaign-segment-act-4-reward-04-entry",
+      "mapSurfaceId": "campaign-map-030",
+      "pointNames": [
+        "亡者之殿"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-4-contains-campaign-segment-act-4-reward-05-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-005",
+      "segmentId": "campaign-segment-act-4",
+      "rewardId": "campaign-segment-act-4-reward-05-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-4-reward-05-entry-located-on-campaign-map-030",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-005",
+      "rewardId": "campaign-segment-act-4-reward-05-entry",
+      "mapSurfaceId": "campaign-map-030",
+      "pointNames": [
+        "亡者之殿"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-4-contains-campaign-segment-act-4-reward-06-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-005",
+      "segmentId": "campaign-segment-act-4",
+      "rewardId": "campaign-segment-act-4-reward-06-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-4-reward-06-entry-located-on-campaign-map-030",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-005",
+      "rewardId": "campaign-segment-act-4-reward-06-entry",
+      "mapSurfaceId": "campaign-map-030",
+      "pointNames": [
+        "廢棄監獄"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-act-4-contains-campaign-segment-act-4-reward-07-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-005",
+      "segmentId": "campaign-segment-act-4",
+      "rewardId": "campaign-segment-act-4-reward-07-entry"
+    },
+    {
+      "id": "relation-campaign-segment-act-4-reward-07-entry-located-on-campaign-map-030",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-005",
+      "rewardId": "campaign-segment-act-4-reward-07-entry",
+      "mapSurfaceId": "campaign-map-030",
+      "pointNames": [
+        "凱吉灣",
+        "金氏島",
+        "瓦卡帕努島",
+        "伯勞鳥之島"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-interlude-1-contains-campaign-segment-interlude-1-reward-01-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-006",
+      "segmentId": "campaign-segment-interlude-1",
+      "rewardId": "campaign-segment-interlude-1-reward-01-entry"
+    },
+    {
+      "id": "relation-campaign-segment-interlude-1-reward-01-entry-located-on-campaign-map-031",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-006",
+      "rewardId": "campaign-segment-interlude-1-reward-01-entry",
+      "mapSurfaceId": "campaign-map-031",
+      "pointNames": [
+        "卡里交會道"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-interlude-1-contains-campaign-segment-interlude-1-reward-02-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-006",
+      "segmentId": "campaign-segment-interlude-1",
+      "rewardId": "campaign-segment-interlude-1-reward-02-entry"
+    },
+    {
+      "id": "relation-campaign-segment-interlude-1-reward-02-entry-located-on-campaign-map-031",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-006",
+      "rewardId": "campaign-segment-interlude-1-reward-02-entry",
+      "mapSurfaceId": "campaign-map-031",
+      "pointNames": [
+        "卡里交會道"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-interlude-1-contains-campaign-segment-interlude-1-reward-03-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-006",
+      "segmentId": "campaign-segment-interlude-1",
+      "rewardId": "campaign-segment-interlude-1-reward-03-entry"
+    },
+    {
+      "id": "relation-campaign-segment-interlude-1-reward-03-entry-located-on-campaign-map-031",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-006",
+      "rewardId": "campaign-segment-interlude-1-reward-03-entry",
+      "mapSurfaceId": "campaign-map-031",
+      "pointNames": [
+        "奇瑪"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-interlude-2-contains-campaign-segment-interlude-2-reward-01-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-006",
+      "segmentId": "campaign-segment-interlude-2",
+      "rewardId": "campaign-segment-interlude-2-reward-01-entry"
+    },
+    {
+      "id": "relation-campaign-segment-interlude-2-reward-01-entry-located-on-campaign-map-031",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-006",
+      "rewardId": "campaign-segment-interlude-2-reward-01-entry",
+      "mapSurfaceId": "campaign-map-031",
+      "pointNames": [
+        "庫萊亞村"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-interlude-2-contains-campaign-segment-interlude-2-reward-02-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-006",
+      "segmentId": "campaign-segment-interlude-2",
+      "rewardId": "campaign-segment-interlude-2-reward-02-entry"
+    },
+    {
+      "id": "relation-campaign-segment-interlude-2-reward-02-entry-located-on-campaign-map-031",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-006",
+      "rewardId": "campaign-segment-interlude-2-reward-02-entry",
+      "mapSurfaceId": "campaign-map-031",
+      "pointNames": [
+        "狂嗥洞穴"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-interlude-3-contains-campaign-segment-interlude-3-reward-01-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-006",
+      "segmentId": "campaign-segment-interlude-3",
+      "rewardId": "campaign-segment-interlude-3-reward-01-entry"
+    },
+    {
+      "id": "relation-campaign-segment-interlude-3-reward-01-entry-located-on-campaign-map-031",
+      "type": "locatedOnMapSurface",
+      "chapterId": "campaign-chapter-006",
+      "rewardId": "campaign-segment-interlude-3-reward-01-entry",
+      "mapSurfaceId": "campaign-map-031",
+      "pointNames": [
+        "狼之要塞"
+      ]
+    },
+    {
+      "id": "relation-campaign-segment-interlude-3-contains-campaign-segment-interlude-3-reward-02-entry",
+      "type": "containsReward",
+      "chapterId": "campaign-chapter-006",
+      "segmentId": "campaign-segment-interlude-3",
+      "rewardId": "campaign-segment-interlude-3-reward-02-entry"
+    }
+  ]
+}

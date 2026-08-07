@@ -1,0 +1,217 @@
+{
+  "schemaVersion": "1.0.0",
+  "dataVersion": "crafting-0.2-001",
+  "id": "crafting-methods-001",
+  "idRegistry": { "nextSequence": 9, "retiredIds": [] },
+  "title": "實際製作流程",
+  "pricePolicy": "成本只使用極低、低、中、高、極高或奢侈分級，不寫死通貨價格。開始製作前請重新查價。",
+  "methodGroups": [
+    {
+      "id": "crafting-group-basic",
+      "navigation": { "slug": "basic-crafting", "name": "基礎做裝", "englishName": "BASIC CRAFTING" },
+      "summary": "從便宜基底開始，使用基礎通貨或精髓點出核心詞綴；每一步都先判斷是否值得繼續投入。",
+      "stageIds": ["crafting-stage-g0", "crafting-stage-g1", "crafting-stage-g2", "crafting-stage-g3"],
+      "methodIds": ["crafting-method-basic-magic", "crafting-method-essence"],
+      "decisionGuide": [
+        {
+          "title": "白裝起手",
+          "description": "基底便宜且可大量替換時，使用蛻變、增幅與富豪逐步點出可用詞綴。"
+        },
+        {
+          "title": "藍裝接續",
+          "description": "掉落藍裝已具有值得保留的核心詞時，從增幅或富豪開始，避免重做已完成的部分。"
+        },
+        {
+          "title": "精髓定向",
+          "description": "需要指定核心詞時使用精髓；先確認詞綴位置，再判斷其餘結果是否值得補詞。"
+        }
+      ]
+    }
+  ],
+  "methods": [
+    {
+      "id": "crafting-method-basic-magic",
+      "name": "白底／藍底基礎加工",
+      "navigation": { "slug": "basic-magic", "name": "基礎加工", "englishName": "BASIC" },
+      "description": "從白、藍裝開始製作。",
+      "stageIds": ["crafting-stage-g0", "crafting-stage-g1"],
+      "investment": "極低",
+      "risk": "低",
+      "materials": ["合適基底", "品質通貨（視需求）", "蛻變石", "增幅石", "富豪石", "崇高石（選用）"],
+      "startConditions": ["基底適合流派。", "預期使用時間足以抵銷少量材料成本。"],
+      "steps": [
+        "選擇適合的白色基底並視需求先提升品質。",
+        "使用蛻變石升為魔法物品。",
+        "保留第一條核心有效詞；不符合就更換便宜基底重來。",
+        "使用增幅石加入第二條魔法詞綴。",
+        "兩條詞都可接受時使用富豪石升為稀有物品。",
+        "成品仍有空詞且值得保留時，才使用崇高石補詞。"
+      ],
+      "successResult": "2 條核心有效詞，另有 1～2 條次要有效詞。",
+      "stopWhen": "足以支撐接下來的主線進度，或下一次加工成本已接近直接換裝成本。"
+    },
+    {
+      "id": "crafting-method-essence",
+      "name": "精髓定向製作",
+      "navigation": { "slug": "essence", "name": "精髓製作", "englishName": "ESSENCE" },
+      "description": "使用精髓建立指定核心詞，再評估其餘詞綴是否值得繼續加工。",
+      "stageIds": ["crafting-stage-g0", "crafting-stage-g1", "crafting-stage-g2", "crafting-stage-g3"],
+      "investment": "低至中",
+      "risk": "低至中",
+      "materials": ["正確基底", "普通／高階／完美精髓", "崇高石", "符文"],
+      "startConditions": ["目標核心詞可由精髓建立。", "已確認精髓會影響前綴或後綴。"],
+      "steps": [
+        "確認基底、物品等級與目標精髓詞。",
+        "先處理品質，再建立可接受的初始詞綴。",
+        "使用符合階段成本的精髓加入核心詞。",
+        "檢查其餘詞綴是否能補足生命、防禦、抗性或傷害。",
+        "有空詞且成品值得繼續時，使用崇高石補詞。",
+        "最後用插槽與符文補足整套裝備缺口。"
+      ],
+      "successResult": "G2 約 3～4 條有效詞；G3 約 4～5 條有效詞。",
+      "stopWhen": "裝備已達目前階段需求，或繼續製作的平均成本高於交易升級。"
+    },
+    {
+      "id": "crafting-method-chaos-repair",
+      "name": "混沌石局部修正",
+      "navigation": { "slug": "chaos-repair", "name": "混沌修正", "englishName": "CHAOS" },
+      "description": "針對已有多條有效詞的稀有裝備，替換單一不理想詞綴。",
+      "stageIds": ["crafting-stage-g2", "crafting-stage-g3", "crafting-stage-g4"],
+      "investment": "中",
+      "risk": "中至高",
+      "materials": ["已有多條有效詞的稀有裝備", "混沌石", "控制移除側別的預兆（後期）"],
+      "startConditions": ["裝備只有 1 條明顯錯誤詞。", "失敗後仍有恢復路線或可承受損失。"],
+      "steps": [
+        "標記不可失去的核心前綴與後綴。",
+        "判斷是否需要用預兆限制移除前綴或後綴。",
+        "使用混沌石移除一條詞綴並加入一條隨機詞綴。",
+        "新詞達標便保留；未達標則重新評估裝備價值與剩餘預算。"
+      ],
+      "successResult": "以單次風險把明顯垃圾詞替換成可用詞。",
+      "stopWhen": "任何一次移除都可能破壞多條高價詞，或只剩最後一條不完美。"
+    },
+    {
+      "id": "crafting-method-fracture",
+      "name": "破裂核心詞後重建",
+      "navigation": { "slug": "fracture", "name": "破裂製作", "englishName": "FRACTURE" },
+      "description": "先固定最難重現的核心詞，再圍繞破裂詞重建其餘詞綴。",
+      "stageIds": ["crafting-stage-g3", "crafting-stage-g4", "crafting-stage-g5"],
+      "investment": "高至極高",
+      "risk": "高",
+      "materials": ["高物品等級稀有基底", "破裂石", "補足四詞的材料", "後續精髓／預兆／高階通貨"],
+      "startConditions": ["存在一條極難重現且會決定成品價值的核心詞。", "基底與成品價值足以承擔破裂成本。", "裝備至少可整理成四條詞綴。"],
+      "steps": [
+        "先列出目標三前綴與三後綴，選出最難重現的詞。",
+        "購買或自行製作正確基底上的核心詞。",
+        "將裝備補至至少四條詞綴，但不要無意義補滿六條。",
+        "讓其他破裂候選詞至少仍具有出售或轉向價值。",
+        "使用破裂石並依結果選擇繼續、轉向或停止。",
+        "成功破裂核心詞後，才投入精髓、預兆與高階通貨重建其餘詞綴。"
+      ],
+      "successResult": "最難重現的核心詞永久固定，後續能圍繞它反覆製作。",
+      "stopWhen": "破裂到無效詞，或成功後續製作已達 G4 的四至五條有效詞需求。"
+    },
+    {
+      "id": "crafting-method-side-control",
+      "name": "前綴／後綴分側製作",
+      "navigation": { "slug": "side-control", "name": "分側製作", "englishName": "SIDE CONTROL" },
+      "description": "完成較難的一側後保護該側，接著定向製作另一側。",
+      "stageIds": ["crafting-stage-g4", "crafting-stage-g5"],
+      "investment": "高",
+      "risk": "高",
+      "materials": ["已固定的核心詞", "精髓或 Alloy", "控制側別的預兆", "高階／完美崇高石"],
+      "startConditions": ["已確認核心詞位於前綴或後綴。", "已決定先完成較難的一側。"],
+      "steps": [
+        "建立第二條可保證或可定向取得的核心詞。",
+        "優先完成較難的前綴或後綴。",
+        "完成一側後，停止所有可能破壞該側的操作。",
+        "使用預兆限制後續移除與替換只發生在另一側。",
+        "定向補空詞並逐次檢查詞綴階級與替代詞。"
+      ],
+      "successResult": "一側完整受保護，另一側可以控制風險地逐步完成。",
+      "stopWhen": "已有四至五條高品質有效詞，或最後一詞的風險大於角色提升。"
+    },
+    {
+      "id": "crafting-method-finishing",
+      "name": "數值與最終加工",
+      "navigation": { "slug": "finishing", "name": "最終加工", "englishName": "FINISHING" },
+      "description": "主要詞綴確定後，再完成數值、品質、插槽、符文與最終處理。",
+      "stageIds": ["crafting-stage-g4", "crafting-stage-g5"],
+      "investment": "中至極高",
+      "risk": "依操作而異",
+      "materials": ["神聖石", "品質材料", "插槽材料", "符文", "聖化材料", "腐化材料"],
+      "startConditions": ["主要詞綴種類與階級已正確。", "不再需要可能重置成品的高風險製作。"],
+      "steps": [
+        "使用神聖石調整真正影響傷害或防禦的數值。",
+        "完成品質、插槽與符文。",
+        "確認後續操作不會使目前加工失效。",
+        "視需求完成聖化。",
+        "只有在不再需要普通修改時，最後才考慮腐化。"
+      ],
+      "successResult": "詞綴、數值、品質、插槽與符文均完成。",
+      "stopWhen": "腐化前尚未完成其他加工，或額外投入只帶來極小提升。"
+    }
+  ],
+  "advancedFlows": [
+    {
+      "id": "crafting-flow-endgame",
+      "name": "後期裝通用流程",
+      "stageId": "crafting-stage-g4",
+      "goal": "以合理成本完成四至五條有效詞，穩定挑戰 T15～T16、城塞與一般終局頭目。",
+      "investment": "高",
+      "risk": "需要逐步停損",
+      "steps": [
+        { "title": "定義必要詞綴", "description": "先決定至少四條必要詞綴，拆分三個前綴與三個後綴，並準備可接受替代詞。" },
+        { "title": "取得正確基底", "description": "確認基底固有能力、物品等級、武器攻速／暴擊或防具基礎值。" },
+        { "title": "判斷是否需要破裂", "description": "若沒有極難重現的核心詞，直接使用精髓或高階通貨；若有，先取得核心詞並嘗試破裂。" },
+        { "title": "建立第二核心詞", "description": "使用精髓、Alloy、褻瀆或其他定向方法建立第二條關鍵詞。" },
+        { "title": "先完成較難的一側", "description": "前綴或後綴哪一側較難，就先完成哪一側。" },
+        { "title": "保護完成側", "description": "使用預兆限制後續操作只影響未完成的一側。" },
+        { "title": "補至四至五條有效詞", "description": "以高階通貨或定向補詞完成成品，最多接受一條普通或無效詞。" },
+        { "title": "達標即停手", "description": "角色已能穩定完成目標內容時停止，優先把資金分配到其他裝備部位。" }
+      ]
+    },
+    {
+      "id": "crafting-flow-high-budget",
+      "name": "高成本／畢業裝完整流程",
+      "stageId": "crafting-stage-g5",
+      "goal": "完成五至六條高階有效詞，並將最難重現的製作步驟永久固定。",
+      "investment": "極高／奢侈",
+      "risk": "接受重做，但每一步都必須設定最大預算",
+      "coreRule": "最難重現的詞先做；最怕失去的詞先破裂；完成其中一側後，只操作另一側。",
+      "budgetNotice": "請確保資金至少有 800 D（賽季初期約 100～200 D）再自行製作裝備。",
+      "steps": [
+        { "title": "列出完整六詞目標", "description": "分別列出三個前綴與三個後綴，標記核心詞、保證詞、特殊詞與替代詞。" },
+        { "title": "確認頂級基底與物品等級", "description": "所有目標詞都必須能在該基底出現；基底本身也要值得承擔高價材料。" },
+        { "title": "建立最難自然詞", "description": "優先購買核心詞基底，或以高階蛻變、特殊機制自行建立。" },
+        { "title": "整理破裂候選詞", "description": "將稀有裝備整理成至少四條詞綴；候選詞越少，指定詞被破裂的基礎機率越高。" },
+        { "title": "使用破裂石", "description": "只有破裂到主要核心詞才沿原計畫繼續；偏離時轉向或出售，無效時停止投入。" },
+        { "title": "建立第二核心詞", "description": "用精髓、Alloy、褻瀆或其他可保證方法建立第二條核心詞。" },
+        { "title": "完成較難的一側", "description": "先完成較難的前綴或後綴，之後不再使用可能破壞該側的操作。" },
+        { "title": "定向完成另一側", "description": "使用預兆控制移除側別，再用高階或完美崇高石補空詞。" },
+        { "title": "評估最後一條詞", "description": "比較目前成品價值、平均成本、失敗損失與實際角色提升，決定繼續或停手。" },
+        { "title": "調整數值", "description": "詞綴種類與階級完全正確後，才使用神聖石調整數值。" },
+        { "title": "完成品質、插槽與符文", "description": "確認不會被後續製作覆蓋，再完成所有非腐化加工。" },
+        { "title": "最後才腐化", "description": "只有在不再需要普通修改且能承擔成品損失時，才進行腐化。" }
+      ],
+      "fractureOutcomes": [
+        { "result": "成功破裂核心詞", "action": "進入後續分側製作。", "tone": "success" },
+        { "result": "破裂到另一條有價值詞", "action": "重新評估其他流派、製作方向或出售。", "tone": "redirect" },
+        { "result": "破裂到無效詞", "action": "停止高價投入，過渡使用、出售或放棄。", "tone": "stop" }
+      ]
+    }
+  ],
+  "preflightChecklist": [
+    { "group": "基底", "items": ["基底類型與固有能力正確。", "物品等級足以出現所有目標詞。", "武器攻速、暴擊率或防具基礎值合格。", "基底值得投入高價材料。"] },
+    { "group": "目標詞綴", "items": ["已列出三條前綴與三條後綴。", "已確認最難取得的核心詞。", "已確認可由精髓或 Alloy 保證的詞。", "已準備可接受替代詞。"] },
+    { "group": "破裂", "items": ["裝備為至少四詞的稀有物品。", "候選詞數已降到合理範圍。", "其他候選詞仍具有部分價值。", "已設定三種破裂結果的處理方式。"] },
+    { "group": "後續製作", "items": ["已決定先完成前綴或後綴。", "已確認預兆與精髓的作用側別。", "已設定最大預算與停手點。", "腐化安排在最後一步。"] }
+  ],
+  "sources": [
+    { "name": "POE2DB 製作系統", "url": "https://poe2db.tw/tw/Crafting" },
+    { "name": "POE2DB 通貨", "url": "https://poe2db.tw/tw/Currency" },
+    { "name": "POE2DB 精髓", "url": "https://poe2db.tw/tw/Essence" },
+    { "name": "POE2DB 預兆", "url": "https://poe2db.tw/tw/Omen" },
+    { "name": "台服通貨交易價格", "url": "https://poe2db.tw/tw/Economy" }
+  ]
+}
