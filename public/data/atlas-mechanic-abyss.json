@@ -1,0 +1,230 @@
+{
+  "schemaVersion": "1.0.0",
+  "dataVersion": "atlas-0.5-001",
+  "id": "atlas-mechanic-guide-abyss-001",
+  "idRegistry": {
+    "nextSequence": 100,
+    "retiredIds": []
+  },
+  "mechanicId": "league-abyss-053",
+  "sourceMarkdown": "willAddmarkdown/基本說明/深淵/基本說明-深淵.md",
+  "slug": "abyss",
+  "name": "深淵",
+  "title": "深淵－基本說明",
+  "versionNote": "版本基準：POE2 0.5。本文使用台服用語；後續版本若調整掉落、褻瀆詞綴或輿圖天賦，應以遊戲內說明與官方公告為準。",
+  "summary": "從地表裂縫、坑洞與寶庫一路推進至無盡深淵、一般頭目與骷髏馬克的容器。",
+  "sections": [
+    {
+      "id": "abyss-guide-section-001",
+      "number": "01",
+      "title": "機制概述",
+      "blocks": [
+        { "type": "paragraph", "text": "深淵的核心流程是：" },
+        { "type": "callout", "text": "擊殺裂縫附近受影響的怪物 → 關閉裂縫 → 啟動坑洞 → 擊殺生成的深淵怪物 → 取得寶箱、古老骨頭或無盡深淵入口" },
+        { "type": "paragraph", "text": "深淵內容可分成四層：" },
+        {
+          "type": "table",
+          "headers": ["內容", "說明"],
+          "columns": "minmax(7rem, .32fr) minmax(0, 1fr)",
+          "rows": [
+            ["一般深淵", "地圖中的裂縫與坑洞遭遇。"],
+            ["無盡深淵", "完成區域最後一個深淵時，可能出現的地下地牢。"],
+            ["一般深淵頭目", "在高等級無盡深淵或特定換界石中遭遇。"],
+            ["骷髏馬克的容器", "使用「骷髏馬克的邀請」進入的深淵巔峰頭目戰。"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abyss-guide-section-002",
+      "number": "02",
+      "title": "一般深淵流程",
+      "blocks": [
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "沿著裂縫移動，擊殺附近受到深淵影響的怪物（怪物身上有綠色亮光）。",
+            "怪物死亡後，對應的裂縫會逐步關閉。",
+            "關閉通往同一坑洞的所有裂縫後，啟動坑洞；擊殺坑洞生成的怪物並關閉坑洞，檢查是否產生深淵寶庫。",
+            "完成區域內最後一個深淵後，檢查是否出現無盡深淵入口。"
+          ]
+        },
+        { "type": "paragraph", "text": "深淵怪物分為黯光者、黑血者與巨坑軍團。每個區域通常以其中一個勢力為主。" },
+        { "type": "subheading", "text": "怪物詞綴規則" },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "深淵生成怪物的稀有度，會受到坑洞附近死亡怪物稀有度影響。",
+            "深淵怪物會偷取附近死亡怪物的部分詞綴。",
+            "稀有深淵怪物偷取的詞綴可能升級為「深淵詞綴」。",
+            "深淵詞綴有低機率進一步成為更強的「巫妖詞綴」。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abyss-guide-section-003",
+      "number": "03",
+      "title": "與其他遭遇的互動",
+      "blocks": [
+        { "type": "paragraph", "text": "只有自然生成在深淵附近的遭遇會產生下列互動；把遠處怪物引到深淵旁擊殺，不會強制觸發。" },
+        {
+          "type": "table",
+          "headers": ["遭遇", "深淵互動"],
+          "columns": "minmax(6rem, .26fr) minmax(0, 1fr)",
+          "rows": [
+            ["地圖頭目", "在深淵附近擊殺後，可產生大型幼蟲怪物"],
+            ["盜賊流亡者", "從坑洞重生為巫妖裔流亡者；保留原有傳奇裝備，並可取得深淵詞綴"],
+            ["精髓", "深淵附近的精髓怪物可額外包含深淵精髓"],
+            ["探險", "在深淵附近引爆探險炸藥可生成深淵怪物"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abyss-guide-section-004",
+      "number": "04",
+      "title": "深淵寶庫與古老骨頭",
+      "blocks": [
+        { "type": "paragraph", "text": "關閉坑洞後，有機率生成深淵寶庫。寶庫可產出用於褻瀆工藝的古老骨頭。" },
+        {
+          "type": "table",
+          "headers": ["骨頭類型", "主要用途"],
+          "columns": "minmax(6.5rem, .26fr) minmax(0, 1fr)",
+          "rows": [
+            ["顎骨", "稀有武器或箭袋"],
+            ["肋骨", "稀有護甲"],
+            ["鎖骨", "稀有項鍊、戒指或腰帶"],
+            ["顱骨", "稀有珠寶；也與不穩定褻瀆相關"],
+            ["特殊骨頭", "依道具說明提供特殊褻瀆效果"]
+          ]
+        },
+        { "type": "callout", "text": "「保存良好的脊椎」過去可褻瀆稀有換界石，但官方自 0.4.0 起已停止其掉落。現行版本不要把取得脊椎列為頭目農法的必要流程。" },
+        { "type": "links", "items": [{ "label": "POE2DB－深淵：完整骨頭與效果", "url": "https://poe2db.tw/tw/Abyss" }] }
+      ]
+    },
+    {
+      "id": "abyss-guide-section-005",
+      "number": "05",
+      "title": "靈魂之井與褻瀆",
+      "blocks": [
+        { "type": "paragraph", "text": "「靈魂之井」於第二章相關任務解鎖，可為符合條件的物品加入一條未揭露的褻瀆詞綴。" },
+        { "type": "subheading", "text": "基本操作" },
+        {
+          "type": "list",
+          "ordered": true,
+          "items": [
+            "對符合條件的物品使用相應骨頭，使物品取得未揭露的褻瀆詞綴。",
+            "將物品放入靈魂之井。",
+            "揭露三個候選效果。",
+            "選擇其中一項套用。"
+          ]
+        },
+        { "type": "paragraph", "text": "褻瀆可用於裝備、珠寶，以及符合條件的換界石。不同骨頭對應不同物品類型；實際使用前應閱讀道具說明。" },
+        { "type": "subheading", "text": "不穩定的褻瀆" },
+        { "type": "paragraph", "text": "具有褻瀆詞綴的物品通常不能再次褻瀆；但標示為「不穩定的褻瀆」的物品可使用保存良好的顱骨再次處理。此時物品可能被摧毀，且風險會隨褻瀆次數增加。" }
+      ]
+    },
+    {
+      "id": "abyss-guide-section-006",
+      "number": "06",
+      "title": "無盡深淵",
+      "blocks": [
+        { "type": "paragraph", "text": "無盡深淵是完成區域內最後一個深淵時，偶爾出現的地下地牢。" },
+        {
+          "type": "list",
+          "ordered": false,
+          "items": [
+            "一般無盡深淵末端會出現同時具有深淵與巫妖詞綴的強力稀有怪物。",
+            "擊敗末端敵人後，可開啟周圍的獎勵寶箱。",
+            "寶箱可產出保存良好的骨頭，並有低機率產出限定徵兆與族裔輔助寶石。",
+            "高等級無盡深淵有機率轉為一般深淵頭目戰。"
+          ]
+        },
+        { "type": "subheading", "text": "入口率與頭目率是兩件事" },
+        {
+          "type": "table",
+          "headers": ["機率", "影響內容"],
+          "rows": [
+            ["深淵通往無盡深淵的機率", "決定是否出現地下入口"],
+            ["無盡深淵含有頭目的機率", "已有地下入口後，決定是否進入一般深淵頭目戰"]
+          ]
+        },
+        { "type": "callout", "text": "只提高入口率會讓玩家更常進入地下，但不代表每次地下區域都有頭目。增加區域寶箱數量的效果也會套用至無盡深淵出現率，因此增加寶箱不會稀釋地下入口機率。" }
+      ]
+    },
+    {
+      "id": "abyss-guide-section-007",
+      "number": "07",
+      "title": "如何增加一般深淵頭目的遭遇率",
+      "blocks": [
+        { "type": "paragraph", "text": "頭目" },
+        { "type": "list", "ordered": false, "layout": "horizontal", "items": ["光芒吞噬者．塔仕古爾", "黑血奴役者．凡德羅斯", "培育之后．伊古蘿葛"] },
+        { "type": "subheading", "text": "* 深淵之怒", "url": "https://poe2db.tw/tw/Abyssal_Ire" },
+        { "type": "subheading", "text": "* 增加深淵通往無盡深淵的機率" },
+        { "type": "subheading", "text": "* 褻瀆換界石", "url": "https://poe2db.tw/tw/Waystones_top_tier" },
+        {
+          "type": "table",
+          "headers": ["詞綴類型", "詞綴"],
+          "columns": "minmax(4.5rem, .14fr) minmax(0, 1fr)",
+          "rows": [
+            ["前綴", "深淵能通往一名深淵頭目"],
+            ["前綴", "深淵能通往無盡深淵"],
+            ["前綴", "區域含有額外 1 位培育之后"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abyss-guide-section-008",
+      "number": "08",
+      "title": "大型事件：深淵蔓延",
+      "blocks": [
+        { "type": "feature", "title": "深淵蔓延", "description": "區域含有許多額外深淵", "image": "images/atlas-icon-abyss-overrun.webp", "imageAlt": "深淵蔓延地圖內容圖示" },
+        { "type": "subheading", "text": "產出與限制" },
+        { "type": "list", "ordered": false, "items": ["額外深淵會增加坑洞、寶庫、古老骨頭與一般掉落的取得機會。", "完成區域最後一個深淵時，仍會進行無盡深淵入口判定。", "區域內只有最後一個深淵進行無盡深淵入口判定；額外深淵不會增加入口判定次數。", "「深淵蔓延」本身不等於保證無盡深淵，也不等於保證一般深淵頭目。"] },
+        { "type": "subheading", "text": "與其他深淵內容的差異" },
+        {
+          "type": "table",
+          "headers": ["類型", "定義", "無盡深淵／頭目結果"],
+          "columns": "minmax(6rem, .18fr) minmax(7rem, .3fr) minmax(0, 1fr)",
+          "rows": [
+            ["一般深淵", "區域含有深淵；可由使用深淵碑牌加入深淵事件", "地下入口與頭目皆為機率判定"],
+            ["深淵蔓延", "輿圖地形", "增加坑洞、寶庫、怪物與材料產出，但不增加入口判定次數，也不保證地下入口或頭目"],
+            ["被深淵佔據", "由天賦、換界石詞綴或傳奇碑牌形成的高密度狀態", "不因「佔據」狀態自動保證頭目"]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "abyss-guide-section-009",
+      "number": "09",
+      "title": "深淵頭目與巔峰頭目",
+      "blocks": [
+        { "type": "callout", "text": "擊殺一般深淵頭目 → 骷髏馬克的邀請 → 在靈魂之井使用 → 挑戰骷髏馬克的容器" },
+        { "type": "paragraph", "text": "一般深淵頭目可掉落古老骨頭、族裔輔助寶石、深淵傳奇、深淵徵兆、深淵之眼，以及「骷髏馬克的邀請」。" },
+        { "type": "paragraph", "text": "取得邀請後，可在靈魂之井使用並進入「骷髏馬克的容器」頭目戰。0.5 版中，邀請固定分配給地圖擁有者；組隊前應確認由誰開圖。" }
+      ]
+    },
+    {
+      "id": "abyss-guide-section-010",
+      "number": "10",
+      "title": "建議解鎖順序",
+      "blocks": [
+        { "type": "list", "ordered": true, "items": ["第二章完成靈魂之井相關任務。", "使用深淵碑牌並累積骨頭與深淵物品。", "優先完成標示「深淵蔓延」的大型事件，累積大量深淵收益。", "配置無盡深淵入口率，以及「深淵之怒」。", "在區域等級 78 以上的地圖農一般深淵頭目。", "取得骷髏馬克的邀請後，再挑戰巔峰頭目。"] }
+      ]
+    }
+  ],
+  "sources": [
+    { "id": "abyss-guide-source-001", "label": "POE2 0.5.0 官方更新公告", "url": "https://www.pathofexile.com/forum/view-thread/3932540" },
+    { "id": "abyss-guide-source-002", "label": "POE2 0.4.0 官方更新公告", "url": "https://www.pathofexile.com/forum/view-thread/3883495" },
+    { "id": "abyss-guide-source-003", "label": "POE2DB－深淵", "url": "https://poe2db.tw/tw/Abyss" },
+    { "id": "abyss-guide-source-004", "label": "POE2DB－無盡深淵", "url": "https://poe2db.tw/tw/Abyssal_Depths" },
+    { "id": "abyss-guide-source-005", "label": "POE2DB－深淵之怒", "url": "https://poe2db.tw/tw/Abyssal_Ire" },
+    { "id": "abyss-guide-source-006", "label": "POE2DB－褻瀆詞綴", "url": "https://poe2db.tw/tw/Desecrated_Modifiers" },
+    { "id": "abyss-guide-source-007", "label": "POE2DB－深淵物價", "url": "https://poe2db.tw/tw/Economy_Abyss" },
+    { "id": "abyss-guide-source-008", "label": "POE2DB－換界石地圖內容", "url": "https://poe2db.tw/tw/Waystones#%E5%9C%B0%E5%9C%96%E5%85%A7%E5%AE%B9" }
+  ]
+}

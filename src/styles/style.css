@@ -187,19 +187,187 @@ html::-webkit-scrollbar {
   outline-offset: 3px;
 }
 
+.atlas-league-mechanics-card .content-quick-nav-button,
+.atlas-league-mechanics-card .content-quick-nav-button:hover {
+  background: transparent;
+}
+
 .atlas-league-mechanic-list {
   position: relative;
   z-index: 1;
   display: grid;
-  gap: 1px;
+  gap: 2rem;
   overflow: hidden;
-  border: 1px solid rgb(245 245 244 / .13);
-  background: rgb(245 245 244 / .1);
 }
 
 .atlas-league-mechanic {
   scroll-margin-top: 8rem;
-  background: rgb(0 0 0 / .28);
+}
+
+.atlas-mechanic-version {
+  max-width: 62rem;
+  color: rgb(168 162 158);
+  font-size: .82rem;
+  line-height: 1.7;
+}
+
+.atlas-mechanic-guide {
+  display: grid;
+  gap: 0;
+  margin-top: 1.5rem;
+  border-top: 1px solid rgb(245 245 244 / .13);
+}
+
+.atlas-mechanic-guide-section {
+  padding-block: 1.75rem;
+}
+
+.atlas-mechanic-guide-section + .atlas-mechanic-guide-section {
+  border-top: 1px solid rgb(245 245 244 / .1);
+}
+
+.atlas-mechanic-section-content {
+  min-width: 0;
+}
+
+.atlas-mechanic-section-content > h5 {
+  margin: 0;
+  color: rgb(245 245 244);
+  font-family: 'Ramabhadra', 'Noto Sans TC', sans-serif;
+  font-size: clamp(1.08rem, 2.1cqw, 1.35rem);
+  font-weight: 600;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.atlas-mechanic-section-content > h5 a,
+.atlas-mechanic-subheading a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in oklab, var(--atlas-yellow) 55%, transparent);
+  text-underline-offset: .2em;
+}
+
+.atlas-mechanic-subheading {
+  margin: 1.5rem 0 0;
+  color: color-mix(in oklab, var(--atlas-yellow) 84%, white);
+  font-family: 'Ramabhadra', 'Noto Sans TC', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.atlas-mechanic-paragraph {
+  margin: .85rem 0 0;
+  color: rgb(214 211 209);
+  line-height: 1.85;
+  text-wrap: pretty;
+}
+
+.atlas-mechanic-list {
+  display: grid;
+  gap: .55rem;
+  margin: .9rem 0 0;
+  padding-left: 1.25rem;
+  color: rgb(214 211 209);
+  line-height: 1.75;
+  list-style: disc outside;
+}
+
+.atlas-mechanic-list-ordered {
+  list-style: decimal outside;
+}
+
+.atlas-mechanic-list-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem 1.5rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.atlas-mechanic-list li::marker {
+  color: var(--atlas-yellow);
+  font-family: 'Ramabhadra', 'Noto Sans TC', sans-serif;
+  font-weight: 600;
+}
+
+.atlas-mechanic-callout {
+  margin: 1rem 0 0;
+  border-left: 2px solid color-mix(in oklab, var(--atlas-yellow) 72%, transparent);
+  background: rgb(0 0 0 / .3);
+  color: rgb(231 229 228);
+  line-height: 1.8;
+  padding: .85rem 1rem;
+  text-wrap: pretty;
+}
+
+.atlas-mechanic-table {
+  margin-top: 1rem;
+  font-size: .84rem;
+}
+
+.atlas-mechanic-table .atlas-data-grid-row > div {
+  padding: .75rem;
+}
+
+.atlas-mechanic-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem 1rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.atlas-mechanic-links a {
+  color: var(--atlas-yellow);
+  line-height: 1.65;
+  text-underline-offset: .2em;
+}
+
+.atlas-mechanic-links a:hover,
+.atlas-mechanic-section-content > h5 a:hover,
+.atlas-mechanic-subheading a:hover {
+  color: var(--atlas-yellow-bright);
+}
+
+.atlas-mechanic-links a:focus-visible,
+.atlas-mechanic-section-content > h5 a:focus-visible,
+.atlas-mechanic-subheading a:focus-visible {
+  border-radius: 2px;
+  outline: 2px solid var(--atlas-yellow);
+  outline-offset: 3px;
+}
+
+.atlas-mechanic-feature {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-top: 1rem;
+  border-top: 1px solid rgb(245 245 244 / .15);
+  border-radius: 8px;
+  background: rgb(0 0 0 / .24);
+  padding: .65rem .75rem;
+}
+
+.atlas-mechanic-feature img {
+  width: 4rem;
+  height: 4rem;
+  flex: 0 0 4rem;
+  object-fit: contain;
+}
+
+.atlas-mechanic-feature strong {
+  color: rgb(245 245 244);
+  font-family: 'Ramabhadra', 'Noto Sans TC', sans-serif;
+  font-weight: 600;
+}
+
+.atlas-mechanic-feature p {
+  margin: .15rem 0 0;
+  color: rgb(214 211 209);
+  line-height: 1.7;
 }
 
 .atlas-accent-text { color: var(--atlas-yellow) !important; }
@@ -1178,7 +1346,7 @@ html::-webkit-scrollbar {
 
 .atlas-data-grid {
   display: grid;
-  grid-template-columns: repeat(var(--atlas-grid-columns), minmax(0, 1fr));
+  grid-template-columns: var(--atlas-grid-template, repeat(var(--atlas-grid-columns), minmax(0, 1fr)));
   gap: 1px;
   border: 1px solid rgb(245 245 244 / .1);
   background: rgb(245 245 244 / .1);

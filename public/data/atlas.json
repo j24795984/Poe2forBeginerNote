@@ -235,8 +235,8 @@
   },
   "leagueMechanics": [
     { "id": "league-ritual-052", "name": "祭祀", "summary": "打完後在城市周邊點大機制，配合輿圖天賦可以多放一個碑牌。" },
-    { "id": "league-abyss-053", "name": "深淵", "summary": "內容待補。" },
-    { "id": "league-breach-054", "name": "裂痕", "summary": "內容待補。" },
+    { "id": "league-abyss-053", "name": "深淵", "summary": "沿裂縫關閉坑洞，取得古老骨頭、無盡深淵入口與頭目產物。" },
+    { "id": "league-breach-054", "name": "裂痕", "summary": "在限時裂痕中快速清怪，取得裂痕斷片、巢裔之血與胎贈。" },
     { "id": "league-expedition-055", "name": "炸墳", "summary": "內容待補。" },
     { "id": "league-vaal-056", "name": "瓦爾", "summary": "內容待補。" },
     { "id": "league-delirium-057", "name": "瞻望", "summary": "可作為跑圖時不主要打、也不需要特別處理的機制碑牌選擇。" }

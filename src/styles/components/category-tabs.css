@@ -137,6 +137,8 @@
   .atlas-shell .atlas-league-mechanics-card .content-quick-nav {
     position: relative;
     top: auto;
+    background: transparent;
+    box-shadow: none;
   }
 
   .atlas-league-mechanic-list {
